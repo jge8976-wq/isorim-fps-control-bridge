@@ -17,18 +17,26 @@ namespace HSK.FpsBridge
         private static Pawn inspector;
         private static Ballistics.ExternalTrace inspectionTrace;
 
-        // 0.8.1: a tap of Alt turns the volumes on or off (kept between sessions). A tap is Alt pressed and released
-        // with no other key meanwhile, so Alt+1-4 (game speed) leaves the display alone.
-        private static bool shown, altCombo;
-        public static bool Held => shown;
+        private const float TapSeconds = .25f;
+        private static bool shown, altCombo, overlayPressed;
+        private static float pressedAt;
+        public static bool Held => shown || (overlayPressed && !altCombo && ControlKeys.Held(ControlAction.Overlay));
 
         // Once per input frame while possessed.
         public static void Frame()
         {
             bool alt = ControlKeys.Held(ControlAction.Overlay);
-            if (ControlKeys.Down(ControlAction.Overlay)) altCombo = false;
-            else if (alt && Input.anyKeyDown) altCombo = true;
-            if (ControlKeys.Up(ControlAction.Overlay) && !alt && !altCombo) shown = !shown;
+            if (ControlKeys.Down(ControlAction.Overlay))
+            {
+                overlayPressed = true;
+                altCombo = false;
+                pressedAt = Time.unscaledTime;
+            }
+            else if (overlayPressed && alt && Input.anyKeyDown) altCombo = true;
+            if (alt || !overlayPressed) return;
+            if (!altCombo && ControlKeys.Up(ControlAction.Overlay) && Time.unscaledTime - pressedAt <= TapSeconds)
+                shown = !shown;
+            overlayPressed = false;
         }
 
         public static void Draw(Pawn self)
@@ -37,11 +45,13 @@ namespace HSK.FpsBridge
             frame = Time.frameCount;
             Map map = self.Map;
             V3 origin = FloorSpace.Spot(self);
+            if (VehicleControl.Owns(self) && VehicleControl.ExternalFollow) DrawCrewVolumes(self);
             IReadOnlyList<Pawn> pawns = map.mapPawns.AllPawnsSpawned;
             for (int i = 0; i < pawns.Count; i++)
             {
                 Pawn p = pawns[i];
                 if (p == self || p.Dead || p.Position.Fogged(map) || (FloorSpace.Spot(p) - origin).Length > Range) continue;
+                if (VehicleApi.IsVehicle(p)) DrawCrewVolumes(p);
                 volumes.Clear();
                 BodyRegions.AddVolumes(p, volumes);
                 if (volumes.Count == 0) continue;
@@ -49,6 +59,17 @@ namespace HSK.FpsBridge
                 Vector3 offset = Vector3.zero;
                 for (int k = 0; k < volumes.Count; k++) Visuals.Volume(volumes[k], offset);
             }
+        }
+
+        private static void DrawCrewVolumes(Pawn vehicle)
+        {
+            if (!VehicleBallisticDamage.TryCrewProfile(vehicle, out var profile, out var handlers)) return;
+            var pose = VehicleGeometry.Pose(vehicle);
+            Vector3 origin = VehicleModels.U(pose.Position);
+            Quaternion rotation = AerialGeometry.Rotation(pose);
+            foreach (var volume in profile.volumes)
+                if (handlers.Any(handler => VehicleApi.RoleKey(handler) == volume.roleKey))
+                    Visuals.CrewVolume(origin + rotation * volume.center, rotation, volume.size);
         }
 
         internal static void DrawInspection(Pawn vehicle)

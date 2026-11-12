@@ -177,7 +177,10 @@ namespace HSK.FpsBridge
             if((bool)ceBlockerContact.Invoke(null,new object[]{__instance,plane})){__result=true;return false;}
             V3 at=V3.Lerp(from,to,fraction);AerialBlast.Remember(__instance,__instance.Map,at);
             exactPos.SetValue(__instance,vector3.Make3(ToNative(__instance.Map,at,plane)));
-            ceLanded.SetValue(__instance,true);ceImpact.Invoke(__instance,new object[]{plane});__result=true;return false;
+            ceLanded.SetValue(__instance,true);
+            using (VehicleBallisticDamage.Begin(__instance, plane, VehicleApi.Get(__instance, "launcher") as Thing, at, to - from))
+                ceImpact.Invoke(__instance,new object[]{plane});
+            __result=true;return false;
         }
     }
 }

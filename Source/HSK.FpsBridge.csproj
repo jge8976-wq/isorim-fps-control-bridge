@@ -5,12 +5,12 @@
     <Nullable>disable</Nullable>
     <AssemblyName>HSK.FpsBridge</AssemblyName>
     <RootNamespace>HSK.FpsBridge</RootNamespace>
-    <Version>0.8.19</Version>
-    <InformationalVersion>0.8.19-formation-raids-r1</InformationalVersion>
+    <Version>0.8.20</Version>
+    <InformationalVersion>0.8.20-minimap-crew-r1</InformationalVersion>
     <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
     <Deterministic>true</Deterministic>
     <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
-    <DebugType>portable</DebugType>
+    <DebugType>none</DebugType>
     <GenerateDependencyFile>false</GenerateDependencyFile>
     <OutputPath>../Build/</OutputPath>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>

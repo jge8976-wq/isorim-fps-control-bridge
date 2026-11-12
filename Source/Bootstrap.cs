@@ -83,6 +83,7 @@ namespace HSK.FpsBridge
                 Bridge.InstallHudCallbacks(harmony);
                 Bridge.InstallCapturedMouse(harmony);
                 ControlCamera.Install(harmony);
+                DubsMinimap.InstallRotation();
                 var movementRecovery = new Harmony(Id + ".movement-guard");
                 try { Bridge.InstallMovementRecovery(movementRecovery); }
                 catch (Exception e) { movementRecovery.UnpatchAll(Id + ".movement-guard"); Log.Warning("[FpsBridge] MOVE_GUARD unavailable; existing movement retained: " + e.Message); }
@@ -115,6 +116,12 @@ namespace HSK.FpsBridge
                 try { HSK.ImportedRendering.SurfaceAdapter.Install(); }
                 catch (Exception e) { Log.Warning("[FpsBridge] Imported surface hook off: " + e.Message); }
                 VehicleApi.Install();
+                if (VehicleApi.Ready)
+                {
+                    var vehicleBallistics = new Harmony(Id + ".vehicle-ballistic-damage");
+                    try { VehicleBallisticDamage.Install(vehicleBallistics); }
+                    catch (Exception e) { vehicleBallistics.UnpatchAll(vehicleBallistics.Id); Log.Warning("[FpsBridge] Vehicle ballistic mapping unavailable: " + e); }
+                }
                 if (VehicleApi.Ready)
                 {
                     var aircraftDamage = new Harmony(Id + ".aircraft-damage");

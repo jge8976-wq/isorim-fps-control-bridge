@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <ModMetaData>
   <name>ISORIM FPS Control Bridge (CE&amp;Vanilla)</name>
-  <author>ISORIM FPS team</author>
+  <author>ISORIM FPS Team</author>
   <packageId>hsk.fpsbridge.control.r4</packageId>
-  <modVersion IgnoreIfNoMatchingField="true">0.8.19-formation-raids-r1</modVersion>
+  <modVersion IgnoreIfNoMatchingField="true">0.8.20-minimap-crew-r1</modVersion>
   <supportedVersions>
     <li>1.7</li>
   </supportedVersions>
@@ -46,7 +46,10 @@
     <li>OskarPotocki.VanillaVehiclesExpandedTier3</li>
     <li>CETeam.CombatExtended</li>
   </loadAfter>
-  <description>[h2]0.8.19[/h2]
+  <description>[h2]0.8.20[/h2]
+The built-in and Dub’s Mint minimaps now rotate with the 3D camera. The compass marks north in cyan and Dub’s click positions follow the rotated map. Hold Alt to view cyan crew hit volumes. On foot, tap Alt to toggle them. Includes crew hit volumes for the Warbird and Badger.
+
+[h2]0.8.19[/h2]
 Aircraft collision checks now skip widely separated airframes before detailed contact checks. Paired with Strike Framework 0.6.7 and tested with and without Combat Extended.
 
 [h2]0.8.18[/h2]

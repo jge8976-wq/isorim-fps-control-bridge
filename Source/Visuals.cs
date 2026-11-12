@@ -25,6 +25,7 @@ namespace HSK.FpsBridge
         public static readonly Color TorsoColor = new Color(1f, 0.85f, 0.2f, 0.26f);
         public static readonly Color LegColor = new Color(0.25f, 0.85f, 1f, 0.3f);
         public static readonly Color SolidColor = new Color(0.7f, 0.7f, 0.75f, 0.12f);
+        private static readonly Color crewVolumeColor = new Color(.18f, .96f, .82f, .38f);
 
         private static bool Ready()
         {
@@ -446,6 +447,13 @@ namespace HSK.FpsBridge
         {
             if (!View3D.Active || !Ready()) return false;
             Draw(mesh, trueMatrix, Vector3.zero, overlay, TorsoColor);
+            return true;
+        }
+
+        internal static bool CrewVolume(Vector3 center, Quaternion rotation, Vector3 size)
+        {
+            if (!View3D.Active || !Ready()) return false;
+            Draw(cube, Matrix4x4.TRS(center, rotation, size), Vector3.zero, overlay, crewVolumeColor);
             return true;
         }
 

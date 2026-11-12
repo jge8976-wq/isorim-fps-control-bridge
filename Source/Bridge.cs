@@ -317,7 +317,8 @@ namespace HSK.FpsBridge
                     {
                         GameFont f0 = Text.Font; TextAnchor a0 = Text.Anchor; Color c0 = GUI.color;
                         Text.Font = GameFont.Tiny; Text.Anchor = TextAnchor.UpperCenter; GUI.color = new Color(1f, 1f, 1f, .8f);
-                        Widgets.Label(new Rect(x - 200, 60, 400, 22), L.T("受击模型（再按 Alt 关闭）：红 头部 · 黄 躯干 · 蓝 腿部", "Hit volumes (Alt again to hide): red head · yellow torso · blue legs"));
+                        Widgets.Label(new Rect(x - 300, 60, 600, 22), L.T("按住 Alt 查看 · 轻按切换 · 红 头部 · 黄 躯干 · 蓝 腿部 · 青 乘员席",
+                            "Hold Alt to view · Tap to toggle · Red head · Yellow torso · Blue legs · Cyan crew"));
                         Text.Font = f0; Text.Anchor = a0; GUI.color = c0;
                     }
                     if (FpsMod.Settings.showHints && Ballistics.LastHit != null && Time.unscaledTime < Ballistics.LastHitUntil)

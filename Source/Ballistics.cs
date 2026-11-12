@@ -495,7 +495,8 @@ namespace HSK.FpsBridge
                 if (thing is Pawn victim) Notify(victim, part, region);
                 // ExactPosition still answers the hit point while the game's impact effects run.
                 bool blocked = shot.ratkin?.cannon == true && thing == null && normal.Y < .5f;
-                impact.Invoke(p, new object[] { thing, blocked });
+                using (VehicleBallisticDamage.Begin(p, thing, shot.launcher, shot.pos, shot.vel))
+                    impact.Invoke(p, new object[] { thing, blocked });
                 keep = ContinueRatkin(p,shot,thing,normal);
             }
             finally

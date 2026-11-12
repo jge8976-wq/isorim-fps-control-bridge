@@ -10,7 +10,7 @@ namespace HSK.FpsBridge
     // 0.8.0: with Dubs Mint Minimap installed, its minimap is the one shown while possessing (opened for the session
     // and put back as the player had it afterwards, without writing their settings); the bridge's own minimap is then
     // not drawn. The Dubs map follows the game camera, which first person keeps on the pawn.
-    internal static class DubsMinimap
+    internal static partial class DubsMinimap
     {
         private static bool bound;
         private static FieldInfo settingsField, openField;
@@ -159,7 +159,8 @@ namespace HSK.FpsBridge
         // Pre-rotated: a GUI-matrix rotation inside Dubs' clipped group lands far from the pivot.
         private static void DrawArrow(Vector2 c, Pawn pawn)
         {
-            float yaw = VehicleControl.Owns(pawn) ? FirstPerson.Yaw : FirstPerson.On && FirstPerson.Pawn == pawn ? FirstPerson.Yaw : pawn.Rotation.AsAngle;
+            bool controlled = VehicleControl.Owns(pawn) || FirstPerson.On && FirstPerson.Pawn == pawn;
+            float yaw = rotatingMap ? mapYaw : controlled ? FirstPerson.Yaw : pawn.Rotation.AsAngle;
             Texture2D tex = Arrow(yaw);
             float size = VehicleApi.IsVehicle(pawn) ? 12f : 24f * .7f;
             Color was = GUI.color;

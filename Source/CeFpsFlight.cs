@@ -199,7 +199,8 @@ namespace HSK.FpsBridge
                 bool directFuze=AerialProximityFuse.DirectContact(__instance,target);
                 float contactDamage=directFuze?Convert.ToSingle(VehicleApi.Get(__instance,"DamageAmount")):0f;
                 if(directFuze)AerialBlast.DirectVictim(__instance,(Pawn)target);
-                ceImpact.Invoke(__instance,new object[]{target});
+                using (VehicleBallisticDamage.Begin(__instance, target, instigator, at, flight.velocity))
+                    ceImpact.Invoke(__instance,new object[]{target});
                 if(directFuze)AerialProximityFuse.ApplyDirectContact(__instance.def,(Pawn)target,instigator,at,flight.velocity,contactDamage);
                 FpsContacts++;
                 CombatDiagnostics.CeContact(__instance, flight.launcher, target);

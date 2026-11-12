@@ -421,7 +421,8 @@ namespace HSK.FpsBridge
                 if (thing == null || thing.Destroyed || !thing.Spawned) return;
                 BattleLogEntry_RangedImpact entry = LogFor(thing);
                 float wear = thing is Pawn ? 1f : CoverWear.Factor(ObstacleOf(thing));
-                thing.TakeDamage(Damage(p.DamageDef, shot.pen.D0 * wear, penetration, null))?.AssociateWithLog(entry);
+                using (VehicleBallisticDamage.Begin(p, thing, p.Launcher, V3.Lerp(a, b, c.T), b - a))
+                    thing.TakeDamage(Damage(p.DamageDef, shot.pen.D0 * wear, penetration, null))?.AssociateWithLog(entry);
             }
         }
     }

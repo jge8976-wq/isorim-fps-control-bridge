@@ -1,3 +1,6 @@
+[h2]0.8.20[/h2]
+The built-in and Dub’s Mint minimaps now rotate with the 3D camera. The compass marks north in cyan and Dub’s click positions follow the rotated map. Hold Alt to view cyan crew hit volumes. On foot, tap Alt to toggle them. Includes crew hit volumes for the Warbird and Badger.
+
 [h2]0.8.19[/h2]
 Aircraft collision checks now skip widely separated airframes before detailed contact checks. Paired with Strike Framework 0.6.7 and tested with and without Combat Extended.
 

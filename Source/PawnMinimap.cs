@@ -72,15 +72,32 @@ namespace HSK.FpsBridge
                 Rect area = new Rect(panel.x + 6f, panel.y + 24f, w, h);
                 GUI.color = Color.white; Text.Font = GameFont.Tiny; Text.Anchor = TextAnchor.UpperLeft;
                 Widgets.DrawBoxSolid(panel, new Color(.025f, .035f, .05f, .92f));
-                Widgets.Label(new Rect(panel.x + 7f, panel.y + 3f, w, 20f), L.T("N ↑ 北 · ", "N ↑ · floor ") + (floorLevel + 1) + L.T(" 层 · ", " · ") + ControlCamera.Label);
-                if (ready) GUI.DrawTexture(area, texture);
-                else Widgets.Label(area, L.T("正在绘制地图…", "Drawing the map…"));
-                if (VehicleControl.Owns(pawn)) VehiclePrediction.DrawMinimap(area, false);
+                float yaw = MinimapOrientation.CameraYaw;
+                Widgets.Label(new Rect(panel.x + 7f, panel.y + 3f, w, 20f), L.T("楼层 ", "Floor ") + (floorLevel + 1) + " · " + ControlCamera.Label);
+                DrawMap(pawn, area, yaw);
+                MinimapOrientation.DrawCompass(area, yaw);
+                Widgets.Label(new Rect(panel.x + 7f, area.yMax + 3f, w, 20f), "X " + pawn.Position.x + "  Z " + (pawn.Position.z - floorShift) + "  ·  " + yaw.ToString("0") + "°");
+            }
+            catch (Exception e) { Log.ErrorOnce("[FpsBridge] Minimap unavailable (control continues): " + e, 19271710); }
+            finally { Text.Font = font; Text.Anchor = anchor; GUI.color = color; }
+        }
+
+        private static void DrawMap(Pawn pawn, Rect area, float yaw)
+        {
+            Rect local = new Rect(Vector2.zero, area.size);
+            GUI.BeginClip(area);
+            Matrix4x4 saved = GUI.matrix;
+            try
+            {
+                if (!ready) Widgets.Label(local, L.T("正在绘制地图…", "Drawing the map…"));
+                MinimapOrientation.BeginMapTransform(local.center, yaw, MinimapOrientation.Fit(local.size, local.size, yaw));
+                if (ready) GUI.DrawTexture(local, texture);
+                if (VehicleControl.Owns(pawn)) VehiclePrediction.DrawMinimap(local, false);
                 // DrawPos can include an IsoRim floor display offset. The minimap uses the current floor's logical grid.
                 V3 pos = FloorSpace.Spot(pawn);
                 var p = MinimapRules.Position(pos.X, pos.Z, map.Size.x, floorRows);
-                var d = MinimapRules.Heading(FirstPerson.Yaw);
-                Vector2 center = new Vector2(area.x + p.x * w, area.y + p.y * h);
+                var d = MinimapRules.Heading(yaw);
+                Vector2 center = new Vector2(p.x * local.width, p.y * local.height);
                 Vector2 forward = new Vector2(d.x, d.y), side = new Vector2(-d.y, d.x);
                 Vector2 tip = center + forward * 10f, back = center - forward * 5f;
                 Color cyan = new Color(.3f, 1f, .95f);
@@ -88,10 +105,12 @@ namespace HSK.FpsBridge
                 Widgets.DrawLine(tip, back + side * 5f, cyan, 2.5f);
                 Widgets.DrawLine(back + side * 5f, back - side * 5f, cyan, 2.5f);
                 Widgets.DrawBoxSolid(new Rect(center.x - 2, center.y - 2, 4, 4), Color.white);
-                Widgets.Label(new Rect(panel.x + 7f, area.yMax + 3f, w, 20f), "X " + pawn.Position.x + "  Z " + (pawn.Position.z - floorShift) + "  ·  " + Mathf.Repeat(FirstPerson.Yaw, 360f).ToString("0") + "°");
             }
-            catch (Exception e) { Log.ErrorOnce("[FpsBridge] Minimap unavailable (control continues): " + e, 19271710); }
-            finally { Text.Font = font; Text.Anchor = anchor; GUI.color = color; }
+            finally
+            {
+                GUI.matrix = saved;
+                GUI.EndClip();
+            }
         }
     }
 }
