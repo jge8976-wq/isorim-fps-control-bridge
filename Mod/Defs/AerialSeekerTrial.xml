@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <Vehicles.VehicleTurretDef ParentName="FPS_AirVehicleTurretBase">
+    <defName>FPS_Air_SeekerTrial80</defName>
+    <label>TEST guided missile (80mm ammunition)</label>
+    <description>Guided test pod using existing 80mm ammunition and native impact damage. Aim at a visible hostile target and press T, or press fire once to start acquisition. Hold the target in view until LOCKED before firing. An unlocked shot does not consume ammunition.</description>
+    <turretType>Rotatable</turretType>
+    <projectile>FPS_AirBullet_Rocket80Projectile</projectile>
+    <warmUpTimer>0</warmUpTimer>
+    <rotationSpeed>80</rotationSpeed>
+    <reloadTimer>8</reloadTimer>
+    <magazineCapacity>12</magazineCapacity>
+    <chargePerAmmoCount>1</chargePerAmmoCount>
+    <genericAmmo>true</genericAmmo>
+    <autoSnapTargeting>false</autoSnapTargeting>
+    <projectileOffset>1.2</projectileOffset>
+    <maxRange>180</maxRange>
+    <minRange>0</minRange>
+    <shotSound>RocketswarmLauncher_Fire</shotSound>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/AssaultRifle</texPath>
+      <graphicClass>Vehicles.Graphic_Turret</graphicClass>
+      <drawSize>(0.6,0.6)</drawSize>
+    </graphicData>
+    <ammunition>
+      <thingDefs>
+        <li>FPS_AirAmmo_Rocket80Round</li>
+      </thingDefs>
+    </ammunition>
+    <fireModes>
+      <li>
+        <shotsPerBurst>1</shotsPerBurst>
+        <ticksBetweenShots>30</ticksBetweenShots>
+        <ticksBetweenBursts>30</ticksBetweenBursts>
+        <spreadRadius>0</spreadRadius>
+        <label>Single</label>
+        <texPath>UI/Gizmos/FireRate_Single</texPath>
+      </li>
+    </fireModes>
+    <modExtensions>
+      <li Class="HSK.FpsBridge.AerialWeaponExtension">
+        <kind>TestMissile</kind>
+        <quickFire>false</quickFire>
+        <mountFraction>(0.65,0.5,0.2)</mountFraction>
+        <barrels>6</barrels>
+        <barrelRadius>0.22</barrelRadius>
+        <barrelLength>0.6</barrelLength>
+        <scopeTemplate>Rocket</scopeTemplate>
+        <ceAmmoSet>AmmoSet_80mmRocket_direct</ceAmmoSet>
+        <lockableMissile>true</lockableMissile>
+      </li>
+    </modExtensions>
+  </Vehicles.VehicleTurretDef>
+</Defs>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Native CE game tuning references are documented in the QQ-000099 receipt.
+       These apply only to the ten named legacy roles when both CE values are zero. -->
+  <HSK.FpsBridge.AerialAccuracyDef>
+    <defName>FPS_AirAccuracy_MG762</defName><sway>0.96</sway><spread>0.04</spread>
+    <turretDefs><li>FPS_Air_VVE_Frog_MG762</li><li>VTOL_Air_VVE_Frog_MG762</li></turretDefs>
+  </HSK.FpsBridge.AerialAccuracyDef>
+  <HSK.FpsBridge.AerialAccuracyDef>
+    <defName>FPS_AirAccuracy_HMG127</defName><sway>1.5</sway><spread>0.1</spread>
+    <turretDefs><li>FPS_Air_VVE_Toad_HMG127</li><li>VTOL_Air_VVE_Toad_HMG127</li><li>FPS_Air_VVE_Smuggler_HMG127</li><li>VTOL_Air_VVE_Smuggler_HMG127</li></turretDefs>
+  </HSK.FpsBridge.AerialAccuracyDef>
+  <HSK.FpsBridge.AerialAccuracyDef>
+    <defName>FPS_AirAccuracy_Autocannon</defName><sway>1.61</sway><spread>0.01</spread>
+    <turretDefs><li>FPS_Air_VVE_Warbird_Rotary20</li><li>VTOL_Air_VVE_Warbird_Rotary20</li><li>FPS_Air_VVE_Mosquito_Cannon30</li><li>VTOL_Air_VVE_Mosquito_Cannon30</li></turretDefs>
+  </HSK.FpsBridge.AerialAccuracyDef>
+  <HSK.FpsBridge.AerialAccuracyDef>
+    <defName>FPS_AirAccuracy_Grenade40</defName><sway>1.61</sway><spread>0.15</spread>
+    <turretDefs><li>FPS_Air_VVE_Frog_Grenade40L</li><li>VTOL_Air_VVE_Frog_Grenade40L</li><li>FPS_Air_VVE_Smuggler_Grenade40H</li><li>VTOL_Air_VVE_Smuggler_Grenade40H</li></turretDefs>
+  </HSK.FpsBridge.AerialAccuracyDef>
+  <HSK.FpsBridge.AerialAccuracyDef>
+    <defName>FPS_AirAccuracy_UnguidedRockets</defName><sway>0.82</sway><spread>4</spread>
+    <turretDefs><li>FPS_Air_VVE_Toad_Rocket70</li><li>VTOL_Air_VVE_Toad_Rocket70</li><li>FPS_Air_VVE_Mosquito_Rocket70</li><li>VTOL_Air_VVE_Mosquito_Rocket70</li><li>FPS_Air_VVE_Warbird_Rocket80</li><li>VTOL_Air_VVE_Warbird_Rocket80</li></turretDefs>
+  </HSK.FpsBridge.AerialAccuracyDef>
+</Defs>

@@ -1,0 +1,36 @@
+R11 鼠族武器、3D弹道和使用进度 / Ratkin weapons, 3D ballistics and use progress
+
+鼠族连弩：10发虚拟弹匣；B切换单发/三连发/全自动，保留自身模型与原有13 tick连发间隔。
+旧存档里受“一发弓弩”规则影响的连弩弹匣会修正一次，不会反复免费补弹。R换弹、打空自动换弹保留。
+鼠族原型脉冲步枪：按普通步枪接入，30发弹匣，B切换三种射击模式；不再误判成特殊武器。
+模型不替换，仍用鼠族自己的脉冲步枪。蓝色弧光脉冲能量团沿真实3D弹道飞行，接入已有命中与穿透。
+连弩默认换弹3.2秒，脉冲步枪按现有普通步枪默认2.5秒；原有冷却规则保留。
+其它可兼容的普通射击子类接入FPS；有自定义发射/资源机制的保留原生序列，支持的弹丸接入3D飞行。
+当前配置原始XML与原生类型排查85条射击定义；已确认脉冲步枪、BFR穿甲弹、RatHolic机枪的接入路径。
+BFR穿甲延续和RatHolic累积效果保留。依赖专门飞行/空爆判定的弹药不强行替换，继续原生行为。
+
+屏幕下方新增使用进度条和剩余秒数：食物、成瘾品、药物、自己/队友包扎，读取实际任务阶段。
+取药或走路准备阶段不虚报固定倒计时；真正吃喝/包扎时显示，暂停冻结，完成或中断即收起。
+第一人称背包Enter手动使用，不再经过AI种族/文化/饮食偏好资格判断；药效、营养和实际消耗仍走原生任务。
+仅改手动使用入口，未修改种族Def、文化、食物政策或其他小人的自动饮食。
+蹲下瞄准晃动降低50%（剩余0.5倍）；趴下降低80%（剩余0.2倍），与原有技能/受伤/压制修正相乘。
+
+保留R10自动装填、食用/治疗动画、鼠鼠装备残留与粗描边修复、鼠鼠跳上模型和双击蹲下落地。
+保留R9一分钟技能音乐，所有模型包和原存档/键位文件不改写。
+构建与原生类型/挂钩、射击模式、弹匣迁移、使用进度数据检查已通过；游戏内输入、蓝色弹丸观感和HUD验收待测试。
+
+R11 English notes
+- Ratkin repeating crossbow: 10-round virtual magazine, B cycles single/burst x3/full auto. Its own model and native
+  13-tick shot spacing remain. Legacy one-round saves are repaired once. R and empty-magazine auto reload remain.
+- Ratkin prototype pulse rifle: ordinary FPS rifle route, 30-round magazine, all three B fire modes, original model.
+  Compact blue electric energy packets follow actual 3D flight, collision and existing penetration calculations.
+- Simple compatible shoot subclasses use FPS control. Custom attacks retain their native sequence and resource costs;
+  compatible native bullets join 3D flight. Native AP continuation and RatHolic effects are retained. Dedicated airburst
+  and unknown flight implementations keep their native behavior.
+- The lower screen shows actual item-use/tending progress and seconds remaining. Preparation/travel is not counted as
+  fixed use time. Pause, interruption and completion follow the real job.
+- Enter from the FPS inventory bypasses AI race/culture/diet eligibility checks. Native effects and consumption remain.
+  Other pawns, saved diet policies and race definitions are unchanged.
+- Crouch reduces aim sway by 50%; prone reduces it by 80%, combined with the existing skill/injury/suppression factors.
+- All R10/R9 content remains. Model packs are unchanged. Native/offline checks pass; in-game visual/input acceptance
+  is pending.

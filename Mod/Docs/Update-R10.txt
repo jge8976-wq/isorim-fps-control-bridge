@@ -1,0 +1,40 @@
+R10 第一人称动作与鼠鼠修复 / First-person actions and Ratkin fixes
+
+1. 玩家FPS角色弹匣打空后自动进入原有装填流程；R仍可提前换弹。
+   不消耗新的真实弹药，装填时长、受伤影响和原有冷却保留。吃喝和包扎期间等待，不抢占双手。
+   旧的单发/三连发输入队列清除；全自动仅在当前仍按住开火时继续。
+2. 滚轮选背包物品、Enter使用时，按原生物品信息匹配喝水、吃药丸、吸粉、用勺子吃、抱肉啃、抱菜啃。
+   注射剂和吸烟类另外保留对应动作，不强行改成吞药。模组可用ConsumableAnimationExtension指定动作。
+   动作跟随真实吃喝阶段与游戏时间，取物和走路不提前吃；暂停冻结，完成或中断收起。
+   自我治疗显示缠绷带动作，快捷包扎和背包用药均支持。治疗队友也显示治疗手部动作。
+   动画不重复消耗食物或药物，也不另算营养、药效和治疗结果。
+3. 修复鼠族体型缩放绘制绕过IsoRim捕获、导致原版武器贴图残留的问题。
+   盾牌/旗帜额外绘制组件在对应3D模型加载成功时停止重复平面绘制，二维模式和未知装备保留原流程。
+   鼠鼠108个模型接入表面修正：移除加厚描边和冗余底层、贴图表面与原始网格重合。
+   原模型面数与顶点未改；模型本身的低面轮廓仍保留。
+4. 操控鼠鼠时，靠近并朝向建筑、家具、地上物品、石块、树等实体模型，单按空格跳上可站立表面。
+   落脚面来自引擎实际模型和摆放变换；窄尖、空洞、竖直贴图不能当作地板。
+   双击左Ctrl（若改键则双击“蹲下”键，间隔0.32秒内）从当前高处下来。普通蹲下仍可单按。
+   普通走过去继续遵守原有通行和减速；此功能只在主动跳上时接管高处移动。
+   人物相机、模型高度和射击起点共用原有高处系统。头顶实体楼板仍会阻挡，走出模型边缘自然下落。
+   适用于正在操控的鼠族角色；生物本身、移动载具、特效、没有实体网格的贴图不作为这个静态落脚面。
+
+保留R9技能BGM：原曲20–80秒，一分钟内重复技能不重播；载具、异象和鼠鼠轻量资源不重新生成。
+测试：自动装填34项；动作生命周期与几何/按键235项；鼠族原生绘制路径8项；108个模型网格与负对照检查。
+以上为编译、真实引擎类型/网格缓冲和输入边界检查。实际游戏画面、手感和GPU表现仍待玩家验收。
+
+R10 English notes
+- An empty player FPS magazine starts its existing reload automatically. R still reloads early. Existing timings,
+  injury modifiers and cooldowns remain; ingestion and tending take priority. No real ammo cost is introduced.
+- Six generic item-use motions: drink, pill, powder, spoon, meat and vegetables. Injectables and smoking retain
+  appropriate poses. Animations observe native use toils only; the original jobs alone consume items and apply effects.
+- Self-tending shows a bandage wrap. Quick-tend and inventory medicine use share the visual. Pause and interruptions
+  follow actual job progress; weapons and offhand shields are lowered while using items.
+- Ratkin gene-scaled weapons now pass through IsoRim's capture/suppression route. Known loaded 3D shields and banners
+  no longer draw a duplicate original flat card. Unknown equipment and 2D drawing retain their fallback.
+- Ratkin imported surfaces no longer keep a thick outline shell or redundant undercoat. Original geometry is retained.
+- While controlling a Ratkin, face a nearby static solid model and press Space to hop onto a supported surface.
+  Double-tap Left Ctrl (the rebound Crouch action also works) within 0.32 s to drop. Ground movement costs are unchanged.
+  Support comes from actual model triangles; holes and thin/vertical faces are rejected. Overhead floors still block.
+- R9 music and all previous features remain. Art packs are unchanged. Native/offline checks pass; gameplay/visual
+  acceptance remains pending.

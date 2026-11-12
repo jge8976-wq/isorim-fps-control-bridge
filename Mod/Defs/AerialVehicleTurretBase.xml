@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- VF 1.6.2144 and DEV 1.7.2520's base contains only gizmoDescription.
+       Own the same default locally so existing FPS-before-VF mod lists work.
+       This deliberately does not redefine VF's global VehicleTurretBase. -->
+  <Vehicles.VehicleTurretDef Name="FPS_AirVehicleTurretBase" Abstract="True">
+    <gizmoDescription>Select a target.\n\nFire for effect.</gizmoDescription>
+  </Vehicles.VehicleTurretDef>
+</Defs>

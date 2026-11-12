@@ -1,0 +1,18 @@
+R9 技能战斗音乐更新 / R9 skill combat music update
+
+成功释放斯安威斯坦或死神之眼时，播放原曲第20–80秒，共60秒。
+曲段已经裁掉原曲前20秒，内置音乐从文件0秒开始，无需再设置偏移。
+技能结束或退出人物控制不会提前中断这段音乐；同一60秒内重复释放技能，不重播、不叠加、不重置或延长计时。
+60秒播放结束后，下一次成功释放技能才开始新的一段。暂停、慢动作和游戏速度不改变音乐速度与实际时长。
+模组选项保留音乐开关、音量、自定义文件及环境音降低功能。手动关闭音乐、音量设为0或退出存档仍会停止播放。
+旧版“技能结束时淡出”和较短播放时长会在运行时迁移到本规则；自定义音乐路径和偏移不被改写。
+音频为双声道OGG，977402字节，小于1MB。沿用现有SoundFile/libsndfile导入流程，不增加游戏前置。
+实际游戏内听感尚待测试；构建、原曲截取、完整60秒解码、重复技能计时和当前引擎挂钩检查已通过。
+本地原曲与旧R8包保持原样。本朋友测试包沿用此前的测试配乐，公开包依原约定替换该配乐。
+
+An accepted Sandevistan / Death Eye activation plays original seconds 20-80: exactly 60 seconds.
+The bundled file is already trimmed; it starts at file time zero. Skill end does not stop the accepted minute.
+Repeat activations within that minute do not restart, overlap, reset or extend it.
+After the minute finishes, another accepted skill activation may start a new minute. Playback uses real time.
+Explicit music off, zero volume or leaving the game still stops playback. Custom paths and seek offsets are preserved.
+Stereo OGG: 977402 bytes, below 1 MB. Game playback/listening acceptance is pending.

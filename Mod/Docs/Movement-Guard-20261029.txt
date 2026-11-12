@@ -1,0 +1,11 @@
+—— 2026-10-29：FPS 移动保护更新 / Movement Guard ——
+人物处于 FPS 接管状态时，屏蔽 Perspective Shift 自己的按键定义，避免原生快捷键与 FPS 控制同时执行；重新绑定这些按键也不会绕过保护。退出 FPS 后恢复原生快捷键。
+移动计算期间临时隔离上游相机锁定；检测到本帧上游未执行人物移动更新时，补调同一个原生移动方法，每帧至多执行一次。
+保留暂停、菜单、自动工作、治疗和过场等控制限制；不改写玩家的按键设置，也不替换原生碰撞算法。
+本次为预防性兼容更新：编译、离线回归与原生启动检查分别记录；尚未复现留言玩家的 WASD 故障，不能保证所有移动故障均已解决。
+更新后请完全退出并重启游戏。日志可查找 [FpsBridge] MOVE_GUARD READY 确认保护已加载。
+
+While controlling a pawn in FPS, Perspective Shift-owned key definitions are suppressed, including rebound keys. Native shortcuts resume after leaving FPS.
+Upstream camera locks are scoped out of controlled movement. If the upstream physics update was not observed this frame, the same native movement method is dispatched at most once per frame.
+Normal pause, menus, work, treatment and cutscene guards remain. Player key bindings and native collision logic are preserved.
+Preventive compatibility update: the player-specific WASD failure has not been reproduced, and this is not a guaranteed fix for every movement issue. Restart the game after updating; look for [FpsBridge] MOVE_GUARD READY in the log.

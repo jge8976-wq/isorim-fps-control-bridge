@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LanguageData>
+  <FPS_CraftAir_MG762Ammo.label>制作7.62毫米机枪弹药</FPS_CraftAir_MG762Ammo.label>
+  <FPS_CraftAir_HMG127Ammo.label>制作12.7毫米重机枪弹药</FPS_CraftAir_HMG127Ammo.label>
+  <FPS_CraftAir_Cannon30Ammo.label>制作30毫米支援机炮弹药</FPS_CraftAir_Cannon30Ammo.label>
+  <FPS_CraftAir_Rotary20Ammo.label>制作20毫米转管机炮弹药</FPS_CraftAir_Rotary20Ammo.label>
+  <FPS_CraftAir_Grenade40LAmmo.label>制作40毫米轻型榴弹发射器弹药</FPS_CraftAir_Grenade40LAmmo.label>
+  <FPS_CraftAir_Grenade40HAmmo.label>制作40毫米自动榴弹发射器弹药</FPS_CraftAir_Grenade40HAmmo.label>
+  <FPS_CraftAir_Rocket70Ammo.label>制作70毫米支援火箭巢弹药</FPS_CraftAir_Rocket70Ammo.label>
+  <FPS_CraftAir_Rocket80Ammo.label>制作80毫米突击火箭巢弹药</FPS_CraftAir_Rocket80Ammo.label>
+</LanguageData>

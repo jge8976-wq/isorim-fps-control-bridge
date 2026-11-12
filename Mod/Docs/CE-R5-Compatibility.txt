@@ -1,0 +1,20 @@
+ISORIM FPS Control Bridge 0.8.1-r5 — local CE integration / 本地 CE 整合版
+
+中文
+此包为 FPS 本体，不含 CE、载具框架、IsoRim 或其他上游 DLL。
+必装前置延续 About.xml：Harmony、SimpleCameraSetting、Resource Delivery Helper、Perspective Shift、IsoRim Waylith。模型拓展与 CE 均可选；CE 启用时应先于 FPS 加载。只启用一份 FPS。
+
+CE 联动：真实弹药、原生换弹、护甲／伤害；FPS 准星和3D弹道；左键即时起手，原生前摇移入后续恢复；移动换弹；全自动整匣连射；死神之眼锁定部位；霰弹、投掷／爆炸、火箭、即时射线与飞行存读；原生护盾拦截；炮台、载具、坐骑、ProjectZ跨层与迫击炮。普通近战沿用武器原生伤害资料。
+通用修复：按键设置内视角／开镜灵敏度，RimCrow真实工坊目录链接，移动／HUD／鼠标保护。默认灵敏度1倍，范围0.1–5倍。
+
+默认操作：P／鼠标前侧键接管（载具内循环视角），后侧键退出；WASD移动，右键瞄准，左键开火；R换弹，B模式，Tab切武器；载具空格打机枪。自定义键位以游戏内设置为准。CE模式需要匹配的真实弹药，空匣后有弹药时自动换弹。
+
+本地测试：CE 16.7.4.0本身仍声明1.6支持，目前是RimWorld1.7／Waylith试验适配；不是CE官方完整1.7版本。已验证环境另有CE VehiclesCompat的当前载具API适配与ProjectZ条件XML修正。只复制本FPS DLL，不能代替这些上游适配。无CE时无需这些CE专属适配。
+已验证基础与常见弹丸、原生护盾及载具／骑乘／跨层／迫击炮联动；不代表任意第三方CE武器、护盾和全模组组合均已验收。测试助手只在独立靶场使用，正常游戏无需开启。
+
+English
+This is the FPS bridge only. CE, Vehicle Framework, IsoRim and other upstream DLLs are not included. Keep the five prerequisites listed in About.xml; CE and art expansions are optional. Load CE before FPS and enable only one FPS copy.
+With CE: real ammunition, native reload/armour/damage, FPS aim and 3D flight, immediate initial cast with warm-up added to recovery, mobile reloading, sustained automatic fire, Death Eye hit-part targeting, common projectile families, in-flight save/load, native shield interception, and turret/vehicle/mount/upper-floor/mortar integration. Without CE, normal FPS weapon behaviour is retained.
+Also includes configurable normal/scoped sensitivity, valid Workshop directory-link support and movement/HUD/mouse guards.
+Defaults: P/front mouse possess or cycle vehicle views; back mouse exit; WASD move; RMB aim; LMB fire; R reload; B firing mode; Tab weapon; vehicle Space machine gun. Existing saved bindings take precedence. CE requires matching real ammunition.
+The tested CE 16.7.4.0 still declares RimWorld 1.6. Our local RimWorld 1.7/Waylith test environment also uses separate CE VehiclesCompat and ProjectZ adaptations. This FPS DLL alone does not replace those upstream fixes. Arbitrary third-party combinations are not exhaustively validated. The private test helper is unnecessary for normal play.

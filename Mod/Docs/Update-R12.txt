@@ -1,0 +1,48 @@
+R14 空中攻击 骑乘跳跃 建筑耐久
+2026-10-26
+
+本批功能
+1 空中攻击保留起跳水平速度。跳跃、从墙顶或楼层下落期间，开火/挥砍不会因取消奔跑而突然减速。
+  不会在空中凭空获得新的冲刺速度；落地恢复正常地面攻击步速，原有射速、冷却和碰撞保留。
+2 鼠族轻/重骑枪：SYS自定义持枪绘制转入IsoRim捕获/隐藏路径，消除持有时留在地面的原版武器卡片。
+  保留原始朝向和翻转；其它武器、2D模式以及真正掉落在地上的武器不由此规则隐藏。
+3 第一人称近战对建筑和物品按3D接触扣耐久。刺击、连招挥砍、重击都可命中，不需要原生相邻格攻击任务。
+  伤害仍取武器伤害信息，经目标原生受伤/摧毁流程处理；碰到前方遮挡物不会隔墙打到后方对象。
+4 近距离准星停在同一有耐久的物体约0.55秒，右下显示名称、耐久条和当前/最大耐久。
+  查看范围6格，换目标、移开或退出第一人称后收起。不伪造无耐久物体的血条。
+5 靠近并面向己方可骑动物，在2.6格内出现“E上马”。轻按E执行Giddy-Up原生骑乘选项，长按E探头保留。
+  训练、年龄、装备和骑乘开关等资格由Giddy-Up检查，安装Giddy-Up 2 - Continued后可用。
+6 骑乘按Shift冲刺，遇到可跨越的矮掩体/栅栏类障碍可自动跳跃越过。高墙、关闭的门、树木、无安全落点不越过。
+  跳跃期间保持规划水平速度；不改变日常寻路、载具碰撞或其它AI移动。
+7 骑乘按住空格蓄力，松开跳跃。最多1.2秒蓄力，速度与蓄力共同影响距离，最远10格。
+  Shift时显示预计落地点；持近战武器时另显示落地前方践踏扇形范围，蓄力改变范围。
+  跳跃中不改变既定落点；近战骑乘落地保留裂地斩，基础范围3.4格，满蓄力4.2格。
+8 骑手通过IsoRim的Back/SitNoLegs挂点坐在动物背上，坐骑跳跃高度与骑手相机共用高度来源，避免重复抬升。
+  骑乘第一人称显示自身躯干，隐藏自己的头和重复世界武器；肩后/俯视可看完整骑乘组合。
+
+测试入口
+键位可在模组选项中修改，文中E/Shift/空格均指默认绑定。
+
+建议实测顺序
+1 手持鼠族重骑枪，第一人称/肩后/上帝视角各观察持有状态；掉落到地面后仍应显示正常物品。
+2 冲刺起跳后连续开枪/挥砍，比较攻击前后水平位移；落地后正常恢复地面规则。
+3 近战四连招及重击打同一堵墙和一件地面物品，停准星看右下耐久实时更新，打烂后显示消失。
+4 准备己方训练合格的成年马，靠近面向它轻按E；对比长按E不会误上马。
+5 骑乘Shift跨过一格矮掩体，再对高墙/关门检查不会穿过；验证走廊/楼层边界不会被当作安全落点。
+6 Shift+空格分别短按和蓄力，核对预落地点与实际落点；持近战武器验证落地践踏范围。
+7 肩后拍摄人马分离的坐姿；第一人称向下看躯干与马背，开火和开镜确认没有自身头部挡视野。
+
+验证边界
+Release构建通过，无编译警告/错误。186项本批规则/原生绘制/接口检查通过；旧武器86项、交互238项和鼠族绘制8项检查通过。
+离线检查隔离了GPU提交、跳跃地图格服务、Giddy资格提供器、对象伤害工作器等边界；不能代替真实地图碰撞、模型坐姿、屏幕与按键验收。
+本候选未自行启动游戏。模型包、旧分享包、存档和自定义键位均保留。
+
+English
+Airborne attacks retain takeoff movement pace; landing restores normal ground rules. Ratkin lance cards now follow
+the engine capture/hide path without changing other weapons or dropped items. All melee swing contacts can damage
+durable scenery through its damage pipeline. Nearby objects show durability after a 0.55-second crosshair dwell.
+Tap E near a friendly eligible animal to invoke Giddy-Up's native mount option. Hold Shift to sprint and automatically
+hop eligible low cover with a safe landing. Hold Space to charge and release to leap; charge/speed change travel
+distance, capped at 10 cells. Sprinting shows the predicted landing and, with a melee weapon, the forward stomp area.
+The rider uses IsoRim's back attachment rather than stacking sprite/model offsets. In-game visual/input and actual
+map collision acceptance remain pending; offline checks are bounded and do not claim runtime acceptance.

@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <Vehicles.VehicleTurretDef ParentName="FPS_AirVehicleTurretBase">
+    <defName>FPS_Air_BombTrialHE</defName>
+    <label>TEST gravity bomb (HE shell)</label>
+    <description>Private gravity bomb trial. Consumes one high-explosive shell, inherits aircraft velocity, retains native shell impact damage.</description>
+    <turretType>Rotatable</turretType>
+    <projectile>Bullet_Shell_HighExplosive</projectile>
+    <warmUpTimer>0</warmUpTimer>
+    <rotationSpeed>80</rotationSpeed>
+    <reloadTimer>5</reloadTimer>
+    <magazineCapacity>2</magazineCapacity>
+    <chargePerAmmoCount>1</chargePerAmmoCount>
+    <genericAmmo>true</genericAmmo>
+    <autoSnapTargeting>false</autoSnapTargeting>
+    <projectileOffset>1.2</projectileOffset>
+    <maxRange>180</maxRange>
+    <minRange>0</minRange>
+    <shotSound>Click</shotSound>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/AssaultRifle</texPath>
+      <graphicClass>Vehicles.Graphic_Turret</graphicClass>
+      <drawSize>(0.6,0.6)</drawSize>
+    </graphicData>
+    <ammunition>
+      <thingDefs>
+        <li>Shell_HighExplosive</li>
+      </thingDefs>
+    </ammunition>
+    <fireModes>
+      <li>
+        <shotsPerBurst>1</shotsPerBurst>
+        <ticksBetweenShots>30</ticksBetweenShots>
+        <ticksBetweenBursts>30</ticksBetweenBursts>
+        <spreadRadius>0</spreadRadius>
+        <label>Single</label>
+        <texPath>UI/Gizmos/FireRate_Single</texPath>
+      </li>
+    </fireModes>
+    <modExtensions>
+      <li Class="HSK.FpsBridge.AerialWeaponExtension">
+        <kind>Bomb</kind>
+        <quickFire>false</quickFire>
+        <mountFraction>(0.65,0.5,0.2)</mountFraction>
+        <barrels>6</barrels>
+        <barrelRadius>0.22</barrelRadius>
+        <barrelLength>0.6</barrelLength>
+        <scopeTemplate>Rocket</scopeTemplate>
+        <ceAmmoSet>AmmoSet_81mmMortarShell</ceAmmoSet>
+        <lockableMissile>false</lockableMissile>
+        <freeFallBomb>true</freeFallBomb>
+      </li>
+    </modExtensions>
+  </Vehicles.VehicleTurretDef>
+</Defs>

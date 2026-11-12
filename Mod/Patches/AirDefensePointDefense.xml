@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/ThingDef[defName="VFES_Gun_PointDefense"]/verbs/li[not(defaultProjectile)]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/ThingDef[defName="VFES_Gun_PointDefense"]/verbs/li[not(defaultProjectile)]</xpath>
+      <value><defaultProjectile>Bullet_MiniTurret</defaultProjectile></value>
+    </match>
+  </Operation>
+</Patch>

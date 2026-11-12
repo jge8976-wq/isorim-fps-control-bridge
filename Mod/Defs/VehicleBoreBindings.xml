@@ -1,0 +1,678 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_M10_MainBattleTank_Default_leftSmoke_A</defName>
+    <profileDefName>RT3D_RT_M10_MainBattleTank_Default</profileDefName>
+    <turretKey>leftSmoke_A</turretKey>
+    <turretDef>RT_GrenadeLauncherUS_A</turretDef>
+    <parentTurretKey>M35_A</parentTurretKey>
+    <localDirection>(-0.557086463, 0.742779652, 0.371393404)</localDirection>
+    <muzzles>
+      <li>(-1.190000000, 0.830000000, 0.320000000)</li>
+      <li>(-1.280000000, 0.830000000, 0.320000000)</li>
+      <li>(-1.190000000, 0.830000000, 0.160000000)</li>
+      <li>(-1.280000000, 0.830000000, 0.160000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_M10_MainBattleTank_Default_rightSmoke_A</defName>
+    <profileDefName>RT3D_RT_M10_MainBattleTank_Default</profileDefName>
+    <turretKey>rightSmoke_A</turretKey>
+    <turretDef>RT_GrenadeLauncherUS_A</turretDef>
+    <parentTurretKey>M35_A</parentTurretKey>
+    <localDirection>(0.557086463, 0.742779652, 0.371393404)</localDirection>
+    <muzzles>
+      <li>(1.190000000, 0.830000000, 0.320000000)</li>
+      <li>(1.280000000, 0.830000000, 0.320000000)</li>
+      <li>(1.190000000, 0.830000000, 0.160000000)</li>
+      <li>(1.280000000, 0.830000000, 0.160000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_M1A2SEP_MainBattleTank_Default_leftSmoke_A</defName>
+    <profileDefName>RT3D_RT_M1A2SEP_MainBattleTank_Default</profileDefName>
+    <turretKey>leftSmoke_A</turretKey>
+    <turretDef>RT_GrenadeLauncherUS_A</turretDef>
+    <parentTurretKey>M256_A</parentTurretKey>
+    <localDirection>(-0.557086463, 0.742779652, 0.371393404)</localDirection>
+    <muzzles>
+      <li>(-1.490000000, 0.830000000, 0.320000000)</li>
+      <li>(-1.580000000, 0.830000000, 0.320000000)</li>
+      <li>(-1.490000000, 0.830000000, 0.160000000)</li>
+      <li>(-1.580000000, 0.830000000, 0.160000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_M1A2SEP_MainBattleTank_Default_rightSmoke_A</defName>
+    <profileDefName>RT3D_RT_M1A2SEP_MainBattleTank_Default</profileDefName>
+    <turretKey>rightSmoke_A</turretKey>
+    <turretDef>RT_GrenadeLauncherUS_A</turretDef>
+    <parentTurretKey>M256_A</parentTurretKey>
+    <localDirection>(0.557086463, 0.742779652, 0.371393404)</localDirection>
+    <muzzles>
+      <li>(1.490000000, 0.830000000, 0.320000000)</li>
+      <li>(1.580000000, 0.830000000, 0.320000000)</li>
+      <li>(1.490000000, 0.830000000, 0.160000000)</li>
+      <li>(1.580000000, 0.830000000, 0.160000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_M1A2SEP_MainBattleTank_TUSK_leftSmoke_B</defName>
+    <profileDefName>RT3D_RT_M1A2SEP_MainBattleTank_TUSK</profileDefName>
+    <turretKey>leftSmoke_B</turretKey>
+    <turretDef>RT_GrenadeLauncherUS_A</turretDef>
+    <parentTurretKey>M256_B</parentTurretKey>
+    <localDirection>(-0.557086463, 0.742779652, 0.371393404)</localDirection>
+    <muzzles>
+      <li>(-1.490000000, 0.830000000, 0.320000000)</li>
+      <li>(-1.580000000, 0.830000000, 0.320000000)</li>
+      <li>(-1.490000000, 0.830000000, 0.160000000)</li>
+      <li>(-1.580000000, 0.830000000, 0.160000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_M1A2SEP_MainBattleTank_TUSK_rightSmoke_B</defName>
+    <profileDefName>RT3D_RT_M1A2SEP_MainBattleTank_TUSK</profileDefName>
+    <turretKey>rightSmoke_B</turretKey>
+    <turretDef>RT_GrenadeLauncherUS_A</turretDef>
+    <parentTurretKey>M256_B</parentTurretKey>
+    <localDirection>(0.557086463, 0.742779652, 0.371393404)</localDirection>
+    <muzzles>
+      <li>(1.490000000, 0.830000000, 0.320000000)</li>
+      <li>(1.580000000, 0.830000000, 0.320000000)</li>
+      <li>(1.490000000, 0.830000000, 0.160000000)</li>
+      <li>(1.580000000, 0.830000000, 0.160000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_M2A3_Vehicle_Default_leftSmoke_A</defName>
+    <profileDefName>RT3D_RT_M2A3_Vehicle_Default</profileDefName>
+    <turretKey>leftSmoke_A</turretKey>
+    <turretDef>RT_GrenadeLauncherUS_A</turretDef>
+    <parentTurretKey>BushMaster</parentTurretKey>
+    <localDirection>(-0.557086463, 0.742779652, 0.371393404)</localDirection>
+    <muzzles>
+      <li>(-0.830000000, 0.610000000, -0.600000000)</li>
+      <li>(-0.920000000, 0.610000000, -0.600000000)</li>
+      <li>(-0.830000000, 0.610000000, -0.760000000)</li>
+      <li>(-0.920000000, 0.610000000, -0.760000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_M2A3_Vehicle_Default_rightSmoke_A</defName>
+    <profileDefName>RT3D_RT_M2A3_Vehicle_Default</profileDefName>
+    <turretKey>rightSmoke_A</turretKey>
+    <turretDef>RT_GrenadeLauncherUS_A</turretDef>
+    <parentTurretKey>BushMaster</parentTurretKey>
+    <localDirection>(0.557086463, 0.742779652, 0.371393404)</localDirection>
+    <muzzles>
+      <li>(0.830000000, 0.610000000, -0.600000000)</li>
+      <li>(0.920000000, 0.610000000, -0.600000000)</li>
+      <li>(0.830000000, 0.610000000, -0.760000000)</li>
+      <li>(0.920000000, 0.610000000, -0.760000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_M2A3_Vehicle_BUSK_leftSmoke_B</defName>
+    <profileDefName>RT3D_RT_M2A3_Vehicle_BUSK</profileDefName>
+    <turretKey>leftSmoke_B</turretKey>
+    <turretDef>RT_GrenadeLauncherUS_A</turretDef>
+    <parentTurretKey>BushMasterII</parentTurretKey>
+    <localDirection>(-0.557086463, 0.742779652, 0.371393404)</localDirection>
+    <muzzles>
+      <li>(-0.830000000, 0.610000000, -0.600000000)</li>
+      <li>(-0.920000000, 0.610000000, -0.600000000)</li>
+      <li>(-0.830000000, 0.610000000, -0.760000000)</li>
+      <li>(-0.920000000, 0.610000000, -0.760000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_M2A3_Vehicle_BUSK_rightSmoke_B</defName>
+    <profileDefName>RT3D_RT_M2A3_Vehicle_BUSK</profileDefName>
+    <turretKey>rightSmoke_B</turretKey>
+    <turretDef>RT_GrenadeLauncherUS_A</turretDef>
+    <parentTurretKey>BushMasterII</parentTurretKey>
+    <localDirection>(0.557086463, 0.742779652, 0.371393404)</localDirection>
+    <muzzles>
+      <li>(0.830000000, 0.610000000, -0.600000000)</li>
+      <li>(0.920000000, 0.610000000, -0.600000000)</li>
+      <li>(0.830000000, 0.610000000, -0.760000000)</li>
+      <li>(0.920000000, 0.610000000, -0.760000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_BMP3_Vehicle_default_leftSmoke</defName>
+    <profileDefName>RT3D_RT_BMP3_Vehicle_default</profileDefName>
+    <turretKey>leftSmoke</turretKey>
+    <turretDef>RT_GrenadeLauncherBMP</turretDef>
+    <parentTurretKey>2A70</parentTurretKey>
+    <localDirection>(0.000000000, 0.000000000, 1.000000000)</localDirection>
+    <muzzles>
+      <li>(-0.860000000, 0.320000000, 0.500000000)</li>
+      <li>(-0.950000000, 0.345000000, 0.500000000)</li>
+      <li>(-1.040000000, 0.370000000, 0.500000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_BMP3_Vehicle_default_rightSmoke</defName>
+    <profileDefName>RT3D_RT_BMP3_Vehicle_default</profileDefName>
+    <turretKey>rightSmoke</turretKey>
+    <turretDef>RT_GrenadeLauncherBMP</turretDef>
+    <parentTurretKey>2A70</parentTurretKey>
+    <localDirection>(0.000000000, -0.000000000, 1.000000000)</localDirection>
+    <muzzles>
+      <li>(0.860000000, 0.320000000, 0.500000000)</li>
+      <li>(0.950000000, 0.345000000, 0.500000000)</li>
+      <li>(1.040000000, 0.370000000, 0.500000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_T80BVM_MainBattleTank_default_leftSmoke</defName>
+    <profileDefName>RT3D_RT_T80BVM_MainBattleTank_default</profileDefName>
+    <turretKey>leftSmoke</turretKey>
+    <turretDef>RT_GrenadeLauncherRu</turretDef>
+    <parentTurretKey>mainTurret</parentTurretKey>
+    <localDirection>(0.000000000, -0.000000000, 1.000000000)</localDirection>
+    <muzzles>
+      <li>(-1.010000000, 0.340000000, 0.210000000)</li>
+      <li>(-1.100000000, 0.365000000, 0.210000000)</li>
+      <li>(-1.190000000, 0.390000000, 0.210000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_T80BVM_MainBattleTank_default_rightSmoke</defName>
+    <profileDefName>RT3D_RT_T80BVM_MainBattleTank_default</profileDefName>
+    <turretKey>rightSmoke</turretKey>
+    <turretDef>RT_GrenadeLauncherRu</turretDef>
+    <parentTurretKey>mainTurret</parentTurretKey>
+    <localDirection>(0.000000000, 0.000000000, 1.000000000)</localDirection>
+    <muzzles>
+      <li>(1.010000000, 0.340000000, 0.210000000)</li>
+      <li>(1.100000000, 0.365000000, 0.210000000)</li>
+      <li>(1.190000000, 0.390000000, 0.210000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_T90M_MainBattleTank_default_leftSmoke</defName>
+    <profileDefName>RT3D_RT_T90M_MainBattleTank_default</profileDefName>
+    <turretKey>leftSmoke</turretKey>
+    <turretDef>RT_GrenadeLauncherADV</turretDef>
+    <parentTurretKey>mainTurret</parentTurretKey>
+    <localDirection>(0.000000000, -0.000000000, 1.000000000)</localDirection>
+    <muzzles>
+      <li>(-1.010000000, 0.340000000, 0.210000000)</li>
+      <li>(-1.100000000, 0.365000000, 0.210000000)</li>
+      <li>(-1.190000000, 0.390000000, 0.210000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_T90M_MainBattleTank_default_rightSmoke</defName>
+    <profileDefName>RT3D_RT_T90M_MainBattleTank_default</profileDefName>
+    <turretKey>rightSmoke</turretKey>
+    <turretDef>RT_GrenadeLauncherADV</turretDef>
+    <parentTurretKey>mainTurret</parentTurretKey>
+    <localDirection>(0.000000000, 0.000000000, 1.000000000)</localDirection>
+    <muzzles>
+      <li>(1.010000000, 0.340000000, 0.210000000)</li>
+      <li>(1.100000000, 0.365000000, 0.210000000)</li>
+      <li>(1.190000000, 0.390000000, 0.210000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_BMP3_Vehicle_2S38_leftSmokeB</defName>
+    <profileDefName>RT3D_RT_BMP3_Vehicle_2S38</profileDefName>
+    <turretKey>leftSmokeB</turretKey>
+    <turretDef>RT_GrenadeLauncherBMP</turretDef>
+    <parentTurretKey>AU220M</parentTurretKey>
+    <localDirection>(0.000000000, -0.000000000, 1.000000000)</localDirection>
+    <muzzles>
+      <li>(-0.550000000, 0.350000000, -0.200000000)</li>
+      <li>(-0.640000000, 0.375000000, -0.200000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_BMP3_Vehicle_2S38_rightSmokeB</defName>
+    <profileDefName>RT3D_RT_BMP3_Vehicle_2S38</profileDefName>
+    <turretKey>rightSmokeB</turretKey>
+    <turretDef>RT_GrenadeLauncherBMP</turretDef>
+    <parentTurretKey>AU220M</parentTurretKey>
+    <localDirection>(0.000000000, 0.000000000, 1.000000000)</localDirection>
+    <muzzles>
+      <li>(0.550000000, 0.350000000, -0.200000000)</li>
+      <li>(0.640000000, 0.375000000, -0.200000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_T90M_MainBattleTank_HeavyERA_leftSmoke</defName>
+    <profileDefName>RT3D_RT_T90M_MainBattleTank_HeavyERA</profileDefName>
+    <turretKey>leftSmoke</turretKey>
+    <turretDef>RT_GrenadeLauncherADV</turretDef>
+    <parentTurretKey>mainTurret</parentTurretKey>
+    <localDirection>(0.000000000, -0.000000000, 1.000000000)</localDirection>
+    <muzzles>
+      <li>(-1.010000000, 0.340000000, 0.210000000)</li>
+      <li>(-1.100000000, 0.365000000, 0.210000000)</li>
+      <li>(-1.190000000, 0.390000000, 0.210000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_T90M_MainBattleTank_HeavyERA_rightSmoke</defName>
+    <profileDefName>RT3D_RT_T90M_MainBattleTank_HeavyERA</profileDefName>
+    <turretKey>rightSmoke</turretKey>
+    <turretDef>RT_GrenadeLauncherADV</turretDef>
+    <parentTurretKey>mainTurret</parentTurretKey>
+    <localDirection>(0.000000000, 0.000000000, 1.000000000)</localDirection>
+    <muzzles>
+      <li>(1.010000000, 0.340000000, 0.210000000)</li>
+      <li>(1.100000000, 0.365000000, 0.210000000)</li>
+      <li>(1.190000000, 0.390000000, 0.210000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_BTR80_Vehicle_Default_SmokeC</defName>
+    <profileDefName>RT3D_RT_BTR80_Vehicle_Default</profileDefName>
+    <turretKey>SmokeC</turretKey>
+    <turretDef>RT_GrenadeLauncherBTR</turretDef>
+    <parentTurretKey>KPVT</parentTurretKey>
+    <localDirection>(-0.381580595, 0.699556546, 0.604166276)</localDirection>
+    <muzzles>
+      <li>(-0.120000000, 0.480000000, 0.060000000)</li>
+      <li>(-0.120000000, 0.480000000, -0.100000000)</li>
+      <li>(-0.120000000, 0.480000000, -0.260000000)</li>
+      <li>(-0.120000000, 0.480000000, -0.420000000)</li>
+      <li>(-0.120000000, 0.480000000, -0.580000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_BTR80_Vehicle_BTR80A_leftSmoke</defName>
+    <profileDefName>RT3D_RT_BTR80_Vehicle_BTR80A</profileDefName>
+    <turretKey>leftSmoke</turretKey>
+    <turretDef>RT_GrenadeLauncherBTR</turretDef>
+    <parentTurretKey>2A72A</parentTurretKey>
+    <localDirection>(-0.381580595, 0.699556546, 0.604166276)</localDirection>
+    <muzzles>
+      <li>(-0.640000000, 0.410000000, 0.230000000)</li>
+      <li>(-0.640000000, 0.410000000, 0.070000000)</li>
+      <li>(-0.640000000, 0.410000000, -0.090000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_BTR80_Vehicle_BTR80A_rightSmoke</defName>
+    <profileDefName>RT3D_RT_BTR80_Vehicle_BTR80A</profileDefName>
+    <turretKey>rightSmoke</turretKey>
+    <turretDef>RT_GrenadeLauncherBTR</turretDef>
+    <parentTurretKey>2A72A</parentTurretKey>
+    <localDirection>(0.381580595, 0.699556546, 0.604166276)</localDirection>
+    <muzzles>
+      <li>(0.640000000, 0.410000000, 0.230000000)</li>
+      <li>(0.640000000, 0.410000000, 0.070000000)</li>
+      <li>(0.640000000, 0.410000000, -0.090000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_Boomerang_Vehicle_Default_BOKornetL</defName>
+    <profileDefName>RT3D_RT_Boomerang_Vehicle_Default</profileDefName>
+    <turretKey>BOKornetL</turretKey>
+    <turretDef>RT_Kornet_Turret</turretDef>
+    <parentTurretKey>Apoch57</parentTurretKey>
+    <localDirection>(0.000000000, 0.000000000, 1.000000000)</localDirection>
+    <muzzles>
+      <li>(-0.905000000, 0.350000000, 0.730000000)</li>
+      <li>(-1.095000000, 0.350000000, 0.730000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_Boomerang_Vehicle_Default_BOKornetR</defName>
+    <profileDefName>RT3D_RT_Boomerang_Vehicle_Default</profileDefName>
+    <turretKey>BOKornetR</turretKey>
+    <turretDef>RT_Kornet_Turret</turretDef>
+    <parentTurretKey>Apoch57</parentTurretKey>
+    <localDirection>(0.000000000, 0.000000000, 1.000000000)</localDirection>
+    <muzzles>
+      <li>(0.905000000, 0.350000000, 0.730000000)</li>
+      <li>(1.095000000, 0.350000000, 0.730000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_Boomerang_Vehicle_Default_leftSmoke</defName>
+    <profileDefName>RT3D_RT_Boomerang_Vehicle_Default</profileDefName>
+    <turretKey>leftSmoke</turretKey>
+    <turretDef>RT_GrenadeLauncherADV</turretDef>
+    <parentTurretKey>Apoch57</parentTurretKey>
+    <localDirection>(-0.381580595, 0.699556546, 0.604166276)</localDirection>
+    <muzzles>
+      <li>(-0.640000000, 0.620000000, -0.250000000)</li>
+      <li>(-0.640000000, 0.620000000, -0.410000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_Boomerang_Vehicle_Default_rightSmoke</defName>
+    <profileDefName>RT3D_RT_Boomerang_Vehicle_Default</profileDefName>
+    <turretKey>rightSmoke</turretKey>
+    <turretDef>RT_GrenadeLauncherADV</turretDef>
+    <parentTurretKey>Apoch57</parentTurretKey>
+    <localDirection>(0.381580595, 0.699556546, 0.604166276)</localDirection>
+    <muzzles>
+      <li>(0.640000000, 0.620000000, -0.250000000)</li>
+      <li>(0.640000000, 0.620000000, -0.410000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_Boomerang_Vehicle_2S25_leftSmoke</defName>
+    <profileDefName>RT3D_RT_Boomerang_Vehicle_2S25</profileDefName>
+    <turretKey>leftSmoke</turretKey>
+    <turretDef>RT_GrenadeLauncherADV</turretDef>
+    <parentTurretKey>2S25</parentTurretKey>
+    <localDirection>(-0.381580595, 0.699556546, 0.604166276)</localDirection>
+    <muzzles>
+      <li>(-0.940000000, 0.590000000, 0.380000000)</li>
+      <li>(-0.940000000, 0.590000000, 0.220000000)</li>
+      <li>(-0.940000000, 0.590000000, 0.060000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_Boomerang_Vehicle_2S25_rightSmoke</defName>
+    <profileDefName>RT3D_RT_Boomerang_Vehicle_2S25</profileDefName>
+    <turretKey>rightSmoke</turretKey>
+    <turretDef>RT_GrenadeLauncherADV</turretDef>
+    <parentTurretKey>2S25</parentTurretKey>
+    <localDirection>(0.381580595, 0.699556546, 0.604166276)</localDirection>
+    <muzzles>
+      <li>(0.940000000, 0.590000000, 0.380000000)</li>
+      <li>(0.940000000, 0.590000000, 0.220000000)</li>
+      <li>(0.940000000, 0.590000000, 0.060000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_Kurganets25_Vehicle_Default_leftSmoke</defName>
+    <profileDefName>RT3D_RT_Kurganets25_Vehicle_Default</profileDefName>
+    <turretKey>leftSmoke</turretKey>
+    <turretDef>RT_GrenadeLauncherADV</turretDef>
+    <parentTurretKey />
+    <localDirection>(-0.381578401, 0.699559836, 0.604163852)</localDirection>
+    <muzzles>
+      <li>(-1.269999167, 2.386486667, -0.100000000)</li>
+      <li>(-1.269999167, 2.386486667, -0.260000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_Kurganets25_Vehicle_Default_rightSmoke</defName>
+    <profileDefName>RT3D_RT_Kurganets25_Vehicle_Default</profileDefName>
+    <turretKey>rightSmoke</turretKey>
+    <turretDef>RT_GrenadeLauncherADV</turretDef>
+    <parentTurretKey />
+    <localDirection>(0.381578401, 0.699559836, 0.604163852)</localDirection>
+    <muzzles>
+      <li>(1.269999167, 2.386486667, -0.100000000)</li>
+      <li>(1.269999167, 2.386486667, -0.260000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_Kurganets25_Vehicle_EpochAlmaty_leftSmoke</defName>
+    <profileDefName>RT3D_RT_Kurganets25_Vehicle_EpochAlmaty</profileDefName>
+    <turretKey>leftSmoke</turretKey>
+    <turretDef>RT_GrenadeLauncherADV</turretDef>
+    <parentTurretKey />
+    <localDirection>(-0.381578401, 0.699559836, 0.604163852)</localDirection>
+    <muzzles>
+      <li>(-1.269999167, 2.386486667, -0.100000000)</li>
+      <li>(-1.269999167, 2.386486667, -0.260000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_Kurganets25_Vehicle_EpochAlmaty_rightSmoke</defName>
+    <profileDefName>RT3D_RT_Kurganets25_Vehicle_EpochAlmaty</profileDefName>
+    <turretKey>rightSmoke</turretKey>
+    <turretDef>RT_GrenadeLauncherADV</turretDef>
+    <parentTurretKey />
+    <localDirection>(0.381578401, 0.699559836, 0.604163852)</localDirection>
+    <muzzles>
+      <li>(1.269999167, 2.386486667, -0.100000000)</li>
+      <li>(1.269999167, 2.386486667, -0.260000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_Kurganets25_Vehicle_EpochAlmaty_EAKornetL</defName>
+    <profileDefName>RT3D_RT_Kurganets25_Vehicle_EpochAlmaty</profileDefName>
+    <turretKey>EAKornetL</turretKey>
+    <turretDef>RT_Kornet_Turret</turretDef>
+    <parentTurretKey>EpochAlmaty</parentTurretKey>
+    <localDirection>(0.000000000, 0.000000000, 1.000000000)</localDirection>
+    <muzzles>
+      <li>(-0.905000000, 0.350000000, 0.730000000)</li>
+      <li>(-1.095000000, 0.350000000, 0.730000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_Kurganets25_Vehicle_EpochAlmaty_EAKornetR</defName>
+    <profileDefName>RT3D_RT_Kurganets25_Vehicle_EpochAlmaty</profileDefName>
+    <turretKey>EAKornetR</turretKey>
+    <turretDef>RT_Kornet_Turret</turretDef>
+    <parentTurretKey>EpochAlmaty</parentTurretKey>
+    <localDirection>(0.000000000, 0.000000000, 1.000000000)</localDirection>
+    <muzzles>
+      <li>(0.905000000, 0.350000000, 0.730000000)</li>
+      <li>(1.095000000, 0.350000000, 0.730000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_Kurganets25_Vehicle_Baikal_leftSmoke</defName>
+    <profileDefName>RT3D_RT_Kurganets25_Vehicle_Baikal</profileDefName>
+    <turretKey>leftSmoke</turretKey>
+    <turretDef>RT_GrenadeLauncherADV</turretDef>
+    <parentTurretKey />
+    <localDirection>(-0.381578401, 0.699559836, 0.604163852)</localDirection>
+    <muzzles>
+      <li>(-1.269999167, 2.386486667, -0.100000000)</li>
+      <li>(-1.269999167, 2.386486667, -0.260000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_Kurganets25_Vehicle_Baikal_rightSmoke</defName>
+    <profileDefName>RT3D_RT_Kurganets25_Vehicle_Baikal</profileDefName>
+    <turretKey>rightSmoke</turretKey>
+    <turretDef>RT_GrenadeLauncherADV</turretDef>
+    <parentTurretKey />
+    <localDirection>(0.381578401, 0.699559836, 0.604163852)</localDirection>
+    <muzzles>
+      <li>(1.269999167, 2.386486667, -0.100000000)</li>
+      <li>(1.269999167, 2.386486667, -0.260000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_Kurganets25_Vehicle_Baikal_BaikalKornet</defName>
+    <profileDefName>RT3D_RT_Kurganets25_Vehicle_Baikal</profileDefName>
+    <turretKey>BaikalKornet</turretKey>
+    <turretDef>RT_Kornet_Turret</turretDef>
+    <parentTurretKey>Baikal</parentTurretKey>
+    <localDirection>(0.000000000, -0.000000000, 1.000000000)</localDirection>
+    <muzzles>
+      <li>(0.905000000, 0.410000000, 0.680000000)</li>
+      <li>(1.095000000, 0.410000000, 0.680000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_T14_MainBattleTank_Default_leftSmokeA</defName>
+    <profileDefName>RT3D_RT_T14_MainBattleTank_Default</profileDefName>
+    <turretKey>leftSmokeA</turretKey>
+    <turretDef>RT_GrenadeLauncherRuNG</turretDef>
+    <parentTurretKey>2A82</parentTurretKey>
+    <localDirection>(-0.381580595, 0.699556546, 0.604166276)</localDirection>
+    <muzzles>
+      <li>(-0.940000000, 0.590000000, 0.380000000)</li>
+      <li>(-0.940000000, 0.590000000, 0.220000000)</li>
+      <li>(-0.940000000, 0.590000000, 0.060000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_T14_MainBattleTank_Default_rightSmokeA</defName>
+    <profileDefName>RT3D_RT_T14_MainBattleTank_Default</profileDefName>
+    <turretKey>rightSmokeA</turretKey>
+    <turretDef>RT_GrenadeLauncherRuNG</turretDef>
+    <parentTurretKey>2A82</parentTurretKey>
+    <localDirection>(0.381580595, 0.699556546, 0.604166276)</localDirection>
+    <muzzles>
+      <li>(0.940000000, 0.590000000, 0.380000000)</li>
+      <li>(0.940000000, 0.590000000, 0.220000000)</li>
+      <li>(0.940000000, 0.590000000, 0.060000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_T14_MainBattleTank_2A83_leftSmokeB</defName>
+    <profileDefName>RT3D_RT_T14_MainBattleTank_2A83</profileDefName>
+    <turretKey>leftSmokeB</turretKey>
+    <turretDef>RT_GrenadeLauncherRuNG</turretDef>
+    <parentTurretKey>2A83</parentTurretKey>
+    <localDirection>(-0.381580595, 0.699556546, 0.604166276)</localDirection>
+    <muzzles>
+      <li>(-0.940000000, 0.590000000, 0.380000000)</li>
+      <li>(-0.940000000, 0.590000000, 0.220000000)</li>
+      <li>(-0.940000000, 0.590000000, 0.060000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_T14_MainBattleTank_2A83_rightSmokeB</defName>
+    <profileDefName>RT3D_RT_T14_MainBattleTank_2A83</profileDefName>
+    <turretKey>rightSmokeB</turretKey>
+    <turretDef>RT_GrenadeLauncherRuNG</turretDef>
+    <parentTurretKey>2A83</parentTurretKey>
+    <localDirection>(0.381580595, 0.699556546, 0.604166276)</localDirection>
+    <muzzles>
+      <li>(0.940000000, 0.590000000, 0.380000000)</li>
+      <li>(0.940000000, 0.590000000, 0.220000000)</li>
+      <li>(0.940000000, 0.590000000, 0.060000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_T15_Vehicle_Default_KornetL</defName>
+    <profileDefName>RT3D_RT_T15_Vehicle_Default</profileDefName>
+    <turretKey>KornetL</turretKey>
+    <turretDef>RT_T15_Kornet_Turret</turretDef>
+    <parentTurretKey>MainTurret</parentTurretKey>
+    <localDirection>(0.000000000, 0.000000000, 1.000000000)</localDirection>
+    <muzzles>
+      <li>(-0.905000000, 0.350000000, 0.730000000)</li>
+      <li>(-1.095000000, 0.350000000, 0.730000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_T15_Vehicle_Default_KornetR</defName>
+    <profileDefName>RT3D_RT_T15_Vehicle_Default</profileDefName>
+    <turretKey>KornetR</turretKey>
+    <turretDef>RT_T15_Kornet_Turret</turretDef>
+    <parentTurretKey>MainTurret</parentTurretKey>
+    <localDirection>(0.000000000, 0.000000000, 1.000000000)</localDirection>
+    <muzzles>
+      <li>(0.905000000, 0.350000000, 0.730000000)</li>
+      <li>(1.095000000, 0.350000000, 0.730000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_T15_Vehicle_Default_leftSmoke</defName>
+    <profileDefName>RT3D_RT_T15_Vehicle_Default</profileDefName>
+    <turretKey>leftSmoke</turretKey>
+    <turretDef>RT_GrenadeLauncherRuNG</turretDef>
+    <parentTurretKey />
+    <localDirection>(-0.381579066, 0.699558563, 0.604164906)</localDirection>
+    <muzzles>
+      <li>(-1.269999167, 2.449328333, -0.570000000)</li>
+      <li>(-1.269999167, 2.449328333, -0.730000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_T15_Vehicle_Default_rightSmoke</defName>
+    <profileDefName>RT3D_RT_T15_Vehicle_Default</profileDefName>
+    <turretKey>rightSmoke</turretKey>
+    <turretDef>RT_GrenadeLauncherRuNG</turretDef>
+    <parentTurretKey />
+    <localDirection>(0.381579066, 0.699558563, 0.604164906)</localDirection>
+    <muzzles>
+      <li>(1.269999167, 2.449328333, -0.570000000)</li>
+      <li>(1.269999167, 2.449328333, -0.730000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_T15_Vehicle_Baikal_leftSmoke</defName>
+    <profileDefName>RT3D_RT_T15_Vehicle_Baikal</profileDefName>
+    <turretKey>leftSmoke</turretKey>
+    <turretDef>RT_GrenadeLauncherRuNG</turretDef>
+    <parentTurretKey />
+    <localDirection>(-0.381579066, 0.699558563, 0.604164906)</localDirection>
+    <muzzles>
+      <li>(-1.269999167, 2.449328333, -0.570000000)</li>
+      <li>(-1.269999167, 2.449328333, -0.730000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_T15_Vehicle_Baikal_rightSmoke</defName>
+    <profileDefName>RT3D_RT_T15_Vehicle_Baikal</profileDefName>
+    <turretKey>rightSmoke</turretKey>
+    <turretDef>RT_GrenadeLauncherRuNG</turretDef>
+    <parentTurretKey />
+    <localDirection>(0.381579066, 0.699558563, 0.604164906)</localDirection>
+    <muzzles>
+      <li>(1.269999167, 2.449328333, -0.570000000)</li>
+      <li>(1.269999167, 2.449328333, -0.730000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_T15_Vehicle_Baikal_BaikalKornetNG</defName>
+    <profileDefName>RT3D_RT_T15_Vehicle_Baikal</profileDefName>
+    <turretKey>BaikalKornetNG</turretKey>
+    <turretDef>RT_T15_Kornet_Turret</turretDef>
+    <parentTurretKey>BaikalNG</parentTurretKey>
+    <localDirection>(0.000000000, -0.000000000, 1.000000000)</localDirection>
+    <muzzles>
+      <li>(0.905000000, 0.410000000, 0.680000000)</li>
+      <li>(1.095000000, 0.410000000, 0.680000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_T15_Vehicle_Apoch57_leftSmoke</defName>
+    <profileDefName>RT3D_RT_T15_Vehicle_Apoch57</profileDefName>
+    <turretKey>leftSmoke</turretKey>
+    <turretDef>RT_GrenadeLauncherRuNG</turretDef>
+    <parentTurretKey />
+    <localDirection>(-0.381579066, 0.699558563, 0.604164906)</localDirection>
+    <muzzles>
+      <li>(-1.269999167, 2.449328333, -0.570000000)</li>
+      <li>(-1.269999167, 2.449328333, -0.730000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_T15_Vehicle_Apoch57_rightSmoke</defName>
+    <profileDefName>RT3D_RT_T15_Vehicle_Apoch57</profileDefName>
+    <turretKey>rightSmoke</turretKey>
+    <turretDef>RT_GrenadeLauncherRuNG</turretDef>
+    <parentTurretKey />
+    <localDirection>(0.381579066, 0.699558563, 0.604164906)</localDirection>
+    <muzzles>
+      <li>(1.269999167, 2.449328333, -0.570000000)</li>
+      <li>(1.269999167, 2.449328333, -0.730000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_T15_Vehicle_Apoch57_A57KornetL</defName>
+    <profileDefName>RT3D_RT_T15_Vehicle_Apoch57</profileDefName>
+    <turretKey>A57KornetL</turretKey>
+    <turretDef>RT_T15_Kornet_Turret</turretDef>
+    <parentTurretKey>Apoch57</parentTurretKey>
+    <localDirection>(0.000000000, 0.000000000, 1.000000000)</localDirection>
+    <muzzles>
+      <li>(-0.905000000, 0.350000000, 0.730000000)</li>
+      <li>(-1.095000000, 0.350000000, 0.730000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_Bore_RT3D_RT_T15_Vehicle_Apoch57_A57KornetR</defName>
+    <profileDefName>RT3D_RT_T15_Vehicle_Apoch57</profileDefName>
+    <turretKey>A57KornetR</turretKey>
+    <turretDef>RT_T15_Kornet_Turret</turretDef>
+    <parentTurretKey>Apoch57</parentTurretKey>
+    <localDirection>(0.000000000, 0.000000000, 1.000000000)</localDirection>
+    <muzzles>
+      <li>(0.905000000, 0.350000000, 0.730000000)</li>
+      <li>(1.095000000, 0.350000000, 0.730000000)</li>
+    </muzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+</Defs>

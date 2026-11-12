@@ -1,0 +1,22 @@
+ISORIM FPS Control Bridge — 0.8.1-r4 工坊测试版
+
+灵敏度：选项 → 模组选项 → ISORIM FPS Control Bridge → 按键设置。
+视角灵敏度和开镜灵敏度均为 0.10–5.00 倍，默认 1.00 倍；可单独恢复默认灵敏度。
+调节即时生效，并保存至模组设置。旧设置缺少新字段时保持原手感，不重置按键。
+人物、炮塔、载具采用同一设置，开镜继续按原倍率缩放。
+
+RimCrow：解析 Junction／符号链接及父目录重定向，核对实际工坊项目编号。
+来源日志包含 root（加载路径）、physical（实际路径）和 linked。
+仍检查包 ID、1.7 支持版本以及原有上游方法签名；不硬编码盘符。
+
+验证：27 项规则检查（包含真实 Windows Junction）；24 项移动／鼠标回归。
+游戏原生启动两种模式通过：直接工坊、五个前置通过本地 Junction 加载。
+检查了接管补丁、移动兜底、HUD、右键保护、中键轮盘及灵敏度原生保存读取。
+尚未在群友的 RimCrow 程序中完成进档、实际按键、移动、射击验收。
+
+这是工坊测试版；进档操作仍欢迎反馈。
+
+R4: separate look/aim sliders on the FPS Key bindings tab, neutral defaults, saved settings.
+Accepts directory links pointing to the expected Workshop items, including redirected parents.
+Package/version and upstream API checks remain. Real linked and direct native startup passed.
+Manual controls in the affected user's RimCrow environment still require testing.

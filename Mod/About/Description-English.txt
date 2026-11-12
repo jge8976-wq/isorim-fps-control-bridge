@@ -1,0 +1,34 @@
+[h2]0.8.17[/h2]
+AI fixed-wing aircraft on both sides turn into a 60° forward firing cone, dive into attack runs, and pull out. Pilot skill, handling and distance affect shot spread. Selecting an airborne fixed wing shows its translucent red firing sector. Anti-air muzzle flashes and trajectories use the raised barrel. Compatible CIWS can engage aircraft.
+
+[h1]ISORIM FPS Control Bridge (CE&Vanilla)[/h1]
+[b]Strike Framework flight/control update[/b]
+Direct infantry, turrets, mechanoids and supported vehicles remain in one FPS control mod. This build adds the matching flight API for the separate 3D Strike Framework, retains the held-weapon stability and model work, and integrates the accepted vehicle contact/fixed-wing speed-and-gravity candidate.
+Aircraft use pilot/crew views, weapon optics, ballistic impact prediction and automatic takeoff/landing. Supported fixed wings can taxi, circle a point, brake into a lower speed cap and lose lift at low airspeed. Rotorcraft/pods use hover and vertical controls. In god view the camera stays free and the selected aircraft accepts point orders.
+Space: takeoff/ascend. Rotorcraft/pods: Ctrl descend, double Left Ctrl land. Fixed wing: Left Ctrl brake, L auto land, Shift afterburner. T: orbit/hover point; G: machine gun; Tab: weapon; B: supported modes. Existing saved bindings can override defaults.
+The separate framework provides installed aircraft weapons, enemy raids, parachutes and salvage. It remains optional for the existing infantry/turret game. New scenes were captured using production APIs; physical controls and arbitrary third-party combinations are not fully certified. CE airborne injury was recorded, while airborne kills and ordinary Highwayman CE firing remain unaccepted in this release's showcase checks.
+
+[b]Play RimWorld from inside the battlefield[/b]
+Directly control your own colonists, eligible mechanoids and supported turrets/vehicles. Walk, sprint, crouch, go prone, slide, jump, cross low cover, climb walls and rocks, reach rooftops, and use supported stairs, ladders and elevators. Manual movement and combat coexist with native colony jobs and interactions.
+
+[b]Combat and freedom[/b]
+3D projectile flight, drop, ricochets, penetration through layered obstacles, body-part/model hits, damage feedback, suppression, injury effects and destructible cover. Iron sights and scopes, firing modes, reloads, weapon switching, melee swings and thrusts based on weapon reach, grenade throws and bounces. Explosive, pulse and other supported special weapons retain their own firing behaviour. Model packs are separate appearance add-ons.
+Mark targets, use the hold-middle-click interaction wheel for native jobs, switch to automatic work, work nearby, pick up and use inventory items, eat, take medicine, tend yourself or nearby allies, and see use progress/hand animations. Mounted movement, charge impacts and jump/slam features require the supported Giddy-Up integration. Optional Ratkin models use smaller camera height, offhand shields and supported model-top movement.
+
+[b]Turrets, artillery and vehicles[/b]
+Approach and interact with supported friendly turrets, or use supported remote control. Cycle nearby turret positions. Mortars and rockets offer a top-down artillery map with target selection, trajectory, dispersion and Alt lead assistance, a rear aiming view and quick loading. Supported vehicles offer crew perspectives, driving, main/secondary fire, machine-gun shortcuts, optics, status HUDs and ballistic prediction. The matching flight API is now included; aircraft armament upgrades, hostile raids, rescue and recovery are supplied by the separate ISORIM 3D Strike Framework.
+
+[b]Skills[/b]
+Sandevistan and Death Eye provide direct-control combat abilities with optional combat music. Native pawn abilities and supported mod abilities remain available through the ability bar. Not every third-party weapon, ability or vehicle is fully adapted.
+
+[b]CE and vanilla[/b]
+One build detects Combat Extended automatically. CE retains real ammo, native loading, armour and damage with FPS flight, immediate casts, mobile reloads, sustained automatic fire and Death Eye targeting. Without CE, the existing FPS/virtual-magazine system remains available. CE 1.6 on RimWorld 1.7 is experimental; vehicle/ProjectZ testing uses separate upstream adaptations not bundled here. Model packs do not supply missing third-party CE balance data.
+
+[b]Default controls — configurable in Mod Settings[/b]
+Front mouse side button / P: enter FPS or cycle supported views. Back mouse side button: god view / return. WASD: move. Mouse: look. Left Shift: toggle sprint. Left Ctrl: crouch; while sprinting, slide. Z: prone. Space: jump / cross low cover. Double Space: climb walls, rocks and roofs.
+LMB: fire / throw / melee. RMB: iron sights, scope toggle or heavy melee. Double RMB and hold the second press: melee sweep (Melee 5+). Q / hold E: lean; tap E: context interaction. Tab: weapons. B: supported firing modes. R: reload. I: inventory. Wheel: inventory selection or scope zoom. Enter: use selected item. J: quick tend.
+H: automatic work; ordinary control input takes over. Hold F: nearby manual work. Tap MMB: mark; hold about 0.3s: interaction wheel. T: social menu. F6: Sandevistan. F7: Death Eye. 1–9: ordinary abilities; 0: ability page. Alt: toggle hit volumes. Alt+1–4: game speed. Tilde: release/capture cursor. Esc: close/cancel.
+Turrets: Q/E cycles nearby positions; F/front side button leaves supported emplacements. Artillery: LMB fires; Tab changes map/rear view; wheel adjusts height/elevation; Shift+wheel fine adjustment; Alt shows lead aid; R loads. Vehicles: Tab switches weapons, B changes supported modes, G fires the machine gun, RMB uses the gunner optic. Mech G: supported special action; Lancer RMB charges while aiming.
+
+Requires the listed RimWorld 1.7 / IsoRim Waylith prerequisites. Optional source mods are required for their corresponding integrations. Cover art is promotional concept art, not a game screenshot.
+[url=https://steamcommunity.com/sharedfiles/filedetails/?id=3833895567]ISORIM 3D Strike Framework[/url]

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <FPS_AirblastStress.label>空爆冲击变形</FPS_AirblastStress.label>
+  <FPS_AirblastStress.deathMessage>{0} 因空爆冲击造成的机体变形而死亡。</FPS_AirblastStress.deathMessage>
+</LanguageData>

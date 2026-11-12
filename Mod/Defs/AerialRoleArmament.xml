@@ -1,0 +1,749 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ThingDef ParentName="ResourceBase">
+    <defName>FPS_AirAmmo_MG762Round</defName>
+    <label>7.62mm machine gun ammunition</label>
+    <description>Ammunition for first-person aircraft equipment. In CE mode use the corresponding native CE caliber.</description>
+    <stackLimit>500</stackLimit>
+    <projectileWhenLoaded>FPS_AirBullet_MG762Projectile</projectileWhenLoaded>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/AssaultRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Mass>0.03</Mass>
+      <MarketValue>1</MarketValue>
+    </statBases>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>FPS_AirBullet_MG762Projectile</defName>
+    <label>7.62mm machine gun projectile</label>
+    <thingClass>Bullet</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>12</damageAmountBase>
+      <armorPenetrationBase>0.2</armorPenetrationBase>
+      <speed>180</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="ResourceBase">
+    <defName>FPS_AirAmmo_HMG127Round</defName>
+    <label>12.7mm heavy machine gun ammunition</label>
+    <description>Ammunition for first-person aircraft equipment. In CE mode use the corresponding native CE caliber.</description>
+    <stackLimit>500</stackLimit>
+    <projectileWhenLoaded>FPS_AirBullet_HMG127Projectile</projectileWhenLoaded>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/AssaultRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Mass>0.03</Mass>
+      <MarketValue>1</MarketValue>
+    </statBases>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>FPS_AirBullet_HMG127Projectile</defName>
+    <label>12.7mm heavy machine gun projectile</label>
+    <thingClass>Bullet</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>22</damageAmountBase>
+      <armorPenetrationBase>0.4</armorPenetrationBase>
+      <speed>200</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="ResourceBase">
+    <defName>FPS_AirAmmo_Cannon30Round</defName>
+    <label>30mm support autocannon ammunition</label>
+    <description>Ammunition for first-person aircraft equipment. In CE mode use the corresponding native CE caliber.</description>
+    <stackLimit>500</stackLimit>
+    <projectileWhenLoaded>FPS_AirBullet_Cannon30Projectile</projectileWhenLoaded>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/AssaultRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Mass>0.2</Mass>
+      <MarketValue>5</MarketValue>
+    </statBases>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>FPS_AirBullet_Cannon30Projectile</defName>
+    <label>30mm support autocannon projectile</label>
+    <thingClass>Projectile_Explosive</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bomb</damageDef>
+      <damageAmountBase>38</damageAmountBase>
+      <armorPenetrationBase>0.65</armorPenetrationBase>
+      <speed>160</speed>
+      <explosionRadius>1.1</explosionRadius>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="ResourceBase">
+    <defName>FPS_AirAmmo_Rotary20Round</defName>
+    <label>20mm rotary cannon ammunition</label>
+    <description>Ammunition for first-person aircraft equipment. In CE mode use the corresponding native CE caliber.</description>
+    <stackLimit>500</stackLimit>
+    <projectileWhenLoaded>FPS_AirBullet_Rotary20Projectile</projectileWhenLoaded>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/AssaultRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Mass>0.2</Mass>
+      <MarketValue>5</MarketValue>
+    </statBases>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>FPS_AirBullet_Rotary20Projectile</defName>
+    <label>20mm rotary cannon projectile</label>
+    <thingClass>Projectile_Explosive</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bomb</damageDef>
+      <damageAmountBase>27</damageAmountBase>
+      <armorPenetrationBase>0.5</armorPenetrationBase>
+      <speed>210</speed>
+      <explosionRadius>0.65</explosionRadius>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="ResourceBase">
+    <defName>FPS_AirAmmo_Grenade40LRound</defName>
+    <label>40mm light grenade launcher ammunition</label>
+    <description>Ammunition for first-person aircraft equipment. In CE mode use the corresponding native CE caliber.</description>
+    <stackLimit>500</stackLimit>
+    <projectileWhenLoaded>FPS_AirBullet_Grenade40LProjectile</projectileWhenLoaded>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/AssaultRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Mass>0.5</Mass>
+      <MarketValue>5</MarketValue>
+    </statBases>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>FPS_AirBullet_Grenade40LProjectile</defName>
+    <label>40mm light grenade launcher projectile</label>
+    <thingClass>Projectile_Explosive</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bomb</damageDef>
+      <damageAmountBase>40</damageAmountBase>
+      <armorPenetrationBase>0.15</armorPenetrationBase>
+      <speed>40</speed>
+      <explosionRadius>2</explosionRadius>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="ResourceBase">
+    <defName>FPS_AirAmmo_Grenade40HRound</defName>
+    <label>40mm automatic grenade launcher ammunition</label>
+    <description>Ammunition for first-person aircraft equipment. In CE mode use the corresponding native CE caliber.</description>
+    <stackLimit>500</stackLimit>
+    <projectileWhenLoaded>FPS_AirBullet_Grenade40HProjectile</projectileWhenLoaded>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/AssaultRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Mass>0.5</Mass>
+      <MarketValue>5</MarketValue>
+    </statBases>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>FPS_AirBullet_Grenade40HProjectile</defName>
+    <label>40mm automatic grenade launcher projectile</label>
+    <thingClass>Projectile_Explosive</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bomb</damageDef>
+      <damageAmountBase>48</damageAmountBase>
+      <armorPenetrationBase>0.2</armorPenetrationBase>
+      <speed>55</speed>
+      <explosionRadius>2.4</explosionRadius>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="ResourceBase">
+    <defName>FPS_AirAmmo_Rocket70Round</defName>
+    <label>70mm support rocket pod ammunition</label>
+    <description>Ammunition for first-person aircraft equipment. In CE mode use the corresponding native CE caliber.</description>
+    <stackLimit>500</stackLimit>
+    <projectileWhenLoaded>FPS_AirBullet_Rocket70Projectile</projectileWhenLoaded>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/AssaultRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Mass>2</Mass>
+      <MarketValue>5</MarketValue>
+    </statBases>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>FPS_AirBullet_Rocket70Projectile</defName>
+    <label>70mm support rocket pod projectile</label>
+    <thingClass>Projectile_Explosive</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bomb</damageDef>
+      <damageAmountBase>85</damageAmountBase>
+      <armorPenetrationBase>0.4</armorPenetrationBase>
+      <speed>100</speed>
+      <explosionRadius>3</explosionRadius>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="ResourceBase">
+    <defName>FPS_AirAmmo_Rocket80Round</defName>
+    <label>80mm strike rocket pod ammunition</label>
+    <description>Ammunition for first-person aircraft equipment. In CE mode use the corresponding native CE caliber.</description>
+    <stackLimit>500</stackLimit>
+    <projectileWhenLoaded>FPS_AirBullet_Rocket80Projectile</projectileWhenLoaded>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/AssaultRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Mass>2</Mass>
+      <MarketValue>5</MarketValue>
+    </statBases>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>FPS_AirBullet_Rocket80Projectile</defName>
+    <label>80mm strike rocket pod projectile</label>
+    <thingClass>Projectile_Explosive</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bomb</damageDef>
+      <damageAmountBase>110</damageAmountBase>
+      <armorPenetrationBase>0.6</armorPenetrationBase>
+      <speed>110</speed>
+      <explosionRadius>3.5</explosionRadius>
+    </projectile>
+  </ThingDef>
+  <Vehicles.VehicleTurretDef ParentName="FPS_AirVehicleTurretBase">
+    <defName>FPS_Air_VVE_Frog_MG762</defName>
+    <label>7.62mm machine gun</label>
+    <description>Role-specific aircraft equipment. CE keeps its native ammunition and impact damage.</description>
+    <turretType>Rotatable</turretType>
+    <projectile>FPS_AirBullet_MG762Projectile</projectile>
+    <warmUpTimer>0</warmUpTimer>
+    <rotationSpeed>80</rotationSpeed>
+    <reloadTimer>3</reloadTimer>
+    <magazineCapacity>100</magazineCapacity>
+    <chargePerAmmoCount>1</chargePerAmmoCount>
+    <genericAmmo>true</genericAmmo>
+    <autoSnapTargeting>false</autoSnapTargeting>
+    <projectileOffset>1.2</projectileOffset>
+    <maxRange>140</maxRange>
+    <minRange>0</minRange>
+    <shotSound>Shot_AssaultRifle</shotSound>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/AssaultRifle</texPath>
+      <graphicClass>Vehicles.Graphic_Turret</graphicClass>
+      <drawSize>(0.6,0.6)</drawSize>
+    </graphicData>
+    <ammunition>
+      <thingDefs>
+        <li>FPS_AirAmmo_MG762Round</li>
+      </thingDefs>
+    </ammunition>
+    <fireModes>
+      <li>
+        <shotsPerBurst>10</shotsPerBurst>
+        <ticksBetweenShots>6</ticksBetweenShots>
+        <ticksBetweenBursts>6</ticksBetweenBursts>
+        <spreadRadius>0</spreadRadius>
+        <label>Automatic</label>
+        <texPath>UI/Gizmos/FireRate_Single</texPath>
+      </li>
+    </fireModes>
+    <modExtensions>
+      <li Class="HSK.FpsBridge.AerialWeaponExtension">
+        <kind>Gun</kind>
+        <quickFire>true</quickFire>
+        <mountFraction>(-0.55,0.55,0.7)</mountFraction>
+        <barrels>1</barrels>
+        <barrelRadius>0.07</barrelRadius>
+        <barrelLength>0.65</barrelLength>
+        <scopeTemplate>MachineGun</scopeTemplate>
+        <ceAmmoSet>AmmoSet_762x51mmNATO</ceAmmoSet>
+      </li>
+    </modExtensions>
+  </Vehicles.VehicleTurretDef>
+  <Vehicles.VehicleTurretDef ParentName="FPS_AirVehicleTurretBase">
+    <defName>FPS_Air_VVE_Frog_Grenade40L</defName>
+    <label>40mm light grenade launcher</label>
+    <description>Role-specific aircraft equipment. CE keeps its native ammunition and impact damage.</description>
+    <turretType>Rotatable</turretType>
+    <projectile>FPS_AirBullet_Grenade40LProjectile</projectile>
+    <warmUpTimer>0</warmUpTimer>
+    <rotationSpeed>80</rotationSpeed>
+    <reloadTimer>4</reloadTimer>
+    <magazineCapacity>4</magazineCapacity>
+    <chargePerAmmoCount>1</chargePerAmmoCount>
+    <genericAmmo>true</genericAmmo>
+    <autoSnapTargeting>false</autoSnapTargeting>
+    <projectileOffset>1.2</projectileOffset>
+    <maxRange>140</maxRange>
+    <minRange>0</minRange>
+    <shotSound>ThumpCannon_Fire</shotSound>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/AssaultRifle</texPath>
+      <graphicClass>Vehicles.Graphic_Turret</graphicClass>
+      <drawSize>(0.6,0.6)</drawSize>
+    </graphicData>
+    <ammunition>
+      <thingDefs>
+        <li>FPS_AirAmmo_Grenade40LRound</li>
+      </thingDefs>
+    </ammunition>
+    <fireModes>
+      <li>
+        <shotsPerBurst>1</shotsPerBurst>
+        <ticksBetweenShots>45</ticksBetweenShots>
+        <ticksBetweenBursts>45</ticksBetweenBursts>
+        <spreadRadius>0</spreadRadius>
+        <label>Single</label>
+        <texPath>UI/Gizmos/FireRate_Single</texPath>
+      </li>
+    </fireModes>
+    <modExtensions>
+      <li Class="HSK.FpsBridge.AerialWeaponExtension">
+        <kind>Grenade</kind>
+        <quickFire>false</quickFire>
+        <mountFraction>(0.55,0.5,0.7)</mountFraction>
+        <barrels>1</barrels>
+        <barrelRadius>0.16</barrelRadius>
+        <barrelLength>0.6</barrelLength>
+        <scopeTemplate>Rocket</scopeTemplate>
+        <ceAmmoSet>AmmoSet_40x46mmGrenade</ceAmmoSet>
+      </li>
+    </modExtensions>
+  </Vehicles.VehicleTurretDef>
+  <Vehicles.VehicleTurretDef ParentName="FPS_AirVehicleTurretBase">
+    <defName>FPS_Air_VVE_Toad_HMG127</defName>
+    <label>12.7mm heavy machine gun</label>
+    <description>Role-specific aircraft equipment. CE keeps its native ammunition and impact damage.</description>
+    <turretType>Rotatable</turretType>
+    <projectile>FPS_AirBullet_HMG127Projectile</projectile>
+    <warmUpTimer>0</warmUpTimer>
+    <rotationSpeed>80</rotationSpeed>
+    <reloadTimer>4</reloadTimer>
+    <magazineCapacity>150</magazineCapacity>
+    <chargePerAmmoCount>1</chargePerAmmoCount>
+    <genericAmmo>true</genericAmmo>
+    <autoSnapTargeting>false</autoSnapTargeting>
+    <projectileOffset>1.2</projectileOffset>
+    <maxRange>140</maxRange>
+    <minRange>0</minRange>
+    <shotSound>Shot_AssaultRifle</shotSound>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/AssaultRifle</texPath>
+      <graphicClass>Vehicles.Graphic_Turret</graphicClass>
+      <drawSize>(0.6,0.6)</drawSize>
+    </graphicData>
+    <ammunition>
+      <thingDefs>
+        <li>FPS_AirAmmo_HMG127Round</li>
+      </thingDefs>
+    </ammunition>
+    <fireModes>
+      <li>
+        <shotsPerBurst>10</shotsPerBurst>
+        <ticksBetweenShots>6</ticksBetweenShots>
+        <ticksBetweenBursts>6</ticksBetweenBursts>
+        <spreadRadius>0</spreadRadius>
+        <label>Automatic</label>
+        <texPath>UI/Gizmos/FireRate_Single</texPath>
+      </li>
+    </fireModes>
+    <modExtensions>
+      <li Class="HSK.FpsBridge.AerialWeaponExtension">
+        <kind>Gun</kind>
+        <quickFire>true</quickFire>
+        <mountFraction>(-0.65,0.65,0.7)</mountFraction>
+        <barrels>1</barrels>
+        <barrelRadius>0.07</barrelRadius>
+        <barrelLength>0.65</barrelLength>
+        <scopeTemplate>MachineGun</scopeTemplate>
+        <ceAmmoSet>AmmoSet_50BMG</ceAmmoSet>
+      </li>
+    </modExtensions>
+  </Vehicles.VehicleTurretDef>
+  <Vehicles.VehicleTurretDef ParentName="FPS_AirVehicleTurretBase">
+    <defName>FPS_Air_VVE_Toad_Rocket70</defName>
+    <label>70mm support rocket pod</label>
+    <description>Role-specific aircraft equipment. CE keeps its native ammunition and impact damage.</description>
+    <turretType>Rotatable</turretType>
+    <projectile>FPS_AirBullet_Rocket70Projectile</projectile>
+    <warmUpTimer>0</warmUpTimer>
+    <rotationSpeed>80</rotationSpeed>
+    <reloadTimer>6</reloadTimer>
+    <magazineCapacity>8</magazineCapacity>
+    <chargePerAmmoCount>1</chargePerAmmoCount>
+    <genericAmmo>true</genericAmmo>
+    <autoSnapTargeting>false</autoSnapTargeting>
+    <projectileOffset>1.2</projectileOffset>
+    <maxRange>180</maxRange>
+    <minRange>0</minRange>
+    <shotSound>RocketswarmLauncher_Fire</shotSound>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/AssaultRifle</texPath>
+      <graphicClass>Vehicles.Graphic_Turret</graphicClass>
+      <drawSize>(0.6,0.6)</drawSize>
+    </graphicData>
+    <ammunition>
+      <thingDefs>
+        <li>FPS_AirAmmo_Rocket70Round</li>
+      </thingDefs>
+    </ammunition>
+    <fireModes>
+      <li>
+        <shotsPerBurst>1</shotsPerBurst>
+        <ticksBetweenShots>40</ticksBetweenShots>
+        <ticksBetweenBursts>40</ticksBetweenBursts>
+        <spreadRadius>0</spreadRadius>
+        <label>Single</label>
+        <texPath>UI/Gizmos/FireRate_Single</texPath>
+      </li>
+    </fireModes>
+    <modExtensions>
+      <li Class="HSK.FpsBridge.AerialWeaponExtension">
+        <kind>Rocket</kind>
+        <quickFire>false</quickFire>
+        <mountFraction>(0.65,0.45,0.5)</mountFraction>
+        <barrels>4</barrels>
+        <barrelRadius>0.22</barrelRadius>
+        <barrelLength>0.6</barrelLength>
+        <scopeTemplate>Rocket</scopeTemplate>
+        <ceAmmoSet>AmmoSet_70mmAPKWS</ceAmmoSet>
+      </li>
+    </modExtensions>
+  </Vehicles.VehicleTurretDef>
+  <Vehicles.VehicleTurretDef ParentName="FPS_AirVehicleTurretBase">
+    <defName>FPS_Air_VVE_Mosquito_Cannon30</defName>
+    <label>30mm support autocannon</label>
+    <description>Role-specific aircraft equipment. CE keeps its native ammunition and impact damage.</description>
+    <turretType>Rotatable</turretType>
+    <projectile>FPS_AirBullet_Cannon30Projectile</projectile>
+    <warmUpTimer>0</warmUpTimer>
+    <rotationSpeed>80</rotationSpeed>
+    <reloadTimer>5</reloadTimer>
+    <magazineCapacity>60</magazineCapacity>
+    <chargePerAmmoCount>1</chargePerAmmoCount>
+    <genericAmmo>true</genericAmmo>
+    <autoSnapTargeting>false</autoSnapTargeting>
+    <projectileOffset>1.2</projectileOffset>
+    <maxRange>140</maxRange>
+    <minRange>0</minRange>
+    <shotSound>Shot_Autocannon</shotSound>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/AssaultRifle</texPath>
+      <graphicClass>Vehicles.Graphic_Turret</graphicClass>
+      <drawSize>(0.6,0.6)</drawSize>
+    </graphicData>
+    <ammunition>
+      <thingDefs>
+        <li>FPS_AirAmmo_Cannon30Round</li>
+      </thingDefs>
+    </ammunition>
+    <fireModes>
+      <li>
+        <shotsPerBurst>10</shotsPerBurst>
+        <ticksBetweenShots>10</ticksBetweenShots>
+        <ticksBetweenBursts>10</ticksBetweenBursts>
+        <spreadRadius>0</spreadRadius>
+        <label>Automatic</label>
+        <texPath>UI/Gizmos/FireRate_Single</texPath>
+      </li>
+    </fireModes>
+    <modExtensions>
+      <li Class="HSK.FpsBridge.AerialWeaponExtension">
+        <kind>Cannon</kind>
+        <quickFire>true</quickFire>
+        <mountFraction>(0,0.25,0.85)</mountFraction>
+        <barrels>1</barrels>
+        <barrelRadius>0.12</barrelRadius>
+        <barrelLength>1.1</barrelLength>
+        <scopeTemplate>MachineGun</scopeTemplate>
+        <ceAmmoSet>AmmoSet_30x113mmB</ceAmmoSet>
+      </li>
+    </modExtensions>
+  </Vehicles.VehicleTurretDef>
+  <Vehicles.VehicleTurretDef ParentName="FPS_AirVehicleTurretBase">
+    <defName>FPS_Air_VVE_Mosquito_Rocket70</defName>
+    <label>70mm support rocket pod</label>
+    <description>Role-specific aircraft equipment. CE keeps its native ammunition and impact damage.</description>
+    <turretType>Rotatable</turretType>
+    <projectile>FPS_AirBullet_Rocket70Projectile</projectile>
+    <warmUpTimer>0</warmUpTimer>
+    <rotationSpeed>80</rotationSpeed>
+    <reloadTimer>7</reloadTimer>
+    <magazineCapacity>14</magazineCapacity>
+    <chargePerAmmoCount>1</chargePerAmmoCount>
+    <genericAmmo>true</genericAmmo>
+    <autoSnapTargeting>false</autoSnapTargeting>
+    <projectileOffset>1.2</projectileOffset>
+    <maxRange>180</maxRange>
+    <minRange>0</minRange>
+    <shotSound>RocketswarmLauncher_Fire</shotSound>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/AssaultRifle</texPath>
+      <graphicClass>Vehicles.Graphic_Turret</graphicClass>
+      <drawSize>(0.6,0.6)</drawSize>
+    </graphicData>
+    <ammunition>
+      <thingDefs>
+        <li>FPS_AirAmmo_Rocket70Round</li>
+      </thingDefs>
+    </ammunition>
+    <fireModes>
+      <li>
+        <shotsPerBurst>1</shotsPerBurst>
+        <ticksBetweenShots>25</ticksBetweenShots>
+        <ticksBetweenBursts>25</ticksBetweenBursts>
+        <spreadRadius>0</spreadRadius>
+        <label>Single</label>
+        <texPath>UI/Gizmos/FireRate_Single</texPath>
+      </li>
+    </fireModes>
+    <modExtensions>
+      <li Class="HSK.FpsBridge.AerialWeaponExtension">
+        <kind>Rocket</kind>
+        <quickFire>false</quickFire>
+        <mountFraction>(0.85,0.55,0.15)</mountFraction>
+        <barrels>7</barrels>
+        <barrelRadius>0.22</barrelRadius>
+        <barrelLength>0.6</barrelLength>
+        <scopeTemplate>Rocket</scopeTemplate>
+        <ceAmmoSet>AmmoSet_70mmAPKWS</ceAmmoSet>
+      </li>
+    </modExtensions>
+  </Vehicles.VehicleTurretDef>
+  <Vehicles.VehicleTurretDef ParentName="FPS_AirVehicleTurretBase">
+    <defName>FPS_Air_VVE_Smuggler_HMG127</defName>
+    <label>12.7mm heavy machine gun</label>
+    <description>Role-specific aircraft equipment. CE keeps its native ammunition and impact damage.</description>
+    <turretType>Rotatable</turretType>
+    <projectile>FPS_AirBullet_HMG127Projectile</projectile>
+    <warmUpTimer>0</warmUpTimer>
+    <rotationSpeed>80</rotationSpeed>
+    <reloadTimer>5</reloadTimer>
+    <magazineCapacity>240</magazineCapacity>
+    <chargePerAmmoCount>1</chargePerAmmoCount>
+    <genericAmmo>true</genericAmmo>
+    <autoSnapTargeting>false</autoSnapTargeting>
+    <projectileOffset>1.2</projectileOffset>
+    <maxRange>140</maxRange>
+    <minRange>0</minRange>
+    <shotSound>Shot_AssaultRifle</shotSound>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/AssaultRifle</texPath>
+      <graphicClass>Vehicles.Graphic_Turret</graphicClass>
+      <drawSize>(0.6,0.6)</drawSize>
+    </graphicData>
+    <ammunition>
+      <thingDefs>
+        <li>FPS_AirAmmo_HMG127Round</li>
+      </thingDefs>
+    </ammunition>
+    <fireModes>
+      <li>
+        <shotsPerBurst>10</shotsPerBurst>
+        <ticksBetweenShots>4</ticksBetweenShots>
+        <ticksBetweenBursts>4</ticksBetweenBursts>
+        <spreadRadius>0</spreadRadius>
+        <label>Automatic</label>
+        <texPath>UI/Gizmos/FireRate_Single</texPath>
+      </li>
+    </fireModes>
+    <modExtensions>
+      <li Class="HSK.FpsBridge.AerialWeaponExtension">
+        <kind>Gun</kind>
+        <quickFire>true</quickFire>
+        <mountFraction>(-0.65,0.55,0.25)</mountFraction>
+        <barrels>2</barrels>
+        <barrelRadius>0.07</barrelRadius>
+        <barrelLength>0.65</barrelLength>
+        <scopeTemplate>MachineGun</scopeTemplate>
+        <ceAmmoSet>AmmoSet_50BMG</ceAmmoSet>
+      </li>
+    </modExtensions>
+  </Vehicles.VehicleTurretDef>
+  <Vehicles.VehicleTurretDef ParentName="FPS_AirVehicleTurretBase">
+    <defName>FPS_Air_VVE_Smuggler_Grenade40H</defName>
+    <label>40mm automatic grenade launcher</label>
+    <description>Role-specific aircraft equipment. CE keeps its native ammunition and impact damage.</description>
+    <turretType>Rotatable</turretType>
+    <projectile>FPS_AirBullet_Grenade40HProjectile</projectile>
+    <warmUpTimer>0</warmUpTimer>
+    <rotationSpeed>80</rotationSpeed>
+    <reloadTimer>5</reloadTimer>
+    <magazineCapacity>12</magazineCapacity>
+    <chargePerAmmoCount>1</chargePerAmmoCount>
+    <genericAmmo>true</genericAmmo>
+    <autoSnapTargeting>false</autoSnapTargeting>
+    <projectileOffset>1.2</projectileOffset>
+    <maxRange>140</maxRange>
+    <minRange>0</minRange>
+    <shotSound>ThumpCannon_Fire</shotSound>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/AssaultRifle</texPath>
+      <graphicClass>Vehicles.Graphic_Turret</graphicClass>
+      <drawSize>(0.6,0.6)</drawSize>
+    </graphicData>
+    <ammunition>
+      <thingDefs>
+        <li>FPS_AirAmmo_Grenade40HRound</li>
+      </thingDefs>
+    </ammunition>
+    <fireModes>
+      <li>
+        <shotsPerBurst>1</shotsPerBurst>
+        <ticksBetweenShots>20</ticksBetweenShots>
+        <ticksBetweenBursts>20</ticksBetweenBursts>
+        <spreadRadius>0</spreadRadius>
+        <label>Single</label>
+        <texPath>UI/Gizmos/FireRate_Single</texPath>
+      </li>
+    </fireModes>
+    <modExtensions>
+      <li Class="HSK.FpsBridge.AerialWeaponExtension">
+        <kind>Grenade</kind>
+        <quickFire>false</quickFire>
+        <mountFraction>(0.65,0.5,0.25)</mountFraction>
+        <barrels>1</barrels>
+        <barrelRadius>0.16</barrelRadius>
+        <barrelLength>0.6</barrelLength>
+        <scopeTemplate>Rocket</scopeTemplate>
+        <ceAmmoSet>AmmoSet_40x53mmGrenade</ceAmmoSet>
+      </li>
+    </modExtensions>
+  </Vehicles.VehicleTurretDef>
+  <Vehicles.VehicleTurretDef ParentName="FPS_AirVehicleTurretBase">
+    <defName>FPS_Air_VVE_Warbird_Rotary20</defName>
+    <label>20mm rotary cannon</label>
+    <description>Role-specific aircraft equipment. CE keeps its native ammunition and impact damage.</description>
+    <turretType>Rotatable</turretType>
+    <projectile>FPS_AirBullet_Rotary20Projectile</projectile>
+    <warmUpTimer>0</warmUpTimer>
+    <rotationSpeed>80</rotationSpeed>
+    <reloadTimer>6</reloadTimer>
+    <magazineCapacity>240</magazineCapacity>
+    <chargePerAmmoCount>1</chargePerAmmoCount>
+    <genericAmmo>true</genericAmmo>
+    <autoSnapTargeting>false</autoSnapTargeting>
+    <projectileOffset>1.2</projectileOffset>
+    <maxRange>140</maxRange>
+    <minRange>0</minRange>
+    <shotSound>Shot_Autocannon</shotSound>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/AssaultRifle</texPath>
+      <graphicClass>Vehicles.Graphic_Turret</graphicClass>
+      <drawSize>(0.6,0.6)</drawSize>
+    </graphicData>
+    <ammunition>
+      <thingDefs>
+        <li>FPS_AirAmmo_Rotary20Round</li>
+      </thingDefs>
+    </ammunition>
+    <fireModes>
+      <li>
+        <shotsPerBurst>10</shotsPerBurst>
+        <ticksBetweenShots>3</ticksBetweenShots>
+        <ticksBetweenBursts>3</ticksBetweenBursts>
+        <spreadRadius>0</spreadRadius>
+        <label>Automatic</label>
+        <texPath>UI/Gizmos/FireRate_Single</texPath>
+      </li>
+    </fireModes>
+    <modExtensions>
+      <li Class="HSK.FpsBridge.AerialWeaponExtension">
+        <kind>Cannon</kind>
+        <quickFire>true</quickFire>
+        <mountFraction>(-0.6,0.55,0.25)</mountFraction>
+        <barrels>6</barrels>
+        <barrelRadius>0.12</barrelRadius>
+        <barrelLength>1.1</barrelLength>
+        <scopeTemplate>MachineGun</scopeTemplate>
+        <ceAmmoSet>AmmoSet_20x102mmNATO</ceAmmoSet>
+      </li>
+    </modExtensions>
+  </Vehicles.VehicleTurretDef>
+  <Vehicles.VehicleTurretDef ParentName="FPS_AirVehicleTurretBase">
+    <defName>FPS_Air_VVE_Warbird_Rocket80</defName>
+    <label>80mm strike rocket pod</label>
+    <description>Role-specific aircraft equipment. CE keeps its native ammunition and impact damage.</description>
+    <turretType>Rotatable</turretType>
+    <projectile>FPS_AirBullet_Rocket80Projectile</projectile>
+    <warmUpTimer>0</warmUpTimer>
+    <rotationSpeed>80</rotationSpeed>
+    <reloadTimer>8</reloadTimer>
+    <magazineCapacity>12</magazineCapacity>
+    <chargePerAmmoCount>1</chargePerAmmoCount>
+    <genericAmmo>true</genericAmmo>
+    <autoSnapTargeting>false</autoSnapTargeting>
+    <projectileOffset>1.2</projectileOffset>
+    <maxRange>180</maxRange>
+    <minRange>0</minRange>
+    <shotSound>RocketswarmLauncher_Fire</shotSound>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/AssaultRifle</texPath>
+      <graphicClass>Vehicles.Graphic_Turret</graphicClass>
+      <drawSize>(0.6,0.6)</drawSize>
+    </graphicData>
+    <ammunition>
+      <thingDefs>
+        <li>FPS_AirAmmo_Rocket80Round</li>
+      </thingDefs>
+    </ammunition>
+    <fireModes>
+      <li>
+        <shotsPerBurst>1</shotsPerBurst>
+        <ticksBetweenShots>30</ticksBetweenShots>
+        <ticksBetweenBursts>30</ticksBetweenBursts>
+        <spreadRadius>0</spreadRadius>
+        <label>Single</label>
+        <texPath>UI/Gizmos/FireRate_Single</texPath>
+      </li>
+    </fireModes>
+    <modExtensions>
+      <li Class="HSK.FpsBridge.AerialWeaponExtension">
+        <kind>Rocket</kind>
+        <quickFire>false</quickFire>
+        <mountFraction>(0.65,0.5,0.2)</mountFraction>
+        <barrels>6</barrels>
+        <barrelRadius>0.22</barrelRadius>
+        <barrelLength>0.6</barrelLength>
+        <scopeTemplate>Rocket</scopeTemplate>
+        <ceAmmoSet>AmmoSet_80mmRocket_direct</ceAmmoSet>
+      </li>
+    </modExtensions>
+  </Vehicles.VehicleTurretDef>
+</Defs>

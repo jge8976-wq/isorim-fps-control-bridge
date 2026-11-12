@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <KeyBindingDef>
+    <defName>FPS_InteractionMenu</defName>
+    <label>Interaction wheel (hold; optional separate key)</label>
+    <category>FPS_ControlKeys</category>
+    <defaultKeyCodeA>None</defaultKeyCodeA>
+    <defaultKeyCodeB>None</defaultKeyCodeB>
+  </KeyBindingDef>
+</Defs>

@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ThingDef ParentName="ResourceBase">
+    <defName>FPS_AirTrialAmmo_MG762Trial</defName>
+    <label>7.62mm trial ammunition</label>
+    <description>Temporary ammunition supplied only in the private flight test.</description>
+    <stackLimit>1000</stackLimit>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/AssaultRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Mass>0.02</Mass>
+      <MarketValue>1</MarketValue>
+    </statBases>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>FPS_AirTrialBullet_MG762Trial</defName>
+    <label>7.62mm trial bullet</label>
+    <thingClass>Bullet</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>12</damageAmountBase>
+      <armorPenetrationBase>0.2</armorPenetrationBase>
+      <speed>180</speed>
+    </projectile>
+  </ThingDef>
+  <Vehicles.VehicleTurretDef ParentName="FPS_AirVehicleTurretBase">
+    <defName>FPS_AirTrial_MG762Trial</defName>
+    <label>Trial 7.62mm machine gun</label>
+    <description>Temporary private-test equipment. Not a permanent aircraft upgrade.</description>
+    <turretType>Rotatable</turretType>
+    <projectile>FPS_AirTrialBullet_MG762Trial</projectile>
+    <warmUpTimer>0</warmUpTimer>
+    <rotationSpeed>30</rotationSpeed>
+    <reloadTimer>3</reloadTimer>
+    <magazineCapacity>100</magazineCapacity>
+    <chargePerAmmoCount>1</chargePerAmmoCount>
+    <genericAmmo>true</genericAmmo>
+    <autoSnapTargeting>false</autoSnapTargeting>
+    <projectileOffset>1.1</projectileOffset>
+    <maxRange>120</maxRange>
+    <minRange>0</minRange>
+    <shotSound>Shot_AssaultRifle</shotSound>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/AssaultRifle</texPath>
+      <graphicClass>Vehicles.Graphic_Turret</graphicClass>
+      <drawSize>(0.6,0.6)</drawSize>
+    </graphicData>
+    <ammunition>
+      <thingDefs>
+        <li>FPS_AirTrialAmmo_MG762Trial</li>
+      </thingDefs>
+    </ammunition>
+    <fireModes>
+      <li>
+        <shotsPerBurst>10</shotsPerBurst>
+        <ticksBetweenShots>6</ticksBetweenShots>
+        <ticksBetweenBursts>6</ticksBetweenBursts>
+        <spreadRadius>0</spreadRadius>
+        <label>Automatic</label>
+        <texPath>UI/Gizmos/FireRate_Single</texPath>
+      </li>
+    </fireModes>
+  </Vehicles.VehicleTurretDef>
+  <ThingDef ParentName="ResourceBase">
+    <defName>FPS_AirTrialAmmo_Rocket50Trial</defName>
+    <label>50mm trial rocket</label>
+    <description>Temporary ammunition supplied only in the private flight test.</description>
+    <stackLimit>1000</stackLimit>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/AssaultRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Mass>0.02</Mass>
+      <MarketValue>1</MarketValue>
+    </statBases>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>FPS_AirTrialBullet_Rocket50Trial</defName>
+    <label>50mm trial rocket</label>
+    <thingClass>Projectile_Explosive</thingClass>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bomb</damageDef>
+      <damageAmountBase>70</damageAmountBase>
+      <armorPenetrationBase>0.32</armorPenetrationBase>
+      <speed>80</speed>
+      <explosionRadius>2.5</explosionRadius>
+    </projectile>
+  </ThingDef>
+  <Vehicles.VehicleTurretDef ParentName="FPS_AirVehicleTurretBase">
+    <defName>FPS_AirTrial_Rocket50Trial</defName>
+    <label>Trial 50mm rocket pod</label>
+    <description>Temporary private-test equipment. Not a permanent aircraft upgrade.</description>
+    <turretType>Rotatable</turretType>
+    <projectile>FPS_AirTrialBullet_Rocket50Trial</projectile>
+    <warmUpTimer>0</warmUpTimer>
+    <rotationSpeed>30</rotationSpeed>
+    <reloadTimer>4</reloadTimer>
+    <magazineCapacity>8</magazineCapacity>
+    <chargePerAmmoCount>1</chargePerAmmoCount>
+    <genericAmmo>true</genericAmmo>
+    <autoSnapTargeting>false</autoSnapTargeting>
+    <projectileOffset>1.1</projectileOffset>
+    <maxRange>120</maxRange>
+    <minRange>0</minRange>
+    <shotSound>RocketswarmLauncher_Fire</shotSound>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponRanged/AssaultRifle</texPath>
+      <graphicClass>Vehicles.Graphic_Turret</graphicClass>
+      <drawSize>(0.6,0.6)</drawSize>
+    </graphicData>
+    <ammunition>
+      <thingDefs>
+        <li>FPS_AirTrialAmmo_Rocket50Trial</li>
+      </thingDefs>
+    </ammunition>
+    <fireModes>
+      <li>
+        <shotsPerBurst>1</shotsPerBurst>
+        <ticksBetweenShots>24</ticksBetweenShots>
+        <ticksBetweenBursts>24</ticksBetweenBursts>
+        <spreadRadius>0</spreadRadius>
+        <label>Single</label>
+        <texPath>UI/Gizmos/FireRate_Single</texPath>
+      </li>
+    </fireModes>
+  </Vehicles.VehicleTurretDef>
+</Defs>

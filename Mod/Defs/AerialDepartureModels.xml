@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HSK.FpsBridge.AerialDepartureModelDef>
+    <defName>FPS_Departure_VVE_Frog</defName>
+    <vehicleDef>VVE_Frog</vehicleDef>
+    <modelPath>Models/SelfBuiltStructural/A9248AB0FE55EF9C2E535446.obj</modelPath>
+    <sha256>9C120AF0CCC462FA25918A3EDEA7081EB75C167CAD471797FCDFE891B6631F3A</sha256>
+    <localForward>(0,0,1)</localForward>
+  </HSK.FpsBridge.AerialDepartureModelDef>
+  <HSK.FpsBridge.AerialDepartureModelDef>
+    <defName>FPS_Departure_VVE_Mosquito</defName>
+    <vehicleDef>VVE_Mosquito</vehicleDef>
+    <modelPath>Models/SelfBuiltStructural/MosquitoR2_Body.obj</modelPath>
+    <sha256>748B1E83AB57314469A1537ED86183BB94BF365477BB1C2031E682AFB7773A3F</sha256>
+    <localForward>(0,0,-1)</localForward>
+  </HSK.FpsBridge.AerialDepartureModelDef>
+  <HSK.FpsBridge.AerialDepartureModelDef>
+    <defName>FPS_Departure_VVE_Smuggler</defName>
+    <vehicleDef>VVE_Smuggler</vehicleDef>
+    <modelPath>Models/NewVehicles/026.obj</modelPath>
+    <sha256>546B5B742ED7DE66AB120F29608C038033C0D2AD18A1C3939155D39397F79501</sha256>
+    <localForward>(0,0,-1)</localForward>
+  </HSK.FpsBridge.AerialDepartureModelDef>
+  <HSK.FpsBridge.AerialDepartureModelDef>
+    <defName>FPS_Departure_VVE_Toad</defName>
+    <vehicleDef>VVE_Toad</vehicleDef>
+    <modelPath>Models/SelfBuiltStructural/728C28071C6521DB5E90CCA1.obj</modelPath>
+    <sha256>BC90DBE7DBAD9779B4C625BC20DBCBB7B6645162FD912C4E0BBAB7D150DA8F75</sha256>
+    <localForward>(0,0,1)</localForward>
+  </HSK.FpsBridge.AerialDepartureModelDef>
+  <HSK.FpsBridge.AerialDepartureModelDef>
+    <defName>FPS_Departure_VVE_Warbird</defName>
+    <vehicleDef>VVE_Warbird</vehicleDef>
+    <modelPath>Models/NewVehicles/035.obj</modelPath>
+    <sha256>0AC30F33BF6524E45BD2EB934E520205419293E53E57A06844030E02DFCEB41F</sha256>
+    <localForward>(0,0,-1)</localForward>
+  </HSK.FpsBridge.AerialDepartureModelDef>
+</Defs>

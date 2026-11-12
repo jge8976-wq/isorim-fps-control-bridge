@@ -1,0 +1,1421 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>IsoRim - CE Armory 3D Models (R2)</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName='CE_ATFour']/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName='CE_ATFour']</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName='CE_ATFour']/modExtensions</xpath>
+          <value>
+            <li Class="HSK.FpsBridge.HeldWeaponModelExtension">
+              <overrideOrientation>true</overrideOrientation>
+              <forward>(1, 0, 0)</forward>
+              <up>(0, 1, 0)</up>
+              <hasGrip>true</hasGrip>
+              <grip>(0.200000003, 0.100000001, -0.0700000003)</grip>
+              <hasMuzzle>true</hasMuzzle>
+              <muzzle>(0.720000029, 0.129999995, 0)</muzzle>
+              <hasSights>true</hasSights>
+              <rearSight>(-0.0399999991, 0.282000001, 0)</rearSight>
+              <frontSight>(0.460000008, 0.282000001, 0)</frontSight>
+              <scope>None</scope>
+              <kind>Gun</kind>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName='CE_Gun_AK74GL']/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName='CE_Gun_AK74GL']</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName='CE_Gun_AK74GL']/modExtensions</xpath>
+          <value>
+            <li Class="HSK.FpsBridge.HeldWeaponModelExtension">
+              <overrideOrientation>true</overrideOrientation>
+              <forward>(1, 0, 0)</forward>
+              <up>(0, 1, 0)</up>
+              <hasGrip>true</hasGrip>
+              <grip>(0, 0, 0)</grip>
+              <hasMuzzle>true</hasMuzzle>
+              <muzzle>(0.689999998, 0.129999995, 0)</muzzle>
+              <hasSights>true</hasSights>
+              <rearSight>(-0.100000001, 0.256999995, 0)</rearSight>
+              <frontSight>(0.50999999, 0.256999995, 0)</frontSight>
+              <scope>None</scope>
+              <kind>Gun</kind>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName='CE_Gun_AKSSeventyFourU']/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName='CE_Gun_AKSSeventyFourU']</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName='CE_Gun_AKSSeventyFourU']/modExtensions</xpath>
+          <value>
+            <li Class="HSK.FpsBridge.HeldWeaponModelExtension">
+              <overrideOrientation>true</overrideOrientation>
+              <forward>(1, 0, 0)</forward>
+              <up>(0, 1, 0)</up>
+              <hasGrip>true</hasGrip>
+              <grip>(0, 0, 0)</grip>
+              <hasMuzzle>true</hasMuzzle>
+              <muzzle>(0.495000005, 0.129999995, 0)</muzzle>
+              <hasSights>true</hasSights>
+              <rearSight>(-0.100000001, 0.256999995, 0)</rearSight>
+              <frontSight>(0.419999987, 0.256999995, 0)</frontSight>
+              <scope>None</scope>
+              <kind>Gun</kind>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName='CE_Gun_AKTwelve']/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName='CE_Gun_AKTwelve']</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName='CE_Gun_AKTwelve']/modExtensions</xpath>
+          <value>
+            <li Class="HSK.FpsBridge.HeldWeaponModelExtension">
+              <overrideOrientation>true</overrideOrientation>
+              <forward>(1, 0, 0)</forward>
+              <up>(0, 1, 0)</up>
+              <hasGrip>true</hasGrip>
+              <grip>(0, 0, 0)</grip>
+              <hasMuzzle>true</hasMuzzle>
+              <muzzle>(0.680000007, 0.129999995, 0)</muzzle>
+              <hasSights>true</hasSights>
+              <rearSight>(-0.100000001, 0.256999995, 0)</rearSight>
+              <frontSight>(0.550000012, 0.256999995, 0)</frontSight>
+              <scope>None</scope>
+              <kind>Gun</kind>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName='CE_Gun_AVB']/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName='CE_Gun_AVB']</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName='CE_Gun_AVB']/modExtensions</xpath>
+          <value>
+            <li Class="HSK.FpsBridge.HeldWeaponModelExtension">
+              <overrideOrientation>true</overrideOrientation>
+              <forward>(1, 0, 0)</forward>
+              <up>(0, 1, 0)</up>
+              <hasGrip>true</hasGrip>
+              <grip>(0, 0, 0)</grip>
+              <hasMuzzle>true</hasMuzzle>
+              <muzzle>(0.730000019, 0.129999995, 0)</muzzle>
+              <hasSights>true</hasSights>
+              <rearSight>(-0.100000001, 0.256999995, 0)</rearSight>
+              <frontSight>(0.529999971, 0.256999995, 0)</frontSight>
+              <scope>None</scope>
+              <kind>Gun</kind>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName='CE_Gun_AmericanOneEighty']/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName='CE_Gun_AmericanOneEighty']</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName='CE_Gun_AmericanOneEighty']/modExtensions</xpath>
+          <value>
+            <li Class="HSK.FpsBridge.HeldWeaponModelExtension">
+              <overrideOrientation>true</overrideOrientation>
+              <forward>(1, 0, 0)</forward>
+              <up>(0, 1, 0)</up>
+              <hasGrip>true</hasGrip>
+              <grip>(0, 0, 0)</grip>
+              <hasMuzzle>true</hasMuzzle>
+              <muzzle>(0.610000014, 0.129999995, 0)</muzzle>
+              <hasSights>true</hasSights>
+              <rearSight>(-0.100000001, 0.246000003, 0)</rearSight>
+              <frontSight>(0.5, 0.246000003, 0)</frontSight>
+              <scope>None</scope>
+              <kind>Gun</kind>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName='CE_Gun_BAR']/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName='CE_Gun_BAR']</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName='CE_Gun_BAR']/modExtensions</xpath>
+          <value>
+            <li Class="HSK.FpsBridge.HeldWeaponModelExtension">
+              <overrideOrientation>true</overrideOrientation>
+              <forward>(1, 0, 0)</forward>
+              <up>(0, 1, 0)</up>
+              <hasGrip>true</hasGrip>
+              <grip>(-0.100000001, 0.0599999987, 0)</grip>
+              <hasMuzzle>true</hasMuzzle>
+              <muzzle>(0.790000021, 0.129999995, 0)</muzzle>
+              <hasSights>true</hasSights>
+              <rearSight>(-0.100000001, 0.236999999, 0)</rearSight>
+              <frontSight>(0.610000014, 0.236999999, 0)</frontSight>
+              <scope>None</scope>
+              <kind>Gun</kind>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName='CE_Gun_BigBoy']/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName='CE_Gun_BigBoy']</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName='CE_Gun_BigBoy']/modExtensions</xpath>
+          <value>
+            <li Class="HSK.FpsBridge.HeldWeaponModelExtension">
+              <overrideOrientation>true</overrideOrientation>
+              <forward>(1, 0, 0)</forward>
+              <up>(0, 1, 0)</up>
+              <hasGrip>true</hasGrip>
+              <grip>(-0.100000001, 0.0599999987, 0)</grip>
+              <hasMuzzle>true</hasMuzzle>
+              <muzzle>(0.75, 0.129999995, 0)</muzzle>
+              <hasSights>true</hasSights>
+              <rearSight>(-0.100000001, 0.231000006, 0)</rearSight>
+              <frontSight>(0.620000005, 0.231000006, 0)</frontSight>
+              <scope>VintageFine</scope>
+              <hasScopeEye>true</hasScopeEye>
+              <scopeEye>(-0.170000002, 0.289999992, 0)</scopeEye>
+              <scopeForward>(1, 0, 0)</scopeForward>
+              <scopeZoom>2.5</scopeZoom>
+              <kind>Gun</kind>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName='CE_Gun_BoysRifle']/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName='CE_Gun_BoysRifle']</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName='CE_Gun_BoysRifle']/modExtensions</xpath>
+          <value>
+            <li Class="HSK.FpsBridge.HeldWeaponModelExtension">
+              <overrideOrientation>true</overrideOrientation>
+              <forward>(1, 0, 0)</forward>
+              <up>(0, 1, 0)</up>
+              <hasGrip>true</hasGrip>
+              <grip>(0, 0, 0)</grip>
+              <hasMuzzle>true</hasMuzzle>
+              <muzzle>(1.14699996, 0.129999995, 0)</muzzle>
+              <scope>None</scope>
+              <kind>Gun</kind>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName='CE_Gun_CarlGustaf']/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName='CE_Gun_CarlGustaf']</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName='CE_Gun_CarlGustaf']/modExtensions</xpath>
+          <value>
+            <li Class="HSK.FpsBridge.HeldWeaponModelExtension">
+              <overrideOrientation>true</overrideOrientation>
+              <forward>(1, 0, 0)</forward>
+              <up>(0, 1, 0)</up>
+              <hasGrip>true</hasGrip>
+              <grip>(0, 0, 0)</grip>
+              <hasMuzzle>true</hasMuzzle>
+              <muzzle>(0.585391283, 0.0599999987, 0)</muzzle>
+              <hasSights>true</hasSights>
+              <rearSight>(-0.140000001, 0.221999999, 0)</rearSight>
+              <frontSight>(0.349999994, 0.221999999, 0)</frontSight>
+              <scope>None</scope>
+              <kind>Gun</kind>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName='CE_Gun_DPtwentySeven']/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName='CE_Gun_DPtwentySeven']</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName='CE_Gun_DPtwentySeven']/modExtensions</xpath>
+          <value>
+            <li Class="HSK.FpsBridge.HeldWeaponModelExtension">
+              <overrideOrientation>true</overrideOrientation>
+              <forward>(1, 0, 0)</forward>
+              <up>(0, 1, 0)</up>
+              <hasGrip>true</hasGrip>
+              <grip>(-0.200000003, 0.0900000036, 0)</grip>
+              <hasMuzzle>true</hasMuzzle>
+              <muzzle>(0.850000024, 0.129999995, 0)</muzzle>
+              <hasSights>true</hasSights>
+              <rearSight>(-0.100000001, 0.252999987, 0)</rearSight>
+              <frontSight>(0.600000024, 0.252999987, 0)</frontSight>
+              <scope>None</scope>
+              <kind>Gun</kind>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName='CE_Gun_Deagke']/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName='CE_Gun_Deagke']</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName='CE_Gun_Deagke']/modExtensions</xpath>
+          <value>
+            <li Class="HSK.FpsBridge.HeldWeaponModelExtension">
+              <overrideOrientation>true</overrideOrientation>
+              <forward>(1, 0, 0)</forward>
+              <up>(0, 1, 0)</up>
+              <hasGrip>true</hasGrip>
+              <grip>(-0.0446601957, 0.0236893203, 0)</grip>
+              <hasMuzzle>true</hasMuzzle>
+              <muzzle>(0.25048545, 0.126601934, 0)</muzzle>
+              <hasSights>true</hasSights>
+              <rearSight>(-0.0660194159, 0.185684208, 0)</rearSight>
+              <frontSight>(0.225242719, 0.177917217, 0)</frontSight>
+              <scope>None</scope>
+              <kind>Gun</kind>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName='CE_Gun_FNFiveSeven']/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName='CE_Gun_FNFiveSeven']</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName='CE_Gun_FNFiveSeven']/modExtensions</xpath>
+          <value>
+            <li Class="HSK.FpsBridge.HeldWeaponModelExtension">
+              <overrideOrientation>true</overrideOrientation>
+              <forward>(1, 0, 0)</forward>
+              <up>(0, 1, 0)</up>
+              <hasGrip>true</hasGrip>
+              <grip>(-0.0442622937, 0.0062295082, 0)</grip>
+              <hasMuzzle>true</hasMuzzle>
+              <muzzle>(0.194262296, 0.109508194, 0)</muzzle>
+              <hasSights>true</hasSights>
+              <rearSight>(-0.0614754111, 0.165647547, 0)</rearSight>
+              <frontSight>(0.169672132, 0.165647547, 0)</frontSight>
+              <scope>None</scope>
+              <kind>Gun</kind>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName='CE_Gun_FightLiteMCR']/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName='CE_Gun_FightLiteMCR']</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName='CE_Gun_FightLiteMCR']/modExtensions</xpath>
+          <value>
+            <li Class="HSK.FpsBridge.HeldWeaponModelExtension">
+              <overrideOrientation>true</overrideOrientation>
+              <forward>(1, 0, 0)</forward>
+              <up>(0, 1, 0)</up>
+              <hasGrip>true</hasGrip>
+              <grip>(-0.129999995, -0.0250000004, 0)</grip>
+              <hasMuzzle>true</hasMuzzle>
+              <muzzle>(0.660000026, 0.129999995, 0)</muzzle>
+              <hasSights>true</hasSights>
+              <rearSight>(-0.159999996, 0.260000016, 0)</rearSight>
+              <frontSight>(0.519999981, 0.260000016, 0)</frontSight>
+              <scope>None</scope>
+              <kind>Gun</kind>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName='CE_Gun_HandMortar']/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName='CE_Gun_HandMortar']</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName='CE_Gun_HandMortar']/modExtensions</xpath>
+          <value>
+            <li Class="HSK.FpsBridge.HeldWeaponModelExtension">
+              <overrideOrientation>true</overrideOrientation>
+              <forward>(1, 0, 0)</forward>
+              <up>(0, 1, 0)</up>
+              <hasGrip>true</hasGrip>
+              <grip>(-0.100000001, 0.0599999987, 0)</grip>
+              <hasMuzzle>true</hasMuzzle>
+              <muzzle>(0.400000006, 0.129999995, 0)</muzzle>
+              <hasSights>true</hasSights>
+              <rearSight>(-0.100000001, 0.231000006, 0)</rearSight>
+              <frontSight>(0.340000004, 0.231000006, 0)</frontSight>
+              <scope>None</scope>
+              <kind>Gun</kind>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName='CE_Gun_HenrySideGate']/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName='CE_Gun_HenrySideGate']</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName='CE_Gun_HenrySideGate']/modExtensions</xpath>
+          <value>
+            <li Class="HSK.FpsBridge.HeldWeaponModelExtension">
+              <overrideOrientation>true</overrideOrientation>
+              <forward>(1, 0, 0)</forward>
+              <up>(0, 1, 0)</up>
+              <hasGrip>true</hasGrip>
+              <grip>(0, 0, 0)</grip>
+              <hasMuzzle>true</hasMuzzle>
+              <muzzle>(0.930000007, 0.0949999988, 0)</muzzle>
+              <hasSights>true</hasSights>
+              <rearSight>(0.100000009, 0.173999991, 0)</rearSight>
+              <frontSight>(0.870000005, 0.173999991, 0)</frontSight>
+              <scope>None</scope>
+              <kind>Gun</kind>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName='CE_Gun_Jericho']/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName='CE_Gun_Jericho']</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName='CE_Gun_Jericho']/modExtensions</xpath>
+          <value>
+            <li Class="HSK.FpsBridge.HeldWeaponModelExtension">
+              <overrideOrientation>true</overrideOrientation>
+              <forward>(1, 0, 0)</forward>
+              <up>(0, 1, 0)</up>
+              <hasGrip>true</hasGrip>
+              <grip>(0, 0, 0)</grip>
+              <hasMuzzle>true</hasMuzzle>
+              <muzzle>(0.303000003, 0.22299999, 0)</muzzle>
+              <hasSights>true</hasSights>
+              <rearSight>(-0.0200000033, 0.319000006, 0)</rearSight>
+              <frontSight>(0.264999986, 0.319000006, 0)</frontSight>
+              <scope>None</scope>
+              <kind>Gun</kind>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName='CE_Gun_KSTwentyThree']/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName='CE_Gun_KSTwentyThree']</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName='CE_Gun_KSTwentyThree']/modExtensions</xpath>
+          <value>
+            <li Class="HSK.FpsBridge.HeldWeaponModelExtension">
+              <overrideOrientation>true</overrideOrientation>
+              <forward>(1, 0, 0)</forward>
+              <up>(0, 1, 0)</up>
+              <hasGrip>true</hasGrip>
+              <grip>(0, 0, 0)</grip>
+              <hasMuzzle>true</hasMuzzle>
+              <muzzle>(0.850000024, 0.0949999988, 0)</muzzle>
+              <hasSights>true</hasSights>
+              <rearSight>(0.100000009, 0.173999991, 0)</rearSight>
+              <frontSight>(0.800000012, 0.173999991, 0)</frontSight>
+              <scope>None</scope>
+              <kind>Gun</kind>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName='CE_Gun_KelTecCPThirtyThree']/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName='CE_Gun_KelTecCPThirtyThree']</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName='CE_Gun_KelTecCPThirtyThree']/modExtensions</xpath>
+          <value>
+            <li Class="HSK.FpsBridge.HeldWeaponModelExtension">
+              <overrideOrientation>true</overrideOrientation>
+              <forward>(1, 0, 0)</forward>
+              <up>(0, 1, 0)</up>
+              <hasGrip>true</hasGrip>
+              <grip>(0, 0, 0)</grip>
+              <hasMuzzle>true</hasMuzzle>
+              <muzzle>(0.412999988, 0.22299999, 0)</muzzle>
+              <hasSights>true</hasSights>
+              <rearSight>(-0.0200000033, 0.334999979, 0)</rearSight>
+              <frontSight>(0.375, 0.334999979, 0)</frontSight>
+              <scope>ModernCombat</scope>
+              <hasScopeEye>true</hasScopeEye>
+              <scopeEye>(-0.00599999726, 0.340999991, 0)</scopeEye>
+              <scopeForward>(1, 0, 0)</scopeForward>
+              <scopeZoom>1.5</scopeZoom>
+              <kind>Gun</kind>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName='CE_Gun_KordPortable']/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName='CE_Gun_KordPortable']</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName='CE_Gun_KordPortable']/modExtensions</xpath>
+          <value>
+            <li Class="HSK.FpsBridge.HeldWeaponModelExtension">
+              <overrideOrientation>true</overrideOrientation>
+              <forward>(1, 0, 0)</forward>
+              <up>(0, 1, 0)</up>
+              <hasGrip>true</hasGrip>
+              <grip>(0, 0, 0)</grip>
+              <hasMuzzle>true</hasMuzzle>
+              <muzzle>(1.21200001, 0.170000002, 0)</muzzle>
+              <hasSights>true</hasSights>
+              <rearSight>(-0.0600000024, 0.290000021, 0)</rearSight>
+              <frontSight>(0.939999938, 0.290000021, 0)</frontSight>
+              <scope>ModernCombat</scope>
+              <hasScopeEye>true</hasScopeEye>
+              <scopeEye>(-0.295000017, 0.325000018, 0)</scopeEye>
+              <scopeForward>(1, 0, 0)</scopeForward>
+              <scopeZoom>2</scopeZoom>
+              <kind>Gun</kind>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName='CE_Gun_LaserCarbine']/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName='CE_Gun_LaserCarbine']</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName='CE_Gun_LaserCarbine']/modExtensions</xpath>
+          <value>
+            <li Class="HSK.FpsBridge.HeldWeaponModelExtension">
+              <overrideOrientation>true</overrideOrientation>
+              <forward>(1, 0, 0)</forward>
+              <up>(0, 1, 0)</up>
+              <hasGrip>true</hasGrip>
+              <grip>(0, 0, 0)</grip>
+              <hasMuzzle>true</hasMuzzle>
+              <muzzle>(0.532000005, 0.189999998, 0)</muzzle>
+              <scope>SpacerHolo</scope>
+              <hasScopeEye>true</hasScopeEye>
+              <scopeEye>(-0.0891964883, 0.286500022, 0)</scopeEye>
+              <scopeForward>(1, 0, 0)</scopeForward>
+              <scopeZoom>1.5</scopeZoom>
+              <kind>Gun</kind>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName='CE_Gun_Lewis']/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName='CE_Gun_Lewis']</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName='CE_Gun_Lewis']/modExtensions</xpath>
+          <value>
+            <li Class="HSK.FpsBridge.HeldWeaponModelExtension">
+              <overrideOrientation>true</overrideOrientation>
+              <forward>(1, 0, 0)</forward>
+              <up>(0, 1, 0)</up>
+              <hasGrip>true</hasGrip>
+              <grip>(0, 0, 0)</grip>
+              <hasMuzzle>true</hasMuzzle>
+              <muzzle>(1.12, 0.0949999988, 0)</muzzle>
+              <hasSights>true</hasSights>
+              <rearSight>(0.0500000119, 0.231000002, 0)</rearSight>
+              <frontSight>(1.00999999, 0.231000002, 0)</frontSight>
+              <scope>None</scope>
+              <kind>Gun</kind>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName='CE_Gun_M1903Springfield']/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName='CE_Gun_M1903Springfield']</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName='CE_Gun_M1903Springfield']/modExtensions</xpath>
+          <value>
+            <li Class="HSK.FpsBridge.HeldWeaponModelExtension">
+              <overrideOrientation>true</overrideOrientation>
+              <forward>(1, 0, 0)</forward>
+              <up>(0, 1, 0)</up>
+              <hasGrip>true</hasGrip>
+              <grip>(0, 0, 0)</grip>
+              <hasMuzzle>true</hasMuzzle>
+              <muzzle>(1.01999998, 0.0949999988, 0)</muzzle>
+              <scope>VintageFine</scope>
+              <hasScopeEye>true</hasScopeEye>
+              <scopeEye>(0.100000009, 0.229999989, 0)</scopeEye>
+              <scopeForward>(1, 0, 0)</scopeForward>
+              <scopeZoom>3</scopeZoom>
+              <kind>Gun</kind>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName='CE_Gun_M1917Enfield']/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName='CE_Gun_M1917Enfield']</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName='CE_Gun_M1917Enfield']/modExtensions</xpath>
+          <value>
+            <li Class="HSK.FpsBridge.HeldWeaponModelExtension">
+              <overrideOrientation>true</overrideOrientation>
+              <forward>(1, 0, 0)</forward>
+              <up>(0, 1, 0)</up>
+              <hasGrip>true</hasGrip>
+              <grip>(0, 0, 0)</grip>
+              <hasMuzzle>true</hasMuzzle>
+              <muzzle>(1.05999994, 0.0949999988, 0)</muzzle>
+              <hasSights>true</hasSights>
+              <rearSight>(0.0800000057, 0.179000001, 0)</rearSight>
+              <frontSight>(0.980000019, 0.179000001, 0)</frontSight>
+              <scope>None</scope>
+              <kind>Gun</kind>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName='CE_Gun_M1Garand']/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName='CE_Gun_M1Garand']</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName='CE_Gun_M1Garand']/modExtensions</xpath>
+          <value>
+            <li Class="HSK.FpsBridge.HeldWeaponModelExtension">
+              <overrideOrientation>true</overrideOrientation>
+              <forward>(1, 0, 0)</forward>
+              <up>(0, 1, 0)</up>
+              <hasGrip>true</hasGrip>
+              <grip>(0, 0, 0)</grip>
+              <hasMuzzle>true</hasMuzzle>
+              <muzzle>(1.00999999, 0.0949999988, 0)</muzzle>
+              <hasSights>true</hasSights>
+              <rearSight>(0.0700000077, 0.179000001, 0)</rearSight>
+              <frontSight>(0.939999998, 0.179000001, 0)</frontSight>
+              <scope>None</scope>
+              <kind>Gun</kind>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName='CE_Gun_M82A2Barrett']/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName='CE_Gun_M82A2Barrett']</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName='CE_Gun_M82A2Barrett']/modExtensions</xpath>
+          <value>
+            <li Class="HSK.FpsBridge.HeldWeaponModelExtension">
+              <overrideOrientation>true</overrideOrientation>
+              <forward>(1, 0, 0)</forward>
+              <up>(0, 1, 0)</up>
+              <hasGrip>true</hasGrip>
+              <grip>(0, 0, 0)</grip>
+              <hasMuzzle>true</hasMuzzle>
+              <muzzle>(1.07200003, 0.170000002, 0)</muzzle>
+              <hasSights>true</hasSights>
+              <rearSight>(-0.170000002, 0.327833142, 0)</rearSight>
+              <frontSight>(0.439999998, 0.327833142, 0)</frontSight>
+              <scope>None</scope>
+              <kind>Gun</kind>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName='CE_Gun_MGThreeThreeEight']/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName='CE_Gun_MGThreeThreeEight']</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName='CE_Gun_MGThreeThreeEight']/modExtensions</xpath>
+          <value>
+            <li Class="HSK.FpsBridge.HeldWeaponModelExtension">
+              <overrideOrientation>true</overrideOrientation>
+              <forward>(1, 0, 0)</forward>
+              <up>(0, 1, 0)</up>
+              <hasGrip>true</hasGrip>
+              <grip>(0, 0, 0)</grip>
+              <hasMuzzle>true</hasMuzzle>
+              <muzzle>(1.10000002, 0.170000002, 0)</muzzle>
+              <scope>ModernCombat</scope>
+              <hasScopeEye>true</hasScopeEye>
+              <scopeEye>(0.0449999943, 0.321999997, 0)</scopeEye>
+              <scopeForward>(1, 0, 0)</scopeForward>
+              <scopeZoom>2</scopeZoom>
+              <kind>Gun</kind>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName='CE_Gun_MSeven']/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName='CE_Gun_MSeven']</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName='CE_Gun_MSeven']/modExtensions</xpath>
+          <value>
+            <li Class="HSK.FpsBridge.HeldWeaponModelExtension">
+              <overrideOrientation>true</overrideOrientation>
+              <forward>(1, 0, 0)</forward>
+              <up>(0, 1, 0)</up>
+              <hasGrip>true</hasGrip>
+              <grip>(0, 0, 0)</grip>
+              <hasMuzzle>true</hasMuzzle>
+              <muzzle>(1.01999998, 0.170000002, 0)</muzzle>
+              <scope>ModernCombat</scope>
+              <hasScopeEye>true</hasScopeEye>
+              <scopeEye>(0.0449999943, 0.321999997, 0)</scopeEye>
+              <scopeForward>(1, 0, 0)</scopeForward>
+              <scopeZoom>2</scopeZoom>
+              <kind>Gun</kind>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName='CE_Gun_MTwoFifty']/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName='CE_Gun_MTwoFifty']</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName='CE_Gun_MTwoFifty']/modExtensions</xpath>
+          <value>
+            <li Class="HSK.FpsBridge.HeldWeaponModelExtension">
+              <overrideOrientation>true</overrideOrientation>
+              <forward>(1, 0, 0)</forward>
+              <up>(0, 1, 0)</up>
+              <hasGrip>true</hasGrip>
+              <grip>(0, 0, 0)</grip>
+              <hasMuzzle>true</hasMuzzle>
+              <muzzle>(1.03999996, 0.170000002, 0)</muzzle>
+              <scope>ModernCombat</scope>
+              <hasScopeEye>true</hasScopeEye>
+              <scopeEye>(0.0449999943, 0.321999997, 0)</scopeEye>
+              <scopeForward>(1, 0, 0)</scopeForward>
+              <scopeZoom>2</scopeZoom>
+              <kind>Gun</kind>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName='CE_Gun_MadsenLMG']/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName='CE_Gun_MadsenLMG']</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName='CE_Gun_MadsenLMG']/modExtensions</xpath>
+          <value>
+            <li Class="HSK.FpsBridge.HeldWeaponModelExtension">
+              <overrideOrientation>true</overrideOrientation>
+              <forward>(1, 0, 0)</forward>
+              <up>(0, 1, 0)</up>
+              <hasGrip>true</hasGrip>
+              <grip>(0, 0, 0)</grip>
+              <hasMuzzle>true</hasMuzzle>
+              <muzzle>(1.01999998, 0.0949999988, 0)</muzzle>
+              <hasSights>true</hasSights>
+              <rearSight>(0.0400000066, 0.198999997, 0)</rearSight>
+              <frontSight>(0.949999988, 0.198999997, 0)</frontSight>
+              <scope>None</scope>
+              <kind>Gun</kind>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName='CE_Gun_MicroUzi']/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName='CE_Gun_MicroUzi']</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName='CE_Gun_MicroUzi']/modExtensions</xpath>
+          <value>
+            <li Class="HSK.FpsBridge.HeldWeaponModelExtension">
+              <overrideOrientation>true</overrideOrientation>
+              <forward>(1, 0, 0)</forward>
+              <up>(0, 1, 0)</up>
+              <hasGrip>true</hasGrip>
+              <grip>(0.00999999978, -0.0149999997, 0)</grip>
+              <hasMuzzle>true</hasMuzzle>
+              <muzzle>(0.275999993, 0.143000007, 0)</muzzle>
+              <hasSights>true</hasSights>
+              <rearSight>(-0.104999997, 0.243999999, 0)</rearSight>
+              <frontSight>(0.175000005, 0.243999999, 0)</frontSight>
+              <scope>None</scope>
+              <kind>Gun</kind>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName='CE_Gun_MosinNagant']/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName='CE_Gun_MosinNagant']</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName='CE_Gun_MosinNagant']/modExtensions</xpath>
+          <value>
+            <li Class="HSK.FpsBridge.HeldWeaponModelExtension">
+              <overrideOrientation>true</overrideOrientation>
+              <forward>(1, 0, 0)</forward>
+              <up>(0, 1, 0)</up>
+              <hasGrip>true</hasGrip>
+              <grip>(-0.0599999987, 0.0149999997, 0)</grip>
+              <hasMuzzle>true</hasMuzzle>
+              <muzzle>(0.925999999, 0.135000005, 0)</muzzle>
+              <hasSights>true</hasSights>
+              <rearSight>(0.189999998, 0.189025977, 0)</rearSight>
+              <frontSight>(0.879999995, 0.181025976, 0)</frontSight>
+              <scope>None</scope>
+              <kind>Gun</kind>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName='CE_Gun_MosqueFAL']/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName='CE_Gun_MosqueFAL']</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName='CE_Gun_MosqueFAL']/modExtensions</xpath>
+          <value>
+            <li Class="HSK.FpsBridge.HeldWeaponModelExtension">
+              <overrideOrientation>true</overrideOrientation>
+              <forward>(1, 0, 0)</forward>
+              <up>(0, 1, 0)</up>
+              <hasGrip>true</hasGrip>
+              <grip>(-0.0599999987, 0.0149999997, 0)</grip>
+              <hasMuzzle>true</hasMuzzle>
+              <muzzle>(0.776000023, 0.135000005, 0)</muzzle>
+              <hasSights>true</hasSights>
+              <rearSight>(-0.150000006, 0.197040735, 0)</rearSight>
+              <frontSight>(0.730000019, 0.181040747, 0)</frontSight>
+              <scope>None</scope>
+              <kind>Gun</kind>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName='CE_Gun_PNinety']/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName='CE_Gun_PNinety']</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName='CE_Gun_PNinety']/modExtensions</xpath>
+          <value>
+            <li Class="HSK.FpsBridge.HeldWeaponModelExtension">
+              <overrideOrientation>true</overrideOrientation>
+              <forward>(1, 0, 0)</forward>
+              <up>(0, 1, 0)</up>
+              <hasGrip>true</hasGrip>
+              <grip>(-0.0199999996, -0.00600000005, 0)</grip>
+              <hasMuzzle>true</hasMuzzle>
+              <muzzle>(0.430999994, 0.0920000002, 0)</muzzle>
+              <scope>ModernCombat</scope>
+              <hasScopeEye>true</hasScopeEye>
+              <scopeEye>(0.112000003, 0.242499993, 0)</scopeEye>
+              <scopeForward>(1, 0, 0)</scopeForward>
+              <scopeZoom>1.5</scopeZoom>
+              <kind>Gun</kind>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName='CE_Gun_RPKSixteen']/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName='CE_Gun_RPKSixteen']</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName='CE_Gun_RPKSixteen']/modExtensions</xpath>
+          <value>
+            <li Class="HSK.FpsBridge.HeldWeaponModelExtension">
+              <overrideOrientation>true</overrideOrientation>
+              <forward>(1, 0, 0)</forward>
+              <up>(0, 1, 0)</up>
+              <hasGrip>true</hasGrip>
+              <grip>(-0.0599999987, 0.0149999997, 0)</grip>
+              <hasMuzzle>true</hasMuzzle>
+              <muzzle>(0.805999994, 0.135000005, 0)</muzzle>
+              <scope>ModernCombat</scope>
+              <hasScopeEye>true</hasScopeEye>
+              <scopeEye>(-0.112999998, 0.241999999, 0)</scopeEye>
+              <scopeForward>(1, 0, 0)</scopeForward>
+              <scopeZoom>2</scopeZoom>
+              <kind>Gun</kind>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName='CE_Gun_SRS']/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName='CE_Gun_SRS']</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName='CE_Gun_SRS']/modExtensions</xpath>
+          <value>
+            <li Class="HSK.FpsBridge.HeldWeaponModelExtension">
+              <overrideOrientation>true</overrideOrientation>
+              <forward>(1, 0, 0)</forward>
+              <up>(0, 1, 0)</up>
+              <hasGrip>true</hasGrip>
+              <grip>(-0.0799999982, -0.0160000008, 0)</grip>
+              <hasMuzzle>true</hasMuzzle>
+              <muzzle>(0.69599998, 0.130999997, 0)</muzzle>
+              <scope>ModernPrecision</scope>
+              <hasScopeEye>true</hasScopeEye>
+              <scopeEye>(-0.180999994, 0.25, 0)</scopeEye>
+              <scopeForward>(1, 0, 0)</scopeForward>
+              <scopeZoom>4</scopeZoom>
+              <kind>Gun</kind>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName='CE_Gun_SRTweintyFive']/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName='CE_Gun_SRTweintyFive']</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName='CE_Gun_SRTweintyFive']/modExtensions</xpath>
+          <value>
+            <li Class="HSK.FpsBridge.HeldWeaponModelExtension">
+              <overrideOrientation>true</overrideOrientation>
+              <forward>(1, 0, 0)</forward>
+              <up>(0, 1, 0)</up>
+              <hasGrip>true</hasGrip>
+              <grip>(-0.0599999987, 0.0149999997, 0)</grip>
+              <hasMuzzle>true</hasMuzzle>
+              <muzzle>(0.825999975, 0.135000005, 0)</muzzle>
+              <scope>ModernPrecision</scope>
+              <hasScopeEye>true</hasScopeEye>
+              <scopeEye>(-0.125, 0.246000007, 0)</scopeEye>
+              <scopeForward>(1, 0, 0)</scopeForward>
+              <scopeZoom>4</scopeZoom>
+              <kind>Gun</kind>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName='CE_Gun_SawedOff']/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName='CE_Gun_SawedOff']</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName='CE_Gun_SawedOff']/modExtensions</xpath>
+          <value>
+            <li Class="HSK.FpsBridge.HeldWeaponModelExtension">
+              <overrideOrientation>true</overrideOrientation>
+              <forward>(1, 0, 0)</forward>
+              <up>(0, 1, 0)</up>
+              <hasGrip>true</hasGrip>
+              <grip>(-0.197999999, 0.0240000002, 0)</grip>
+              <hasMuzzle>true</hasMuzzle>
+              <muzzle>(0.316000015, 0.135000005, 0)</muzzle>
+              <scope>None</scope>
+              <kind>Gun</kind>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName='CE_Gun_TacFifty']/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName='CE_Gun_TacFifty']</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName='CE_Gun_TacFifty']/modExtensions</xpath>
+          <value>
+            <li Class="HSK.FpsBridge.HeldWeaponModelExtension">
+              <overrideOrientation>true</overrideOrientation>
+              <forward>(1, 0, 0)</forward>
+              <up>(0, 1, 0)</up>
+              <hasGrip>true</hasGrip>
+              <grip>(-0.0599999987, 0.0149999997, 0)</grip>
+              <hasMuzzle>true</hasMuzzle>
+              <muzzle>(1.13100004, 0.135000005, 0)</muzzle>
+              <scope>ModernPrecision</scope>
+              <hasScopeEye>true</hasScopeEye>
+              <scopeEye>(-0.128999993, 0.246000007, 0)</scopeEye>
+              <scopeForward>(1, 0, 0)</scopeForward>
+              <scopeZoom>4</scopeZoom>
+              <kind>Gun</kind>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName='CE_Gun_TaurusJudge']/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName='CE_Gun_TaurusJudge']</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName='CE_Gun_TaurusJudge']/modExtensions</xpath>
+          <value>
+            <li Class="HSK.FpsBridge.HeldWeaponModelExtension">
+              <overrideOrientation>true</overrideOrientation>
+              <forward>(1, 0, 0)</forward>
+              <up>(0, 1, 0)</up>
+              <hasGrip>true</hasGrip>
+              <grip>(-0.103, 0.0170000009, 0)</grip>
+              <hasMuzzle>true</hasMuzzle>
+              <muzzle>(0.231999993, 0.138999999, 0)</muzzle>
+              <hasSights>true</hasSights>
+              <rearSight>(-0.0649999976, 0.191102937, 0)</rearSight>
+              <frontSight>(0.207000003, 0.194602937, 0)</frontSight>
+              <scope>None</scope>
+              <kind>Gun</kind>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName='CE_Gun_TavorSeven']/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName='CE_Gun_TavorSeven']</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName='CE_Gun_TavorSeven']/modExtensions</xpath>
+          <value>
+            <li Class="HSK.FpsBridge.HeldWeaponModelExtension">
+              <overrideOrientation>true</overrideOrientation>
+              <forward>(1, 0, 0)</forward>
+              <up>(0, 1, 0)</up>
+              <hasGrip>true</hasGrip>
+              <grip>(0.0670000017, -0.0160000008, 0)</grip>
+              <hasMuzzle>true</hasMuzzle>
+              <muzzle>(0.586000025, 0.130999997, 0)</muzzle>
+              <hasSights>true</hasSights>
+              <rearSight>(-0.319999993, 0.250003457, 0)</rearSight>
+              <frontSight>(0.330000013, 0.251003459, 0)</frontSight>
+              <scope>None</scope>
+              <kind>Gun</kind>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName='CE_Gun_Uzi']/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName='CE_Gun_Uzi']</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName='CE_Gun_Uzi']/modExtensions</xpath>
+          <value>
+            <li Class="HSK.FpsBridge.HeldWeaponModelExtension">
+              <overrideOrientation>true</overrideOrientation>
+              <forward>(1, 0, 0)</forward>
+              <up>(0, 1, 0)</up>
+              <hasGrip>true</hasGrip>
+              <grip>(0.00999999978, -0.0149999997, 0)</grip>
+              <hasMuzzle>true</hasMuzzle>
+              <muzzle>(0.416000009, 0.143000007, 0)</muzzle>
+              <hasSights>true</hasSights>
+              <rearSight>(-0.104999997, 0.243999999, 0)</rearSight>
+              <frontSight>(0.295000001, 0.243999999, 0)</frontSight>
+              <scope>None</scope>
+              <kind>Gun</kind>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName='CE_Gun_WallGun']/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName='CE_Gun_WallGun']</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName='CE_Gun_WallGun']/modExtensions</xpath>
+          <value>
+            <li Class="HSK.FpsBridge.HeldWeaponModelExtension">
+              <overrideOrientation>true</overrideOrientation>
+              <forward>(1, 0, 0)</forward>
+              <up>(0, 1, 0)</up>
+              <hasGrip>true</hasGrip>
+              <grip>(-0.0599999987, 0.0149999997, 0)</grip>
+              <hasMuzzle>true</hasMuzzle>
+              <muzzle>(1.36600006, 0.135000005, 0)</muzzle>
+              <hasSights>true</hasSights>
+              <rearSight>(-0.150000006, 0.197024389, 0)</rearSight>
+              <frontSight>(1.32000005, 0.181024401, 0)</frontSight>
+              <scope>None</scope>
+              <kind>Gun</kind>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName='CE_Gun_WinchesterEightySix']/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName='CE_Gun_WinchesterEightySix']</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName='CE_Gun_WinchesterEightySix']/modExtensions</xpath>
+          <value>
+            <li Class="HSK.FpsBridge.HeldWeaponModelExtension">
+              <overrideOrientation>true</overrideOrientation>
+              <forward>(1, 0, 0)</forward>
+              <up>(0, 1, 0)</up>
+              <hasGrip>true</hasGrip>
+              <grip>(-0.209999993, 0.057, 0)</grip>
+              <hasMuzzle>true</hasMuzzle>
+              <muzzle>(0.825999975, 0.135000005, 0)</muzzle>
+              <hasSights>true</hasSights>
+              <rearSight>(-0.150000006, 0.197038545, 0)</rearSight>
+              <frontSight>(0.779999971, 0.181038558, 0)</frontSight>
+              <scope>None</scope>
+              <kind>Gun</kind>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName='CE_Melee_BecDeCorbin']/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName='CE_Melee_BecDeCorbin']</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName='CE_Melee_BecDeCorbin']/modExtensions</xpath>
+          <value>
+            <li Class="HSK.FpsBridge.HeldWeaponModelExtension">
+              <overrideOrientation>true</overrideOrientation>
+              <forward>(1, 0, 0)</forward>
+              <up>(0, 1, 0)</up>
+              <hasGrip>true</hasGrip>
+              <grip>(0, 0, 0)</grip>
+              <scope>None</scope>
+              <kind>Blade</kind>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName='CE_Melee_Machete']/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName='CE_Melee_Machete']</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName='CE_Melee_Machete']/modExtensions</xpath>
+          <value>
+            <li Class="HSK.FpsBridge.HeldWeaponModelExtension">
+              <overrideOrientation>true</overrideOrientation>
+              <forward>(1, 0, 0)</forward>
+              <up>(0, 1, 0)</up>
+              <hasGrip>true</hasGrip>
+              <grip>(-0.115000002, 0, 0)</grip>
+              <scope>None</scope>
+              <kind>Blade</kind>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName='CE_Melee_Pollaxe']/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName='CE_Melee_Pollaxe']</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName='CE_Melee_Pollaxe']/modExtensions</xpath>
+          <value>
+            <li Class="HSK.FpsBridge.HeldWeaponModelExtension">
+              <overrideOrientation>true</overrideOrientation>
+              <forward>(1, 0, 0)</forward>
+              <up>(0, 1, 0)</up>
+              <hasGrip>true</hasGrip>
+              <grip>(0, 0, 0)</grip>
+              <scope>None</scope>
+              <kind>Blade</kind>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName='CE_Melee_QuarterStaff']/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName='CE_Melee_QuarterStaff']</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName='CE_Melee_QuarterStaff']/modExtensions</xpath>
+          <value>
+            <li Class="HSK.FpsBridge.HeldWeaponModelExtension">
+              <overrideOrientation>true</overrideOrientation>
+              <forward>(1, 0, 0)</forward>
+              <up>(0, 1, 0)</up>
+              <hasGrip>true</hasGrip>
+              <grip>(0, 0, 0)</grip>
+              <scope>None</scope>
+              <kind>Blade</kind>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName='CE_Melee_Saber']/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName='CE_Melee_Saber']</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName='CE_Melee_Saber']/modExtensions</xpath>
+          <value>
+            <li Class="HSK.FpsBridge.HeldWeaponModelExtension">
+              <overrideOrientation>true</overrideOrientation>
+              <forward>(1, 0, 0)</forward>
+              <up>(0, 1, 0)</up>
+              <hasGrip>true</hasGrip>
+              <grip>(-0.125, 0, 0)</grip>
+              <scope>None</scope>
+              <kind>Blade</kind>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName='CE_Weapon_SatchelCharge']/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName='CE_Weapon_SatchelCharge']</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName='CE_Weapon_SatchelCharge']/modExtensions</xpath>
+          <value>
+            <li Class="HSK.FpsBridge.HeldWeaponModelExtension">
+              <overrideOrientation>true</overrideOrientation>
+              <forward>(1, 0, 0)</forward>
+              <up>(0, 1, 0)</up>
+              <hasGrip>true</hasGrip>
+              <grip>(0, 0, 0)</grip>
+              <scope>None</scope>
+              <kind>Grenade</kind>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationConditional">
+          <xpath>Defs/ThingDef[defName='CE_Weapon_SmokeBomb']/modExtensions</xpath>
+          <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/ThingDef[defName='CE_Weapon_SmokeBomb']</xpath>
+            <value>
+              <modExtensions />
+            </value>
+          </nomatch>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/ThingDef[defName='CE_Weapon_SmokeBomb']/modExtensions</xpath>
+          <value>
+            <li Class="HSK.FpsBridge.HeldWeaponModelExtension">
+              <overrideOrientation>true</overrideOrientation>
+              <forward>(1, 0, 0)</forward>
+              <up>(0, 1, 0)</up>
+              <hasGrip>true</hasGrip>
+              <grip>(0, 0, 0)</grip>
+              <scope>None</scope>
+              <kind>Grenade</kind>
+            </li>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

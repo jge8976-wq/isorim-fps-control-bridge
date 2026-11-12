@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <AssemblyName>HSK.FpsBridge</AssemblyName>
+    <RootNamespace>HSK.FpsBridge</RootNamespace>
+    <Version>0.8.18</Version>
+    <InformationalVersion>0.8.18-held-sprite-r1</InformationalVersion>
+    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+    <Deterministic>true</Deterministic>
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+    <DebugType>portable</DebugType>
+    <GenerateDependencyFile>false</GenerateDependencyFile>
+    <OutputPath>../Build/</OutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp"><HintPath>$(RimWorldDir)/Assembly-CSharp.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityStubs"><HintPath>$(RimWorldDir)/UnityStubs.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Waylith"><HintPath>$(RimWorldDir)/Waylith.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="0Harmony"><HintPath>$(WorkshopDir)/2009463077/1.7/Assemblies/0Harmony.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="IsoRim"><HintPath>$(WorkshopDir)/3819577715/1.7/Assemblies/IsoRim.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+</Project>

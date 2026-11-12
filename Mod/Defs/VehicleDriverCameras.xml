@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Fixed local driver eyes measured against the delivered cabin and installed fixture geometry. -->
+  <HSK.FpsBridge.VehicleDriverCameraDef>
+    <defName>FPS_Driver_ArmySteed</defName>
+    <vehicleDef>DMS_ArmySteed_APC</vehicleDef>
+    <bodyModel>Models/DMS/d05499a4ec4ba2c07_p28_vehicle_body.obj</bodyModel>
+    <eye>(-0.32,1.55,0.55)</eye>
+  </HSK.FpsBridge.VehicleDriverCameraDef>
+  <HSK.FpsBridge.VehicleDriverCameraDef>
+    <defName>FPS_Driver_Tango</defName>
+    <vehicleDef>VVE_Tango</vehicleDef>
+    <bodyModel>Models/NewVehicles/029.obj</bodyModel>
+    <eye>(-0.3824,1.82873,1.65)</eye>
+  </HSK.FpsBridge.VehicleDriverCameraDef>
+  <HSK.FpsBridge.VehicleDriverCameraDef>
+    <defName>FPS_Driver_Dinghy</defName>
+    <vehicleDef>VVE_Dinghy</vehicleDef>
+    <bodyModel>Models/NewVehicles/009.obj</bodyModel>
+    <eye>(-0.26653,1.72,1.0295)</eye>
+  </HSK.FpsBridge.VehicleDriverCameraDef>
+  <HSK.FpsBridge.VehicleDriverCameraDef>
+    <defName>FPS_Driver_Trawler</defName>
+    <vehicleDef>VVE_Trawler</vehicleDef>
+    <bodyModel>Models/NewVehicles/032.obj</bodyModel>
+    <eye>(-0.29184,1.80,1.07)</eye>
+  </HSK.FpsBridge.VehicleDriverCameraDef>
+</Defs>

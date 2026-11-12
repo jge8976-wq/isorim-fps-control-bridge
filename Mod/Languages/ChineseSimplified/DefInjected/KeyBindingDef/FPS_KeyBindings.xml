@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LanguageData>
+  <FPS_ViewCycle.label>接管 / 切换人物视角</FPS_ViewCycle.label>
+  <FPS_ExitRecall.label>退出 / 返回上次人物</FPS_ExitRecall.label>
+  <FPS_Capture.label>释放 / 锁定鼠标</FPS_Capture.label>
+  <FPS_Forward.label>向前移动</FPS_Forward.label>
+  <FPS_Backward.label>向后移动</FPS_Backward.label>
+  <FPS_Left.label>向左移动</FPS_Left.label>
+  <FPS_Right.label>向右移动</FPS_Right.label>
+  <FPS_LeanLeft.label>左探头 / 上一炮台</FPS_LeanLeft.label>
+  <FPS_InteractLeanRight.label>轻按交互 / 长按右探头 / 下一炮台</FPS_InteractLeanRight.label>
+  <FPS_NextWeapon.label>切换武器 / 炮兵视角</FPS_NextWeapon.label>
+  <FPS_Inventory.label>打开 / 关闭背包</FPS_Inventory.label>
+  <FPS_Fire.label>攻击 / 投掷</FPS_Fire.label>
+  <FPS_Aim.label>瞄准 / 开镜 / 近战重击</FPS_Aim.label>
+  <FPS_Sprint.label>奔跑 / 炮兵精细调节</FPS_Sprint.label>
+  <FPS_Crouch.label>蹲下 / 滑铲</FPS_Crouch.label>
+  <FPS_Prone.label>趴下 / 站起</FPS_Prone.label>
+  <FPS_Jump.label>跳跃 / 翻越 / 爬墙</FPS_Jump.label>
+  <FPS_AutoWork.label>自动工作</FPS_AutoWork.label>
+  <FPS_ManualWork.label>手动工作 / 离开炮台</FPS_ManualWork.label>
+  <FPS_FireMode.label>切换射击模式</FPS_FireMode.label>
+  <FPS_Reload.label>武器换弹／火炮快速装填</FPS_Reload.label>
+  <FPS_UseItem.label>使用当前背包物品</FPS_UseItem.label>
+  <FPS_MarkTarget.label>标记 / 取消目标</FPS_MarkTarget.label>
+  <FPS_Social.label>社交菜单 / 确认</FPS_Social.label>
+  <FPS_MechAbility.label>机械体专属能力</FPS_MechAbility.label>
+  <FPS_Overlay.label>判定框 / 提前量 / 调速修饰键</FPS_Overlay.label>
+  <FPS_AbilityPage.label>主动能力栏翻页</FPS_AbilityPage.label>
+  <FPS_Sandevistan.label>第一人称技能：斯安威斯坦</FPS_Sandevistan.label>
+  <FPS_DeathEye.label>第一人称技能：死神之眼</FPS_DeathEye.label>
+  <FPS_QuickTend.label>快捷包扎自己／附近队友</FPS_QuickTend.label>
+<FPS_VehicleMachineGun.label>载具机枪（按住开火）</FPS_VehicleMachineGun.label></LanguageData>

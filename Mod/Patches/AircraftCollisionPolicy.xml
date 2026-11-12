@@ -1,0 +1,393 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/*[defName="RT_C130_Vehicle"]</xpath>
+    <match Class="PatchOperationConditional">
+      <xpath>Defs/*[defName="RT_C130_Vehicle"]/modExtensions</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>Defs/*[defName="RT_C130_Vehicle"]/modExtensions</xpath>
+        <value>
+          <li Class="HSK.FpsBridge.AircraftCollisionExtension">
+            <returnFraction>0.3</returnFraction>
+            <armoredReturnFraction>0.15</armoredReturnFraction>
+          </li>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>Defs/*[defName="RT_C130_Vehicle"]</xpath>
+        <value>
+          <modExtensions>
+            <li Class="HSK.FpsBridge.AircraftCollisionExtension">
+              <returnFraction>0.3</returnFraction>
+              <armoredReturnFraction>0.15</armoredReturnFraction>
+            </li>
+          </modExtensions>
+        </value>
+      </nomatch>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/*[defName="RT_CH53E_Vehicle"]</xpath>
+    <match Class="PatchOperationConditional">
+      <xpath>Defs/*[defName="RT_CH53E_Vehicle"]/modExtensions</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>Defs/*[defName="RT_CH53E_Vehicle"]/modExtensions</xpath>
+        <value>
+          <li Class="HSK.FpsBridge.AircraftCollisionExtension">
+            <returnFraction>0.3</returnFraction>
+            <armoredReturnFraction>0.15</armoredReturnFraction>
+          </li>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>Defs/*[defName="RT_CH53E_Vehicle"]</xpath>
+        <value>
+          <modExtensions>
+            <li Class="HSK.FpsBridge.AircraftCollisionExtension">
+              <returnFraction>0.3</returnFraction>
+              <armoredReturnFraction>0.15</armoredReturnFraction>
+            </li>
+          </modExtensions>
+        </value>
+      </nomatch>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/*[defName="RT_UH60_Vehicle"]</xpath>
+    <match Class="PatchOperationConditional">
+      <xpath>Defs/*[defName="RT_UH60_Vehicle"]/modExtensions</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>Defs/*[defName="RT_UH60_Vehicle"]/modExtensions</xpath>
+        <value>
+          <li Class="HSK.FpsBridge.AircraftCollisionExtension">
+            <returnFraction>0.3</returnFraction>
+            <armoredReturnFraction>0.15</armoredReturnFraction>
+          </li>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>Defs/*[defName="RT_UH60_Vehicle"]</xpath>
+        <value>
+          <modExtensions>
+            <li Class="HSK.FpsBridge.AircraftCollisionExtension">
+              <returnFraction>0.3</returnFraction>
+              <armoredReturnFraction>0.15</armoredReturnFraction>
+            </li>
+          </modExtensions>
+        </value>
+      </nomatch>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/*[defName="SoS2_Shuttle"]</xpath>
+    <match Class="PatchOperationConditional">
+      <xpath>Defs/*[defName="SoS2_Shuttle"]/modExtensions</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>Defs/*[defName="SoS2_Shuttle"]/modExtensions</xpath>
+        <value>
+          <li Class="HSK.FpsBridge.AircraftCollisionExtension">
+            <returnFraction>0.5</returnFraction>
+            <armoredReturnFraction>0.15</armoredReturnFraction>
+          </li>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>Defs/*[defName="SoS2_Shuttle"]</xpath>
+        <value>
+          <modExtensions>
+            <li Class="HSK.FpsBridge.AircraftCollisionExtension">
+              <returnFraction>0.5</returnFraction>
+              <armoredReturnFraction>0.15</armoredReturnFraction>
+            </li>
+          </modExtensions>
+        </value>
+      </nomatch>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/*[defName="SoS2_Shuttle_Heavy"]</xpath>
+    <match Class="PatchOperationConditional">
+      <xpath>Defs/*[defName="SoS2_Shuttle_Heavy"]/modExtensions</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>Defs/*[defName="SoS2_Shuttle_Heavy"]/modExtensions</xpath>
+        <value>
+          <li Class="HSK.FpsBridge.AircraftCollisionExtension">
+            <returnFraction>0.3</returnFraction>
+            <armoredReturnFraction>0.15</armoredReturnFraction>
+          </li>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>Defs/*[defName="SoS2_Shuttle_Heavy"]</xpath>
+        <value>
+          <modExtensions>
+            <li Class="HSK.FpsBridge.AircraftCollisionExtension">
+              <returnFraction>0.3</returnFraction>
+              <armoredReturnFraction>0.15</armoredReturnFraction>
+            </li>
+          </modExtensions>
+        </value>
+      </nomatch>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/*[defName="SoS2_Shuttle_Personal"]</xpath>
+    <match Class="PatchOperationConditional">
+      <xpath>Defs/*[defName="SoS2_Shuttle_Personal"]/modExtensions</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>Defs/*[defName="SoS2_Shuttle_Personal"]/modExtensions</xpath>
+        <value>
+          <li Class="HSK.FpsBridge.AircraftCollisionExtension">
+            <returnFraction>0.5</returnFraction>
+            <armoredReturnFraction>0.15</armoredReturnFraction>
+          </li>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>Defs/*[defName="SoS2_Shuttle_Personal"]</xpath>
+        <value>
+          <modExtensions>
+            <li Class="HSK.FpsBridge.AircraftCollisionExtension">
+              <returnFraction>0.5</returnFraction>
+              <armoredReturnFraction>0.15</armoredReturnFraction>
+            </li>
+          </modExtensions>
+        </value>
+      </nomatch>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/*[defName="SoS2_Shuttle_Superheavy"]</xpath>
+    <match Class="PatchOperationConditional">
+      <xpath>Defs/*[defName="SoS2_Shuttle_Superheavy"]/modExtensions</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>Defs/*[defName="SoS2_Shuttle_Superheavy"]/modExtensions</xpath>
+        <value>
+          <li Class="HSK.FpsBridge.AircraftCollisionExtension">
+            <returnFraction>0.3</returnFraction>
+            <armoredReturnFraction>0.15</armoredReturnFraction>
+          </li>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>Defs/*[defName="SoS2_Shuttle_Superheavy"]</xpath>
+        <value>
+          <modExtensions>
+            <li Class="HSK.FpsBridge.AircraftCollisionExtension">
+              <returnFraction>0.3</returnFraction>
+              <armoredReturnFraction>0.15</armoredReturnFraction>
+            </li>
+          </modExtensions>
+        </value>
+      </nomatch>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/*[defName="VVE_Cherokee"]</xpath>
+    <match Class="PatchOperationConditional">
+      <xpath>Defs/*[defName="VVE_Cherokee"]/modExtensions</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>Defs/*[defName="VVE_Cherokee"]/modExtensions</xpath>
+        <value>
+          <li Class="HSK.FpsBridge.AircraftCollisionExtension">
+            <returnFraction>0.3</returnFraction>
+            <armoredReturnFraction>0.15</armoredReturnFraction>
+          </li>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>Defs/*[defName="VVE_Cherokee"]</xpath>
+        <value>
+          <modExtensions>
+            <li Class="HSK.FpsBridge.AircraftCollisionExtension">
+              <returnFraction>0.3</returnFraction>
+              <armoredReturnFraction>0.15</armoredReturnFraction>
+            </li>
+          </modExtensions>
+        </value>
+      </nomatch>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/*[defName="VVE_Frog"]</xpath>
+    <match Class="PatchOperationConditional">
+      <xpath>Defs/*[defName="VVE_Frog"]/modExtensions</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>Defs/*[defName="VVE_Frog"]/modExtensions</xpath>
+        <value>
+          <li Class="HSK.FpsBridge.AircraftCollisionExtension">
+            <returnFraction>0.5</returnFraction>
+            <armoredReturnFraction>0.15</armoredReturnFraction>
+          </li>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>Defs/*[defName="VVE_Frog"]</xpath>
+        <value>
+          <modExtensions>
+            <li Class="HSK.FpsBridge.AircraftCollisionExtension">
+              <returnFraction>0.5</returnFraction>
+              <armoredReturnFraction>0.15</armoredReturnFraction>
+            </li>
+          </modExtensions>
+        </value>
+      </nomatch>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/*[defName="VVE_Goliath"]</xpath>
+    <match Class="PatchOperationConditional">
+      <xpath>Defs/*[defName="VVE_Goliath"]/modExtensions</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>Defs/*[defName="VVE_Goliath"]/modExtensions</xpath>
+        <value>
+          <li Class="HSK.FpsBridge.AircraftCollisionExtension">
+            <returnFraction>0.3</returnFraction>
+            <armoredReturnFraction>0.15</armoredReturnFraction>
+          </li>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>Defs/*[defName="VVE_Goliath"]</xpath>
+        <value>
+          <modExtensions>
+            <li Class="HSK.FpsBridge.AircraftCollisionExtension">
+              <returnFraction>0.3</returnFraction>
+              <armoredReturnFraction>0.15</armoredReturnFraction>
+            </li>
+          </modExtensions>
+        </value>
+      </nomatch>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/*[defName="VVE_Louie"]</xpath>
+    <match Class="PatchOperationConditional">
+      <xpath>Defs/*[defName="VVE_Louie"]/modExtensions</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>Defs/*[defName="VVE_Louie"]/modExtensions</xpath>
+        <value>
+          <li Class="HSK.FpsBridge.AircraftCollisionExtension">
+            <returnFraction>0.3</returnFraction>
+            <armoredReturnFraction>0.15</armoredReturnFraction>
+          </li>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>Defs/*[defName="VVE_Louie"]</xpath>
+        <value>
+          <modExtensions>
+            <li Class="HSK.FpsBridge.AircraftCollisionExtension">
+              <returnFraction>0.3</returnFraction>
+              <armoredReturnFraction>0.15</armoredReturnFraction>
+            </li>
+          </modExtensions>
+        </value>
+      </nomatch>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/*[defName="VVE_Mosquito"]</xpath>
+    <match Class="PatchOperationConditional">
+      <xpath>Defs/*[defName="VVE_Mosquito"]/modExtensions</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>Defs/*[defName="VVE_Mosquito"]/modExtensions</xpath>
+        <value>
+          <li Class="HSK.FpsBridge.AircraftCollisionExtension">
+            <returnFraction>0.3</returnFraction>
+            <armoredReturnFraction>0.15</armoredReturnFraction>
+          </li>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>Defs/*[defName="VVE_Mosquito"]</xpath>
+        <value>
+          <modExtensions>
+            <li Class="HSK.FpsBridge.AircraftCollisionExtension">
+              <returnFraction>0.3</returnFraction>
+              <armoredReturnFraction>0.15</armoredReturnFraction>
+            </li>
+          </modExtensions>
+        </value>
+      </nomatch>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/*[defName="VVE_Smuggler"]</xpath>
+    <match Class="PatchOperationConditional">
+      <xpath>Defs/*[defName="VVE_Smuggler"]/modExtensions</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>Defs/*[defName="VVE_Smuggler"]/modExtensions</xpath>
+        <value>
+          <li Class="HSK.FpsBridge.AircraftCollisionExtension">
+            <returnFraction>0.5</returnFraction>
+            <armoredReturnFraction>0.15</armoredReturnFraction>
+          </li>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>Defs/*[defName="VVE_Smuggler"]</xpath>
+        <value>
+          <modExtensions>
+            <li Class="HSK.FpsBridge.AircraftCollisionExtension">
+              <returnFraction>0.5</returnFraction>
+              <armoredReturnFraction>0.15</armoredReturnFraction>
+            </li>
+          </modExtensions>
+        </value>
+      </nomatch>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/*[defName="VVE_Toad"]</xpath>
+    <match Class="PatchOperationConditional">
+      <xpath>Defs/*[defName="VVE_Toad"]/modExtensions</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>Defs/*[defName="VVE_Toad"]/modExtensions</xpath>
+        <value>
+          <li Class="HSK.FpsBridge.AircraftCollisionExtension">
+            <returnFraction>0.5</returnFraction>
+            <armoredReturnFraction>0.15</armoredReturnFraction>
+          </li>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>Defs/*[defName="VVE_Toad"]</xpath>
+        <value>
+          <modExtensions>
+            <li Class="HSK.FpsBridge.AircraftCollisionExtension">
+              <returnFraction>0.5</returnFraction>
+              <armoredReturnFraction>0.15</armoredReturnFraction>
+            </li>
+          </modExtensions>
+        </value>
+      </nomatch>
+    </match>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/*[defName="VVE_Warbird"]</xpath>
+    <match Class="PatchOperationConditional">
+      <xpath>Defs/*[defName="VVE_Warbird"]/modExtensions</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>Defs/*[defName="VVE_Warbird"]/modExtensions</xpath>
+        <value>
+          <li Class="HSK.FpsBridge.AircraftCollisionExtension">
+            <returnFraction>0.3</returnFraction>
+            <armoredReturnFraction>0.15</armoredReturnFraction>
+          </li>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>Defs/*[defName="VVE_Warbird"]</xpath>
+        <value>
+          <modExtensions>
+            <li Class="HSK.FpsBridge.AircraftCollisionExtension">
+              <returnFraction>0.3</returnFraction>
+              <armoredReturnFraction>0.15</armoredReturnFraction>
+            </li>
+          </modExtensions>
+        </value>
+      </nomatch>
+    </match>
+  </Operation>
+</Patch>

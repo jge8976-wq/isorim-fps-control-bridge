@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+  <Operation Class="HSK.FpsVehicleCompatibility.PatchOperationVehicleCapability">
+    <requiredTypes>
+      <li>Vehicles.CETurretDataDefModExtension</li>
+    </requiredTypes>
+    <operation Class="PatchOperationConditional">
+      <xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_762x51mmNATO"]</xpath>
+      <match Class="PatchOperationSequence">
+        <operations>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/Vehicles.VehicleTurretDef[defName="FPS_Air_SeekerTrial80"]/ammunition</xpath>
+            <value>
+              <ammunition>
+                <thingDefs>
+                  <li>Ammo_80mmRocket_HE</li>
+                  <li>Ammo_80mmRocket_HEAT</li>
+                  <li>Ammo_80mmRocket_Thermobaric</li>
+                </thingDefs>
+              </ammunition>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/Vehicles.VehicleTurretDef[defName="FPS_Air_SeekerTrial80"]/projectile</xpath>
+            <value>
+              <projectile>Bullet_80mmRocket_HE</projectile>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/Vehicles.VehicleTurretDef[defName="FPS_Air_SeekerTrial80"]/genericAmmo</xpath>
+            <value>
+              <genericAmmo>false</genericAmmo>
+            </value>
+          </li>
+          <li Class="PatchOperationAddModExtension">
+            <xpath>Defs/Vehicles.VehicleTurretDef[defName="FPS_Air_SeekerTrial80"]</xpath>
+            <value>
+              <li Class="Vehicles.CETurretDataDefModExtension">
+                <ammoSet>AmmoSet_80mmRocket_direct</ammoSet>
+                <shotHeight>2</shotHeight>
+                <spread>0</spread>
+                <sway>0</sway>
+                <recoil>0</recoil>
+              </li>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </operation>
+  </Operation>
+</Patch>

@@ -1,0 +1,40 @@
+R14 喷火载具与墙顶区域查询修复
+2026-10-26
+
+修复范围
+1 FPS手操载具：VEF ExpandableProjectile及其喷火子类交回VEF原生飞行/范围伤害流程。
+  原先桥接在基类Launch后重写origin/destination/ticks并加入3D飞行表，派生类仍继续初始化并执行自身扩展伤害线。
+  这会让两个飞行流程同时工作；ProjectZ不同楼层的原始行坐标差又可能把约15格的喷火线放大到约300格。
+  现在手动瞄准喷火弹时始终使用发射载具所在楼层的逻辑行坐标，AfterLaunch只记录成功射击，不接管其轨迹。
+  保留VEF喷火伤害、燃烧、生命周期，以及原生载具燃料/弹药/装填/射速流程。普通炮弹和机枪仍走原有3D弹道。
+  此次没有把原生二维喷火锥重新实现为跨楼层3D火焰；原生喷火的上下层/垂直瞄准表现仍需独立实机验收。
+
+2 墙顶控制：站在墙格上的人物没有原版地面Region。日志中的SURFACE_ENTER含walkable=False、room=none，随后出现避爆查找空root。
+  同一日志还存在进食寻找站位时RandomRegionNear(root=null)的异常。
+  现在只对Surface当前控制且没有地面Region的角色加保护：避爆返回没有地面路线；站位使用当前表面位置，仍遵守调用方额外位置条件。
+  有效Region、其它人物以及显式提供目标Region的查询继续走原流程。不全局屏蔽异常、不伪造地面区域。
+
+验证
+Release生产构建通过，0警告、0错误。
+29项专项检查使用实际安装VEF类型和原生RCellFinder方法，验证喷火字段保留、成功射击计数、普通炮弹分流，以及不同楼层原始行坐标的目标选择。
+原有武器86项、交互238项、空中移动/骑乘/近战186项、鼠族绘制8项及原生补丁安装检查通过。
+专项测试隔离地图、Region提供器、普通弹丸的碰撞/接管边界、楼层布局缓存和炮塔发射派发；不代表GPU、真实地图寻路或喷火伤害已实机通过。
+
+测试入口
+使用现有独立测试存档。此次不改存档、键位、前置列表和模型资源；旧候选及分享包保留。
+
+建议实测
+1 Bunsen喷火载具手操，平射/向下瞄准各连续开火并等装填后再射，确认没有200半径上限红字，火焰仍能伤敌/燃烧。
+2 同场用普通主炮/机枪各打一轮，确认3D飞行、装填和弹药正常。
+3 同一名角色爬钢墙顶，附近放潜在爆炸物，观察不再出现FleePotentialExplosion的空root错误。
+4 墙顶吃东西或触发食物相关查询，检查无SpotToStandDuringJob空root；下墙后普通AI进食和避爆仍可运行。
+
+证据
+Evidence/Player-before-fix.log：原始日志副本。
+Evidence/VEF-ExpandableProjectile.cs、RCellFinder.cs、VehicleTurret.cs：当前安装版本反编译，仅诊断用途，不放进玩家包。
+Evidence/flame-region-checks.json：专项离线结果；Evidence/install.json：安装及回退备份回执。
+
+上游开放实现参考
+https://github.com/Vanilla-Expanded/VanillaExpandedFramework
+https://github.com/SmashPhil/Vehicle-Framework
+本修复通过桥接分流复用上游行为，没有另造喷火伤害系统。

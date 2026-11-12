@@ -1,0 +1,492 @@
+{
+  "format": 1,
+  "models": 94,
+  "mappings": 97,
+  "entries": [
+    {
+      "defName": "Gun_EmpLauncher",
+      "modelId": "Gun_EmpLauncher",
+      "atlas": "DLC_Gun_EmpLauncher"
+    },
+    {
+      "defName": "MeleeWeapon_MonoSwordBladelink",
+      "modelId": "MeleeWeapon_MonoSwordBladelink",
+      "atlas": "DLC_MeleeWeapon_MonoSwordBladelink"
+    },
+    {
+      "defName": "MeleeWeapon_MonoSword",
+      "modelId": "MeleeWeapon_MonoSwordBladelink",
+      "atlas": "DLC_MeleeWeapon_MonoSwordBladelink"
+    },
+    {
+      "defName": "MeleeWeapon_ZeusHammerBladelink",
+      "modelId": "MeleeWeapon_ZeusHammerBladelink",
+      "atlas": "DLC_MeleeWeapon_ZeusHammerBladelink"
+    },
+    {
+      "defName": "MeleeWeapon_Zeushammer",
+      "modelId": "MeleeWeapon_ZeusHammerBladelink",
+      "atlas": "DLC_MeleeWeapon_ZeusHammerBladelink"
+    },
+    {
+      "defName": "MeleeWeapon_PlasmaSwordBladelink",
+      "modelId": "MeleeWeapon_PlasmaSwordBladelink",
+      "atlas": "DLC_MeleeWeapon_PlasmaSwordBladelink"
+    },
+    {
+      "defName": "MeleeWeapon_PlasmaSword",
+      "modelId": "MeleeWeapon_PlasmaSwordBladelink",
+      "atlas": "DLC_MeleeWeapon_PlasmaSwordBladelink"
+    },
+    {
+      "defName": "MastodonTusk",
+      "modelId": "MastodonTusk",
+      "atlas": "DLC_MastodonTusk"
+    },
+    {
+      "defName": "Gun_NeedleLauncher",
+      "modelId": "Gun_NeedleLauncher",
+      "atlas": "DLC_Gun_NeedleLauncher"
+    },
+    {
+      "defName": "Gun_ToxicNeedle",
+      "modelId": "Gun_ToxicNeedle",
+      "atlas": "DLC_Gun_ToxicNeedle"
+    },
+    {
+      "defName": "Gun_HellcatRifle",
+      "modelId": "Gun_HellcatRifle",
+      "atlas": "DLC_Gun_HellcatRifle"
+    },
+    {
+      "defName": "Gun_Slugthrower",
+      "modelId": "Gun_Slugthrower",
+      "atlas": "DLC_Gun_Slugthrower"
+    },
+    {
+      "defName": "Gun_HellsphereCannon",
+      "modelId": "Gun_HellsphereCannon",
+      "atlas": "DLC_Gun_HellsphereCannon"
+    },
+    {
+      "defName": "Gun_BeamGraser",
+      "modelId": "Gun_BeamGraser",
+      "atlas": "DLC_Gun_BeamGraser"
+    },
+    {
+      "defName": "MeleeWeapon_Axe",
+      "modelId": "MeleeWeapon_Axe",
+      "atlas": "DLC_MeleeWeapon_Axe"
+    },
+    {
+      "defName": "MeleeWeapon_Axe",
+      "modelId": "MeleeWeapon_Axe__Horaxian",
+      "atlas": "DLC_MeleeWeapon_Axe__Horaxian"
+    },
+    {
+      "defName": "MeleeWeapon_Warhammer",
+      "modelId": "MeleeWeapon_Warhammer",
+      "atlas": "DLC_MeleeWeapon_Warhammer"
+    },
+    {
+      "defName": "ThrumboHorn",
+      "modelId": "ThrumboHorn",
+      "atlas": "DLC_ThrumboHorn"
+    },
+    {
+      "defName": "Gun_ToxbombLauncher",
+      "modelId": "Gun_ToxbombLauncher",
+      "atlas": "DLC_Gun_ToxbombLauncher"
+    },
+    {
+      "defName": "Weapon_GrenadeTox",
+      "modelId": "Weapon_GrenadeTox",
+      "atlas": "DLC_Weapon_GrenadeTox"
+    },
+    {
+      "defName": "Flamebow",
+      "modelId": "Flamebow",
+      "atlas": "DLC_Flamebow"
+    },
+    {
+      "defName": "MeleeWeapon_PsyfocusStaff",
+      "modelId": "MeleeWeapon_PsyfocusStaff",
+      "atlas": "DLC_MeleeWeapon_PsyfocusStaff"
+    },
+    {
+      "defName": "Gun_SmokeLauncher",
+      "modelId": "Gun_SmokeLauncher",
+      "atlas": "DLC_Gun_SmokeLauncher"
+    },
+    {
+      "defName": "Gun_Incinerator",
+      "modelId": "Gun_Incinerator",
+      "atlas": "DLC_Gun_Incinerator"
+    },
+    {
+      "defName": "Gun_HellcatRifle_Unique",
+      "modelId": "Gun_HellcatRifle_Unique__A",
+      "atlas": "DLC_Gun_HellcatRifle_Unique__A"
+    },
+    {
+      "defName": "Gun_HellcatRifle_Unique",
+      "modelId": "Gun_HellcatRifle_Unique__B",
+      "atlas": "DLC_Gun_HellcatRifle_Unique__B"
+    },
+    {
+      "defName": "Gun_HellcatRifle_Unique",
+      "modelId": "Gun_HellcatRifle_Unique__C",
+      "atlas": "DLC_Gun_HellcatRifle_Unique__C"
+    },
+    {
+      "defName": "Gun_HellcatRifle_Unique",
+      "modelId": "Gun_HellcatRifle_Unique__D",
+      "atlas": "DLC_Gun_HellcatRifle_Unique__D"
+    },
+    {
+      "defName": "Gun_HellcatRifle_Unique",
+      "modelId": "Gun_HellcatRifle_Unique__E",
+      "atlas": "DLC_Gun_HellcatRifle_Unique__E"
+    },
+    {
+      "defName": "Gun_Revolver_Unique",
+      "modelId": "Gun_Revolver_Unique__A",
+      "atlas": "DLC_Gun_Revolver_Unique__A"
+    },
+    {
+      "defName": "Gun_Revolver_Unique",
+      "modelId": "Gun_Revolver_Unique__B",
+      "atlas": "DLC_Gun_Revolver_Unique__B"
+    },
+    {
+      "defName": "Gun_Revolver_Unique",
+      "modelId": "Gun_Revolver_Unique__C",
+      "atlas": "DLC_Gun_Revolver_Unique__C"
+    },
+    {
+      "defName": "Gun_Revolver_Unique",
+      "modelId": "Gun_Revolver_Unique__D",
+      "atlas": "DLC_Gun_Revolver_Unique__D"
+    },
+    {
+      "defName": "Gun_Revolver_Unique",
+      "modelId": "Gun_Revolver_Unique__E",
+      "atlas": "DLC_Gun_Revolver_Unique__E"
+    },
+    {
+      "defName": "Bow_Great_Unique",
+      "modelId": "Bow_Great_Unique__A",
+      "atlas": "DLC_Bow_Great_Unique__A"
+    },
+    {
+      "defName": "Bow_Great_Unique",
+      "modelId": "Bow_Great_Unique__B",
+      "atlas": "DLC_Bow_Great_Unique__B"
+    },
+    {
+      "defName": "Bow_Great_Unique",
+      "modelId": "Bow_Great_Unique__C",
+      "atlas": "DLC_Bow_Great_Unique__C"
+    },
+    {
+      "defName": "Bow_Great_Unique",
+      "modelId": "Bow_Great_Unique__D",
+      "atlas": "DLC_Bow_Great_Unique__D"
+    },
+    {
+      "defName": "Bow_Great_Unique",
+      "modelId": "Bow_Great_Unique__E",
+      "atlas": "DLC_Bow_Great_Unique__E"
+    },
+    {
+      "defName": "Gun_BoltActionRifle_Unique",
+      "modelId": "Gun_BoltActionRifle_Unique__A",
+      "atlas": "DLC_Gun_BoltActionRifle_Unique__A"
+    },
+    {
+      "defName": "Gun_BoltActionRifle_Unique",
+      "modelId": "Gun_BoltActionRifle_Unique__B",
+      "atlas": "DLC_Gun_BoltActionRifle_Unique__B"
+    },
+    {
+      "defName": "Gun_BoltActionRifle_Unique",
+      "modelId": "Gun_BoltActionRifle_Unique__C",
+      "atlas": "DLC_Gun_BoltActionRifle_Unique__C"
+    },
+    {
+      "defName": "Gun_BoltActionRifle_Unique",
+      "modelId": "Gun_BoltActionRifle_Unique__D",
+      "atlas": "DLC_Gun_BoltActionRifle_Unique__D"
+    },
+    {
+      "defName": "Gun_SniperRifle_Unique",
+      "modelId": "Gun_SniperRifle_Unique__A",
+      "atlas": "DLC_Gun_SniperRifle_Unique__A"
+    },
+    {
+      "defName": "Gun_SniperRifle_Unique",
+      "modelId": "Gun_SniperRifle_Unique__B",
+      "atlas": "DLC_Gun_SniperRifle_Unique__B"
+    },
+    {
+      "defName": "Gun_SniperRifle_Unique",
+      "modelId": "Gun_SniperRifle_Unique__C",
+      "atlas": "DLC_Gun_SniperRifle_Unique__C"
+    },
+    {
+      "defName": "Gun_SniperRifle_Unique",
+      "modelId": "Gun_SniperRifle_Unique__D",
+      "atlas": "DLC_Gun_SniperRifle_Unique__D"
+    },
+    {
+      "defName": "Gun_SniperRifle_Unique",
+      "modelId": "Gun_SniperRifle_Unique__E",
+      "atlas": "DLC_Gun_SniperRifle_Unique__E"
+    },
+    {
+      "defName": "Gun_ChargeLance_Unique",
+      "modelId": "Gun_ChargeLance_Unique__A",
+      "atlas": "DLC_Gun_ChargeLance_Unique__A"
+    },
+    {
+      "defName": "Gun_ChargeLance_Unique",
+      "modelId": "Gun_ChargeLance_Unique__B",
+      "atlas": "DLC_Gun_ChargeLance_Unique__B"
+    },
+    {
+      "defName": "Gun_ChargeLance_Unique",
+      "modelId": "Gun_ChargeLance_Unique__C",
+      "atlas": "DLC_Gun_ChargeLance_Unique__C"
+    },
+    {
+      "defName": "Gun_ChargeLance_Unique",
+      "modelId": "Gun_ChargeLance_Unique__D",
+      "atlas": "DLC_Gun_ChargeLance_Unique__D"
+    },
+    {
+      "defName": "Gun_ChargeLance_Unique",
+      "modelId": "Gun_ChargeLance_Unique__E",
+      "atlas": "DLC_Gun_ChargeLance_Unique__E"
+    },
+    {
+      "defName": "Gun_ChargeRifle_Unique",
+      "modelId": "Gun_ChargeRifle_Unique__A",
+      "atlas": "DLC_Gun_ChargeRifle_Unique__A"
+    },
+    {
+      "defName": "Gun_ChargeRifle_Unique",
+      "modelId": "Gun_ChargeRifle_Unique__B",
+      "atlas": "DLC_Gun_ChargeRifle_Unique__B"
+    },
+    {
+      "defName": "Gun_ChargeRifle_Unique",
+      "modelId": "Gun_ChargeRifle_Unique__C",
+      "atlas": "DLC_Gun_ChargeRifle_Unique__C"
+    },
+    {
+      "defName": "Gun_ChargeRifle_Unique",
+      "modelId": "Gun_ChargeRifle_Unique__D",
+      "atlas": "DLC_Gun_ChargeRifle_Unique__D"
+    },
+    {
+      "defName": "Gun_ChargeRifle_Unique",
+      "modelId": "Gun_ChargeRifle_Unique__E",
+      "atlas": "DLC_Gun_ChargeRifle_Unique__E"
+    },
+    {
+      "defName": "Gun_AssaultRifle_Unique",
+      "modelId": "Gun_AssaultRifle_Unique__A",
+      "atlas": "DLC_Gun_AssaultRifle_Unique__A"
+    },
+    {
+      "defName": "Gun_AssaultRifle_Unique",
+      "modelId": "Gun_AssaultRifle_Unique__B",
+      "atlas": "DLC_Gun_AssaultRifle_Unique__B"
+    },
+    {
+      "defName": "Gun_AssaultRifle_Unique",
+      "modelId": "Gun_AssaultRifle_Unique__C",
+      "atlas": "DLC_Gun_AssaultRifle_Unique__C"
+    },
+    {
+      "defName": "Gun_AssaultRifle_Unique",
+      "modelId": "Gun_AssaultRifle_Unique__D",
+      "atlas": "DLC_Gun_AssaultRifle_Unique__D"
+    },
+    {
+      "defName": "Gun_AssaultRifle_Unique",
+      "modelId": "Gun_AssaultRifle_Unique__E",
+      "atlas": "DLC_Gun_AssaultRifle_Unique__E"
+    },
+    {
+      "defName": "Gun_BeamRepeater_Unique",
+      "modelId": "Gun_BeamRepeater_Unique__A",
+      "atlas": "DLC_Gun_BeamRepeater_Unique__A"
+    },
+    {
+      "defName": "Gun_BeamRepeater_Unique",
+      "modelId": "Gun_BeamRepeater_Unique__B",
+      "atlas": "DLC_Gun_BeamRepeater_Unique__B"
+    },
+    {
+      "defName": "Gun_BeamRepeater_Unique",
+      "modelId": "Gun_BeamRepeater_Unique__C",
+      "atlas": "DLC_Gun_BeamRepeater_Unique__C"
+    },
+    {
+      "defName": "Gun_BeamRepeater_Unique",
+      "modelId": "Gun_BeamRepeater_Unique__D",
+      "atlas": "DLC_Gun_BeamRepeater_Unique__D"
+    },
+    {
+      "defName": "Gun_BeamRepeater_Unique",
+      "modelId": "Gun_BeamRepeater_Unique__E",
+      "atlas": "DLC_Gun_BeamRepeater_Unique__E"
+    },
+    {
+      "defName": "Gun_LMG_Unique",
+      "modelId": "Gun_LMG_Unique__A",
+      "atlas": "DLC_Gun_LMG_Unique__A"
+    },
+    {
+      "defName": "Gun_LMG_Unique",
+      "modelId": "Gun_LMG_Unique__B",
+      "atlas": "DLC_Gun_LMG_Unique__B"
+    },
+    {
+      "defName": "Gun_LMG_Unique",
+      "modelId": "Gun_LMG_Unique__C",
+      "atlas": "DLC_Gun_LMG_Unique__C"
+    },
+    {
+      "defName": "Gun_LMG_Unique",
+      "modelId": "Gun_LMG_Unique__D",
+      "atlas": "DLC_Gun_LMG_Unique__D"
+    },
+    {
+      "defName": "Gun_LMG_Unique",
+      "modelId": "Gun_LMG_Unique__E",
+      "atlas": "DLC_Gun_LMG_Unique__E"
+    },
+    {
+      "defName": "Gun_Minigun_Unique",
+      "modelId": "Gun_Minigun_Unique__A",
+      "atlas": "DLC_Gun_Minigun_Unique__A"
+    },
+    {
+      "defName": "Gun_Minigun_Unique",
+      "modelId": "Gun_Minigun_Unique__B",
+      "atlas": "DLC_Gun_Minigun_Unique__B"
+    },
+    {
+      "defName": "Gun_Minigun_Unique",
+      "modelId": "Gun_Minigun_Unique__C",
+      "atlas": "DLC_Gun_Minigun_Unique__C"
+    },
+    {
+      "defName": "Gun_Minigun_Unique",
+      "modelId": "Gun_Minigun_Unique__D",
+      "atlas": "DLC_Gun_Minigun_Unique__D"
+    },
+    {
+      "defName": "Gun_Minigun_Unique",
+      "modelId": "Gun_Minigun_Unique__E",
+      "atlas": "DLC_Gun_Minigun_Unique__E"
+    },
+    {
+      "defName": "Gun_HeavySMG_Unique",
+      "modelId": "Gun_HeavySMG_Unique__A",
+      "atlas": "DLC_Gun_HeavySMG_Unique__A"
+    },
+    {
+      "defName": "Gun_HeavySMG_Unique",
+      "modelId": "Gun_HeavySMG_Unique__B",
+      "atlas": "DLC_Gun_HeavySMG_Unique__B"
+    },
+    {
+      "defName": "Gun_HeavySMG_Unique",
+      "modelId": "Gun_HeavySMG_Unique__C",
+      "atlas": "DLC_Gun_HeavySMG_Unique__C"
+    },
+    {
+      "defName": "Gun_HeavySMG_Unique",
+      "modelId": "Gun_HeavySMG_Unique__D",
+      "atlas": "DLC_Gun_HeavySMG_Unique__D"
+    },
+    {
+      "defName": "Gun_HeavySMG_Unique",
+      "modelId": "Gun_HeavySMG_Unique__E",
+      "atlas": "DLC_Gun_HeavySMG_Unique__E"
+    },
+    {
+      "defName": "Gun_ChainShotgun_Unique",
+      "modelId": "Gun_ChainShotgun_Unique__A",
+      "atlas": "DLC_Gun_ChainShotgun_Unique__A"
+    },
+    {
+      "defName": "Gun_ChainShotgun_Unique",
+      "modelId": "Gun_ChainShotgun_Unique__B",
+      "atlas": "DLC_Gun_ChainShotgun_Unique__B"
+    },
+    {
+      "defName": "Gun_ChainShotgun_Unique",
+      "modelId": "Gun_ChainShotgun_Unique__C",
+      "atlas": "DLC_Gun_ChainShotgun_Unique__C"
+    },
+    {
+      "defName": "Gun_ChainShotgun_Unique",
+      "modelId": "Gun_ChainShotgun_Unique__D",
+      "atlas": "DLC_Gun_ChainShotgun_Unique__D"
+    },
+    {
+      "defName": "Gun_ChainShotgun_Unique",
+      "modelId": "Gun_ChainShotgun_Unique__E",
+      "atlas": "DLC_Gun_ChainShotgun_Unique__E"
+    },
+    {
+      "defName": "Gun_BeamRepeater",
+      "modelId": "Gun_BeamRepeater",
+      "atlas": "DLC_Gun_BeamRepeater"
+    },
+    {
+      "defName": "Gun_Spiner",
+      "modelId": "Gun_Spiner",
+      "atlas": "DLC_Gun_Spiner"
+    },
+    {
+      "defName": "ElephantTusk",
+      "modelId": "ElephantTusk",
+      "atlas": "DLC_ElephantTusk"
+    },
+    {
+      "defName": "Gun_MiniFlameblaster",
+      "modelId": "Gun_MiniFlameblaster",
+      "atlas": "DLC_Gun_MiniFlameblaster"
+    },
+    {
+      "defName": "Gun_MiniShotgun",
+      "modelId": "Gun_MiniShotgun",
+      "atlas": "DLC_Gun_MiniShotgun"
+    },
+    {
+      "defName": "Pila",
+      "modelId": "Pila",
+      "atlas": "DLC_Pila"
+    },
+    {
+      "defName": "AlphaThrumboHorn",
+      "modelId": "AlphaThrumboHorn",
+      "atlas": "DLC_AlphaThrumboHorn"
+    },
+    {
+      "defName": "Gun_Scattergun",
+      "modelId": "Gun_Scattergun",
+      "atlas": "DLC_Gun_Scattergun"
+    },
+    {
+      "defName": "NerveSpiker",
+      "modelId": "NerveSpiker",
+      "atlas": "DLC_NerveSpiker"
+    }
+  ]
+}

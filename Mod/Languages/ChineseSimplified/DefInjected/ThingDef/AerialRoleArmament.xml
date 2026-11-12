@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LanguageData>
+  <FPS_AirAmmo_MG762Round.label>7.62毫米机枪弹药</FPS_AirAmmo_MG762Round.label>
+  <FPS_AirAmmo_HMG127Round.label>12.7毫米重机枪弹药</FPS_AirAmmo_HMG127Round.label>
+  <FPS_AirAmmo_Cannon30Round.label>30毫米支援机炮弹药</FPS_AirAmmo_Cannon30Round.label>
+  <FPS_AirAmmo_Rotary20Round.label>20毫米转管机炮弹药</FPS_AirAmmo_Rotary20Round.label>
+  <FPS_AirAmmo_Grenade40LRound.label>40毫米轻型榴弹发射器弹药</FPS_AirAmmo_Grenade40LRound.label>
+  <FPS_AirAmmo_Grenade40HRound.label>40毫米自动榴弹发射器弹药</FPS_AirAmmo_Grenade40HRound.label>
+  <FPS_AirAmmo_Rocket70Round.label>70毫米支援火箭巢弹药</FPS_AirAmmo_Rocket70Round.label>
+  <FPS_AirAmmo_Rocket80Round.label>80毫米突击火箭巢弹药</FPS_AirAmmo_Rocket80Round.label>
+</LanguageData>

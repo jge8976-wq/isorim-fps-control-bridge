@@ -1,0 +1,26 @@
+本次整合：车载双武器与鼠族装备 / Vehicle guns and Ratkin gear
+
+载具：左键发射当前武器；Tab切武器；B切换当前机枪/机炮单发、三连发、全自动。
+空格直接发射车载机枪，无需先Tab；若当前已选中同一机枪，左键和空格不会重复触发两次。
+R为所有可用武器装填，各炮/机枪分别计算实际弹药、装填和冷却；空弹匣会自动尝试装填。
+装填期间的点击不会排队自动开火，装填结束后松开并重新按下开火键。
+主炮与机枪各有实时进度圆环；机枪状态显示在载具面板。
+这里的空格沿用“跳跃”绑定，Tab/B/R同样沿用模组选项中的对应操作，已保存键位不变。
+将帅车顶机枪的父炮塔、顶部位置和已有模型保持本轮之前的修复。
+
+鼠族：31把武器、56件服装/盾牌落地显示各自3D模型；3D模型与3D原材料选项需开启。
+鼠鼠人物持枪使用配套3D武器，保留原生携带/瞄准/后坐姿势；现有穿戴服装不变。
+木盾、重盾、塔盾、能量盾支持第一人称左手持盾；瞄准时降低持盾，保留中央视野。
+盾牌原有的格挡、冷却和防护由NewRatkinPlus处理，不因这个视角额外获得防护。
+
+Vehicle: LMB fires the selected gun; Tab changes weapons; B cycles single/3-round/automatic modes.
+Space quick-fires available machine guns. A selected MG is processed once even if LMB and Space are both held.
+R reloads available guns. Ammo, reload and cadence belong to each physical gun. Empty guns try to reload automatically.
+Reload cancels pending fire; release and press again when loaded. Per-gun rings show real reload/cycle progress.
+Space follows the configurable Jump binding. Existing saved keys and saves are preserved.
+Ratkin: 31 weapons and 56 apparel/shield ground models, figure-held weapons and four FPS offhand shields.
+Keep IsoRim 3D models and 3D raw materials enabled. Native Ratkin protection remains authoritative.
+
+验证：编译、当前IsoRim挂钩/网格读回、持盾视野几何与双武器状态检查通过。
+游戏内图像、输入与实际弹药消耗仍待玩家测试。独立载具CPU夹具缺少游戏的Unity兼容加载环境，未计为通过。
+Build/native IsoRim geometry/input-state checks pass. In-game visuals, controls and real ammunition acceptance are pending.

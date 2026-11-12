@@ -1,0 +1,64 @@
+newmtl P90_GraphitePolymer
+Kd 0.045 0.056 0.066
+Ka 0 0 0
+Ks 0.14 0.14 0.14
+Ns 28
+d 1
+illum 2
+
+newmtl P90_BlackIronSteel
+Kd 0.073 0.086 0.098
+Ka 0 0 0
+Ks 0.14 0.14 0.14
+Ns 55
+d 1
+illum 2
+
+newmtl P90_PanelGraphiteMetal
+Kd 0.09 0.108 0.121
+Ka 0 0 0
+Ks 0.14 0.14 0.14
+Ns 42
+d 1
+illum 2
+
+newmtl P90_GunmetalRailEdges
+Kd 0.145 0.166 0.178
+Ka 0 0 0
+Ks 0.14 0.14 0.14
+Ns 60
+d 1
+illum 2
+
+newmtl P90_RubberButtPad
+Kd 0.02 0.026 0.03
+Ka 0 0 0
+Ks 0.14 0.14 0.14
+Ns 10
+d 1
+illum 2
+
+newmtl P90_SmokedMagazine
+Kd 0.09 0.079 0.06
+Ka 0 0 0
+Ks 0.14 0.14 0.14
+Ns 45
+d 1
+illum 2
+
+newmtl P90_BrassCartridges
+Kd 0.43 0.295 0.105
+Ka 0 0 0
+Ks 0.14 0.14 0.14
+Ns 62
+d 1
+illum 2
+
+newmtl P90_AmberSightOpticRim
+Kd 0.25 0.19 0.085
+Ka 0 0 0
+Ks 0.14 0.14 0.14
+Ns 70
+d 1
+illum 2
+

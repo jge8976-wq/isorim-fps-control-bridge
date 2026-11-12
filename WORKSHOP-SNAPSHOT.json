@@ -1,0 +1,1596 @@
+{
+  "workshopItemId": 3824599915,
+  "packageId": "hsk.fpsbridge.control.r4",
+  "version": "0.8.18-held-sprite-r1",
+  "workshopBaselineVersion": "0.8.17-air-recon-vt-r1",
+  "files": {
+    "1.7/Assemblies/HSK.FpsBridge.dll": {
+      "bytes": 1273856,
+      "sha256": "500cde08b7f27b608e1cc639fa9db496418625d6ab9084bad149bc12f89cca17"
+    },
+    "1.7/Assemblies/HSK.FpsVehicleCompatibility.dll": {
+      "bytes": 18944,
+      "sha256": "95390b2ddd1b61b5849f83a9a7c2d20694903303ce005e935e0fe01d1b8ce418"
+    },
+    "About/About.xml": {
+      "bytes": 8347,
+      "sha256": "458fd2493d9ef9db30225cf88ea163935ef677e988b11514de2ca9ce0dff7b28"
+    },
+    "About/ChineseSimplified/About.xml": {
+      "bytes": 8346,
+      "sha256": "c5f8f99899f9b43470581cb00314ec272196f94a0a21db6e2d06557f6d029ca3"
+    },
+    "About/Description-Chinese.txt": {
+      "bytes": 6241,
+      "sha256": "631c5c93877fee53410ca9006998f4b9045076cf149c042c3e522f688a2dd878"
+    },
+    "About/Description-English.txt": {
+      "bytes": 6171,
+      "sha256": "a659e45dbf3ae90b4697ac74fde5aa0dcc048edf47fdbd499788195c777766b7"
+    },
+    "About/English/About.xml": {
+      "bytes": 8347,
+      "sha256": "458fd2493d9ef9db30225cf88ea163935ef677e988b11514de2ca9ce0dff7b28"
+    },
+    "About/Preview.png": {
+      "bytes": 914165,
+      "sha256": "d4b9971f3c7348b779c8d637ffd3e858a3e6d443be7a06a8932e78a50edc5512"
+    },
+    "About/PublishedFileId.txt": {
+      "bytes": 10,
+      "sha256": "cd0f4843b80ce54958ee52093988096a6ace346c5ec3a1942bdb5c64b5ad1ef7"
+    },
+    "Defs/AerialAccuracy.xml": {
+      "bytes": 1896,
+      "sha256": "394fc8b26b58c4d8a77dfe185dfa41537125c334c506f28532838d2d39fad966"
+    },
+    "Defs/AerialAmmoRecipes.xml": {
+      "bytes": 9738,
+      "sha256": "d5ff0e3fedd1ba3421ebee5b5441fd4cd8f480a50ee10f43bf4c6ccc166c1880"
+    },
+    "Defs/AerialBombTrial.xml": {
+      "bytes": 2128,
+      "sha256": "6a93db68ac6960287d58d311a32a9754c5b55d0d4f97bbf92b6fde834173133b"
+    },
+    "Defs/AerialDepartureModels.xml": {
+      "bytes": 1946,
+      "sha256": "a5816353842d88dbcaee36570f0255f5618195d4be1ba8d96aa4dae8836e7d2d"
+    },
+    "Defs/AerialFlight.xml": {
+      "bytes": 1498,
+      "sha256": "bca54900527727c39b10027acf040cad87b7ea43e808a875a4134f1b370fdaf3"
+    },
+    "Defs/AerialFlight_Additional.xml": {
+      "bytes": 2767,
+      "sha256": "ab43173c5e1122c010b5d56e5bf33cb5bfe35a229033a8f0439cfc0e01fb095e"
+    },
+    "Defs/AerialRoleArmament.xml": {
+      "bytes": 29834,
+      "sha256": "62b5b72b20c612764aba9dcd5195f7045e29f43db431e4dc4831d91b1c677b59"
+    },
+    "Defs/AerialSeekerTrial.xml": {
+      "bytes": 2266,
+      "sha256": "3e2e1f6bec094e62861e6f6a112bef92a8e2a0f36a15443aed5a8006ba3aff2a"
+    },
+    "Defs/AerialTactical.xml": {
+      "bytes": 316,
+      "sha256": "b188093f91903437ab7dab7201a0d87058e0ae695c851aefb1b84ecd2e7f2848"
+    },
+    "Defs/AerialTrialArmament.xml": {
+      "bytes": 5266,
+      "sha256": "f68e58e8f061016299a9f6182ce0a35672cf593b00915759cf314cac98246a0f"
+    },
+    "Defs/AerialVehicleTurretBase.xml": {
+      "bytes": 472,
+      "sha256": "b338005460e5a2f6975afbd9e67782134183886ad04b741f5bee857b12dc80d8"
+    },
+    "Defs/FPS_InteractionWheel.xml": {
+      "bytes": 340,
+      "sha256": "dab0d280b541701cac850d57402a36d11ed9eda4bc40a92e9e1601b23367e87c"
+    },
+    "Defs/FPS_KeyBindings.xml": {
+      "bytes": 8779,
+      "sha256": "cc47faf8a3ae8ecd63e9b93b697596dd2feeb33305bea5aef0adb87a7c714466"
+    },
+    "Defs/FPS_ManualJobs.xml": {
+      "bytes": 500,
+      "sha256": "4a1b636dec3c93f922f0cdb032396a0da25e65469bb6f64458b8b0650dca103d"
+    },
+    "Defs/HeldArmorySights-R3.xml": {
+      "bytes": 23280,
+      "sha256": "5694d1ab22ad3d5266ab253c8a2feada8fbcd9312947b8df26dadfc84edb5531"
+    },
+    "Defs/HeldP90Detail-R4.xml": {
+      "bytes": 881,
+      "sha256": "cbe0aa40f1f18b09df5cd1032478bbcf9015dca23b3041742024ae2a69cce001"
+    },
+    "Defs/VehicleBarrelBindings.xml": {
+      "bytes": 59214,
+      "sha256": "55670a1577579f7467e900634286907c8b30d6c0247f25212e1777de603b0eb3"
+    },
+    "Defs/VehicleBoreBindings.xml": {
+      "bytes": 33270,
+      "sha256": "1e75e8fc11d2c63597552e83bf34449a60b41901a671003fe5ce7c21b4bc1c5a"
+    },
+    "Defs/VehicleCollisionR4.xml": {
+      "bytes": 1196,
+      "sha256": "f7e5fe91f11bd58b5daf5face76ac3b7a1459944394175f7ad81b457312f6f54"
+    },
+    "Defs/VehicleDriverCameras.xml": {
+      "bytes": 1208,
+      "sha256": "3f602b09afb6f485c3d52a37052a23e91b27cdb1716bc7c3a7d530d9bff234e4"
+    },
+    "Docs/Callback-Mouse-Guard-R3-20261029.txt": {
+      "bytes": 2415,
+      "sha256": "ea869979d1404176cf3648429d079ae7a5cfc8320844e47cdc3cce4972a1ba74"
+    },
+    "Docs/CE-R5-Compatibility.txt": {
+      "bytes": 3171,
+      "sha256": "5f8327d3bf351052f137ab9638426e615a2ba617cbe9ea8effe695d84d8af157"
+    },
+    "Docs/CE-R7-Compatibility.txt": {
+      "bytes": 3361,
+      "sha256": "f04a33a502c573fd6ca469d87171416b6415173b3f7d55eb4f83a002853f6b42"
+    },
+    "Docs/CombatMusic-R9.txt": {
+      "bytes": 1844,
+      "sha256": "b8838c6276341a8769942ebd0836c24d827c5405ee349de5d7312c602ec697e0"
+    },
+    "Docs/Flight-R3-Development.md": {
+      "bytes": 2667,
+      "sha256": "a9f226325d78a7bdb5c37aefc1505f8e8f45cc1ce8b1d1d91e8e1a9d22846d10"
+    },
+    "Docs/Flight-R3-测试说明.txt": {
+      "bytes": 2980,
+      "sha256": "85eef976b988fdcc7392bb8291d3e80955faaae4d8d6fb817ae61c7094c06219"
+    },
+    "Docs/Flight-R4-测试说明.txt": {
+      "bytes": 3890,
+      "sha256": "a9b1a53e388564b0db08e0883330dcdfb779bad5b6c1a9d8d7294f97f32f4549"
+    },
+    "Docs/HeldWeaponModels-API.md": {
+      "bytes": 6897,
+      "sha256": "c1f3e08790ed143e96d912894c602b686c313a1f04c9c3f86fa9c67d286eff07"
+    },
+    "Docs/Movement-Guard-20261029.txt": {
+      "bytes": 1605,
+      "sha256": "4a3ab119c85b5ab3979869a1d31f160333ec866ec434fdbc849dfdca0664f659"
+    },
+    "Docs/R2-Changes.md": {
+      "bytes": 2939,
+      "sha256": "e62f5014d5c28581d3dcf35f4f17ea8b61b3f74a4da27df08eb4f3c756d7fab6"
+    },
+    "Docs/R3-Changes.md": {
+      "bytes": 3239,
+      "sha256": "68e059c236586754b90685ddc5d9221f9468b4de75885eacc6c75d1ed74b185b"
+    },
+    "Docs/R4-Changes.md": {
+      "bytes": 1787,
+      "sha256": "4ebce92cb4fbc7b09ebd8b83673700cb920cec072ad0e81b87fd2c0cfaf370ee"
+    },
+    "Docs/R4-Sensitivity-RimCrow-20261031.txt": {
+      "bytes": 1550,
+      "sha256": "d7544114bbdd776b0a7b93988fc428d063a6bb0a7258c40a32cdc53fccf469a9"
+    },
+    "Docs/UPDATE-20261025-R8.txt": {
+      "bytes": 2405,
+      "sha256": "eadcf02ffe0823386554a6355a43c04300c538110fbf87c7f91654f07ed87f2d"
+    },
+    "Docs/Update-R10.txt": {
+      "bytes": 4148,
+      "sha256": "b18593ff0944ca7c7fe0064584cd1f731a9ead99954484bd056e045f07bbd830"
+    },
+    "Docs/Update-R11.txt": {
+      "bytes": 3582,
+      "sha256": "a446d48190da5aaedcbe35f3f63abc2fc50dedfe592268cefadf7f314b5bb802"
+    },
+    "Docs/Update-R12.txt": {
+      "bytes": 4578,
+      "sha256": "31f2d0ca49418972587e74a5e996c4bbc166df4bab25ac0f6e500011d328bc14"
+    },
+    "Docs/Update-R14.txt": {
+      "bytes": 3248,
+      "sha256": "0631e89461176d15699563384b45e41da1cdd9fdd5eef33f878a52fe43f84ceb"
+    },
+    "Docs/载具战斗HUD与批量模型-20261025.md": {
+      "bytes": 2201,
+      "sha256": "b662ae2c9c99ba4a4d18e2960efcb7d8d5bc0a839c83231ab5561c528b990916"
+    },
+    "Docs/降临动画与战斗音乐-测试说明.txt": {
+      "bytes": 2931,
+      "sha256": "173e5fdad81ce127d93c43b6de1a4f1b92011884da47f894b28dfbb1a0a18d15"
+    },
+    "Docs/鼠族与炮镜-本次测试说明.txt": {
+      "bytes": 2726,
+      "sha256": "c13da587d9e7999f5983d45d5d5cfce9555add821ce8d7fc70c8ed5ff5a9b8ea"
+    },
+    "Languages/ChineseSimplified/DefInjected/DamageDef/Airblast.xml": {
+      "bytes": 271,
+      "sha256": "ab2cacd985e1ea0ce7e8f2f825d17f1a31a483cc0c895a9dcf381e32ee37e056"
+    },
+    "Languages/ChineseSimplified/DefInjected/JobDef/FPS_ManualJobs.xml": {
+      "bytes": 264,
+      "sha256": "3b2c8ed6600dcfe2fc99d456b7860336e38121b8c272a0938b31a64d8f3c44cd"
+    },
+    "Languages/ChineseSimplified/DefInjected/KeyBindingCategoryDef/FPS_KeyBindings.xml": {
+      "bytes": 551,
+      "sha256": "b96b17b84497e45ff9b86c6682d76d21172c98976b1346946c241b82ed84015f"
+    },
+    "Languages/ChineseSimplified/DefInjected/KeyBindingDef/Aerial.xml": {
+      "bytes": 276,
+      "sha256": "5177ca4dd2c2ec4fd5e6abaecce8be3eba1311c0c662bf34f480374af343d2a7"
+    },
+    "Languages/ChineseSimplified/DefInjected/KeyBindingDef/FPS_FlightR4.xml": {
+      "bytes": 455,
+      "sha256": "164b030092e446f896431f3e7e5ff3a18f24a08e8044b067337ad7bd02b6707e"
+    },
+    "Languages/ChineseSimplified/DefInjected/KeyBindingDef/FPS_InteractionWheel.xml": {
+      "bytes": 180,
+      "sha256": "539ea2df4b42582c4fb345c1f4282a736a47263d562c8871140f8d973f30c5ed"
+    },
+    "Languages/ChineseSimplified/DefInjected/KeyBindingDef/FPS_KeyBindings.xml": {
+      "bytes": 2203,
+      "sha256": "34103a35024f109d59c83f13ce251bc6479c42a98d6b155f1cc3f7a42d7ddee3"
+    },
+    "Languages/ChineseSimplified/DefInjected/RecipeDef/AerialAmmoRecipes.xml": {
+      "bytes": 912,
+      "sha256": "67826b723785193e92e3527fde893869a1cd291c1270c4521b7b3619e89e5d0d"
+    },
+    "Languages/ChineseSimplified/DefInjected/ThingDef/AerialRoleArmament.xml": {
+      "bytes": 864,
+      "sha256": "0ced6b01d846e6750a7da09322ede380a0e8ddb68119e57457894874128cbcb2"
+    },
+    "Languages/ChineseSimplified/DefInjected/VehicleTurretDef/AerialRoleArmament.xml": {
+      "bytes": 1040,
+      "sha256": "1e0684acd9fab7424fb6914db17f2d2ad15176feed84b4e077f9f3177c55ec9b"
+    },
+    "Languages/ChineseSimplified/DefInjected/VehicleTurretDef/AerialSeekerTrial.xml": {
+      "bytes": 454,
+      "sha256": "4448a542d9c04e14763ac76ed20264d1cb4a65fc0bdb076c35efc0a63f8ce802"
+    },
+    "Languages/ChineseTraditional/DefInjected/DamageDef/Airblast.xml": {
+      "bytes": 271,
+      "sha256": "a6ee6d5f397a0d3e63ab9a9544e4d4738ff2bc1c2bb874c50e3aaf77d7857115"
+    },
+    "Languages/ChineseTraditional/DefInjected/JobDef/FPS_ManualJobs.xml": {
+      "bytes": 264,
+      "sha256": "576301e6e88baa87944fbe884e7fab2e3af7933680632d418f24577394402107"
+    },
+    "Languages/ChineseTraditional/DefInjected/KeyBindingCategoryDef/FPS_KeyBindings.xml": {
+      "bytes": 551,
+      "sha256": "5fd8d46461bd1e7936722c2b0b31986bbde234b543b0496f6900f7607cb9fc0b"
+    },
+    "Languages/ChineseTraditional/DefInjected/KeyBindingDef/Aerial.xml": {
+      "bytes": 275,
+      "sha256": "38f126e889fb61cd781e3b156860a07fa1d7d17523de871efd48e54c0e73643c"
+    },
+    "Languages/ChineseTraditional/DefInjected/KeyBindingDef/FPS_FlightR4.xml": {
+      "bytes": 455,
+      "sha256": "02566ea50173ce9ae29d9a1eedda2746bb439000a416c05c1ca0899137858da7"
+    },
+    "Languages/ChineseTraditional/DefInjected/KeyBindingDef/FPS_InteractionWheel.xml": {
+      "bytes": 180,
+      "sha256": "f3d186ba25370a37e1cc81050cf8950811d2efcd1c5bbd19cb050712ab93ad2b"
+    },
+    "Languages/ChineseTraditional/DefInjected/KeyBindingDef/FPS_KeyBindings.xml": {
+      "bytes": 2203,
+      "sha256": "df354fb90e985c4423b5fdafdeaf4bd250675c1c689f8ee6d79c22b7939650fb"
+    },
+    "Languages/ChineseTraditional/DefInjected/VehicleTurretDef/AerialSeekerTrial.xml": {
+      "bytes": 454,
+      "sha256": "ced11a307c8e326bf72ac2d7b3ea0ac3b11baaf1bd4d36c40e222563d54d42c8"
+    },
+    "Languages/English/DefInjected/KeyBindingDef/FPS_FlightR4.xml": {
+      "bytes": 181,
+      "sha256": "0fef64df7a929ed2b1d6a3c4a2c0792eea1cddfb8001276c0ef0a6dad9eed4ad"
+    },
+    "LoadFolders.xml": {
+      "bytes": 104,
+      "sha256": "88ff56f871f4cbc16436af7a5f62eed5c9ef75d37c8171530a859edcd7f2d09f"
+    },
+    "Models/AlphaThrumboHorn.cwm": {
+      "bytes": 62312,
+      "sha256": "7eefb815226a633c2bd311ff7a22bd326187f68aa1e09679cfffc681a0c9ffb2"
+    },
+    "Models/Autopistol.cwm": {
+      "bytes": 29600,
+      "sha256": "649ba169d4d38871c6c64724c8c662b06b5bcdc51a563f398ce504d5d7afd8a9"
+    },
+    "Models/Bow_Great.cwm": {
+      "bytes": 27200,
+      "sha256": "9d5ccdd334ffbbf6aabfc25c8aa69fb852302b35a5281aa03eda89fde5e9d55b"
+    },
+    "Models/Bow_Great_Unique__A.cwm": {
+      "bytes": 121664,
+      "sha256": "843cee9798bbb3f45beb11541867a9cefaef77da4d1a04a1cb96746d39b8de73"
+    },
+    "Models/Bow_Great_Unique__B.cwm": {
+      "bytes": 122176,
+      "sha256": "8c21f240aca4f263cfd6e4c62af15386728900019a8158d15cfa002df08cf9a9"
+    },
+    "Models/Bow_Great_Unique__C.cwm": {
+      "bytes": 122560,
+      "sha256": "7249d8ea4db2e2d21148b33066bb883c6452d661d0280b0256f031b04b87f3bd"
+    },
+    "Models/Bow_Great_Unique__D.cwm": {
+      "bytes": 121664,
+      "sha256": "fa9af6df3331892a058a4ff007852af4eb8ac9aa465e0c126f3bacad94ee0915"
+    },
+    "Models/Bow_Great_Unique__E.cwm": {
+      "bytes": 121408,
+      "sha256": "239e9d986fd1745b1f27c6d83508b39225d79f0a9bfce9684a0f44d8c26ff262"
+    },
+    "Models/Bow_Recurve.cwm": {
+      "bytes": 33520,
+      "sha256": "14c7d66397f7fd9b5a76d8df2d6c28904e6eeeb59522f20ac4144b57d13adcb2"
+    },
+    "Models/Bow_Short.cwm": {
+      "bytes": 22896,
+      "sha256": "a7a3ddca1f1b72c1dfa063b64544f39bdad0c853b81b854c25775c0473edf660"
+    },
+    "Models/CE_DisposableRocketLauncher.cwm": {
+      "bytes": 51632,
+      "sha256": "019809414eab116e252acc710c4b8459fa5aaee456981dec263ee1b6d135c9a1"
+    },
+    "Models/CE_FlareGun.cwm": {
+      "bytes": 43664,
+      "sha256": "59b98407e0cf1abfc7bb115df2f21cff9ea124e88a776bcbac816486aac85434"
+    },
+    "Models/CE_GrenadeLauncher.cwm": {
+      "bytes": 50016,
+      "sha256": "23e4febdbedd5737c558201f6248c99555fa9aadc3f1cd9884764e29ea3cbe79"
+    },
+    "Models/CE_MechanoidMinigun.cwm": {
+      "bytes": 117392,
+      "sha256": "b24c3837af25c28938a94f2605c2e46ee0d30755957e9f1580c1809c2382f2b7"
+    },
+    "Models/CE_ThermalBoltProjector.cwm": {
+      "bytes": 122096,
+      "sha256": "dfa0a21e2cb9ea98aba18a0668611606a1843304a7a9f71da8fb8f59579303c2"
+    },
+    "Models/CE_Weapon_GrenadeConcussion.cwm": {
+      "bytes": 25104,
+      "sha256": "e4fa750046e58c09dc9f870b1d3b278a93da630e7051eec73d73b19e056bb0fa"
+    },
+    "Models/CE_Weapon_GrenadeFirefoam.cwm": {
+      "bytes": 28624,
+      "sha256": "40556e020704ae15435cf1c8b2af343c0413eafa882b03a145ee0a7370a33d6a"
+    },
+    "Models/CE_Weapon_GrenadeFlashbang.cwm": {
+      "bytes": 36032,
+      "sha256": "02673af6b63967004171060a31386d6541f3af96f4d413d140d4614cd94a42c0"
+    },
+    "Models/CE_Weapon_GrenadeSmoke.cwm": {
+      "bytes": 24656,
+      "sha256": "422efc4027d44c5b6ba497893f7df7ca3e484b8b3cbd6e431d3ac948ce6f235f"
+    },
+    "Models/CE_Weapon_GrenadeStickBomb.cwm": {
+      "bytes": 36192,
+      "sha256": "503fb95543f873b85d9fa97eab032b6c648e68ed5d057909883f1dfde9bd0702"
+    },
+    "Models/dlc-weapons.json": {
+      "bytes": 14155,
+      "sha256": "634efbe6f3674a9e15b16ec824e5946923f8ac3acd64fba300ed6e4de8aeb206"
+    },
+    "Models/ElephantTusk.cwm": {
+      "bytes": 54216,
+      "sha256": "10db2752f5207af8db10dcaf6f454cce2b992ee56af4646c44436504f61ba708"
+    },
+    "Models/Flamebow.cwm": {
+      "bytes": 122816,
+      "sha256": "cc204e87884bb1a1a1c9a95073b868581ed5da47dfe8626dbf48bc74a5a60dc9"
+    },
+    "Models/Grenade.cwm": {
+      "bytes": 24464,
+      "sha256": "434413bdcc8143b4ea91fc8c308b9bd88e32247beb5638c791b5b1dd8ef2a506"
+    },
+    "Models/Gun_AssaultRifle.cwm": {
+      "bytes": 75504,
+      "sha256": "518e729b3e08e9a5dac4cd570c4ae00e20b23c389216e94f61da773cf33758ea"
+    },
+    "Models/Gun_AssaultRifle_Unique__A.cwm": {
+      "bytes": 214688,
+      "sha256": "8212c3f0ee753df3b4147d2d3a68c61a39337e96c0eeccf3f891934a8b02c0bb"
+    },
+    "Models/Gun_AssaultRifle_Unique__B.cwm": {
+      "bytes": 256560,
+      "sha256": "db4c00919b0f6e2bd6d175b76ece3d64f3033f5b7eb4c103ee1adc7d6e3fb2a9"
+    },
+    "Models/Gun_AssaultRifle_Unique__C.cwm": {
+      "bytes": 214688,
+      "sha256": "8212c3f0ee753df3b4147d2d3a68c61a39337e96c0eeccf3f891934a8b02c0bb"
+    },
+    "Models/Gun_AssaultRifle_Unique__D.cwm": {
+      "bytes": 244576,
+      "sha256": "6508a693991594e88473c46bee8f38efc354214f57e58ccfd4baf1b7144ed15a"
+    },
+    "Models/Gun_AssaultRifle_Unique__E.cwm": {
+      "bytes": 239376,
+      "sha256": "d76ecb8c5b1c381249749324d51cc26b93b68dfee873461c37210d2da368e95e"
+    },
+    "Models/Gun_BeamGraser.cwm": {
+      "bytes": 145520,
+      "sha256": "d7752b902e491d1b0d1dcc50d88c4147a5430050b6fec151ccf2f27677b35572"
+    },
+    "Models/Gun_BeamRepeater.cwm": {
+      "bytes": 259088,
+      "sha256": "bfb99e8b75f3d11384773eed7001ddeb5357d52cfef41ec0f85c1f11b18d1cfd"
+    },
+    "Models/Gun_BeamRepeater_Unique__A.cwm": {
+      "bytes": 257712,
+      "sha256": "493cd5b33dc263c7db18e15c5ea71c3b10c8f38d99305c34f8b5bcfdb796db1d"
+    },
+    "Models/Gun_BeamRepeater_Unique__B.cwm": {
+      "bytes": 244688,
+      "sha256": "78252f9969584b3a8d5c1a127cb6ac3b3646117d55f8f0f87749840d73e310d3"
+    },
+    "Models/Gun_BeamRepeater_Unique__C.cwm": {
+      "bytes": 257152,
+      "sha256": "fbead9bf2fb81dcefae32152aed28759505837382c8d584e77b6e9a052516769"
+    },
+    "Models/Gun_BeamRepeater_Unique__D.cwm": {
+      "bytes": 244688,
+      "sha256": "99222fc7e76c169fa292fe29980589c933598e748edc48d019c61f97125e2090"
+    },
+    "Models/Gun_BeamRepeater_Unique__E.cwm": {
+      "bytes": 218864,
+      "sha256": "63a47ecdc0b3edfb143764a5f22173420bf19e39b60de6b00f9d0d2e1eb1431c"
+    },
+    "Models/Gun_BoltActionRifle_Unique__A.cwm": {
+      "bytes": 101952,
+      "sha256": "a10105438cd5472e7a0cb58be145ee684dd6465856e710e67bd251b899d21e26"
+    },
+    "Models/Gun_BoltActionRifle_Unique__B.cwm": {
+      "bytes": 222768,
+      "sha256": "69cdfef217c2e6f8d143dea9806d18f0c2cf003697b6d82c1bdbd38b97fc84bf"
+    },
+    "Models/Gun_BoltActionRifle_Unique__C.cwm": {
+      "bytes": 109664,
+      "sha256": "1cee9c18a22703523451d31f89edeafcfa70984c0b53a82554c852b2816b027c"
+    },
+    "Models/Gun_BoltActionRifle_Unique__D.cwm": {
+      "bytes": 208368,
+      "sha256": "9ebd8c6009a3618cab95219beed7f41a79d0d12b29138dc16eaabc79ee49ca33"
+    },
+    "Models/Gun_ChainShotgun.cwm": {
+      "bytes": 55776,
+      "sha256": "5fda4bcfd6ee99e592ec0a06017dd273852acff74e5751beca75a82d2814d091"
+    },
+    "Models/Gun_ChainShotgun_Unique__A.cwm": {
+      "bytes": 125120,
+      "sha256": "57baca6ef007dbc232498386beb7f0b31104e619d1165b9685380632f7a4b302"
+    },
+    "Models/Gun_ChainShotgun_Unique__B.cwm": {
+      "bytes": 111616,
+      "sha256": "5a70ec5772883b58532ba0869ea78a8569cd6c73eb594ef07cdabaea6fc4b865"
+    },
+    "Models/Gun_ChainShotgun_Unique__C.cwm": {
+      "bytes": 121424,
+      "sha256": "b6cc7da6e038b77da93e12ffebcb93109940fd5dff37cc18c104541d92655cfe"
+    },
+    "Models/Gun_ChainShotgun_Unique__D.cwm": {
+      "bytes": 111552,
+      "sha256": "9229e4c1a40ec56c692c49e96c977c0a42ca4c584fced63e85d9898ce487245e"
+    },
+    "Models/Gun_ChainShotgun_Unique__E.cwm": {
+      "bytes": 112096,
+      "sha256": "c0bec2faefd9352f9c7ead1b9b6e62cb2b16d4fe00258a05673f03cd4aafb68f"
+    },
+    "Models/Gun_ChargeBlasterHeavy.cwm": {
+      "bytes": 97072,
+      "sha256": "726b624f47c3dfa8b0d4acc374ee0548761616b499867adb7fb5b3b304084f34"
+    },
+    "Models/Gun_ChargeBlasterHeavyTurret.cwm": {
+      "bytes": 66112,
+      "sha256": "3e4ffe7ff286c295ed2264b57741c6bfaf6b56e03746eaece1d2d6db6af4da8e"
+    },
+    "Models/Gun_ChargeLance.cwm": {
+      "bytes": 77976,
+      "sha256": "78d39c67c211216a1935bb188f4ae50c4c69233fab941a7bc089607d1019f521"
+    },
+    "Models/Gun_ChargeLance_Unique__A.cwm": {
+      "bytes": 207552,
+      "sha256": "f08d50c751e869f297b97414ce7ca744766a3d0c3c2e9e832fe477afd1273404"
+    },
+    "Models/Gun_ChargeLance_Unique__B.cwm": {
+      "bytes": 215840,
+      "sha256": "042038f9962086c15a6ba34b799926c6de25bd9ae4bd2c3eeea109c3ac7af58b"
+    },
+    "Models/Gun_ChargeLance_Unique__C.cwm": {
+      "bytes": 229248,
+      "sha256": "8d02dc806982ed3241d73bbacc1fa4a1be913ff42e6d380a556a0f16f9510d37"
+    },
+    "Models/Gun_ChargeLance_Unique__D.cwm": {
+      "bytes": 202944,
+      "sha256": "eae5d8c87cfca6dde5ab5fb5575a8acbab392fd698ebe16ed7423dbdb6b0bea3"
+    },
+    "Models/Gun_ChargeLance_Unique__E.cwm": {
+      "bytes": 229248,
+      "sha256": "8d02dc806982ed3241d73bbacc1fa4a1be913ff42e6d380a556a0f16f9510d37"
+    },
+    "Models/Gun_ChargeRifle.cwm": {
+      "bytes": 76432,
+      "sha256": "be2062963a0eef015292b4e45ad7817f112c37d22b33f837d22bdc254e9a6bee"
+    },
+    "Models/Gun_ChargeRifle_Unique__A.cwm": {
+      "bytes": 143120,
+      "sha256": "dadb44f0945c6d7daaded07753a73d85a150c1fb877b22ac0232710f2a0d055d"
+    },
+    "Models/Gun_ChargeRifle_Unique__B.cwm": {
+      "bytes": 152208,
+      "sha256": "59dde9b73b5566803074669c3ce1fe7abf5396942e8c26cf06d1d489f838379e"
+    },
+    "Models/Gun_ChargeRifle_Unique__C.cwm": {
+      "bytes": 148608,
+      "sha256": "c7b22cab06fbeebb14073ba709c279aae482860688700ba8b3f86fe094de4f8e"
+    },
+    "Models/Gun_ChargeRifle_Unique__D.cwm": {
+      "bytes": 143120,
+      "sha256": "581491777d997739dea74ca13122408724ee4fd990531d468d8d12a4bfa53f4e"
+    },
+    "Models/Gun_ChargeRifle_Unique__E.cwm": {
+      "bytes": 153656,
+      "sha256": "962608e98cb57a1986dd4999db53f1564dd317d5b02b51ac8a3ffd27b71a5a6f"
+    },
+    "Models/Gun_DoomsdayRocket.cwm": {
+      "bytes": 69904,
+      "sha256": "d5232c9f5ab6a64e21ab10b07e348a2366173a2abec67345d2f1249be4b07d89"
+    },
+    "Models/Gun_EmpLauncher.cwm": {
+      "bytes": 171184,
+      "sha256": "b53fbf0341a069d0314226091635693812842133c985ead3fdba74e2ba3c080c"
+    },
+    "Models/Gun_HeavySMG.cwm": {
+      "bytes": 85552,
+      "sha256": "5da901b3b2cd18e92c8648bfff8554e15b1aa49a8d2579a4f31946b6889b3fe6"
+    },
+    "Models/Gun_HeavySMG_Unique__A.cwm": {
+      "bytes": 238368,
+      "sha256": "a0c8ed4f5e9746bd0427d9b3014f3079a79e269571b623fe2ad039b99288a50d"
+    },
+    "Models/Gun_HeavySMG_Unique__B.cwm": {
+      "bytes": 242128,
+      "sha256": "6d19cb37fca12951639b842667f15f3710ceb598ddf3de5472252295fade518c"
+    },
+    "Models/Gun_HeavySMG_Unique__C.cwm": {
+      "bytes": 238368,
+      "sha256": "a0c8ed4f5e9746bd0427d9b3014f3079a79e269571b623fe2ad039b99288a50d"
+    },
+    "Models/Gun_HeavySMG_Unique__D.cwm": {
+      "bytes": 268256,
+      "sha256": "e57f19a7b21ae00323778272fde549895f871b67a06251dc6fdd82c39b209e89"
+    },
+    "Models/Gun_HeavySMG_Unique__E.cwm": {
+      "bytes": 268416,
+      "sha256": "a9b53c07e9da17bedf817bef3e350170849af3ec572f14c4a0edb9276700cca0"
+    },
+    "Models/Gun_HellcatRifle.cwm": {
+      "bytes": 258496,
+      "sha256": "ca77a5ceac28a378db35118aac2430447cc93f97f1fed794873695202738ee1d"
+    },
+    "Models/Gun_HellcatRifle_Unique__A.cwm": {
+      "bytes": 258496,
+      "sha256": "ca77a5ceac28a378db35118aac2430447cc93f97f1fed794873695202738ee1d"
+    },
+    "Models/Gun_HellcatRifle_Unique__B.cwm": {
+      "bytes": 250416,
+      "sha256": "23bef73fff46ca50c16fe8684bfabebadf48833a6c7ff770a9d843f234dd2a22"
+    },
+    "Models/Gun_HellcatRifle_Unique__C.cwm": {
+      "bytes": 264928,
+      "sha256": "28d38433c7d52ff982e89bde1a8a4165ef83ecd20f3603a23e2b9f966dfc558e"
+    },
+    "Models/Gun_HellcatRifle_Unique__D.cwm": {
+      "bytes": 258496,
+      "sha256": "ca77a5ceac28a378db35118aac2430447cc93f97f1fed794873695202738ee1d"
+    },
+    "Models/Gun_HellcatRifle_Unique__E.cwm": {
+      "bytes": 258496,
+      "sha256": "ca77a5ceac28a378db35118aac2430447cc93f97f1fed794873695202738ee1d"
+    },
+    "Models/Gun_HellsphereCannon.cwm": {
+      "bytes": 166688,
+      "sha256": "830e2fa3c7674bd51a37095653555e0350ad445bf6dd1fb13ea8b0d5a2661321"
+    },
+    "Models/Gun_IncendiaryLauncher.cwm": {
+      "bytes": 48416,
+      "sha256": "64d0cf664789b3fcea7ba7323a3a063d38d186ec1d3f34d6f4bcc44444e69232"
+    },
+    "Models/Gun_Incinerator.cwm": {
+      "bytes": 143792,
+      "sha256": "028f78e03b2d63ea14dfb435dd5fd06b609728bcb6600b18cc13689bc63fb455"
+    },
+    "Models/Gun_InfernoCannon.cwm": {
+      "bytes": 108528,
+      "sha256": "c66784071c9edc44d9b450951fe86dff15af0a3cdca43a5e59116d0025244e70"
+    },
+    "Models/Gun_LMG.cwm": {
+      "bytes": 66672,
+      "sha256": "9106fca7c6390192b54a5dc837150197b287e5a4dfec342922f839eeb8f9d2eb"
+    },
+    "Models/Gun_LMG_Unique__A.cwm": {
+      "bytes": 125248,
+      "sha256": "4d6fe9b85f1ca6ee740c7b2f8b129da1c51c926210d3a5297b155145eec0db1c"
+    },
+    "Models/Gun_LMG_Unique__B.cwm": {
+      "bytes": 130768,
+      "sha256": "f9bdbbbaa5ff0035c9c77b69ea3dda8bba40f342c715d94bc2dba074c8a33e5b"
+    },
+    "Models/Gun_LMG_Unique__C.cwm": {
+      "bytes": 149040,
+      "sha256": "045d390ba7b83a9513b677e79db9422154bfa3f1b0803df256b542c7322498f2"
+    },
+    "Models/Gun_LMG_Unique__D.cwm": {
+      "bytes": 125248,
+      "sha256": "286c3391132046da45c58df1776b728225f64f3b83d8ef38296cafa114e19af0"
+    },
+    "Models/Gun_LMG_Unique__E.cwm": {
+      "bytes": 142464,
+      "sha256": "854d7dfadb4dbc3cb660b0acf148d8f32da44ff130f57f0c44511f2bd192e14a"
+    },
+    "Models/Gun_MachinePistol.cwm": {
+      "bytes": 55072,
+      "sha256": "b3b15d5a93decf434587ff8670f27495dd9a095cd6ad6b23d60a2e17ca253224"
+    },
+    "Models/Gun_MiniFlameblaster.cwm": {
+      "bytes": 76896,
+      "sha256": "2c7e5ca6e6b6280ecded07b3a0bd46dfa2d15aac88a62da25f6a06eeb31e621f"
+    },
+    "Models/Gun_Minigun.cwm": {
+      "bytes": 117232,
+      "sha256": "05d8a15f9e1587a32d756e81baaabf06c61a8a2219b24e4d500556e48860a9fc"
+    },
+    "Models/Gun_Minigun_Unique__A.cwm": {
+      "bytes": 183216,
+      "sha256": "1a053f30401db4702b43555a4e2c6392eb76214adcbdb9b5742682b95445cb18"
+    },
+    "Models/Gun_Minigun_Unique__B.cwm": {
+      "bytes": 182000,
+      "sha256": "38a5b9d721f801fef6d6c73c8ef181076b4308038b6b04fadcc9ccdb45150794"
+    },
+    "Models/Gun_Minigun_Unique__C.cwm": {
+      "bytes": 164608,
+      "sha256": "71dbbb100e2eea2a0da62c1f39859dcd8799666b5aa2f292ea05f99fd69ac75a"
+    },
+    "Models/Gun_Minigun_Unique__D.cwm": {
+      "bytes": 180752,
+      "sha256": "a3ad49456007475d5c1060024bc84bcf6cccace66f94ba2368e247f3dbc8bdc3"
+    },
+    "Models/Gun_Minigun_Unique__E.cwm": {
+      "bytes": 164784,
+      "sha256": "0cdacdf94fbd041cb78f0be75f833c8c2278ce24a80421d8cd33490b105d1635"
+    },
+    "Models/Gun_MiniShotgun.cwm": {
+      "bytes": 55520,
+      "sha256": "4ed2a5eddf067543785c8d12b2087f7e69fe3143bcc120e6524954169496ac48"
+    },
+    "Models/Gun_Needle.cwm": {
+      "bytes": 72824,
+      "sha256": "bf2c5bf79047241037248ad3ee5df314ccc54ae3c4d91386812cadcf4f01e4de"
+    },
+    "Models/Gun_NeedleLauncher.cwm": {
+      "bytes": 89984,
+      "sha256": "f3867c1e86f019d4c559399ef7cef61ab668967bfb7fe188eede397fd3d05db9"
+    },
+    "Models/Gun_PumpShotgun.cwm": {
+      "bytes": 51408,
+      "sha256": "ee49f737d42281f2b5885a35995c34bb5392fa5550b2b72c2b3435466fd80564"
+    },
+    "Models/Gun_Revolver_Unique__A.cwm": {
+      "bytes": 150416,
+      "sha256": "4ac240b6ec85f3e8be8653af51b829428d0bcb606441bd3dcb43337c8343c33a"
+    },
+    "Models/Gun_Revolver_Unique__B.cwm": {
+      "bytes": 150416,
+      "sha256": "6b443c1426aebb03b70bbdf19f19b0ca47a0cb9e6e1059d96b89694a718cd30a"
+    },
+    "Models/Gun_Revolver_Unique__C.cwm": {
+      "bytes": 150416,
+      "sha256": "d5b2ac6fb49a7310b5c8c481d75409e6a427da8a03e97891be4843e3bacba459"
+    },
+    "Models/Gun_Revolver_Unique__D.cwm": {
+      "bytes": 150416,
+      "sha256": "b5d1fb984e456722eb73e520fcaeb1092a8408b42647859bf3acc80ad0cb2708"
+    },
+    "Models/Gun_Revolver_Unique__E.cwm": {
+      "bytes": 155920,
+      "sha256": "912c739bc8ba1e9bfcd3aaa578f9d740b5d75207d707e8f2e5e6d62556cba9e9"
+    },
+    "Models/Gun_Scattergun.cwm": {
+      "bytes": 86256,
+      "sha256": "649cbe001b4faddca20fb9ff43bc69f7755e3c0320df259bc810fcca036db60c"
+    },
+    "Models/Gun_Slugthrower.cwm": {
+      "bytes": 85888,
+      "sha256": "9231c34730dd75e8b77fb63f37c0fe9a3779daa1fed07510856b55836b90f043"
+    },
+    "Models/Gun_SmokeLauncher.cwm": {
+      "bytes": 180656,
+      "sha256": "265c311fe2287c98d908839cbaac022d21410f274d4874e3f118c307d95b59dc"
+    },
+    "Models/Gun_SniperRifle.cwm": {
+      "bytes": 75056,
+      "sha256": "5c4e7334b64cae8fa4cc898dd27b5f8027fe87dbc7f6988bffaa298449235bd5"
+    },
+    "Models/Gun_SniperRifle_Unique__A.cwm": {
+      "bytes": 208368,
+      "sha256": "238f40d5fcd3f475b64d3f47846634007da6576fc0894006b890cabb33b49235"
+    },
+    "Models/Gun_SniperRifle_Unique__B.cwm": {
+      "bytes": 216384,
+      "sha256": "522c1b474ae75d2cf537d49e8458f0e3adda8e4bd698d3eb7ceef913abba6e50"
+    },
+    "Models/Gun_SniperRifle_Unique__C.cwm": {
+      "bytes": 224480,
+      "sha256": "ea46867503c0a7e763e7672287ae74c419a5257a21cfcfaadffad1a670a42824"
+    },
+    "Models/Gun_SniperRifle_Unique__D.cwm": {
+      "bytes": 215568,
+      "sha256": "476392f13c91dc9fd35fb16d5d1a2eb63f2cc32c5865f61e52cf17c8a10446f5"
+    },
+    "Models/Gun_SniperRifle_Unique__E.cwm": {
+      "bytes": 253280,
+      "sha256": "4230d914843d299eee1441f24f500b336bc22dad2a7ae0f5d7ecb5189cd78560"
+    },
+    "Models/Gun_Spiner.cwm": {
+      "bytes": 63808,
+      "sha256": "fe7d2e98eed13371167e7aaa5109ccd8bc5ba2d2455d72afcf2552bdbe3d8d38"
+    },
+    "Models/Gun_ThumpCannon.cwm": {
+      "bytes": 108624,
+      "sha256": "14d7e9befe7aa46776f7f17bcaf6d0c61f56696fb25646eb0b2e5486b2b3460c"
+    },
+    "Models/Gun_ToxbombLauncher.cwm": {
+      "bytes": 178528,
+      "sha256": "e77433516bcc43713e79cfc12d68c5cb94dc962cf298da0ecad1ccab21935e1b"
+    },
+    "Models/Gun_ToxicNeedle.cwm": {
+      "bytes": 74912,
+      "sha256": "2c616092a81b76b64630a75aff0c2bf5f1338db87f2588435a72c0e36593becd"
+    },
+    "Models/Gun_TripleRocket.cwm": {
+      "bytes": 79568,
+      "sha256": "347df8091fe02088f14670bdbd6461468e8b6c85051d0f98750ddb25f31157de"
+    },
+    "Models/HeldArmoryDetail/CE_Gun_PNinety/CE_Gun_PNinety.obj": {
+      "bytes": 289015,
+      "sha256": "0830e684d8e884435d4452a76d8af57aa1cadff43e6b680d76332e17159b334b"
+    },
+    "Models/HeldArmoryDetail/CE_Gun_PNinety/P90Held.mtl": {
+      "bytes": 812,
+      "sha256": "dba23f96ee998ca5b4019d50390e5dc20d541319955a978bfba6251c2b2fbbcb"
+    },
+    "Models/HeldArmorySights/CE_ATFour/CE_ATFour.obj": {
+      "bytes": 154768,
+      "sha256": "7c5759519b754a0853b802205fd242293b34c85711c428602152c1db392d9303"
+    },
+    "Models/HeldArmorySights/CE_ATFour/Palette.mtl": {
+      "bytes": 896,
+      "sha256": "c445a7d14393e86ada6ba4b446f32e59cca6a51b5b3a14819a519b04b43f38d7"
+    },
+    "Models/HeldArmorySights/CE_Gun_AK74GL/CE_Gun_AK74GL.obj": {
+      "bytes": 289261,
+      "sha256": "2357ef97a31e0723be6b9583f62e8d011ee871b30b77f7376af89afda1de937b"
+    },
+    "Models/HeldArmorySights/CE_Gun_AK74GL/Palette.mtl": {
+      "bytes": 946,
+      "sha256": "53dedaefdb7a5546ce7495fe160eed7bd95f864425b37749da21f46f7443cbcb"
+    },
+    "Models/HeldArmorySights/CE_Gun_AKSSeventyFourU/CE_Gun_AKSSeventyFourU.obj": {
+      "bytes": 259623,
+      "sha256": "e9ee80e6fe5c59891d1e03234991a4a68a4a874317a2acf4a9c5f1240aba6b70"
+    },
+    "Models/HeldArmorySights/CE_Gun_AKSSeventyFourU/Palette.mtl": {
+      "bytes": 1027,
+      "sha256": "c67ff2d3d981865dc89c7ad175356564dd0261be6d9347452b834f3c9b69b704"
+    },
+    "Models/HeldArmorySights/CE_Gun_AKTwelve/CE_Gun_AKTwelve.obj": {
+      "bytes": 317302,
+      "sha256": "0664cba5c649fde6672ae7f3bd16af55d11c907cdd5e0bb2c1e7e2d94ecb69a5"
+    },
+    "Models/HeldArmorySights/CE_Gun_AKTwelve/Palette.mtl": {
+      "bytes": 964,
+      "sha256": "047e7a919b9e0a07ccacb2f8032bfdcec70776d9992ccf4ce9b422dcca598fb8"
+    },
+    "Models/HeldArmorySights/CE_Gun_AmericanOneEighty/CE_Gun_AmericanOneEighty.obj": {
+      "bytes": 443182,
+      "sha256": "d3f32b3de372599b039ff24f0f8b5648e6911b93dcb826f73dee94914c232f63"
+    },
+    "Models/HeldArmorySights/CE_Gun_AmericanOneEighty/Palette.mtl": {
+      "bytes": 1042,
+      "sha256": "386368fd9624447fd43d8c430ec656d2e51e66073fd7249a9b388243e67d0482"
+    },
+    "Models/HeldArmorySights/CE_Gun_AVB/CE_Gun_AVB.obj": {
+      "bytes": 243364,
+      "sha256": "46095195bf8e190b4557fb2f2a6fe26feb1b34e1d21bc4c96fe3d8a918eb684b"
+    },
+    "Models/HeldArmorySights/CE_Gun_AVB/Palette.mtl": {
+      "bytes": 919,
+      "sha256": "9b5ff5021cfb86a811f1d745612434acc80c85088a9a66c46c61a15076cf437a"
+    },
+    "Models/HeldArmorySights/CE_Gun_BAR/CE_Gun_BAR.obj": {
+      "bytes": 182122,
+      "sha256": "b6cbf84d4b259d3d27f37282bd9f607eac0cc439ed26c2d507ba442ce77b6664"
+    },
+    "Models/HeldArmorySights/CE_Gun_BAR/Palette.mtl": {
+      "bytes": 919,
+      "sha256": "ce7d3af4858cc37a0ecad62f478c42257921efaed7ce2e8d7e4b6720d8323ae2"
+    },
+    "Models/HeldArmorySights/CE_Gun_BoysRifle/CE_Gun_BoysRifle.obj": {
+      "bytes": 142067,
+      "sha256": "41a7041a915514b51b7aab909cd7bf1ce055a576e625be7d8193f904f4d8bee6"
+    },
+    "Models/HeldArmorySights/CE_Gun_BoysRifle/Palette.mtl": {
+      "bytes": 952,
+      "sha256": "95bcfce1b50a6d83b00b716e6293c214aab8d11c04e2fdd9bbac896326d85cf6"
+    },
+    "Models/HeldArmorySights/CE_Gun_CarlGustaf/CE_Gun_CarlGustaf.obj": {
+      "bytes": 328234,
+      "sha256": "c6205acbd2b139b3c93681f9672a6031cbd58999dde65f964f3f426f92f64041"
+    },
+    "Models/HeldArmorySights/CE_Gun_CarlGustaf/Palette.mtl": {
+      "bytes": 960,
+      "sha256": "77c153073315cfc19d4c6592e5bf8ef7bb1aee2d785deabb7a7d3c02d57e0cf8"
+    },
+    "Models/HeldArmorySights/CE_Gun_Deagke/CE_Gun_Deagke.mtl": {
+      "bytes": 1301,
+      "sha256": "da68ea1c473745753001e8e796f0fe53cfd691cc7b7adf7b78f801202e5d2e07"
+    },
+    "Models/HeldArmorySights/CE_Gun_Deagke/CE_Gun_Deagke.obj": {
+      "bytes": 289478,
+      "sha256": "b0c1e2d6ddfa24140b4a4a9254e1f757642c5050acf0c632947b110f71a1046d"
+    },
+    "Models/HeldArmorySights/CE_Gun_DPtwentySeven/CE_Gun_DPtwentySeven.obj": {
+      "bytes": 169083,
+      "sha256": "44a8044b3b9a73e44172a18db174f3731d92b68c85311f8e7bb101bd316a3d0c"
+    },
+    "Models/HeldArmorySights/CE_Gun_DPtwentySeven/Palette.mtl": {
+      "bytes": 989,
+      "sha256": "b402ddd17db04e4effc3571cafc1f964b6189cf89d4d5e1610b67a9fb1fe0d1c"
+    },
+    "Models/HeldArmorySights/CE_Gun_FightLiteMCR/CE_Gun_FightLiteMCR.obj": {
+      "bytes": 402845,
+      "sha256": "a8501e59e39ba2933ba2c470355b63658323e0cf88341949587e08b455489112"
+    },
+    "Models/HeldArmorySights/CE_Gun_FightLiteMCR/Palette.mtl": {
+      "bytes": 981,
+      "sha256": "812ddc2b42471792471b9f34648d49e82fbbbdbab43426bbe398ec653537ec17"
+    },
+    "Models/HeldArmorySights/CE_Gun_FNFiveSeven/CE_Gun_FNFiveSeven.mtl": {
+      "bytes": 1361,
+      "sha256": "9220d33da0064f58019425bea9889fc7f48a3317ba651f498d03d1ce2b0cc3e6"
+    },
+    "Models/HeldArmorySights/CE_Gun_FNFiveSeven/CE_Gun_FNFiveSeven.obj": {
+      "bytes": 223388,
+      "sha256": "d22de82f9a2cb9ee1b39671923584c0a7b74c57c642302c2b37dd7033004bb8c"
+    },
+    "Models/HeldArmorySights/CE_Gun_HandMortar/CE_Gun_HandMortar.obj": {
+      "bytes": 82240,
+      "sha256": "ccedc89149b0f35d511428ba9fcacafa3ed26df704752be59aa20cf86f09502d"
+    },
+    "Models/HeldArmorySights/CE_Gun_HandMortar/Palette.mtl": {
+      "bytes": 917,
+      "sha256": "2ad9700713c503a89ddc38b1654101c940ba251c62dd5ecd71fb2393a4abdc95"
+    },
+    "Models/HeldArmorySights/CE_Gun_HenrySideGate/CE_Gun_HenrySideGate.mtl": {
+      "bytes": 1385,
+      "sha256": "77d5c1a77ae127ed61fab7f5f5908dc114e403ba74c34c52d2b376131e4b4e4a"
+    },
+    "Models/HeldArmorySights/CE_Gun_HenrySideGate/CE_Gun_HenrySideGate.obj": {
+      "bytes": 204155,
+      "sha256": "30963b7fc4ce53f36952a35d6da546daf3210e1dfe214d68b20b4c0c7c4184e7"
+    },
+    "Models/HeldArmorySights/CE_Gun_Jericho/CE_Gun_Jericho.mtl": {
+      "bytes": 1313,
+      "sha256": "664a608bd06fc6c958eaf5b9cb014e2c97b28086c5e21928b5c14c9936facf6c"
+    },
+    "Models/HeldArmorySights/CE_Gun_Jericho/CE_Gun_Jericho.obj": {
+      "bytes": 173623,
+      "sha256": "6f7adae2cc541837bbe3fabc82ac1a2a3d9e8dcf90740346c2b09df436b491fb"
+    },
+    "Models/HeldArmorySights/CE_Gun_KSTwentyThree/CE_Gun_KSTwentyThree.obj": {
+      "bytes": 69707,
+      "sha256": "09b0b2189693ca88da2401b5831fd595e2a75d7c288419884fe797f4e7f45932"
+    },
+    "Models/HeldArmorySights/CE_Gun_KSTwentyThree/Palette.mtl": {
+      "bytes": 941,
+      "sha256": "83b2b7284b547ff9b0c82f1790fd641cae9dc2214d90c6628f0906d72f096242"
+    },
+    "Models/HeldArmorySights/CE_Gun_Lewis/CE_Gun_Lewis.obj": {
+      "bytes": 309500,
+      "sha256": "351504db0c9f871dc93f640e0413cec1eee237870051174521517718fd78e347"
+    },
+    "Models/HeldArmorySights/CE_Gun_Lewis/Palette.mtl": {
+      "bytes": 925,
+      "sha256": "59b20e12a08472c0789fed94ee43358231ef42d1a60a2d65425b58d27327689a"
+    },
+    "Models/HeldArmorySights/CE_Gun_M1917Enfield/CE_Gun_M1917Enfield.obj": {
+      "bytes": 66848,
+      "sha256": "700e20a79f7e61f22896ec6390565f55b53df1205258735b23045d474b341f7a"
+    },
+    "Models/HeldArmorySights/CE_Gun_M1917Enfield/Palette.mtl": {
+      "bytes": 933,
+      "sha256": "afa087f57fd94013f5c5afd8466a327511f0799734ff60b9f9f2e5a5925663fd"
+    },
+    "Models/HeldArmorySights/CE_Gun_M1Garand/CE_Gun_M1Garand.obj": {
+      "bytes": 65453,
+      "sha256": "47272080174cb6179f4e9743c8a052d96a37643a59c3cbb0ea6fcc2a107ed897"
+    },
+    "Models/HeldArmorySights/CE_Gun_M1Garand/Palette.mtl": {
+      "bytes": 901,
+      "sha256": "dc8dd3ae2c19473729c0fe4c095ea39bebda75939ebd4cd643c23ff0e623d9d1"
+    },
+    "Models/HeldArmorySights/CE_Gun_M82A2Barrett/CE_Gun_M82A2Barrett.obj": {
+      "bytes": 230519,
+      "sha256": "794db43a923c225702dc1fdcd982c5a2fd77c7b1ca9c2b292bca318ffc43d988"
+    },
+    "Models/HeldArmorySights/CE_Gun_M82A2Barrett/Palette.mtl": {
+      "bytes": 979,
+      "sha256": "748f11a571cd355f01c20a0630985d8cf53c7e926e58881bc2acd25aefb4fa60"
+    },
+    "Models/HeldArmorySights/CE_Gun_MadsenLMG/CE_Gun_MadsenLMG.obj": {
+      "bytes": 236904,
+      "sha256": "e66db92906be4288c9cb549fb93e0ffbda307a8b5f2f4420c325d3033ac55f6d"
+    },
+    "Models/HeldArmorySights/CE_Gun_MadsenLMG/Palette.mtl": {
+      "bytes": 957,
+      "sha256": "7931cf9eaa8f58f88700c3855864d45fe7df6db9a41cf73e55b26cc3d9b664a8"
+    },
+    "Models/HeldArmorySights/CE_Gun_MicroUzi/CE_Gun_MicroUzi.obj": {
+      "bytes": 443246,
+      "sha256": "a88af562213502f15a5faa301b32386b11955461fecbd33a8a718899ed176e88"
+    },
+    "Models/HeldArmorySights/CE_Gun_MicroUzi/Palette.mtl": {
+      "bytes": 961,
+      "sha256": "a6a25650dff2fcf8abf099a4e9a280e96fcfa317a5c82709e0d30f60511ca77b"
+    },
+    "Models/HeldArmorySights/CE_Gun_MosinNagant/CE_Gun_MosinNagant.obj": {
+      "bytes": 59975,
+      "sha256": "2b212890b26dc39a35edcd5abe5a98e73b16bf01efd3289dc7c0b000e08de48e"
+    },
+    "Models/HeldArmorySights/CE_Gun_MosinNagant/Palette.mtl": {
+      "bytes": 925,
+      "sha256": "e237262514951fb7ef3b5edecf89638e784452077bd9e00b408c096d7c8421d0"
+    },
+    "Models/HeldArmorySights/CE_Gun_MosqueFAL/CE_Gun_MosqueFAL.obj": {
+      "bytes": 383950,
+      "sha256": "e5ac803b7c6b4a405360289d5288cedc7856d9b411f7408eea741157177f5319"
+    },
+    "Models/HeldArmorySights/CE_Gun_MosqueFAL/Palette.mtl": {
+      "bytes": 970,
+      "sha256": "77b31b1cc51b3f3a3c612ff9a86c4cb1da33f97028576d2e59dd8e260a27d6ff"
+    },
+    "Models/HeldArmorySights/CE_Gun_TaurusJudge/CE_Gun_TaurusJudge.mtl": {
+      "bytes": 1361,
+      "sha256": "8c8370816a722336df2808c7644b113a177e59d352d4459de674424708af5500"
+    },
+    "Models/HeldArmorySights/CE_Gun_TaurusJudge/CE_Gun_TaurusJudge.obj": {
+      "bytes": 198940,
+      "sha256": "0f0cc45ac8f7cdd634189c942ca4afaa05f18e920045fd6a92df915815924a38"
+    },
+    "Models/HeldArmorySights/CE_Gun_TavorSeven/CE_Gun_TavorSeven.obj": {
+      "bytes": 685427,
+      "sha256": "6086fb79d752e262b0095eb0a67fe50d9e1fd5f67f7e137e1e460443ba28c1f5"
+    },
+    "Models/HeldArmorySights/CE_Gun_TavorSeven/Palette.mtl": {
+      "bytes": 979,
+      "sha256": "fe9decc92ba517df0200e40baa162b8beb1bc795c6d3fa345404dd71e0e90799"
+    },
+    "Models/HeldArmorySights/CE_Gun_Uzi/CE_Gun_Uzi.obj": {
+      "bytes": 590142,
+      "sha256": "129299c03876e6df32dae3d31f373cf0e9f4d243a3e9075fb7b3449e37516de0"
+    },
+    "Models/HeldArmorySights/CE_Gun_Uzi/Palette.mtl": {
+      "bytes": 916,
+      "sha256": "d342c7770fa7ea7bea1a549d9394c6ecd7e3e34e7a8abdbac04c263d227c97a6"
+    },
+    "Models/HeldArmorySights/CE_Gun_WallGun/CE_Gun_WallGun.obj": {
+      "bytes": 128280,
+      "sha256": "d8cd5b2b0d27db9136e939abcc2b27adbe792c7afae75407c7416d63a0fb3c93"
+    },
+    "Models/HeldArmorySights/CE_Gun_WallGun/Palette.mtl": {
+      "bytes": 936,
+      "sha256": "7e75db9142b9a77234c3f26e6039c047d58c9e97236bc9901ea362e443dd2ab3"
+    },
+    "Models/HeldArmorySights/CE_Gun_WinchesterEightySix/CE_Gun_WinchesterEightySix.obj": {
+      "bytes": 53245,
+      "sha256": "6442ac2d99be929ac7a96a046f4c7070ddd2f5b7be120aec9b6768455f4bd610"
+    },
+    "Models/HeldArmorySights/CE_Gun_WinchesterEightySix/Palette.mtl": {
+      "bytes": 989,
+      "sha256": "332e3542ffdf7394581d1cbdedf1b6ede539d27cf38a6cf980de4d45da150d46"
+    },
+    "Models/Knife.cwm": {
+      "bytes": 24872,
+      "sha256": "8281792588b0864b64c1919addefad420767da33cf07b7636b93f2b46ccb0844"
+    },
+    "Models/Longsword.cwm": {
+      "bytes": 19248,
+      "sha256": "70f18aa2f5222f03cd6342779a028f2d5be4cde55d5c43417ed121191b4e9316"
+    },
+    "Models/MastodonTusk.cwm": {
+      "bytes": 62120,
+      "sha256": "1b5e26d40995df0d0047ba8583364b02db5855a0b92bd2153b17712adf5bc047"
+    },
+    "Models/MeleeWeapon_Axe.cwm": {
+      "bytes": 85728,
+      "sha256": "fb80a71f8bd92a1100d66e6efcab50ca2b965dae02f33ecb27af2e2ecff0b477"
+    },
+    "Models/MeleeWeapon_Axe__Horaxian.cwm": {
+      "bytes": 85904,
+      "sha256": "cd08a3df56bbd2cf6ee27ad074770892b0418a2dc73f22f543958970943ae096"
+    },
+    "Models/MeleeWeapon_BreachAxe.cwm": {
+      "bytes": 14256,
+      "sha256": "7472bbb8c89c254326a35253c2d12320953c3486da7cfcc06f5375e8a349cbf1"
+    },
+    "Models/MeleeWeapon_Club.cwm": {
+      "bytes": 23272,
+      "sha256": "a4aa72593d81a5e65273d260cc59521c55f18ffc3df43e044236e2fe25c7853f"
+    },
+    "Models/MeleeWeapon_Gladius.cwm": {
+      "bytes": 12600,
+      "sha256": "ed7dc23a3ad7dd16b791c3daa8dc1236b0616a2a1e5a6c0cab70759f8dc781e7"
+    },
+    "Models/MeleeWeapon_Ikwa.cwm": {
+      "bytes": 8952,
+      "sha256": "1f695593e0c8b1a502ff910942e3e90efecb8529eb3d755ffec430c24b87c2e0"
+    },
+    "Models/MeleeWeapon_Mace.cwm": {
+      "bytes": 17472,
+      "sha256": "3dcf8146db274b0bc72bf247c8e4c06d6f4fd813a2bbe18c8e33579b3674286d"
+    },
+    "Models/MeleeWeapon_MonoSwordBladelink.cwm": {
+      "bytes": 103472,
+      "sha256": "197f4d82da9c9fd8db31cb0fbbc47491c70c4cf595538b53aa5f7a083245da8d"
+    },
+    "Models/MeleeWeapon_PlasmaSwordBladelink.cwm": {
+      "bytes": 84496,
+      "sha256": "cc01dae68b31c800534791c3d8646b24d1fd111fd9c10e3f3b66769940b9fb3b"
+    },
+    "Models/MeleeWeapon_PsyfocusStaff.cwm": {
+      "bytes": 138848,
+      "sha256": "e72f0ed1680714478ddac5d8051c4be9dfb7d12993d35155b63f0e3c0797491c"
+    },
+    "Models/MeleeWeapon_Spear.cwm": {
+      "bytes": 8152,
+      "sha256": "516fa084a9991810c93a27ba96592d522383f16ec9b8486f82d3bcc61dec2f94"
+    },
+    "Models/MeleeWeapon_Warhammer.cwm": {
+      "bytes": 93848,
+      "sha256": "64dada3417de5e9de9f05b5c2349eacf564a97736aebe918d7b02803c76bd3ad"
+    },
+    "Models/MeleeWeapon_ZeusHammerBladelink.cwm": {
+      "bytes": 96464,
+      "sha256": "36dbe214e2e327ca4f4c0f20db12cef44d96e22f79bede447cf1af5e9aa7a89e"
+    },
+    "Models/NerveSpiker.cwm": {
+      "bytes": 84544,
+      "sha256": "b9a0eb55bebbb19dd1b272fc09f72edc4c51810df74baaf63de2bf1699197895"
+    },
+    "Models/Pila.cwm": {
+      "bytes": 65456,
+      "sha256": "024b0edce5d8c5f4d7471a073f569e557872007979c8dff7abcf007c0c964423"
+    },
+    "Models/Revolver.cwm": {
+      "bytes": 43920,
+      "sha256": "18b354ef68f934cd78d058a74e1639826ca3b28b61d182fd831d3ead7d75994d"
+    },
+    "Models/Rifle.cwm": {
+      "bytes": 50944,
+      "sha256": "09f8a73834080357e2ed782af65e3eca1a8346e2b8af56fd9892df7f892276b5"
+    },
+    "Models/ThrumboHorn.cwm": {
+      "bytes": 54408,
+      "sha256": "4ceecfc89554338c65523f0a76b51d255e19f9a08ad5d4ecc3524382ae6c309b"
+    },
+    "Models/Weapon_GrenadeEMP.cwm": {
+      "bytes": 35264,
+      "sha256": "72890828360a7a9ec5d501c0f7b6f78f84245c88eff447883a1a108846632244"
+    },
+    "Models/Weapon_GrenadeMolotov.cwm": {
+      "bytes": 23840,
+      "sha256": "cc79479ad636ac0195992ab35f4a192e5dc2c6c78c3406b705e14aa424b869e8"
+    },
+    "Models/Weapon_GrenadeTox.cwm": {
+      "bytes": 198576,
+      "sha256": "92d00ae94503f7b739bad99942cb8ce7c948af8072d15cadd843905e66b7b943"
+    },
+    "Optional/AerialTactical/HSK.AerialTactical.dll": {
+      "bytes": 10240,
+      "sha256": "4a4f3cfcf5e5f960e70832ea205525c0c43a4db79ad4e3aedc0c36806fecd6e9"
+    },
+    "Optional/AerialTacticalDev/HSK.AerialTactical.Dev.dll": {
+      "bytes": 10240,
+      "sha256": "c4ccec057f33becdd44fd43a93ed72b81566451fdf8b6b62d851d147791692ff"
+    },
+    "Patches/AerialBombTrialCE.xml": {
+      "bytes": 1911,
+      "sha256": "d7207e478abf23cfcfb1121331c304f4942d6d144d893d089fa5914d946699a4"
+    },
+    "Patches/AerialRoleArmamentCE.xml": {
+      "bytes": 18333,
+      "sha256": "8cfc316f95c90680a66958cd08e12d42f6b59fd3724d8d42a3ab5668a3f86f5b"
+    },
+    "Patches/AerialSeekerTrialCE.xml": {
+      "bytes": 2020,
+      "sha256": "86a5503cb2051a5e692d8315968cadc16a95663a29a0416218f302c48755b64c"
+    },
+    "Patches/AerialTrialArmament.xml": {
+      "bytes": 9632,
+      "sha256": "1d0b7d52181269495749f275e6ca60552cb5abc4b1959a2fa847f7d0a49f832a"
+    },
+    "Patches/AircraftCollisionPolicy.xml": {
+      "bytes": 15344,
+      "sha256": "b5e3d2f6d12fe9fbecef15bacf5e1dbfa4bb33b46b79e7375463a72890bb7532"
+    },
+    "Patches/AirDefensePointDefense.xml": {
+      "bytes": 458,
+      "sha256": "4b5e0c58e4aa4b45f0ddf6de3247d28dc10ff93a22d08a3c51ff114b9923db6a"
+    },
+    "Patches/C130HalfScale.xml": {
+      "bytes": 10451,
+      "sha256": "cd69a0f177f26e9950355005d56dca5adc2bfcd6b4095055fee45014c8cadad3"
+    },
+    "Patches/CEArmory-FirstPerson-Anchors.xml": {
+      "bytes": 60347,
+      "sha256": "62e4fd2d6ac22f514c961c9d794dff0536276c44d7c710f3f7a7da0d03a3bea1"
+    },
+    "Patches/VehicleBarrelSourceBindings.xml": {
+      "bytes": 387578,
+      "sha256": "aa51f7ce6e7174ae4369cdbc534d89556d3e8ede6fdaaf929ae8c9d045326eb1"
+    },
+    "Patches/VehicleBoreAlignment.xml": {
+      "bytes": 1109,
+      "sha256": "1214540b2e9739dd9387a26adfb1e9003f3e8edce1e30fc724e7d5a67d978bb9"
+    },
+    "Sounds/CombatMusic/SweetDreams_Combat.ogg": {
+      "bytes": 977402,
+      "sha256": "d9dbe5d2ece71f7a7a37231208e797df980c719cbb4f55a3ea78638a63387639"
+    },
+    "Textures/HSKFps/Scopes/ModernCombat.png": {
+      "bytes": 231159,
+      "sha256": "e7d10c1c4db95a5b7f1de3937ba7fca641b26b025b6a6ce0e5f0899ad036ca77"
+    },
+    "Textures/HSKFps/Scopes/ModernPrecision.png": {
+      "bytes": 217403,
+      "sha256": "2a8b14e06bef18172d3e909eb1b956b36a130da3fc3e7acf6413b60014d5385e"
+    },
+    "Textures/HSKFps/Scopes/scopes.json": {
+      "bytes": 2835,
+      "sha256": "21ed48bb11b5886967fa7c43deb321b8f5275ec15d29d4091fe98078fa39723c"
+    },
+    "Textures/HSKFps/Scopes/SpacerHolo.png": {
+      "bytes": 260049,
+      "sha256": "54de37490806e35d6977711cab7e7a1d7b04d1de9558304dfed22a79ef266556"
+    },
+    "Textures/HSKFps/Scopes/SpacerPrecision.png": {
+      "bytes": 248849,
+      "sha256": "a2dd183255c8b8620381879fbf473eaa15779f15ce95777a58685aaceade456f"
+    },
+    "Textures/HSKFps/Scopes/VintageFine.png": {
+      "bytes": 224941,
+      "sha256": "680186d929e06c8ad13482f6c54a7fb0133ccb0bbcb2e7f0db7772600e28cdc9"
+    },
+    "Textures/HSKFps/Scopes/VintagePost.png": {
+      "bytes": 236958,
+      "sha256": "2a2e7a7b1ff1780a9ba04f730890b90fb19f7ff17bb854c219c421d6091f0409"
+    },
+    "Textures/HSKFps/Weapons/CE_PistolSamples_Atlas.png": {
+      "bytes": 9488,
+      "sha256": "b93163ba59f8b54ffa121bbff92fc5b081c213c15dbda630a48318558a0a1290"
+    },
+    "Textures/HSKFps/Weapons/CE_WeaponSamples_Atlas.png": {
+      "bytes": 9552,
+      "sha256": "2587095b252ad038b69420d67d2b8059902c3e60bda23bb09c1c169606de529c"
+    },
+    "Textures/HSKFps/Weapons/DLC_AlphaThrumboHorn.png": {
+      "bytes": 1917,
+      "sha256": "a86111cba1462e9e409b6a217454f09ff13d285c53f3d33a300cba388d1a4550"
+    },
+    "Textures/HSKFps/Weapons/DLC_Bow_Great_Unique__A.png": {
+      "bytes": 2021,
+      "sha256": "ea4c1aa6afd065cd49495bbeebd6691a813e1b5461b68a80b742af7f23347e58"
+    },
+    "Textures/HSKFps/Weapons/DLC_Bow_Great_Unique__B.png": {
+      "bytes": 2021,
+      "sha256": "ea4c1aa6afd065cd49495bbeebd6691a813e1b5461b68a80b742af7f23347e58"
+    },
+    "Textures/HSKFps/Weapons/DLC_Bow_Great_Unique__C.png": {
+      "bytes": 2021,
+      "sha256": "ea4c1aa6afd065cd49495bbeebd6691a813e1b5461b68a80b742af7f23347e58"
+    },
+    "Textures/HSKFps/Weapons/DLC_Bow_Great_Unique__D.png": {
+      "bytes": 2021,
+      "sha256": "ea4c1aa6afd065cd49495bbeebd6691a813e1b5461b68a80b742af7f23347e58"
+    },
+    "Textures/HSKFps/Weapons/DLC_Bow_Great_Unique__E.png": {
+      "bytes": 2021,
+      "sha256": "ea4c1aa6afd065cd49495bbeebd6691a813e1b5461b68a80b742af7f23347e58"
+    },
+    "Textures/HSKFps/Weapons/DLC_ElephantTusk.png": {
+      "bytes": 2021,
+      "sha256": "ea4c1aa6afd065cd49495bbeebd6691a813e1b5461b68a80b742af7f23347e58"
+    },
+    "Textures/HSKFps/Weapons/DLC_Flamebow.png": {
+      "bytes": 2021,
+      "sha256": "ea4c1aa6afd065cd49495bbeebd6691a813e1b5461b68a80b742af7f23347e58"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_AssaultRifle_Unique__A.png": {
+      "bytes": 674,
+      "sha256": "e0b68fab77bf16977478aa66eaea30344410a0e71f579c4398d9e8db063f5f5f"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_AssaultRifle_Unique__B.png": {
+      "bytes": 661,
+      "sha256": "2d2005e33c3ed01ed1289984ebb435d45358b5072fc0510a44ff54501f8b3e6f"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_AssaultRifle_Unique__C.png": {
+      "bytes": 645,
+      "sha256": "5c911959d447ade05e3ae2ee8cabb2a5993220c117948a24b020badd8f3657bf"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_AssaultRifle_Unique__D.png": {
+      "bytes": 673,
+      "sha256": "a6a7df2e397e701845f0e09f57a89d2ebe3acf5120d4c571e70e5d8b1a605fe2"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_AssaultRifle_Unique__E.png": {
+      "bytes": 661,
+      "sha256": "2d2005e33c3ed01ed1289984ebb435d45358b5072fc0510a44ff54501f8b3e6f"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_BeamGraser.png": {
+      "bytes": 6927,
+      "sha256": "ecc8d4fc9242eccf631ab2d84c0f5359084d76d81e0d12cdf46d6b7a40a759b9"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_BeamRepeater.png": {
+      "bytes": 522,
+      "sha256": "0edb9e6d17cd59132e01b02ae0ab03f87f06f4c7c933a6e8dc9776736e46d32c"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_BeamRepeater_Unique__A.png": {
+      "bytes": 535,
+      "sha256": "005b3c2271e2bc6028bfa3aab8d4a04b250c7630e038048ce3981c526cfab6bc"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_BeamRepeater_Unique__B.png": {
+      "bytes": 544,
+      "sha256": "2aa4b0d3b5cdfd7ccbb128b536e844ab661d9145340feb8644f3796d228ba7c6"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_BeamRepeater_Unique__C.png": {
+      "bytes": 530,
+      "sha256": "8ffadcce486e5546be12a8f717929e7360548752fb5068786ece816b01694702"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_BeamRepeater_Unique__D.png": {
+      "bytes": 530,
+      "sha256": "6e92383162b0c9456f0ef34abcf0def2fa56c023cca77da177c86bf77cbb504f"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_BeamRepeater_Unique__E.png": {
+      "bytes": 531,
+      "sha256": "86033a9df4369a8d640823fa9ef7fe1eca2b4222d6d21a30f3aace8bad0de91c"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_BoltActionRifle_Unique__A.png": {
+      "bytes": 7519,
+      "sha256": "dc31a4a7121f9ce1c4915af0382da1b39436d1d08f56fe8d7d0dc46f4ada2f08"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_BoltActionRifle_Unique__B.png": {
+      "bytes": 8013,
+      "sha256": "2c0254e21a4e242236402878a699af5335a8357810466355f773a103459def4a"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_BoltActionRifle_Unique__C.png": {
+      "bytes": 7689,
+      "sha256": "e94fa2c92c9b98aaee8b95d5bf79d960011ec506ff781bd42808f2342f9603eb"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_BoltActionRifle_Unique__D.png": {
+      "bytes": 7686,
+      "sha256": "6d06f7c7dd3123e7d7145cafecad093de1f7d8c113c3d801c72712713823d511"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_ChainShotgun_Unique__A.png": {
+      "bytes": 1183,
+      "sha256": "34a13bf4735f8aab288dfec5585c996d30dc2a738e2f0147c3c59a03102fb871"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_ChainShotgun_Unique__B.png": {
+      "bytes": 1182,
+      "sha256": "a197ef61e302b006873fd9260e7f00edc7143568ff361f87530d302da1f78f6f"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_ChainShotgun_Unique__C.png": {
+      "bytes": 1182,
+      "sha256": "a197ef61e302b006873fd9260e7f00edc7143568ff361f87530d302da1f78f6f"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_ChainShotgun_Unique__D.png": {
+      "bytes": 1181,
+      "sha256": "23ae0e1b2e24a1ed40c0982aeca6ef6c3a69640d36cec450ab72a256030f7380"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_ChainShotgun_Unique__E.png": {
+      "bytes": 1182,
+      "sha256": "a197ef61e302b006873fd9260e7f00edc7143568ff361f87530d302da1f78f6f"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_ChargeLance_Unique__A.png": {
+      "bytes": 540,
+      "sha256": "ab5a46b68996b4ac72fe28aab0ce8e69027e139ded90c242c760ffc292774c66"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_ChargeLance_Unique__B.png": {
+      "bytes": 519,
+      "sha256": "64f0cfa6f9ee3dd8455596ee62599d3de487666a8ee8904122c514af8b10b6ba"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_ChargeLance_Unique__C.png": {
+      "bytes": 540,
+      "sha256": "d2a56dafeb1ee9f89f63e3706c2f4da33b6239bc2489cdfb1a2a159dcd479c42"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_ChargeLance_Unique__D.png": {
+      "bytes": 534,
+      "sha256": "5e2a81d90e35e7fdbf0e1d5041d9b67952bd268f9a6e7a53f1a237f17f4043da"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_ChargeLance_Unique__E.png": {
+      "bytes": 545,
+      "sha256": "5bd179a7eddf2c1ae7c8bdbb74bfec2a33bb53d3af2a854653f83114f444b546"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_ChargeRifle_Unique__A.png": {
+      "bytes": 525,
+      "sha256": "9d6fa8595c83619e6e2ae06651258b3998117a4e01e46dfb75fcb032ea37c006"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_ChargeRifle_Unique__B.png": {
+      "bytes": 535,
+      "sha256": "f911d6f71f416a44d77ccf51f8c04afe88bb7c8f9cc9f533897d09018aa5ca77"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_ChargeRifle_Unique__C.png": {
+      "bytes": 535,
+      "sha256": "5de6c188f72bc6188f2a35412e6a33c28f570e53049220368a8c61f006fb38d8"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_ChargeRifle_Unique__D.png": {
+      "bytes": 537,
+      "sha256": "378c04dbfde7ef27b5368e60b63305d3adaf2c708e03745000d2ee2a36bc2695"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_ChargeRifle_Unique__E.png": {
+      "bytes": 736,
+      "sha256": "c1c37c3fdf28d39b3d754718b9b3e7bc766155da45c8c1ce4b0ed0af560a0a27"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_EmpLauncher.png": {
+      "bytes": 6940,
+      "sha256": "84fb919941e7343c4155ae68e9c92825ce77e98b1e06e6732af29a56200fcf5d"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_HeavySMG_Unique__A.png": {
+      "bytes": 645,
+      "sha256": "5c911959d447ade05e3ae2ee8cabb2a5993220c117948a24b020badd8f3657bf"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_HeavySMG_Unique__B.png": {
+      "bytes": 645,
+      "sha256": "8d99571786f710d48777229867f194b740374a3c7cc5b40234704ec7096793b8"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_HeavySMG_Unique__C.png": {
+      "bytes": 649,
+      "sha256": "3f3b980abb9ea278787f0f9ed84a6809bca88208d8d78695b615724c4e2e72c5"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_HeavySMG_Unique__D.png": {
+      "bytes": 638,
+      "sha256": "86723409b72089911902a78d63fa598361de770acc339d5a293999dcb2b6027c"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_HeavySMG_Unique__E.png": {
+      "bytes": 661,
+      "sha256": "2d2005e33c3ed01ed1289984ebb435d45358b5072fc0510a44ff54501f8b3e6f"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_HellcatRifle.png": {
+      "bytes": 655,
+      "sha256": "95f94b2ee1804d6138736e66ef8cd6dfe6d0cbc502fd37f6d07d40538a7d908c"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_HellcatRifle_Unique__A.png": {
+      "bytes": 664,
+      "sha256": "686483e05a3f90a5a0ef4beef7be47a4a230ad2ee0f4e98d3fd19880eb65d5ec"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_HellcatRifle_Unique__B.png": {
+      "bytes": 672,
+      "sha256": "8915617e6557926ca57a0fe5c3a17789ed06f21c9dcef792374d366e3d2b5919"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_HellcatRifle_Unique__C.png": {
+      "bytes": 667,
+      "sha256": "cff7b8805ff47de59c6768fd98ad309d6a35e253d4e6ca0ec8805d182a791d2e"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_HellcatRifle_Unique__D.png": {
+      "bytes": 665,
+      "sha256": "92d11f788ddf2791926da6f4bca07118a6d8b87c7c043900f8c97cb1f5ae4282"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_HellcatRifle_Unique__E.png": {
+      "bytes": 664,
+      "sha256": "686483e05a3f90a5a0ef4beef7be47a4a230ad2ee0f4e98d3fd19880eb65d5ec"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_HellsphereCannon.png": {
+      "bytes": 6808,
+      "sha256": "9336195522ff95984996a7fdd344d3945d07d142307cbe1f57e04becde58eb74"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_Incinerator.png": {
+      "bytes": 6960,
+      "sha256": "79bd38b2554dbc34ac3b25fdc6a398a679502c64506e5ece766a4b74449e3c13"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_LMG_Unique__A.png": {
+      "bytes": 990,
+      "sha256": "f97d8bab7a20a73f76225b99b7a06a1e353bf65d209113a9c8568ac2987d55e6"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_LMG_Unique__B.png": {
+      "bytes": 989,
+      "sha256": "de1f2fc53f6acab9876a63f1ac2c874d315e6f2125323eb273f1c93ce3176666"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_LMG_Unique__C.png": {
+      "bytes": 990,
+      "sha256": "8c9099ec7fe2b56b0464f086c08a7e7efb7c10d041b89ce22b8e9ac404c2c05b"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_LMG_Unique__D.png": {
+      "bytes": 992,
+      "sha256": "d52ab8495a558ab9111865ea5c9ae91a6c10e7c65d384501bc1c523589827c45"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_LMG_Unique__E.png": {
+      "bytes": 990,
+      "sha256": "c4d02f668d8d071a1585d87a06d28781b0936af94322ad121a27e1a5e3f8ac08"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_MiniFlameblaster.png": {
+      "bytes": 6850,
+      "sha256": "53490f9a4423a6e9dfab347f63ecb03233e1b1063180dace238c7de35c16ee0b"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_Minigun_Unique__A.png": {
+      "bytes": 985,
+      "sha256": "422e78a3b256791cc0c46d2e8a55eab853dcef73c77a62e74cd157f59bf2f02b"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_Minigun_Unique__B.png": {
+      "bytes": 984,
+      "sha256": "5a4bc006e79b00134d45149097858704312365e9d0ea1655a638a59dcc6cddb0"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_Minigun_Unique__C.png": {
+      "bytes": 986,
+      "sha256": "b6cac9de17b39361be977a0f06a34003db2542bffb3784ca3c4ca53d4c3ecd6f"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_Minigun_Unique__D.png": {
+      "bytes": 989,
+      "sha256": "ac9e8d88bef149dab5f4cc6575755d874772eaf7646982b41d34d7558bb893b0"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_Minigun_Unique__E.png": {
+      "bytes": 990,
+      "sha256": "f97d8bab7a20a73f76225b99b7a06a1e353bf65d209113a9c8568ac2987d55e6"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_MiniShotgun.png": {
+      "bytes": 6854,
+      "sha256": "7109378af35b290a6fbbd42a7c049ccff27ae48ee54ab9f1e3b8029ae38fae0c"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_NeedleLauncher.png": {
+      "bytes": 6769,
+      "sha256": "b7e7fdd0f7abba7e0d86faefef2593f013037483e120a95df87e03d37c29c721"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_Revolver_Unique__A.png": {
+      "bytes": 8519,
+      "sha256": "f56864bc99a3a3029dd546148a400102d0f76ab0c11ff1458e484a62497c8ef1"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_Revolver_Unique__B.png": {
+      "bytes": 8685,
+      "sha256": "519c0ba5d37e826e3957a454f96718d0019ce5475b8bdb0254ef2c48cdd357dd"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_Revolver_Unique__C.png": {
+      "bytes": 8941,
+      "sha256": "5322163d21792d4039b63b2b6e9f1442ed7c12fb8d3ee1e276170382bead3683"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_Revolver_Unique__D.png": {
+      "bytes": 8429,
+      "sha256": "688ef1b59fd03ae1b58dd2b714a680ce3389566d53c1931b01f44b9f622bbb7d"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_Revolver_Unique__E.png": {
+      "bytes": 8951,
+      "sha256": "bc49e417e9f9305e96288ac3679d6590f4af2f9113e3dc476ea4898dfa356511"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_Scattergun.png": {
+      "bytes": 6849,
+      "sha256": "b5552a6659571faeb5738fe8ff47f26c28eda57880fae537cbc8ddef5b85dcf4"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_Slugthrower.png": {
+      "bytes": 6835,
+      "sha256": "285779c81fed407efe879eb41e0dd6dac3ce6658c6f5ac8bf11170a9d09252c5"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_SmokeLauncher.png": {
+      "bytes": 7016,
+      "sha256": "6f631ad51c4c38aad1534221113ae8a7136e56cbbea73f93cb9a7a3975d63e49"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_SniperRifle_Unique__A.png": {
+      "bytes": 7787,
+      "sha256": "f48b727c446ce5794334485342e75f89351b500e6376ff9f5fcf41fddef0d770"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_SniperRifle_Unique__B.png": {
+      "bytes": 7454,
+      "sha256": "91b49e42880be5f570b2dd0082397845fb1183b0ae3b57667df53ac70fc6f3f9"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_SniperRifle_Unique__C.png": {
+      "bytes": 7951,
+      "sha256": "13cfc1311015dbd4a7024160f6141a0be3da5206e76147bc3cf65c8f32af51ea"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_SniperRifle_Unique__D.png": {
+      "bytes": 7882,
+      "sha256": "3d188546c53de63bce594c7c3982f50aa8262f26c5b9f3d12132ac782662182f"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_SniperRifle_Unique__E.png": {
+      "bytes": 8070,
+      "sha256": "9335ca9aedeed47d9c60f8ba691e7e2575e9ddf0e5d581d5e07c70a0df04d11c"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_Spiner.png": {
+      "bytes": 6786,
+      "sha256": "3d7e8def87c1f9e0e0736eb13ee9d090c49c5fc5fe64f44f909a98478514f847"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_ToxbombLauncher.png": {
+      "bytes": 6975,
+      "sha256": "de3245a0d86c00d4a89b47abe781715c3dbed2a57eed1f85aa41aba53990b0fb"
+    },
+    "Textures/HSKFps/Weapons/DLC_Gun_ToxicNeedle.png": {
+      "bytes": 6789,
+      "sha256": "6bbeb6935bfefb533caa05a565d53a6f6c2e622c74021f820079494f5ae7c7e5"
+    },
+    "Textures/HSKFps/Weapons/DLC_MastodonTusk.png": {
+      "bytes": 2021,
+      "sha256": "ea4c1aa6afd065cd49495bbeebd6691a813e1b5461b68a80b742af7f23347e58"
+    },
+    "Textures/HSKFps/Weapons/DLC_MeleeWeapon_Axe.png": {
+      "bytes": 2021,
+      "sha256": "ea4c1aa6afd065cd49495bbeebd6691a813e1b5461b68a80b742af7f23347e58"
+    },
+    "Textures/HSKFps/Weapons/DLC_MeleeWeapon_Axe__Horaxian.png": {
+      "bytes": 2021,
+      "sha256": "ea4c1aa6afd065cd49495bbeebd6691a813e1b5461b68a80b742af7f23347e58"
+    },
+    "Textures/HSKFps/Weapons/DLC_MeleeWeapon_MonoSwordBladelink.png": {
+      "bytes": 2021,
+      "sha256": "ea4c1aa6afd065cd49495bbeebd6691a813e1b5461b68a80b742af7f23347e58"
+    },
+    "Textures/HSKFps/Weapons/DLC_MeleeWeapon_PlasmaSwordBladelink.png": {
+      "bytes": 2021,
+      "sha256": "ea4c1aa6afd065cd49495bbeebd6691a813e1b5461b68a80b742af7f23347e58"
+    },
+    "Textures/HSKFps/Weapons/DLC_MeleeWeapon_PsyfocusStaff.png": {
+      "bytes": 2021,
+      "sha256": "ea4c1aa6afd065cd49495bbeebd6691a813e1b5461b68a80b742af7f23347e58"
+    },
+    "Textures/HSKFps/Weapons/DLC_MeleeWeapon_Warhammer.png": {
+      "bytes": 2021,
+      "sha256": "ea4c1aa6afd065cd49495bbeebd6691a813e1b5461b68a80b742af7f23347e58"
+    },
+    "Textures/HSKFps/Weapons/DLC_MeleeWeapon_ZeusHammerBladelink.png": {
+      "bytes": 2021,
+      "sha256": "ea4c1aa6afd065cd49495bbeebd6691a813e1b5461b68a80b742af7f23347e58"
+    },
+    "Textures/HSKFps/Weapons/DLC_NerveSpiker.png": {
+      "bytes": 6921,
+      "sha256": "dc1b56e61c9dd088f8e180f98b839c85442ee04dd9c32d470b1db29bd9a5648c"
+    },
+    "Textures/HSKFps/Weapons/DLC_Pila.png": {
+      "bytes": 2021,
+      "sha256": "ea4c1aa6afd065cd49495bbeebd6691a813e1b5461b68a80b742af7f23347e58"
+    },
+    "Textures/HSKFps/Weapons/DLC_ThrumboHorn.png": {
+      "bytes": 2021,
+      "sha256": "ea4c1aa6afd065cd49495bbeebd6691a813e1b5461b68a80b742af7f23347e58"
+    },
+    "Textures/HSKFps/Weapons/DLC_Weapon_GrenadeTox.png": {
+      "bytes": 2021,
+      "sha256": "ea4c1aa6afd065cd49495bbeebd6691a813e1b5461b68a80b742af7f23347e58"
+    },
+    "Textures/HSKFps/Weapons/Expansion_032aaa2011ff2c22.png": {
+      "bytes": 2630,
+      "sha256": "424b4777fa8ec3c39c9495373093bf2760dee61bcae4d586aa44ba3f6a48e027"
+    },
+    "Textures/HSKFps/Weapons/Expansion_5a045d8d343dc93e.png": {
+      "bytes": 6368,
+      "sha256": "9e6dfaecdc3fa123db66fd608de8bf69428cf805cd9bf807d70e2e88a2c6ab15"
+    },
+    "Textures/HSKFps/Weapons/Expansion_6b97427448fef39d.png": {
+      "bytes": 8693,
+      "sha256": "cfdb1fcbf9db5dbbf99b24ac52da951325c669d49a920136c501c7a384aa04af"
+    },
+    "Textures/HSKFps/Weapons/Expansion_d41c05ad781f51e9.png": {
+      "bytes": 6937,
+      "sha256": "385530e20f63e568704525f92e6d8ee0c981329990c64478107e1e1e9d42bf3a"
+    },
+    "Textures/HSKFps/Weapons/Expansion_dc832302b282e81e.png": {
+      "bytes": 3105,
+      "sha256": "ac94f8c15683ee9f525929cfe533e280fb18c77c102ee7f753e89cfe81555fd6"
+    },
+    "Textures/HSKFps/Weapons/Expansion_e4ef7a1346b836a7.png": {
+      "bytes": 16995,
+      "sha256": "126cbd2d762ae193f0950dee4cd2ad6dfe2290908b051f7cb586f0ca1973e8ad"
+    },
+    "Textures/HSKFps/Weapons/Expansion_ebef1f14d61d9a3e.png": {
+      "bytes": 16872,
+      "sha256": "0e70f7454dacce88ded6aef61b4e5f925ae06642423150010b9dfba35c318b0b"
+    }
+  },
+  "privacy": {
+    "normalizedFiles": 18,
+    "omittedHistoricalGalleryFiles": 0
+  }
+}

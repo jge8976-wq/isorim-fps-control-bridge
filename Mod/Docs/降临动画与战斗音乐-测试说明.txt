@@ -1,0 +1,34 @@
+降临动画、战斗音乐与鼠族整合测试 / Descent, combat music and Ratkin test
+
+本版默认按目标区分降临节奏：人物 1.5 秒，炮台 1.2 秒，机械体 1.8 秒，载具 2 秒。
+人物靠近后上车／上炮的短过渡最多 0.6 秒。模组选项可关闭动画、目标分类和末尾轻震动，或调整基础时长。
+动画中按 Esc／退出键返回原视角，再按视角切换键跳过动画。原有按键绑定保留。
+
+成功激活斯安威斯坦或死神之眼时播放战斗音乐。音乐淡入，原 BGM 淡出；枪声等效果保留。
+可选将环境音降低至30%；每次成功触发固定播放60秒，技能结束不中断，同一分钟内重复技能不重播或延长。
+播放按实际经过时间计时，慢动作不会拖慢音乐；重复激活不叠加、不从头重播，曲段不循环。
+本地曲段为原文件第20–80秒，共60秒，977,402字节，OGG Vorbis 双声道。
+默认路径 CombatMusic/SweetDreams_Combat，从文件0秒播放（已经裁掉原曲开头20秒，无需再次偏移）。
+旧候选默认 FpsBattleOriginal 缺失时会兼容到此曲；自定义路径保留，缺失时保留原 BGM。
+本曲仅用于本地测试；按原任务书，公开工坊包不附本曲。之前的原创曲仍保留在旧候选。
+
+鼠族整合包含 128 项模型、轻量贴图与中英文 About；Preview.png 小于 1 MB。
+需要 NewRatkinPlus、Humanoid Alien Races、IsoRim 及本版 FPS 主模组。
+
+测试入口使用独立 TestProfile：从现有 FPS 测试配置复制，并另存 R3-test-copy 为单独测试副本。
+不会覆盖现有 Profile 的配置、按键或存档。安装有精确备份，可用本候选 Rollback.cmd 回退。
+
+手动测试顺序：
+1. 从俯视进入人物第一人称，检查降临起止位置与朝向；中途分别试 Esc 和视角切换键。
+2. 对移动人物、机械体、炮台和载具各试一次；确认动画后射击和鼠标控制恢复。
+3. 使用满足条件的角色激活斯安威斯坦／死神之眼，检查音乐、枪声和淡出恢复。
+4. 在独立配置里检查鼠族身体／头发／服装、武器、炮台与仓鼠轮。
+5. 对比关闭轻震动和目标分类后的效果；检查关音乐、音量 0、自定义路径与恢复默认。
+
+文件、编译和离线挂接检查不能代替上述画面、操作与声音实测。
+
+English: defaults are pawn 1.5s, turret 1.2s, mechanoid 1.8s and vehicle 2.0s.
+Esc/exit cancels; the view-cycle key skips. Existing key bindings are preserved.
+Successful Sandevistan / Death Eye activation triggers the local 60s track. Music fades, weapon effects remain.
+Optional ambient ducking. Fixed 60-second real-time window; skill end and repeat activations do not interrupt, restart or extend it.
+Use the isolated test profile for manual visual, input and listening checks. Previous candidates remain intact.

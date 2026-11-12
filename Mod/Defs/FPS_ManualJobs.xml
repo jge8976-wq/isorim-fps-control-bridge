@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <JobDef>
+    <defName>FPS_QuickTend</defName>
+    <driverClass>HSK.FpsBridge.JobDriver_QuickTend</driverClass>
+    <reportString>Tending TargetA.</reportString>
+    <playerInterruptible>true</playerInterruptible>
+  </JobDef>
+  <JobDef>
+    <defName>FPS_ChargeKnockdown</defName>
+    <driverClass>HSK.FpsBridge.JobDriver_ChargeKnockdown</driverClass>
+    <reportString>Recovering after a mounted impact.</reportString>
+  </JobDef>
+</Defs>

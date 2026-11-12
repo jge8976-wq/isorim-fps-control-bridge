@@ -1,0 +1,1156 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_FPS_Imported_VVE_Burya_mainTurret</defName>
+    <profileDefName>FPS_Imported_VVE_Burya</profileDefName>
+    <turretKey>mainTurret</turretKey>
+    <turretDef>Burya_MainTurret</turretDef>
+    <parentTurretKey />
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(-0.000000055, -0.000000024, 1.000000000)</localDirection>
+    <followsParentPitch>false</followsParentPitch>
+    <barrelRestAngles>(18.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/SelfBuiltStructural/T3_Burya_mainTurret_Barrel.obj</barrelModel>
+    <modelLocalDirection>(-0.000000055, 0.309016972, 0.951056524)</modelLocalDirection>
+    <muzzles>
+      <li>(-0.617027690, 0.608435628, 1.171047948)</li>
+      <li>(0.440734060, 0.608435628, 1.171047948)</li>
+      <li>(-0.176293610, 0.790457205, 1.171047928)</li>
+      <li>(0.088146810, 0.608435628, 1.171047948)</li>
+      <li>(-0.088146810, 0.608435628, 1.171047948)</li>
+      <li>(0.176293630, 0.790457205, 1.171047928)</li>
+      <li>(-0.440734050, 0.608435628, 1.171047948)</li>
+      <li>(0.617027660, 0.608435628, 1.171047948)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(-0.617027690, 0.700514630, 1.257994500)</li>
+      <li>(0.440734060, 0.700514630, 1.257994500)</li>
+      <li>(-0.176293610, 0.873627430, 1.201746720)</li>
+      <li>(0.088146810, 0.700514630, 1.257994500)</li>
+      <li>(-0.088146810, 0.700514630, 1.257994500)</li>
+      <li>(0.176293630, 0.873627430, 1.201746720)</li>
+      <li>(-0.440734050, 0.700514630, 1.257994500)</li>
+      <li>(0.617027660, 0.700514630, 1.257994500)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_RT_BMPT_Vehicle_default_mainTurret</defName>
+    <profileDefName>RT3D_RT_BMPT_Vehicle_default</profileDefName>
+    <turretKey>mainTurret</turretKey>
+    <turretDef>BMPT_Tank_Turret</turretDef>
+    <parentTurretKey />
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(0.000000000, -0.000000018, 1.000000000)</localDirection>
+    <followsParentPitch>false</followsParentPitch>
+    <barrelRestAngles>(-0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunder/47204ec00ad5f21ca012.obj</barrelModel>
+    <modelLocalDirection>(0.000000000, -0.000000018, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(-0.170000000, 0.859999798, 2.729999976)</li>
+      <li>(0.170000000, 0.859999798, 2.729999976)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(-0.170000000, 0.010000013, 2.080000000)</li>
+      <li>(0.170000000, 0.010000013, 2.080000000)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_RT_BMPT_Vehicle_default_LeftmissileLauncher</defName>
+    <profileDefName>RT3D_RT_BMPT_Vehicle_default</profileDefName>
+    <turretKey>LeftmissileLauncher</turretKey>
+    <turretDef>RT_AtakaTurret</turretDef>
+    <parentTurretKey>mainTurret</parentTurretKey>
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(0.000000000, 0.000000000, 1.000000000)</localDirection>
+    <followsParentPitch>false</followsParentPitch>
+    <barrelRestAngles>(0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunder/07dbb26e2c8f8c5f0f71.obj</barrelModel>
+    <modelLocalDirection>(0.000000000, 0.000000000, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(-0.100000000, 0.010000000, 0.925000000)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(-0.100000000, 0.010000000, 0.925000000)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_RT_BMPT_Vehicle_default_RightmissileLauncher</defName>
+    <profileDefName>RT3D_RT_BMPT_Vehicle_default</profileDefName>
+    <turretKey>RightmissileLauncher</turretKey>
+    <turretDef>RT_AtakaTurret</turretDef>
+    <parentTurretKey>mainTurret</parentTurretKey>
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(0.000000000, 0.000000000, 1.000000000)</localDirection>
+    <followsParentPitch>false</followsParentPitch>
+    <barrelRestAngles>(0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunder/cc210af332c4af48ed37.obj</barrelModel>
+    <modelLocalDirection>(0.000000000, 0.000000000, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(0.100000000, 0.010000000, 0.925000000)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(0.100000000, 0.010000000, 0.925000000)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_RT_BMPT_Vehicle_default_LeftgrenadeTurret</defName>
+    <profileDefName>RT3D_RT_BMPT_Vehicle_default</profileDefName>
+    <turretKey>LeftgrenadeTurret</turretKey>
+    <turretDef>RT_AG17DTurret</turretDef>
+    <parentTurretKey />
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(0.000000000, 0.000000043, 1.000000000)</localDirection>
+    <followsParentPitch>false</followsParentPitch>
+    <barrelRestAngles>(0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunder/b5026f70f6916a39a8d5.obj</barrelModel>
+    <modelLocalDirection>(0.000000000, 0.000000043, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(0.000000050, 0.019999950, 0.649999900)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(0.000000050, 0.019999950, 0.649999900)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_RT_BMPT_Vehicle_default_RightgrenadeTurret</defName>
+    <profileDefName>RT3D_RT_BMPT_Vehicle_default</profileDefName>
+    <turretKey>RightgrenadeTurret</turretKey>
+    <turretDef>RT_AG17DTurret</turretDef>
+    <parentTurretKey />
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(0.000000000, 0.000000043, 1.000000000)</localDirection>
+    <followsParentPitch>false</followsParentPitch>
+    <barrelRestAngles>(0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunder/714b9f01d6ce4c58aef3.obj</barrelModel>
+    <modelLocalDirection>(0.000000000, 0.000000043, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(-0.000000050, 0.019999950, 0.649999900)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(-0.000000050, 0.019999950, 0.649999900)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_RT_M113_APC_Default_mainTurret</defName>
+    <profileDefName>RT3D_R2_RT_M113_APC_Default</profileDefName>
+    <turretKey>mainTurret</turretKey>
+    <turretDef>RT_M2HB_MGTurret</turretDef>
+    <parentTurretKey />
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(0.000000000, 0.000000000, 1.000000000)</localDirection>
+    <followsParentPitch>false</followsParentPitch>
+    <barrelRestAngles>(0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/da5d3c4467559cc5b3a37f33.obj</barrelModel>
+    <modelLocalDirection>(0.000000000, 0.000000000, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(0.000000000, 0.420000076, 1.420000073)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(0.000000000, 0.000000000, 10.800000400)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_RT_M113M_APC_Default_supportMG</defName>
+    <profileDefName>RT3D_R2_RT_M113M_APC_Default</profileDefName>
+    <turretKey>supportMG</turretKey>
+    <turretDef>RT_M249_MGTurret</turretDef>
+    <parentTurretKey />
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(0.000000000, 0.000000000, 1.000000000)</localDirection>
+    <followsParentPitch>false</followsParentPitch>
+    <barrelRestAngles>(0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/d9686fe7c2b74ac2b7f88f69.obj</barrelModel>
+    <modelLocalDirection>(0.000000000, 0.000000000, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(0.000000000, 0.420000076, 1.220000033)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(0.000000000, 0.000000000, 8.800000000)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_RT_M113M_APC_Default_mainTurret</defName>
+    <profileDefName>RT3D_R2_RT_M113M_APC_Default</profileDefName>
+    <turretKey>mainTurret</turretKey>
+    <turretDef>RT_M113M_APC_Turret</turretDef>
+    <parentTurretKey />
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(0.000000000, -0.000000010, 1.000000000)</localDirection>
+    <followsParentPitch>false</followsParentPitch>
+    <barrelRestAngles>(60.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/0ab45575d239d0bf354284f9.obj</barrelModel>
+    <modelLocalDirection>(0.000000000, 0.866025399, 0.500000009)</modelLocalDirection>
+    <muzzles>
+      <li>(-0.000000000, 0.169999944, 1.339999986)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(-0.000000000, 11.604740221, 6.700000042)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_BMP1_Vehicle_AM_MainTurret</defName>
+    <profileDefName>RT3D_R2_BMP1_Vehicle_AM</profileDefName>
+    <turretKey>MainTurret</turretKey>
+    <turretDef>BMP1_2A72_Turret</turretDef>
+    <parentTurretKey />
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(0.000000000, 0.000000005, 1.000000000)</localDirection>
+    <followsParentPitch>false</followsParentPitch>
+    <barrelRestAngles>(0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/331dcb451f29c07a78508af5.obj</barrelModel>
+    <modelLocalDirection>(0.000000000, 0.000000005, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(-0.000000000, 0.389999971, 2.999999877)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(-0.000000000, -0.000000150, 23.399999100)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_BMP1_Vehicle_AM_CoaxialTurret</defName>
+    <profileDefName>RT3D_R2_BMP1_Vehicle_AM</profileDefName>
+    <turretKey>CoaxialTurret</turretKey>
+    <turretDef>BMP1_PKTM_Turret</turretDef>
+    <parentTurretKey>MainTurret</parentTurretKey>
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(0.000000007, 0.000000015, 1.000000000)</localDirection>
+    <followsParentPitch>true</followsParentPitch>
+    <barrelRestAngles>(0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/545d0cb44dde55412954abf6.obj</barrelModel>
+    <modelLocalDirection>(0.000000007, 0.000000015, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(0.000000006, -0.000000036, 0.570000051)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(0.000000063, -0.000000362, 5.400000200)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_BMP1_Vehicle_AM_KitMax_MainTurret</defName>
+    <profileDefName>RT3D_R2_BMP1_Vehicle_AM_KitMax</profileDefName>
+    <turretKey>MainTurret</turretKey>
+    <turretDef>BMP1_2A72_Turret</turretDef>
+    <parentTurretKey />
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(0.000000000, 0.000000005, 1.000000000)</localDirection>
+    <followsParentPitch>false</followsParentPitch>
+    <barrelRestAngles>(0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/331dcb451f29c07a78508af5.obj</barrelModel>
+    <modelLocalDirection>(0.000000000, 0.000000005, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(-0.000000000, 0.389999971, 2.999999877)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(-0.000000000, -0.000000150, 23.399999100)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_BMP1_Vehicle_AM_KitMax_CoaxialTurret</defName>
+    <profileDefName>RT3D_R2_BMP1_Vehicle_AM_KitMax</profileDefName>
+    <turretKey>CoaxialTurret</turretKey>
+    <turretDef>BMP1_PKTM_Turret</turretDef>
+    <parentTurretKey>MainTurret</parentTurretKey>
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(0.000000007, 0.000000015, 1.000000000)</localDirection>
+    <followsParentPitch>true</followsParentPitch>
+    <barrelRestAngles>(0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/545d0cb44dde55412954abf6.obj</barrelModel>
+    <modelLocalDirection>(0.000000007, 0.000000015, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(0.000000006, -0.000000036, 0.570000051)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(0.000000063, -0.000000362, 5.400000200)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_BMP1_Vehicle_default_KitMax_MainTurret</defName>
+    <profileDefName>RT3D_R2_BMP1_Vehicle_default_KitMax</profileDefName>
+    <turretKey>MainTurret</turretKey>
+    <turretDef>BMP1_73mm_Turret</turretDef>
+    <parentTurretKey />
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(0.000000000, -0.000000004, 1.000000000)</localDirection>
+    <followsParentPitch>false</followsParentPitch>
+    <barrelRestAngles>(-0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/ec4ff9a577d042cbc2294b40.obj</barrelModel>
+    <modelLocalDirection>(0.000000000, -0.000000004, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(0.000000000, 0.269999958, 2.330000042)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(0.000000000, -0.000000225, 17.900000800)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_BMP1_Vehicle_default_KitMax_CoaxialTurret</defName>
+    <profileDefName>RT3D_R2_BMP1_Vehicle_default_KitMax</profileDefName>
+    <turretKey>CoaxialTurret</turretKey>
+    <turretDef>BMP1_PKT_Turret</turretDef>
+    <parentTurretKey>MainTurret</parentTurretKey>
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(-0.000000009, -0.000000067, 1.000000000)</localDirection>
+    <followsParentPitch>true</followsParentPitch>
+    <barrelRestAngles>(-0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/668e9558ccbb5f2cd342d891.obj</barrelModel>
+    <modelLocalDirection>(-0.000000009, -0.000000067, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(-0.000000004, -0.000000029, 0.470000031)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(-0.000000038, -0.000000287, 4.400000000)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_BMP1_Vehicle_LegacyATGM_MainTurret</defName>
+    <profileDefName>RT3D_R2_BMP1_Vehicle_LegacyATGM</profileDefName>
+    <turretKey>MainTurret</turretKey>
+    <turretDef>BMP1_73mm_Turret</turretDef>
+    <parentTurretKey />
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(0.000000000, -0.000000004, 1.000000000)</localDirection>
+    <followsParentPitch>false</followsParentPitch>
+    <barrelRestAngles>(-0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/ec4ff9a577d042cbc2294b40.obj</barrelModel>
+    <modelLocalDirection>(0.000000000, -0.000000004, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(0.000000000, 0.269999958, 2.330000042)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(0.000000000, -0.000000225, 17.900000800)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_BMP1_Vehicle_LegacyATGM_CoaxialTurret</defName>
+    <profileDefName>RT3D_R2_BMP1_Vehicle_LegacyATGM</profileDefName>
+    <turretKey>CoaxialTurret</turretKey>
+    <turretDef>BMP1_PKT_Turret</turretDef>
+    <parentTurretKey>MainTurret</parentTurretKey>
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(-0.000000009, -0.000000067, 1.000000000)</localDirection>
+    <followsParentPitch>true</followsParentPitch>
+    <barrelRestAngles>(-0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/668e9558ccbb5f2cd342d891.obj</barrelModel>
+    <modelLocalDirection>(-0.000000009, -0.000000067, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(-0.000000004, -0.000000029, 0.470000031)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(-0.000000038, -0.000000287, 4.400000000)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_BMP1_Vehicle_LegacyATGM_ATGM_Turret</defName>
+    <profileDefName>RT3D_R2_BMP1_Vehicle_LegacyATGM</profileDefName>
+    <turretKey>ATGM_Turret</turretKey>
+    <turretDef>BMP1_ATGM_Turret</turretDef>
+    <parentTurretKey>MainTurret</parentTurretKey>
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(0.000000005, 0.000000018, 1.000000000)</localDirection>
+    <followsParentPitch>false</followsParentPitch>
+    <barrelRestAngles>(0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/894ab1232ee08cf13aa41320.obj</barrelModel>
+    <modelLocalDirection>(0.000000005, 0.000000018, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(0.000000011, 0.160000100, 0.560000000)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(0.000000113, 0.399999756, 5.600000000)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_BMP1_Vehicle_LegacyATGM_KitMax_MainTurret</defName>
+    <profileDefName>RT3D_R2_BMP1_Vehicle_LegacyATGM_KitMax</profileDefName>
+    <turretKey>MainTurret</turretKey>
+    <turretDef>BMP1_73mm_Turret</turretDef>
+    <parentTurretKey />
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(0.000000000, -0.000000004, 1.000000000)</localDirection>
+    <followsParentPitch>false</followsParentPitch>
+    <barrelRestAngles>(-0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/ec4ff9a577d042cbc2294b40.obj</barrelModel>
+    <modelLocalDirection>(0.000000000, -0.000000004, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(0.000000000, 0.269999958, 2.330000042)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(0.000000000, -0.000000225, 17.900000800)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_BMP1_Vehicle_LegacyATGM_KitMax_CoaxialTurret</defName>
+    <profileDefName>RT3D_R2_BMP1_Vehicle_LegacyATGM_KitMax</profileDefName>
+    <turretKey>CoaxialTurret</turretKey>
+    <turretDef>BMP1_PKT_Turret</turretDef>
+    <parentTurretKey>MainTurret</parentTurretKey>
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(-0.000000009, -0.000000067, 1.000000000)</localDirection>
+    <followsParentPitch>true</followsParentPitch>
+    <barrelRestAngles>(-0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/668e9558ccbb5f2cd342d891.obj</barrelModel>
+    <modelLocalDirection>(-0.000000009, -0.000000067, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(-0.000000004, -0.000000029, 0.470000031)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(-0.000000038, -0.000000287, 4.400000000)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_BMP1_Vehicle_LegacyATGM_KitMax_ATGM_Turret</defName>
+    <profileDefName>RT3D_R2_BMP1_Vehicle_LegacyATGM_KitMax</profileDefName>
+    <turretKey>ATGM_Turret</turretKey>
+    <turretDef>BMP1_ATGM_Turret</turretDef>
+    <parentTurretKey>MainTurret</parentTurretKey>
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(0.000000005, 0.000000018, 1.000000000)</localDirection>
+    <followsParentPitch>false</followsParentPitch>
+    <barrelRestAngles>(0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/894ab1232ee08cf13aa41320.obj</barrelModel>
+    <modelLocalDirection>(0.000000005, 0.000000018, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(0.000000011, 0.160000100, 0.560000000)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(0.000000113, 0.399999756, 5.600000000)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_BMP1_Vehicle_P_MainTurret</defName>
+    <profileDefName>RT3D_R2_BMP1_Vehicle_P</profileDefName>
+    <turretKey>MainTurret</turretKey>
+    <turretDef>BMP1_73mm_Turret</turretDef>
+    <parentTurretKey />
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(0.000000000, -0.000000004, 1.000000000)</localDirection>
+    <followsParentPitch>false</followsParentPitch>
+    <barrelRestAngles>(-0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/ec4ff9a577d042cbc2294b40.obj</barrelModel>
+    <modelLocalDirection>(0.000000000, -0.000000004, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(0.000000000, 0.269999958, 2.330000042)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(0.000000000, -0.000000225, 17.900000800)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_BMP1_Vehicle_P_CoaxialTurret</defName>
+    <profileDefName>RT3D_R2_BMP1_Vehicle_P</profileDefName>
+    <turretKey>CoaxialTurret</turretKey>
+    <turretDef>BMP1_PKT_Turret</turretDef>
+    <parentTurretKey>MainTurret</parentTurretKey>
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(-0.000000009, -0.000000067, 1.000000000)</localDirection>
+    <followsParentPitch>true</followsParentPitch>
+    <barrelRestAngles>(-0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/668e9558ccbb5f2cd342d891.obj</barrelModel>
+    <modelLocalDirection>(-0.000000009, -0.000000067, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(-0.000000004, -0.000000029, 0.470000031)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(-0.000000038, -0.000000287, 4.400000000)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_BMP1_Vehicle_P_UpgradeP_Konkurs</defName>
+    <profileDefName>RT3D_R2_BMP1_Vehicle_P</profileDefName>
+    <turretKey>UpgradeP_Konkurs</turretKey>
+    <turretDef>BMP1_Konkurs_Turret</turretDef>
+    <parentTurretKey>MainTurret</parentTurretKey>
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(0.000000005, 0.000000018, 1.000000000)</localDirection>
+    <followsParentPitch>false</followsParentPitch>
+    <barrelRestAngles>(0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/894ab1232ee08cf13aa41320.obj</barrelModel>
+    <modelLocalDirection>(0.000000005, 0.000000018, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(0.000000011, 0.160000100, 0.560000000)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(0.000000113, 0.399999756, 5.600000000)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_BMP1_Vehicle_P_KitMax_MainTurret</defName>
+    <profileDefName>RT3D_R2_BMP1_Vehicle_P_KitMax</profileDefName>
+    <turretKey>MainTurret</turretKey>
+    <turretDef>BMP1_73mm_Turret</turretDef>
+    <parentTurretKey />
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(0.000000000, -0.000000004, 1.000000000)</localDirection>
+    <followsParentPitch>false</followsParentPitch>
+    <barrelRestAngles>(-0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/ec4ff9a577d042cbc2294b40.obj</barrelModel>
+    <modelLocalDirection>(0.000000000, -0.000000004, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(0.000000000, 0.269999958, 2.330000042)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(0.000000000, -0.000000225, 17.900000800)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_BMP1_Vehicle_P_KitMax_CoaxialTurret</defName>
+    <profileDefName>RT3D_R2_BMP1_Vehicle_P_KitMax</profileDefName>
+    <turretKey>CoaxialTurret</turretKey>
+    <turretDef>BMP1_PKT_Turret</turretDef>
+    <parentTurretKey>MainTurret</parentTurretKey>
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(-0.000000009, -0.000000067, 1.000000000)</localDirection>
+    <followsParentPitch>true</followsParentPitch>
+    <barrelRestAngles>(-0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/668e9558ccbb5f2cd342d891.obj</barrelModel>
+    <modelLocalDirection>(-0.000000009, -0.000000067, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(-0.000000004, -0.000000029, 0.470000031)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(-0.000000038, -0.000000287, 4.400000000)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_BMP1_Vehicle_P_KitMax_UpgradeP_Konkurs</defName>
+    <profileDefName>RT3D_R2_BMP1_Vehicle_P_KitMax</profileDefName>
+    <turretKey>UpgradeP_Konkurs</turretKey>
+    <turretDef>BMP1_Konkurs_Turret</turretDef>
+    <parentTurretKey>MainTurret</parentTurretKey>
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(0.000000005, 0.000000018, 1.000000000)</localDirection>
+    <followsParentPitch>false</followsParentPitch>
+    <barrelRestAngles>(0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/894ab1232ee08cf13aa41320.obj</barrelModel>
+    <modelLocalDirection>(0.000000005, 0.000000018, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(0.000000011, 0.160000100, 0.560000000)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(0.000000113, 0.399999756, 5.600000000)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_BMP1_Vehicle_PG_MainTurret</defName>
+    <profileDefName>RT3D_R2_BMP1_Vehicle_PG</profileDefName>
+    <turretKey>MainTurret</turretKey>
+    <turretDef>BMP1_73mm_Turret</turretDef>
+    <parentTurretKey />
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(0.000000000, -0.000000004, 1.000000000)</localDirection>
+    <followsParentPitch>false</followsParentPitch>
+    <barrelRestAngles>(-0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/ec4ff9a577d042cbc2294b40.obj</barrelModel>
+    <modelLocalDirection>(0.000000000, -0.000000004, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(0.000000000, 0.269999958, 2.330000042)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(0.000000000, -0.000000225, 17.900000800)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_BMP1_Vehicle_PG_CoaxialTurret</defName>
+    <profileDefName>RT3D_R2_BMP1_Vehicle_PG</profileDefName>
+    <turretKey>CoaxialTurret</turretKey>
+    <turretDef>BMP1_PKT_Turret</turretDef>
+    <parentTurretKey>MainTurret</parentTurretKey>
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(-0.000000009, -0.000000067, 1.000000000)</localDirection>
+    <followsParentPitch>true</followsParentPitch>
+    <barrelRestAngles>(-0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/668e9558ccbb5f2cd342d891.obj</barrelModel>
+    <modelLocalDirection>(-0.000000009, -0.000000067, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(-0.000000004, -0.000000029, 0.470000031)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(-0.000000038, -0.000000287, 4.400000000)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_BMP1_Vehicle_PG_UpgradePG_Konkurs</defName>
+    <profileDefName>RT3D_R2_BMP1_Vehicle_PG</profileDefName>
+    <turretKey>UpgradePG_Konkurs</turretKey>
+    <turretDef>BMP1_Konkurs_Turret</turretDef>
+    <parentTurretKey>MainTurret</parentTurretKey>
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(0.000000005, 0.000000018, 1.000000000)</localDirection>
+    <followsParentPitch>false</followsParentPitch>
+    <barrelRestAngles>(0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/894ab1232ee08cf13aa41320.obj</barrelModel>
+    <modelLocalDirection>(0.000000005, 0.000000018, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(0.000000011, 0.160000100, 0.560000000)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(0.000000113, 0.399999756, 5.600000000)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_BMP1_Vehicle_PG_UpgradePG_AG17</defName>
+    <profileDefName>RT3D_R2_BMP1_Vehicle_PG</profileDefName>
+    <turretKey>UpgradePG_AG17</turretKey>
+    <turretDef>BMP1_AG17_Turret</turretDef>
+    <parentTurretKey>MainTurret</parentTurretKey>
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(0.000000000, -0.000000085, 1.000000000)</localDirection>
+    <followsParentPitch>false</followsParentPitch>
+    <barrelRestAngles>(0.000010000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/40c02742a2e565eda6db3917.obj</barrelModel>
+    <modelLocalDirection>(0.000000000, 0.000000090, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(-0.000000030, 0.180000003, 0.600000000)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(-0.000000300, 0.599999833, 5.999999900)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_BMP1_Vehicle_PG_KitMax_MainTurret</defName>
+    <profileDefName>RT3D_R2_BMP1_Vehicle_PG_KitMax</profileDefName>
+    <turretKey>MainTurret</turretKey>
+    <turretDef>BMP1_73mm_Turret</turretDef>
+    <parentTurretKey />
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(0.000000000, -0.000000004, 1.000000000)</localDirection>
+    <followsParentPitch>false</followsParentPitch>
+    <barrelRestAngles>(-0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/ec4ff9a577d042cbc2294b40.obj</barrelModel>
+    <modelLocalDirection>(0.000000000, -0.000000004, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(0.000000000, 0.269999958, 2.330000042)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(0.000000000, -0.000000225, 17.900000800)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_BMP1_Vehicle_PG_KitMax_CoaxialTurret</defName>
+    <profileDefName>RT3D_R2_BMP1_Vehicle_PG_KitMax</profileDefName>
+    <turretKey>CoaxialTurret</turretKey>
+    <turretDef>BMP1_PKT_Turret</turretDef>
+    <parentTurretKey>MainTurret</parentTurretKey>
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(-0.000000009, -0.000000067, 1.000000000)</localDirection>
+    <followsParentPitch>true</followsParentPitch>
+    <barrelRestAngles>(-0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/668e9558ccbb5f2cd342d891.obj</barrelModel>
+    <modelLocalDirection>(-0.000000009, -0.000000067, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(-0.000000004, -0.000000029, 0.470000031)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(-0.000000038, -0.000000287, 4.400000000)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_BMP1_Vehicle_PG_KitMax_UpgradePG_Konkurs</defName>
+    <profileDefName>RT3D_R2_BMP1_Vehicle_PG_KitMax</profileDefName>
+    <turretKey>UpgradePG_Konkurs</turretKey>
+    <turretDef>BMP1_Konkurs_Turret</turretDef>
+    <parentTurretKey>MainTurret</parentTurretKey>
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(0.000000005, 0.000000018, 1.000000000)</localDirection>
+    <followsParentPitch>false</followsParentPitch>
+    <barrelRestAngles>(0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/894ab1232ee08cf13aa41320.obj</barrelModel>
+    <modelLocalDirection>(0.000000005, 0.000000018, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(0.000000011, 0.160000100, 0.560000000)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(0.000000113, 0.399999756, 5.600000000)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_BMP1_Vehicle_PG_KitMax_UpgradePG_AG17</defName>
+    <profileDefName>RT3D_R2_BMP1_Vehicle_PG_KitMax</profileDefName>
+    <turretKey>UpgradePG_AG17</turretKey>
+    <turretDef>BMP1_AG17_Turret</turretDef>
+    <parentTurretKey>MainTurret</parentTurretKey>
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(0.000000000, -0.000000085, 1.000000000)</localDirection>
+    <followsParentPitch>false</followsParentPitch>
+    <barrelRestAngles>(0.000010000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/40c02742a2e565eda6db3917.obj</barrelModel>
+    <modelLocalDirection>(0.000000000, 0.000000090, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(-0.000000030, 0.180000003, 0.600000000)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(-0.000000300, 0.599999833, 5.999999900)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_BMP1AM_Vehicle_default_MainTurret</defName>
+    <profileDefName>RT3D_R2_BMP1AM_Vehicle_default</profileDefName>
+    <turretKey>MainTurret</turretKey>
+    <turretDef>BMP1_2A72_Turret</turretDef>
+    <parentTurretKey />
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(0.000000000, 0.000000005, 1.000000000)</localDirection>
+    <followsParentPitch>false</followsParentPitch>
+    <barrelRestAngles>(0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/331dcb451f29c07a78508af5.obj</barrelModel>
+    <modelLocalDirection>(0.000000000, 0.000000005, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(-0.000000000, 0.389999971, 2.999999877)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(-0.000000000, -0.000000150, 23.399999100)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_BMP1AM_Vehicle_default_CoaxialTurret</defName>
+    <profileDefName>RT3D_R2_BMP1AM_Vehicle_default</profileDefName>
+    <turretKey>CoaxialTurret</turretKey>
+    <turretDef>BMP1_PKTM_Turret</turretDef>
+    <parentTurretKey>MainTurret</parentTurretKey>
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(0.000000007, 0.000000015, 1.000000000)</localDirection>
+    <followsParentPitch>true</followsParentPitch>
+    <barrelRestAngles>(0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/545d0cb44dde55412954abf6.obj</barrelModel>
+    <modelLocalDirection>(0.000000007, 0.000000015, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(0.000000006, -0.000000036, 0.570000051)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(0.000000063, -0.000000362, 5.400000200)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_BMP1P_Vehicle_default_MainTurret</defName>
+    <profileDefName>RT3D_R2_BMP1P_Vehicle_default</profileDefName>
+    <turretKey>MainTurret</turretKey>
+    <turretDef>BMP1_73mm_Turret</turretDef>
+    <parentTurretKey />
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(0.000000000, -0.000000004, 1.000000000)</localDirection>
+    <followsParentPitch>false</followsParentPitch>
+    <barrelRestAngles>(-0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/ec4ff9a577d042cbc2294b40.obj</barrelModel>
+    <modelLocalDirection>(0.000000000, -0.000000004, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(0.000000000, 0.269999958, 2.330000042)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(0.000000000, -0.000000225, 17.900000800)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_BMP1P_Vehicle_default_CoaxialTurret</defName>
+    <profileDefName>RT3D_R2_BMP1P_Vehicle_default</profileDefName>
+    <turretKey>CoaxialTurret</turretKey>
+    <turretDef>BMP1_PKT_Turret</turretDef>
+    <parentTurretKey>MainTurret</parentTurretKey>
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(-0.000000009, -0.000000067, 1.000000000)</localDirection>
+    <followsParentPitch>true</followsParentPitch>
+    <barrelRestAngles>(-0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/668e9558ccbb5f2cd342d891.obj</barrelModel>
+    <modelLocalDirection>(-0.000000009, -0.000000067, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(-0.000000004, -0.000000029, 0.470000031)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(-0.000000038, -0.000000287, 4.400000000)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_BMP1P_Vehicle_default_KonkursTurret</defName>
+    <profileDefName>RT3D_R2_BMP1P_Vehicle_default</profileDefName>
+    <turretKey>KonkursTurret</turretKey>
+    <turretDef>BMP1_Konkurs_Turret</turretDef>
+    <parentTurretKey>MainTurret</parentTurretKey>
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(0.000000005, 0.000000018, 1.000000000)</localDirection>
+    <followsParentPitch>false</followsParentPitch>
+    <barrelRestAngles>(0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/894ab1232ee08cf13aa41320.obj</barrelModel>
+    <modelLocalDirection>(0.000000005, 0.000000018, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(0.000000011, 0.160000100, 0.560000000)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(0.000000113, 0.399999756, 5.600000000)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_BMP1PG_Vehicle_default_MainTurret</defName>
+    <profileDefName>RT3D_R2_BMP1PG_Vehicle_default</profileDefName>
+    <turretKey>MainTurret</turretKey>
+    <turretDef>BMP1_73mm_Turret</turretDef>
+    <parentTurretKey />
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(0.000000000, -0.000000004, 1.000000000)</localDirection>
+    <followsParentPitch>false</followsParentPitch>
+    <barrelRestAngles>(-0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/ec4ff9a577d042cbc2294b40.obj</barrelModel>
+    <modelLocalDirection>(0.000000000, -0.000000004, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(0.000000000, 0.269999958, 2.330000042)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(0.000000000, -0.000000225, 17.900000800)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_BMP1PG_Vehicle_default_CoaxialTurret</defName>
+    <profileDefName>RT3D_R2_BMP1PG_Vehicle_default</profileDefName>
+    <turretKey>CoaxialTurret</turretKey>
+    <turretDef>BMP1_PKT_Turret</turretDef>
+    <parentTurretKey>MainTurret</parentTurretKey>
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(-0.000000009, -0.000000067, 1.000000000)</localDirection>
+    <followsParentPitch>true</followsParentPitch>
+    <barrelRestAngles>(-0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/668e9558ccbb5f2cd342d891.obj</barrelModel>
+    <modelLocalDirection>(-0.000000009, -0.000000067, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(-0.000000004, -0.000000029, 0.470000031)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(-0.000000038, -0.000000287, 4.400000000)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_BMP1PG_Vehicle_default_KonkursTurret</defName>
+    <profileDefName>RT3D_R2_BMP1PG_Vehicle_default</profileDefName>
+    <turretKey>KonkursTurret</turretKey>
+    <turretDef>BMP1_Konkurs_Turret</turretDef>
+    <parentTurretKey>MainTurret</parentTurretKey>
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(0.000000005, 0.000000018, 1.000000000)</localDirection>
+    <followsParentPitch>false</followsParentPitch>
+    <barrelRestAngles>(0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/894ab1232ee08cf13aa41320.obj</barrelModel>
+    <modelLocalDirection>(0.000000005, 0.000000018, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(0.000000011, 0.160000100, 0.560000000)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(0.000000113, 0.399999756, 5.600000000)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_BMP1PG_Vehicle_default_AG17Turret</defName>
+    <profileDefName>RT3D_R2_BMP1PG_Vehicle_default</profileDefName>
+    <turretKey>AG17Turret</turretKey>
+    <turretDef>BMP1_AG17_Turret</turretDef>
+    <parentTurretKey>MainTurret</parentTurretKey>
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(0.000000000, -0.000000085, 1.000000000)</localDirection>
+    <followsParentPitch>false</followsParentPitch>
+    <barrelRestAngles>(0.000010000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/40c02742a2e565eda6db3917.obj</barrelModel>
+    <modelLocalDirection>(0.000000000, 0.000000090, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(-0.000000030, 0.180000003, 0.600000000)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(-0.000000300, 0.599999833, 5.999999900)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_RT_M1A2_MainBattleTank_Default_mainTurret</defName>
+    <profileDefName>RT3D_R2_RT_M1A2_MainBattleTank_Default</profileDefName>
+    <turretKey>mainTurret</turretKey>
+    <turretDef>RT_M1A2_Tank_Turret</turretDef>
+    <parentTurretKey />
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(0.000000000, 0.000000000, 1.000000000)</localDirection>
+    <followsParentPitch>false</followsParentPitch>
+    <barrelRestAngles>(0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/2cd151e5122b1f96262c991c.obj</barrelModel>
+    <modelLocalDirection>(0.000000000, 0.000000000, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(0.000000000, 0.470000267, 5.300000189)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(0.000000000, -0.000000000, 43.200001700)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_RT_M1A2_MainBattleTank_Default_topMG</defName>
+    <profileDefName>RT3D_R2_RT_M1A2_MainBattleTank_Default</profileDefName>
+    <turretKey>topMG</turretKey>
+    <turretDef>RT_M249_MGTurret</turretDef>
+    <parentTurretKey>mainTurret</parentTurretKey>
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(0.000000000, 0.000000000, 1.000000000)</localDirection>
+    <followsParentPitch>false</followsParentPitch>
+    <barrelRestAngles>(0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/785f3dddd2d5e0d1f55341d2.obj</barrelModel>
+    <modelLocalDirection>(0.000000000, 0.000000000, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(-0.000000000, 0.139999867, 0.770000014)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(-0.000000000, 0.099999906, 6.700000200)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_RT_M1A2_MainBattleTank_Default_topTurret</defName>
+    <profileDefName>RT3D_R2_RT_M1A2_MainBattleTank_Default</profileDefName>
+    <turretKey>topTurret</turretKey>
+    <turretDef>RT_M1A2T_SecondaryTurret</turretDef>
+    <parentTurretKey>mainTurret</parentTurretKey>
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(0.000000000, 0.000000000, 1.000000000)</localDirection>
+    <followsParentPitch>false</followsParentPitch>
+    <barrelRestAngles>(0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/c4671727b6a5cb3dc6c8017b.obj</barrelModel>
+    <modelLocalDirection>(0.000000000, 0.000000000, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(-0.000000000, 0.150000095, 0.989999984)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(-0.000000000, 0.000000000, 8.999999800)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_RT_M1A2_MainBattleTank_Default_coaxialMG</defName>
+    <profileDefName>RT3D_R2_RT_M1A2_MainBattleTank_Default</profileDefName>
+    <turretKey>coaxialMG</turretKey>
+    <turretDef>RT_M2HB_MGTurret</turretDef>
+    <parentTurretKey>mainTurret</parentTurretKey>
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(0.000000000, -0.000000000, 1.000000000)</localDirection>
+    <followsParentPitch>true</followsParentPitch>
+    <barrelRestAngles>(-0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/21e4cb4bef14fb8d8cf222ae.obj</barrelModel>
+    <modelLocalDirection>(0.000000000, -0.000000000, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(0.000000000, 0.000000000, 0.900000100)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(0.000000000, 0.000000000, 9.000001000)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_RT_M1A2_MainBattleTank_Default_subCoaxialMG</defName>
+    <profileDefName>RT3D_R2_RT_M1A2_MainBattleTank_Default</profileDefName>
+    <turretKey>subCoaxialMG</turretKey>
+    <turretDef>RT_M249_MGTurret</turretDef>
+    <parentTurretKey>mainTurret</parentTurretKey>
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(0.000000000, -0.000000000, 1.000000000)</localDirection>
+    <followsParentPitch>true</followsParentPitch>
+    <barrelRestAngles>(-0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/1df39f10cde49bbc5b915431.obj</barrelModel>
+    <modelLocalDirection>(0.000000000, -0.000000000, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(-0.000000002, 0.000000000, 0.660000030)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(-0.000000017, 0.000000000, 6.600000300)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_RT_M1A2_MainBattleTank_Default_leftSmoke</defName>
+    <profileDefName>RT3D_R2_RT_M1A2_MainBattleTank_Default</profileDefName>
+    <turretKey>leftSmoke</turretKey>
+    <turretDef>RT_GrenadeLauncherUS</turretDef>
+    <parentTurretKey>mainTurret</parentTurretKey>
+    <fixedToParent>true</fixedToParent>
+    <localDirection>(-0.461315642, 0.757875811, 0.461315655)</localDirection>
+    <followsParentPitch>false</followsParentPitch>
+    <barrelRestAngles>(0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/e1ce154d759ec1abae45c44a.obj</barrelModel>
+    <modelLocalDirection>(-0.461315642, 0.757875811, 0.461315655)</modelLocalDirection>
+    <muzzles>
+      <li>(-0.139999985, 0.230000018, -0.019999995)</li>
+      <li>(-0.139999985, 0.230000020, 0.139999993)</li>
+      <li>(-0.139999985, 0.230000020, 0.299999989)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(-1.399999850, 2.300000183, -0.199999950)</li>
+      <li>(-1.399999850, 2.300000200, 1.399999925)</li>
+      <li>(-1.399999850, 2.300000200, 2.999999892)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_RT_M1A2_MainBattleTank_Default_rightSmoke</defName>
+    <profileDefName>RT3D_R2_RT_M1A2_MainBattleTank_Default</profileDefName>
+    <turretKey>rightSmoke</turretKey>
+    <turretDef>RT_GrenadeLauncherUS</turretDef>
+    <parentTurretKey>mainTurret</parentTurretKey>
+    <fixedToParent>true</fixedToParent>
+    <localDirection>(0.461315642, 0.757875811, 0.461315655)</localDirection>
+    <followsParentPitch>false</followsParentPitch>
+    <barrelRestAngles>(0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/08add7f1650b79135196290c.obj</barrelModel>
+    <modelLocalDirection>(0.461315642, 0.757875811, 0.461315655)</modelLocalDirection>
+    <muzzles>
+      <li>(0.139999985, 0.230000018, -0.019999995)</li>
+      <li>(0.139999985, 0.230000020, 0.139999993)</li>
+      <li>(0.139999985, 0.230000020, 0.299999989)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(1.399999850, 2.300000183, -0.199999950)</li>
+      <li>(1.399999850, 2.300000200, 1.399999925)</li>
+      <li>(1.399999850, 2.300000200, 2.999999892)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_RT_M48H_MediumTank_Default_mainTurret</defName>
+    <profileDefName>RT3D_R2_RT_M48H_MediumTank_Default</profileDefName>
+    <turretKey>mainTurret</turretKey>
+    <turretDef>RT_M48H_Tank_Turret</turretDef>
+    <parentTurretKey />
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(0.000000000, 0.000000000, 1.000000000)</localDirection>
+    <followsParentPitch>false</followsParentPitch>
+    <barrelRestAngles>(0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/319831f1d72e1186236dea1b.obj</barrelModel>
+    <modelLocalDirection>(0.000000000, 0.000000000, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(0.000000000, 0.520000219, 5.119999889)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(0.000000000, -0.000000000, 41.399999300)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_RT_M48H_MediumTank_Default_topMG</defName>
+    <profileDefName>RT3D_R2_RT_M48H_MediumTank_Default</profileDefName>
+    <turretKey>topMG</turretKey>
+    <turretDef>RT_M249_MGTurret</turretDef>
+    <parentTurretKey>mainTurret</parentTurretKey>
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(-0.000000000, 0.000000000, 1.000000000)</localDirection>
+    <followsParentPitch>false</followsParentPitch>
+    <barrelRestAngles>(0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/13165526d5a7261bda709a65.obj</barrelModel>
+    <modelLocalDirection>(-0.000000000, 0.000000000, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(0.000000002, 0.139999867, 0.769999984)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(0.000000019, 0.099999906, 6.699999900)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_RT_M48H_MediumTank_Default_coaxialMG</defName>
+    <profileDefName>RT3D_R2_RT_M48H_MediumTank_Default</profileDefName>
+    <turretKey>coaxialMG</turretKey>
+    <turretDef>RT_M249_MGTurret</turretDef>
+    <parentTurretKey>mainTurret</parentTurretKey>
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(0.000000000, 0.000000000, 1.000000000)</localDirection>
+    <followsParentPitch>true</followsParentPitch>
+    <barrelRestAngles>(0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/01dc66d79c69ebe5a32c8eac.obj</barrelModel>
+    <modelLocalDirection>(0.000000000, 0.000000000, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(0.000000000, 0.000000000, 0.759999990)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(0.000000000, 0.000000000, 7.599999900)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_RT_M48H_MediumTank_Default_leftSmoke</defName>
+    <profileDefName>RT3D_R2_RT_M48H_MediumTank_Default</profileDefName>
+    <turretKey>leftSmoke</turretKey>
+    <turretDef>RT_GrenadeLauncherUS</turretDef>
+    <parentTurretKey>mainTurret</parentTurretKey>
+    <fixedToParent>true</fixedToParent>
+    <localDirection>(-0.461315759, 0.757875752, 0.461315635)</localDirection>
+    <followsParentPitch>false</followsParentPitch>
+    <barrelRestAngles>(0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/122e41de1bc0d52233cba84c.obj</barrelModel>
+    <modelLocalDirection>(-0.461315759, 0.757875752, 0.461315635)</modelLocalDirection>
+    <muzzles>
+      <li>(-0.140000045, 0.230000020, -0.019999971)</li>
+      <li>(-0.140000045, 0.230000020, 0.139999985)</li>
+      <li>(-0.140000045, 0.230000020, 0.299999952)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(-1.400000450, 2.300000200, -0.199999708)</li>
+      <li>(-1.400000450, 2.300000200, 1.399999850)</li>
+      <li>(-1.400000450, 2.300000200, 2.999999517)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_RT_M48H_MediumTank_Default_rightSmoke</defName>
+    <profileDefName>RT3D_R2_RT_M48H_MediumTank_Default</profileDefName>
+    <turretKey>rightSmoke</turretKey>
+    <turretDef>RT_GrenadeLauncherUS</turretDef>
+    <parentTurretKey>mainTurret</parentTurretKey>
+    <fixedToParent>true</fixedToParent>
+    <localDirection>(0.461315759, 0.757875752, 0.461315635)</localDirection>
+    <followsParentPitch>false</followsParentPitch>
+    <barrelRestAngles>(0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/19f5345f3fc67741f6835b96.obj</barrelModel>
+    <modelLocalDirection>(0.461315759, 0.757875752, 0.461315635)</modelLocalDirection>
+    <muzzles>
+      <li>(0.140000045, 0.230000020, -0.019999971)</li>
+      <li>(0.140000045, 0.230000020, 0.139999985)</li>
+      <li>(0.140000045, 0.230000020, 0.299999952)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(1.400000450, 2.300000200, -0.199999708)</li>
+      <li>(1.400000450, 2.300000200, 1.399999850)</li>
+      <li>(1.400000450, 2.300000200, 2.999999517)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_RT_M1075_HEMTT_Default_supportMG</defName>
+    <profileDefName>RT3D_R2_RT_M1075_HEMTT_Default</profileDefName>
+    <turretKey>supportMG</turretKey>
+    <turretDef>RT_M249_MGTurret_HEMTT</turretDef>
+    <parentTurretKey />
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(0.000000000, 0.000000000, 1.000000000)</localDirection>
+    <followsParentPitch>false</followsParentPitch>
+    <barrelRestAngles>(0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/e31cbdd08d77666a41ac464c.obj</barrelModel>
+    <modelLocalDirection>(0.000000000, 0.000000000, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(-0.000000000, 0.390000075, 1.070000049)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(-0.000000000, -0.000000300, 8.700002400)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_RT_TyphoonVDV_Vehicle_VDV_2S41_2S41</defName>
+    <profileDefName>RT3D_R2_RT_TyphoonVDV_Vehicle_VDV_2S41</profileDefName>
+    <turretKey>2S41</turretKey>
+    <turretDef>RT_2S41_Turret</turretDef>
+    <parentTurretKey />
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(0.000000000, -0.000000000, 1.000000000)</localDirection>
+    <followsParentPitch>false</followsParentPitch>
+    <barrelRestAngles>(-0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/9146519b5bc628f9f22418a7.obj</barrelModel>
+    <modelLocalDirection>(0.000000000, -0.000000000, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(0.000000000, 0.450000045, 1.399999978)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(0.000000000, 0.599999400, 11.999999900)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+  <HSK.FpsBridge.VehicleBoreBindingDef>
+    <defName>FPS_BarrelBore_RT3D_R2_RT_TyphoonVDV_Vehicle_VDV_2S41_PKM</defName>
+    <profileDefName>RT3D_R2_RT_TyphoonVDV_Vehicle_VDV_2S41</profileDefName>
+    <turretKey>PKM</turretKey>
+    <turretDef>RT_VDV_PKM_Turret</turretDef>
+    <parentTurretKey />
+    <fixedToParent>false</fixedToParent>
+    <localDirection>(0.000000000, -0.000000000, 1.000000000)</localDirection>
+    <followsParentPitch>false</followsParentPitch>
+    <barrelRestAngles>(-0.000000000, 0.000000000, 0.000000000)</barrelRestAngles>
+    <barrelModel>Models/RimThunderR2/5b3264612baabd97dc8a466a.obj</barrelModel>
+    <modelLocalDirection>(0.000000000, -0.000000000, 1.000000000)</modelLocalDirection>
+    <muzzles>
+      <li>(-0.000000000, 0.390000075, 1.070000048)</li>
+    </muzzles>
+    <modelMuzzles>
+      <li>(-0.000000000, -0.000000300, 8.700000000)</li>
+    </modelMuzzles>
+  </HSK.FpsBridge.VehicleBoreBindingDef>
+</Defs>

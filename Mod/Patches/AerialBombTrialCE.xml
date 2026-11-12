@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+  <Operation Class="HSK.FpsVehicleCompatibility.PatchOperationVehicleCapability">
+    <requiredTypes>
+      <li>Vehicles.CETurretDataDefModExtension</li>
+    </requiredTypes>
+    <operation Class="PatchOperationConditional">
+      <xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_762x51mmNATO"]</xpath>
+      <match Class="PatchOperationSequence">
+        <operations>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/Vehicles.VehicleTurretDef[defName="FPS_Air_BombTrialHE"]/ammunition</xpath>
+            <value>
+              <ammunition>
+                <thingDefs>
+                  <li>Shell_HighExplosive</li>
+                </thingDefs>
+              </ammunition>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/Vehicles.VehicleTurretDef[defName="FPS_Air_BombTrialHE"]/projectile</xpath>
+            <value>
+              <projectile>Bullet_81mmMortarShell_HE</projectile>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/Vehicles.VehicleTurretDef[defName="FPS_Air_BombTrialHE"]/genericAmmo</xpath>
+            <value>
+              <genericAmmo>false</genericAmmo>
+            </value>
+          </li>
+          <li Class="PatchOperationAddModExtension">
+            <xpath>Defs/Vehicles.VehicleTurretDef[defName="FPS_Air_BombTrialHE"]</xpath>
+            <value>
+              <li Class="Vehicles.CETurretDataDefModExtension">
+                <ammoSet>AmmoSet_81mmMortarShell</ammoSet>
+                <shotHeight>2</shotHeight>
+                <spread>0</spread>
+                <sway>0</sway>
+                <recoil>0</recoil>
+              </li>
+            </value>
+          </li>
+        </operations>
+      </match>
+    </operation>
+  </Operation>
+</Patch>

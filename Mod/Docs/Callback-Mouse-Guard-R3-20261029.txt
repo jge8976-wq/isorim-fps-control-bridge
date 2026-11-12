@@ -1,0 +1,12 @@
+—— 0.8.1 R3 / 2026-10-29：移动、HUD与右键瞄准 ——
+合入移动／HUD回调修复：HUD从游戏GUI直接绘制，上游缺少人物绘制更新时补调原生同步，物理与绘制分别每帧去重。
+修复右键瞄准同时弹出地图／规划菜单：FPS捕获鼠标时，在地图与Perspective Shift旧GUI处理前保留鼠标事件；释放鼠标或打开阻挡控制的面板后恢复正常菜单。原按键、移速和碰撞规则不变。
+增加低频本地诊断：实际更新／GUI／物理／绘制调用次数、阻挡原因、按键映射、DLL校验值、模块加载上下文和补丁归属。进入接管时、每5秒以及退出接管时写入Logs/FpsBridge-control-diagnostics.json，并记录简短CONTROL_DIAG日志；不会自动上传。
+如仍异常，操作复现后退出游戏，同时提供本次Logs/Player.log和Logs/FpsBridge-control-diagnostics.json。不要混用其他启动会话的旧日志。
+24项原生回调／鼠标夹具、30项原有回归及实际引擎启动注册／诊断写入检查通过。右键冲突仍需受影响玩家复测；同文件环境下具体的上游回调差异原因尚未最终证实。更新后重启游戏，只启用一份FPS。
+
+Includes movement/HUD callback recovery: the HUD draws directly from the game GUI; missing native pawn-render synchronization is recovered with separate per-frame physics/render gates.
+Captured FPS mouse events are reserved before map and legacy Perspective Shift GUI handling, preventing aim clicks from also opening map/planning menus. Released pointers and blocking panels retain normal UI interaction. Keys, movement speed and collision rules are unchanged.
+Low-frequency local diagnostics record actual callback counts, input blockers/bindings, DLL hashes, module load contexts and patch ownership at session entry, every five seconds, and exit. The file is Logs/FpsBridge-control-diagnostics.json; CONTROL_DIAG lines go to Player.log. Nothing is uploaded automatically.
+If a problem remains, reproduce it, exit, and provide Player.log plus the diagnostic JSON from the same session.
+24 callback/mouse fixtures, 30 prior regression cases and engine-startup hook/diagnostic-write checks passed. The new aim fix still needs affected-player retesting; the exact cause of differing upstream callback dispatch remains unproven. Restart after updating and enable only one FPS copy.

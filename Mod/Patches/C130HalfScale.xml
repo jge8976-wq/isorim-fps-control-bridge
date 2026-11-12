@@ -1,0 +1,274 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/HSK.VehicleModels.VehicleModelDef[defName="RT3D_RT_C130_Vehicle_Default"]</xpath>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationAdd">
+          <xpath>Defs/HSK.VehicleModels.VehicleModelDef[defName="RT3D_RT_C130_Vehicle_Default"]</xpath>
+          <value>
+            <modelScale>(0.5,0.5,0.5)</modelScale>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/HSK.VehicleModels.VehicleModelDef[defName="RT3D_RT_C130_Vehicle_Default"]/hullHeight</xpath>
+          <value>
+            <hullHeight>5.2880090326070786</hullHeight>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/HSK.VehicleModels.VehicleModelDef[defName="RT3D_RT_C130_Vehicle_Default"]/shoulderDistance</xpath>
+          <value>
+            <shoulderDistance>20.467999839782713</shoulderDistance>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/HSK.VehicleModels.VehicleModelDef[defName="RT3D_RT_C130_Vehicle_Default"]/driverEye</xpath>
+          <value>
+            <driverEye>(-0.275000006,2.388008833,6.090000153)</driverEye>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/HSK.VehicleModels.VehicleModelDef[defName="RT3D_RT_C130_Vehicle_Default"]/commanderEye</xpath>
+          <value>
+            <commanderEye>(0.275000006,2.388008833,6.090000153)</commanderEye>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/HSK.VehicleModels.VehicleModelDef[defName="RT3D_RT_C130_Vehicle_Default"]/seats/li[roleKey="pilot"]/eye</xpath>
+          <value>
+            <eye>(-0.275000006,2.388008833,6.090000153)</eye>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/HSK.VehicleModels.VehicleModelDef[defName="RT3D_RT_C130_Vehicle_Default"]/seats/li[roleKey="passenger"]/eye</xpath>
+          <value>
+            <eye>(0.275000006,2.388008833,6.090000153)</eye>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/Vehicles.VehicleDef[defName="RT_C130_Vehicle"]/size</xpath>
+          <value>
+            <size>(5,7)</size>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/Vehicles.VehicleDef[defName="RT_C130_Vehicle"]/graphicData/drawSize</xpath>
+          <value>
+            <drawSize>(12.5,10.5)</drawSize>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/Vehicles.VehicleBuildDef[defName="RT_C130_Vehicle_Blueprint"]/size</xpath>
+          <value>
+            <size>(5,7)</size>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/Vehicles.VehicleBuildDef[defName="RT_C130_Vehicle_Blueprint"]/graphicData/drawSize</xpath>
+          <value>
+            <drawSize>(12.5,10.5)</drawSize>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/Vehicles.VehicleDef[defName="RT_C130_Vehicle"]/components/li[key="Engine1"]/hitbox/cells</xpath>
+          <value>
+            <cells>
+              <li>(-2,2)</li>
+            </cells>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/Vehicles.VehicleDef[defName="RT_C130_Vehicle"]/components/li[key="Engine2"]/hitbox/cells</xpath>
+          <value>
+            <cells>
+              <li>(-1,2)</li>
+            </cells>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/Vehicles.VehicleDef[defName="RT_C130_Vehicle"]/components/li[key="Engine3"]/hitbox/cells</xpath>
+          <value>
+            <cells>
+              <li>(1,2)</li>
+            </cells>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/Vehicles.VehicleDef[defName="RT_C130_Vehicle"]/components/li[key="Engine4"]/hitbox/cells</xpath>
+          <value>
+            <cells>
+              <li>(2,2)</li>
+            </cells>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/Vehicles.VehicleDef[defName="RT_C130_Vehicle"]/components/li[key="Engine1Cover"]/hitbox/cells</xpath>
+          <value>
+            <cells>
+              <li>(-2,2)</li>
+            </cells>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/Vehicles.VehicleDef[defName="RT_C130_Vehicle"]/components/li[key="Engine2Cover"]/hitbox/cells</xpath>
+          <value>
+            <cells>
+              <li>(-1,2)</li>
+            </cells>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/Vehicles.VehicleDef[defName="RT_C130_Vehicle"]/components/li[key="Engine3Cover"]/hitbox/cells</xpath>
+          <value>
+            <cells>
+              <li>(1,2)</li>
+            </cells>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/Vehicles.VehicleDef[defName="RT_C130_Vehicle"]/components/li[key="Engine4Cover"]/hitbox/cells</xpath>
+          <value>
+            <cells>
+              <li>(2,2)</li>
+            </cells>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/Vehicles.VehicleDef[defName="RT_C130_Vehicle"]/components/li[key="LeftLandingWheel"]/hitbox/cells</xpath>
+          <value>
+            <cells>
+              <li>(-1,0)</li>
+              <li>(-1,1)</li>
+            </cells>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/Vehicles.VehicleDef[defName="RT_C130_Vehicle"]/components/li[key="RightLandingWheel"]/hitbox/cells</xpath>
+          <value>
+            <cells>
+              <li>(1,0)</li>
+              <li>(1,1)</li>
+            </cells>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/Vehicles.VehicleDef[defName="RT_C130_Vehicle"]/components/li[key="CentralLandingWheel"]/hitbox/cells</xpath>
+          <value>
+            <cells>
+              <li>(0,3)</li>
+            </cells>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/Vehicles.VehicleDef[defName="RT_C130_Vehicle"]/components/li[key="LeftHorizontalStabilizer"]/hitbox/cells</xpath>
+          <value>
+            <cells>
+              <li>(-1,-3)</li>
+              <li>(-2,-3)</li>
+            </cells>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/Vehicles.VehicleDef[defName="RT_C130_Vehicle"]/components/li[key="RightHorizontalStabilizer"]/hitbox/cells</xpath>
+          <value>
+            <cells>
+              <li>(1,-3)</li>
+              <li>(2,-3)</li>
+            </cells>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/Vehicles.VehicleDef[defName="RT_C130_Vehicle"]/components/li[key="Rudder"]/hitbox/cells</xpath>
+          <value>
+            <cells>
+              <li>(0,-3)</li>
+              <li>(0,-2)</li>
+            </cells>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/Vehicles.VehicleDef[defName="RT_C130_Vehicle"]/components/li[key="LeftWing"]/hitbox/cells</xpath>
+          <value>
+            <cells>
+              <li>(-1,2)</li>
+              <li>(-1,1)</li>
+              <li>(-2,2)</li>
+              <li>(-2,1)</li>
+            </cells>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/Vehicles.VehicleDef[defName="RT_C130_Vehicle"]/components/li[key="RightWing"]/hitbox/cells</xpath>
+          <value>
+            <cells>
+              <li>(1,2)</li>
+              <li>(1,1)</li>
+              <li>(2,2)</li>
+              <li>(2,1)</li>
+            </cells>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/Vehicles.VehicleDef[defName="RT_C130_Vehicle"]/components/li[key="LeftAileron"]/hitbox/cells</xpath>
+          <value>
+            <cells>
+              <li>(-1,1)</li>
+              <li>(-2,1)</li>
+            </cells>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/Vehicles.VehicleDef[defName="RT_C130_Vehicle"]/components/li[key="RightAileron"]/hitbox/cells</xpath>
+          <value>
+            <cells>
+              <li>(1,1)</li>
+              <li>(2,1)</li>
+            </cells>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/Vehicles.VehicleDef[defName="RT_C130_Vehicle"]/components/li[key="LeftFlap"]/hitbox/cells</xpath>
+          <value>
+            <cells>
+              <li>(-1,1)</li>
+              <li>(-2,1)</li>
+            </cells>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/Vehicles.VehicleDef[defName="RT_C130_Vehicle"]/components/li[key="RightFlap"]/hitbox/cells</xpath>
+          <value>
+            <cells>
+              <li>(1,1)</li>
+              <li>(2,1)</li>
+            </cells>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/Vehicles.VehicleDef[defName="RT_C130_Vehicle"]/properties/roles/li[key="pilot"]/hitbox/cells</xpath>
+          <value>
+            <cells>
+              <li>(0,3)</li>
+              <li>(1,3)</li>
+              <li>(-1,3)</li>
+            </cells>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>Defs/Vehicles.VehicleDef[defName="RT_C130_Vehicle"]/properties/roles/li[key="passenger"]/hitbox/cells</xpath>
+          <value>
+            <cells>
+              <li>(0,1)</li>
+              <li>(-1,1)</li>
+              <li>(1,1)</li>
+              <li>(0,2)</li>
+              <li>(-1,2)</li>
+              <li>(1,2)</li>
+            </cells>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>

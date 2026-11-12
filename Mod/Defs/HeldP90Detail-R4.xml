@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <HSK.FpsBridge.HeldWeaponVisualDef MayRequire="hsk.cearmory.models">
+    <defName>HSK_HeldDetailR4_CE_Gun_PNinety</defName>
+    <weapon>CE_Gun_PNinety</weapon>
+    <model>HeldArmoryDetail/CE_Gun_PNinety/CE_Gun_PNinety</model>
+    <view>
+      <overrideOrientation>true</overrideOrientation>
+      <forward>(1, 0, 0)</forward>
+      <up>(0, 1, 0)</up>
+      <hasGrip>true</hasGrip>
+      <grip>(-0.0199999996, -0.00600000005, 0)</grip>
+      <hasMuzzle>true</hasMuzzle>
+      <muzzle>(0.430999994, 0.0920000002, 0)</muzzle>
+      <scope>ModernCombat</scope>
+      <hasScopeEye>true</hasScopeEye>
+      <scopeEye>(0.112000003, 0.242499993, 0)</scopeEye>
+      <scopeForward>(1, 0, 0)</scopeForward>
+      <scopeZoom>1.5</scopeZoom>
+      <kind>Gun</kind>
+    </view>
+  </HSK.FpsBridge.HeldWeaponVisualDef>
+</Defs>

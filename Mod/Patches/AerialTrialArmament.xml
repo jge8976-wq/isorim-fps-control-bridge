@@ -1,0 +1,234 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+  <Operation Class="HSK.FpsVehicleCompatibility.PatchOperationVehicleCapability">
+    <requiredTypes>
+      <li>Vehicles.CompProperties_VehicleTurrets</li>
+    </requiredTypes>
+    <requiredXPath>Defs/Vehicles.VehicleDef[defName="VVE_Frog"]</requiredXPath>
+    <operation Class="PatchOperationConditional">
+      <xpath>Defs/Vehicles.VehicleDef[defName="VVE_Frog"]/comps/li[@Class="Vehicles.CompProperties_VehicleTurrets"]</xpath>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>Defs/Vehicles.VehicleDef[defName="VVE_Frog"]/comps</xpath>
+        <value>
+          <li Class="Vehicles.CompProperties_VehicleTurrets">
+            <turrets />
+          </li>
+        </value>
+      </nomatch>
+    </operation>
+  </Operation>
+  <Operation Class="HSK.FpsVehicleCompatibility.PatchOperationVehicleCapability">
+    <requiredTypes>
+      <li>Vehicles.CompProperties_VehicleTurrets</li>
+    </requiredTypes>
+    <requiredXPath>Defs/Vehicles.VehicleDef[defName="VVE_Frog"]</requiredXPath>
+    <operation Class="PatchOperationAdd">
+      <xpath>Defs/Vehicles.VehicleDef[defName="VVE_Frog"]/comps/li[@Class="Vehicles.CompProperties_VehicleTurrets"]/turrets</xpath>
+      <value>
+        <li>
+          <key>FPS_AirLoadout_0_MG762</key>
+          <def>FPS_Air_VVE_Frog_MG762</def>
+          <autoTargeting>false</autoTargeting>
+        </li>
+        <li>
+          <key>FPS_AirLoadout_1_Grenade40L</key>
+          <def>FPS_Air_VVE_Frog_Grenade40L</def>
+          <autoTargeting>false</autoTargeting>
+        </li>
+        <li>
+          <key>FPS_AirLoadout_3_Seeker80</key>
+          <def>FPS_Air_SeekerTrial80</def>
+          <autoTargeting>false</autoTargeting>
+        </li>
+      </value>
+    </operation>
+  </Operation>
+  <Operation Class="HSK.FpsVehicleCompatibility.PatchOperationVehicleCapability">
+    <requiredTypes>
+      <li>Vehicles.CompProperties_VehicleTurrets</li>
+    </requiredTypes>
+    <requiredXPath>Defs/Vehicles.VehicleDef[defName="VVE_Toad"]</requiredXPath>
+    <operation Class="PatchOperationConditional">
+      <xpath>Defs/Vehicles.VehicleDef[defName="VVE_Toad"]/comps/li[@Class="Vehicles.CompProperties_VehicleTurrets"]</xpath>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>Defs/Vehicles.VehicleDef[defName="VVE_Toad"]/comps</xpath>
+        <value>
+          <li Class="Vehicles.CompProperties_VehicleTurrets">
+            <turrets />
+          </li>
+        </value>
+      </nomatch>
+    </operation>
+  </Operation>
+  <Operation Class="HSK.FpsVehicleCompatibility.PatchOperationVehicleCapability">
+    <requiredTypes>
+      <li>Vehicles.CompProperties_VehicleTurrets</li>
+    </requiredTypes>
+    <requiredXPath>Defs/Vehicles.VehicleDef[defName="VVE_Toad"]</requiredXPath>
+    <operation Class="PatchOperationAdd">
+      <xpath>Defs/Vehicles.VehicleDef[defName="VVE_Toad"]/comps/li[@Class="Vehicles.CompProperties_VehicleTurrets"]/turrets</xpath>
+      <value>
+        <li>
+          <key>FPS_AirLoadout_0_HMG127</key>
+          <def>FPS_Air_VVE_Toad_HMG127</def>
+          <autoTargeting>false</autoTargeting>
+        </li>
+        <li>
+          <key>FPS_AirLoadout_1_Rocket70</key>
+          <def>FPS_Air_VVE_Toad_Rocket70</def>
+          <autoTargeting>false</autoTargeting>
+        </li>
+        <li>
+          <key>FPS_AirLoadout_3_Seeker80</key>
+          <def>FPS_Air_SeekerTrial80</def>
+          <autoTargeting>false</autoTargeting>
+        </li>
+      </value>
+    </operation>
+  </Operation>
+  <Operation Class="HSK.FpsVehicleCompatibility.PatchOperationVehicleCapability">
+    <requiredTypes>
+      <li>Vehicles.CompProperties_VehicleTurrets</li>
+    </requiredTypes>
+    <requiredXPath>Defs/Vehicles.VehicleDef[defName="VVE_Mosquito"]</requiredXPath>
+    <operation Class="PatchOperationConditional">
+      <xpath>Defs/Vehicles.VehicleDef[defName="VVE_Mosquito"]/comps/li[@Class="Vehicles.CompProperties_VehicleTurrets"]</xpath>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>Defs/Vehicles.VehicleDef[defName="VVE_Mosquito"]/comps</xpath>
+        <value>
+          <li Class="Vehicles.CompProperties_VehicleTurrets">
+            <turrets />
+          </li>
+        </value>
+      </nomatch>
+    </operation>
+  </Operation>
+  <Operation Class="HSK.FpsVehicleCompatibility.PatchOperationVehicleCapability">
+    <requiredTypes>
+      <li>Vehicles.CompProperties_VehicleTurrets</li>
+    </requiredTypes>
+    <requiredXPath>Defs/Vehicles.VehicleDef[defName="VVE_Mosquito"]</requiredXPath>
+    <operation Class="PatchOperationAdd">
+      <xpath>Defs/Vehicles.VehicleDef[defName="VVE_Mosquito"]/comps/li[@Class="Vehicles.CompProperties_VehicleTurrets"]/turrets</xpath>
+      <value>
+        <li>
+          <key>FPS_AirLoadout_0_Cannon30</key>
+          <def>FPS_Air_VVE_Mosquito_Cannon30</def>
+          <autoTargeting>false</autoTargeting>
+        </li>
+        <li>
+          <key>FPS_AirLoadout_1_Rocket70</key>
+          <def>FPS_Air_VVE_Mosquito_Rocket70</def>
+          <autoTargeting>false</autoTargeting>
+        </li>
+        <li>
+          <key>FPS_AirLoadout_3_Seeker80</key>
+          <def>FPS_Air_SeekerTrial80</def>
+          <autoTargeting>false</autoTargeting>
+        </li>
+      </value>
+    </operation>
+  </Operation>
+  <Operation Class="HSK.FpsVehicleCompatibility.PatchOperationVehicleCapability">
+    <requiredTypes>
+      <li>Vehicles.CompProperties_VehicleTurrets</li>
+    </requiredTypes>
+    <requiredXPath>Defs/Vehicles.VehicleDef[defName="VVE_Smuggler"]</requiredXPath>
+    <operation Class="PatchOperationConditional">
+      <xpath>Defs/Vehicles.VehicleDef[defName="VVE_Smuggler"]/comps/li[@Class="Vehicles.CompProperties_VehicleTurrets"]</xpath>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>Defs/Vehicles.VehicleDef[defName="VVE_Smuggler"]/comps</xpath>
+        <value>
+          <li Class="Vehicles.CompProperties_VehicleTurrets">
+            <turrets />
+          </li>
+        </value>
+      </nomatch>
+    </operation>
+  </Operation>
+  <Operation Class="HSK.FpsVehicleCompatibility.PatchOperationVehicleCapability">
+    <requiredTypes>
+      <li>Vehicles.CompProperties_VehicleTurrets</li>
+    </requiredTypes>
+    <requiredXPath>Defs/Vehicles.VehicleDef[defName="VVE_Smuggler"]</requiredXPath>
+    <operation Class="PatchOperationAdd">
+      <xpath>Defs/Vehicles.VehicleDef[defName="VVE_Smuggler"]/comps/li[@Class="Vehicles.CompProperties_VehicleTurrets"]/turrets</xpath>
+      <value>
+        <li>
+          <key>FPS_AirLoadout_0_HMG127</key>
+          <def>FPS_Air_VVE_Smuggler_HMG127</def>
+          <autoTargeting>false</autoTargeting>
+        </li>
+        <li>
+          <key>FPS_AirLoadout_1_Grenade40H</key>
+          <def>FPS_Air_VVE_Smuggler_Grenade40H</def>
+          <autoTargeting>false</autoTargeting>
+        </li>
+        <li>
+          <key>FPS_AirLoadout_3_Seeker80</key>
+          <def>FPS_Air_SeekerTrial80</def>
+          <autoTargeting>false</autoTargeting>
+        </li>
+      </value>
+    </operation>
+  </Operation>
+  <Operation Class="HSK.FpsVehicleCompatibility.PatchOperationVehicleCapability">
+    <requiredTypes>
+      <li>Vehicles.CompProperties_VehicleTurrets</li>
+    </requiredTypes>
+    <requiredXPath>Defs/Vehicles.VehicleDef[defName="VVE_Warbird"]</requiredXPath>
+    <operation Class="PatchOperationConditional">
+      <xpath>Defs/Vehicles.VehicleDef[defName="VVE_Warbird"]/comps/li[@Class="Vehicles.CompProperties_VehicleTurrets"]</xpath>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>Defs/Vehicles.VehicleDef[defName="VVE_Warbird"]/comps</xpath>
+        <value>
+          <li Class="Vehicles.CompProperties_VehicleTurrets">
+            <turrets />
+          </li>
+        </value>
+      </nomatch>
+    </operation>
+  </Operation>
+  <Operation Class="HSK.FpsVehicleCompatibility.PatchOperationVehicleCapability">
+    <requiredTypes>
+      <li>Vehicles.CompProperties_VehicleTurrets</li>
+    </requiredTypes>
+    <requiredXPath>Defs/Vehicles.VehicleDef[defName="VVE_Warbird"]</requiredXPath>
+    <operation Class="PatchOperationAdd">
+      <xpath>Defs/Vehicles.VehicleDef[defName="VVE_Warbird"]/comps/li[@Class="Vehicles.CompProperties_VehicleTurrets"]/turrets</xpath>
+      <value>
+        <li>
+          <key>FPS_AirLoadout_0_Rotary20</key>
+          <def>FPS_Air_VVE_Warbird_Rotary20</def>
+          <autoTargeting>false</autoTargeting>
+        </li>
+        <li>
+          <key>FPS_AirLoadout_1_Rocket80</key>
+          <def>FPS_Air_VVE_Warbird_Rocket80</def>
+          <autoTargeting>false</autoTargeting>
+        </li>
+        <li>
+          <key>FPS_AirLoadout_3_Seeker80</key>
+          <def>FPS_Air_SeekerTrial80</def>
+          <autoTargeting>false</autoTargeting>
+        </li>
+      </value>
+    </operation>
+  </Operation>
+  <Operation Class="HSK.FpsVehicleCompatibility.PatchOperationVehicleCapability">
+    <requiredTypes>
+      <li>Vehicles.CompProperties_VehicleTurrets</li>
+    </requiredTypes>
+    <requiredXPath>Defs/Vehicles.VehicleDef[defName="VVE_Warbird"]</requiredXPath>
+    <operation Class="PatchOperationAdd">
+      <xpath>Defs/Vehicles.VehicleDef[defName="VVE_Warbird"]/comps/li[@Class="Vehicles.CompProperties_VehicleTurrets"]/turrets</xpath>
+      <value>
+        <li>
+          <key>FPS_AirLoadout_2_BombHE</key>
+          <def>FPS_Air_BombTrialHE</def>
+          <autoTargeting>false</autoTargeting>
+        </li>
+      </value>
+    </operation>
+  </Operation>
+</Patch>

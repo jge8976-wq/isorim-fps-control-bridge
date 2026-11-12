@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <HSK.FpsBridge.AerialFlightDef>
+    <defName>FPS_VTOL_Frog</defName>
+    <vehicleDef>VVE_Frog</vehicleDef>
+    <kind>DropPod</kind>
+    <maximumSpeed>6</maximumSpeed>
+    <exhaustTier>0</exhaustTier>
+    <propulsion>VerticalThruster</propulsion>
+  </HSK.FpsBridge.AerialFlightDef>
+  <HSK.FpsBridge.AerialFlightDef>
+    <defName>FPS_VTOL_Toad</defName>
+    <vehicleDef>VVE_Toad</vehicleDef>
+    <kind>DropPod</kind>
+    <maximumSpeed>7</maximumSpeed>
+    <exhaustTier>2</exhaustTier>
+    <propulsion>VerticalThruster</propulsion>
+  </HSK.FpsBridge.AerialFlightDef>
+  <HSK.FpsBridge.AerialFlightDef>
+    <defName>FPS_VTOL_Mosquito</defName>
+    <vehicleDef>VVE_Mosquito</vehicleDef>
+    <kind>Rotorcraft</kind>
+    <maximumSpeed>9</maximumSpeed>
+    <propulsion>Rotor</propulsion>
+  </HSK.FpsBridge.AerialFlightDef>
+  <HSK.FpsBridge.AerialFlightDef>
+    <defName>FPS_AIR_Smuggler</defName>
+    <vehicleDef>VVE_Smuggler</vehicleDef>
+    <kind>FixedWing</kind>
+    <maximumSpeed>14</maximumSpeed>
+    <propulsion>Propeller</propulsion>
+    <useNativeSpeed>true</useNativeSpeed>
+  </HSK.FpsBridge.AerialFlightDef>
+  <HSK.FpsBridge.AerialFlightDef>
+    <defName>FPS_AIR_Warbird</defName>
+    <vehicleDef>VVE_Warbird</vehicleDef>
+    <kind>FixedWing</kind>
+    <maximumSpeed>18</maximumSpeed>
+    <propulsion>Propeller</propulsion>
+    <useNativeSpeed>true</useNativeSpeed>
+  </HSK.FpsBridge.AerialFlightDef>
+</Defs>

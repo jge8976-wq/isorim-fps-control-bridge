@@ -1,0 +1,437 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+  <Operation Class="HSK.FpsVehicleCompatibility.PatchOperationVehicleCapability">
+    <requiredTypes>
+      <li>Vehicles.CETurretDataDefModExtension</li>
+    </requiredTypes>
+    <operation Class="PatchOperationConditional">
+      <xpath>Defs/CombatExtended.AmmoSetDef[defName="AmmoSet_762x51mmNATO"]</xpath>
+      <match Class="PatchOperationSequence">
+        <operations>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/Vehicles.VehicleTurretDef[defName="FPS_Air_VVE_Frog_MG762"]/ammunition</xpath>
+            <value>
+              <ammunition>
+                <thingDefs>
+                  <li>Ammo_762x51mmNATO_FMJ</li>
+                  <li>Ammo_762x51mmNATO_AP</li>
+                  <li>Ammo_762x51mmNATO_HP</li>
+                  <li>Ammo_762x51mmNATO_Incendiary</li>
+                  <li>Ammo_762x51mmNATO_HE</li>
+                  <li>Ammo_762x51mmNATO_Sabot</li>
+                </thingDefs>
+              </ammunition>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/Vehicles.VehicleTurretDef[defName="FPS_Air_VVE_Frog_MG762"]/projectile</xpath>
+            <value>
+              <projectile>Bullet_762x51mmNATO_FMJ</projectile>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/Vehicles.VehicleTurretDef[defName="FPS_Air_VVE_Frog_MG762"]/genericAmmo</xpath>
+            <value>
+              <genericAmmo>false</genericAmmo>
+            </value>
+          </li>
+          <li Class="PatchOperationAddModExtension">
+            <xpath>Defs/Vehicles.VehicleTurretDef[defName="FPS_Air_VVE_Frog_MG762"]</xpath>
+            <value>
+              <li Class="Vehicles.CETurretDataDefModExtension">
+                <ammoSet>AmmoSet_762x51mmNATO</ammoSet>
+                <shotHeight>2</shotHeight>
+                <spread>0.04</spread>
+                <sway>0.96</sway>
+                <recoil>0</recoil>
+              </li>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/Vehicles.VehicleTurretDef[defName="FPS_Air_VVE_Frog_Grenade40L"]/ammunition</xpath>
+            <value>
+              <ammunition>
+                <thingDefs>
+                  <li>Ammo_40x46mmGrenade_HE</li>
+                  <li>Ammo_40x46mmGrenade_HE_TFuzed</li>
+                  <li>Ammo_40x46mmGrenade_HEDP</li>
+                  <li>Ammo_40x46mmGrenade_EMP</li>
+                  <li>Ammo_40x46mmGrenade_Smoke</li>
+                </thingDefs>
+              </ammunition>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/Vehicles.VehicleTurretDef[defName="FPS_Air_VVE_Frog_Grenade40L"]/projectile</xpath>
+            <value>
+              <projectile>Bullet_40x46mmGrenade_HE</projectile>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/Vehicles.VehicleTurretDef[defName="FPS_Air_VVE_Frog_Grenade40L"]/genericAmmo</xpath>
+            <value>
+              <genericAmmo>false</genericAmmo>
+            </value>
+          </li>
+          <li Class="PatchOperationAddModExtension">
+            <xpath>Defs/Vehicles.VehicleTurretDef[defName="FPS_Air_VVE_Frog_Grenade40L"]</xpath>
+            <value>
+              <li Class="Vehicles.CETurretDataDefModExtension">
+                <ammoSet>AmmoSet_40x46mmGrenade</ammoSet>
+                <shotHeight>2</shotHeight>
+                <spread>0.15</spread>
+                <sway>1.61</sway>
+                <recoil>0</recoil>
+              </li>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/Vehicles.VehicleTurretDef[defName="FPS_Air_VVE_Toad_HMG127"]/ammunition</xpath>
+            <value>
+              <ammunition>
+                <thingDefs>
+                  <li>Ammo_50BMG_FMJ</li>
+                  <li>Ammo_50BMG_AP</li>
+                  <li>Ammo_50BMG_Incendiary</li>
+                  <li>Ammo_50BMG_HE</li>
+                  <li>Ammo_50BMG_Sabot</li>
+                </thingDefs>
+              </ammunition>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/Vehicles.VehicleTurretDef[defName="FPS_Air_VVE_Toad_HMG127"]/projectile</xpath>
+            <value>
+              <projectile>Bullet_50BMG_FMJ</projectile>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/Vehicles.VehicleTurretDef[defName="FPS_Air_VVE_Toad_HMG127"]/genericAmmo</xpath>
+            <value>
+              <genericAmmo>false</genericAmmo>
+            </value>
+          </li>
+          <li Class="PatchOperationAddModExtension">
+            <xpath>Defs/Vehicles.VehicleTurretDef[defName="FPS_Air_VVE_Toad_HMG127"]</xpath>
+            <value>
+              <li Class="Vehicles.CETurretDataDefModExtension">
+                <ammoSet>AmmoSet_50BMG</ammoSet>
+                <shotHeight>2</shotHeight>
+                <spread>0.1</spread>
+                <sway>1.5</sway>
+                <recoil>0</recoil>
+              </li>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/Vehicles.VehicleTurretDef[defName="FPS_Air_VVE_Toad_Rocket70"]/ammunition</xpath>
+            <value>
+              <ammunition>
+                <thingDefs>
+                  <li>Ammo_70mmAPKWS_HEAT</li>
+                </thingDefs>
+              </ammunition>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/Vehicles.VehicleTurretDef[defName="FPS_Air_VVE_Toad_Rocket70"]/projectile</xpath>
+            <value>
+              <projectile>Bullet_70mmAPKWS_HEAT</projectile>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/Vehicles.VehicleTurretDef[defName="FPS_Air_VVE_Toad_Rocket70"]/genericAmmo</xpath>
+            <value>
+              <genericAmmo>false</genericAmmo>
+            </value>
+          </li>
+          <li Class="PatchOperationAddModExtension">
+            <xpath>Defs/Vehicles.VehicleTurretDef[defName="FPS_Air_VVE_Toad_Rocket70"]</xpath>
+            <value>
+              <li Class="Vehicles.CETurretDataDefModExtension">
+                <ammoSet>AmmoSet_70mmAPKWS</ammoSet>
+                <shotHeight>2</shotHeight>
+                <spread>4</spread>
+                <sway>0.82</sway>
+                <recoil>0</recoil>
+              </li>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/Vehicles.VehicleTurretDef[defName="FPS_Air_VVE_Mosquito_Cannon30"]/ammunition</xpath>
+            <value>
+              <ammunition>
+                <thingDefs>
+                  <li>Ammo_30x113mmB_AP</li>
+                  <li>Ammo_30x113mmB_Incendiary</li>
+                  <li>Ammo_30x113mmB_HE</li>
+                  <li>Ammo_30x113mmB_Sabot</li>
+                  <li>Ammo_30x113mmBGrenade_HE</li>
+                  <li>Ammo_30x113mmBGrenade_HE_TFuzed</li>
+                  <li>Ammo_30x113mmBGrenade_HEDP</li>
+                  <li>Ammo_30x113mmBGrenade_EMP</li>
+                  <li>Ammo_30x113mmBGrenade_Smoke</li>
+                </thingDefs>
+              </ammunition>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/Vehicles.VehicleTurretDef[defName="FPS_Air_VVE_Mosquito_Cannon30"]/projectile</xpath>
+            <value>
+              <projectile>Bullet_30x113mmB_AP</projectile>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/Vehicles.VehicleTurretDef[defName="FPS_Air_VVE_Mosquito_Cannon30"]/genericAmmo</xpath>
+            <value>
+              <genericAmmo>false</genericAmmo>
+            </value>
+          </li>
+          <li Class="PatchOperationAddModExtension">
+            <xpath>Defs/Vehicles.VehicleTurretDef[defName="FPS_Air_VVE_Mosquito_Cannon30"]</xpath>
+            <value>
+              <li Class="Vehicles.CETurretDataDefModExtension">
+                <ammoSet>AmmoSet_30x113mmB</ammoSet>
+                <shotHeight>2</shotHeight>
+                <spread>0.01</spread>
+                <sway>1.61</sway>
+                <recoil>0</recoil>
+              </li>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/Vehicles.VehicleTurretDef[defName="FPS_Air_VVE_Mosquito_Rocket70"]/ammunition</xpath>
+            <value>
+              <ammunition>
+                <thingDefs>
+                  <li>Ammo_70mmAPKWS_HEAT</li>
+                </thingDefs>
+              </ammunition>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/Vehicles.VehicleTurretDef[defName="FPS_Air_VVE_Mosquito_Rocket70"]/projectile</xpath>
+            <value>
+              <projectile>Bullet_70mmAPKWS_HEAT</projectile>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/Vehicles.VehicleTurretDef[defName="FPS_Air_VVE_Mosquito_Rocket70"]/genericAmmo</xpath>
+            <value>
+              <genericAmmo>false</genericAmmo>
+            </value>
+          </li>
+          <li Class="PatchOperationAddModExtension">
+            <xpath>Defs/Vehicles.VehicleTurretDef[defName="FPS_Air_VVE_Mosquito_Rocket70"]</xpath>
+            <value>
+              <li Class="Vehicles.CETurretDataDefModExtension">
+                <ammoSet>AmmoSet_70mmAPKWS</ammoSet>
+                <shotHeight>2</shotHeight>
+                <spread>4</spread>
+                <sway>0.82</sway>
+                <recoil>0</recoil>
+              </li>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/Vehicles.VehicleTurretDef[defName="FPS_Air_VVE_Smuggler_HMG127"]/ammunition</xpath>
+            <value>
+              <ammunition>
+                <thingDefs>
+                  <li>Ammo_50BMG_FMJ</li>
+                  <li>Ammo_50BMG_AP</li>
+                  <li>Ammo_50BMG_Incendiary</li>
+                  <li>Ammo_50BMG_HE</li>
+                  <li>Ammo_50BMG_Sabot</li>
+                </thingDefs>
+              </ammunition>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/Vehicles.VehicleTurretDef[defName="FPS_Air_VVE_Smuggler_HMG127"]/projectile</xpath>
+            <value>
+              <projectile>Bullet_50BMG_FMJ</projectile>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/Vehicles.VehicleTurretDef[defName="FPS_Air_VVE_Smuggler_HMG127"]/genericAmmo</xpath>
+            <value>
+              <genericAmmo>false</genericAmmo>
+            </value>
+          </li>
+          <li Class="PatchOperationAddModExtension">
+            <xpath>Defs/Vehicles.VehicleTurretDef[defName="FPS_Air_VVE_Smuggler_HMG127"]</xpath>
+            <value>
+              <li Class="Vehicles.CETurretDataDefModExtension">
+                <ammoSet>AmmoSet_50BMG</ammoSet>
+                <shotHeight>2</shotHeight>
+                <spread>0.1</spread>
+                <sway>1.5</sway>
+                <recoil>0</recoil>
+              </li>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/Vehicles.VehicleTurretDef[defName="FPS_Air_VVE_Smuggler_Grenade40H"]/ammunition</xpath>
+            <value>
+              <ammunition>
+                <thingDefs>
+                  <li>Ammo_40x53mmGrenade_HE</li>
+                  <li>Ammo_40x53mmGrenade_HE_TFuzed</li>
+                  <li>Ammo_40x53mmGrenade_HEDP</li>
+                  <li>Ammo_40x53mmGrenade_EMP</li>
+                  <li>Ammo_40x53mmGrenade_Smoke</li>
+                </thingDefs>
+              </ammunition>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/Vehicles.VehicleTurretDef[defName="FPS_Air_VVE_Smuggler_Grenade40H"]/projectile</xpath>
+            <value>
+              <projectile>Bullet_40x53mmGrenade_HE</projectile>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/Vehicles.VehicleTurretDef[defName="FPS_Air_VVE_Smuggler_Grenade40H"]/genericAmmo</xpath>
+            <value>
+              <genericAmmo>false</genericAmmo>
+            </value>
+          </li>
+          <li Class="PatchOperationAddModExtension">
+            <xpath>Defs/Vehicles.VehicleTurretDef[defName="FPS_Air_VVE_Smuggler_Grenade40H"]</xpath>
+            <value>
+              <li Class="Vehicles.CETurretDataDefModExtension">
+                <ammoSet>AmmoSet_40x53mmGrenade</ammoSet>
+                <shotHeight>2</shotHeight>
+                <spread>0.15</spread>
+                <sway>1.61</sway>
+                <recoil>0</recoil>
+              </li>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/Vehicles.VehicleTurretDef[defName="FPS_Air_VVE_Warbird_Rotary20"]/ammunition</xpath>
+            <value>
+              <ammunition>
+                <thingDefs>
+                  <li>Ammo_20x102mmNATO_AP</li>
+                  <li>Ammo_20x102mmNATO_Incendiary</li>
+                  <li>Ammo_20x102mmNATO_HE</li>
+                  <li>Ammo_20x102mmNATO_Sabot</li>
+                </thingDefs>
+              </ammunition>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/Vehicles.VehicleTurretDef[defName="FPS_Air_VVE_Warbird_Rotary20"]/projectile</xpath>
+            <value>
+              <projectile>Bullet_20x102mmNATO_AP</projectile>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/Vehicles.VehicleTurretDef[defName="FPS_Air_VVE_Warbird_Rotary20"]/genericAmmo</xpath>
+            <value>
+              <genericAmmo>false</genericAmmo>
+            </value>
+          </li>
+          <li Class="PatchOperationAddModExtension">
+            <xpath>Defs/Vehicles.VehicleTurretDef[defName="FPS_Air_VVE_Warbird_Rotary20"]</xpath>
+            <value>
+              <li Class="Vehicles.CETurretDataDefModExtension">
+                <ammoSet>AmmoSet_20x102mmNATO</ammoSet>
+                <shotHeight>2</shotHeight>
+                <spread>0.01</spread>
+                <sway>1.61</sway>
+                <recoil>0</recoil>
+              </li>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/Vehicles.VehicleTurretDef[defName="FPS_Air_VVE_Warbird_Rocket80"]/ammunition</xpath>
+            <value>
+              <ammunition>
+                <thingDefs>
+                  <li>Ammo_80mmRocket_HE</li>
+                  <li>Ammo_80mmRocket_HEAT</li>
+                  <li>Ammo_80mmRocket_Thermobaric</li>
+                </thingDefs>
+              </ammunition>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/Vehicles.VehicleTurretDef[defName="FPS_Air_VVE_Warbird_Rocket80"]/projectile</xpath>
+            <value>
+              <projectile>Bullet_80mmRocket_HE</projectile>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/Vehicles.VehicleTurretDef[defName="FPS_Air_VVE_Warbird_Rocket80"]/genericAmmo</xpath>
+            <value>
+              <genericAmmo>false</genericAmmo>
+            </value>
+          </li>
+          <li Class="PatchOperationAddModExtension">
+            <xpath>Defs/Vehicles.VehicleTurretDef[defName="FPS_Air_VVE_Warbird_Rocket80"]</xpath>
+            <value>
+              <li Class="Vehicles.CETurretDataDefModExtension">
+                <ammoSet>AmmoSet_80mmRocket_direct</ammoSet>
+                <shotHeight>2</shotHeight>
+                <spread>4</spread>
+                <sway>0.82</sway>
+                <recoil>0</recoil>
+              </li>
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/RecipeDef[defName="FPS_CraftAir_MG762Ammo"]/recipeUsers</xpath>
+            <value>
+              <recipeUsers />
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/RecipeDef[defName="FPS_CraftAir_HMG127Ammo"]/recipeUsers</xpath>
+            <value>
+              <recipeUsers />
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/RecipeDef[defName="FPS_CraftAir_Cannon30Ammo"]/recipeUsers</xpath>
+            <value>
+              <recipeUsers />
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/RecipeDef[defName="FPS_CraftAir_Rotary20Ammo"]/recipeUsers</xpath>
+            <value>
+              <recipeUsers />
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/RecipeDef[defName="FPS_CraftAir_Grenade40LAmmo"]/recipeUsers</xpath>
+            <value>
+              <recipeUsers />
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/RecipeDef[defName="FPS_CraftAir_Grenade40HAmmo"]/recipeUsers</xpath>
+            <value>
+              <recipeUsers />
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/RecipeDef[defName="FPS_CraftAir_Rocket70Ammo"]/recipeUsers</xpath>
+            <value>
+              <recipeUsers />
+            </value>
+          </li>
+          <li Class="PatchOperationReplace">
+            <xpath>Defs/RecipeDef[defName="FPS_CraftAir_Rocket80Ammo"]/recipeUsers</xpath>
+            <value>
+              <recipeUsers />
+            </value>
+          </li>
+        </operations>
+      </match>
+    </operation>
+  </Operation>
+</Patch>

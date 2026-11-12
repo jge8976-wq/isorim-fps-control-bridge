@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/HSK.VehicleModels.VehicleModelDef/weapons/li[modelInParent="true" and (turretDef="RT_M240_MGTurret" or turretDef="RT_2A72_Turret" or turretDef="RT_PKT_MGTurret" or turretDef="RT_PKT_ADV_MGTurret" or turretDef="RT_pkt_MGTurret" or turretDef="Baikal_PKT_Turret" or turretDef="T14_2A72_Turret" or turretDef="RT_PKT_NG_MGTurret" or turretDef="T15_Baikal_PKT_Turret" or turretDef="RT_VDV_PKT_MGTurret")]</xpath>
+    <match Class="PatchOperationAdd">
+      <xpath>Defs/HSK.VehicleModels.VehicleModelDef/weapons/li[modelInParent="true" and (turretDef="RT_M240_MGTurret" or turretDef="RT_2A72_Turret" or turretDef="RT_PKT_MGTurret" or turretDef="RT_PKT_ADV_MGTurret" or turretDef="RT_pkt_MGTurret" or turretDef="Baikal_PKT_Turret" or turretDef="T14_2A72_Turret" or turretDef="RT_PKT_NG_MGTurret" or turretDef="T15_Baikal_PKT_Turret" or turretDef="RT_VDV_PKT_MGTurret")]</xpath>
+      <value>
+        <boreFollowsParentPitch>true</boreFollowsParentPitch>
+      </value>
+    </match>
+  </Operation>
+</Patch>

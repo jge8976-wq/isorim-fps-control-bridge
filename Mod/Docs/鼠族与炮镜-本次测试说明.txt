@@ -1,0 +1,32 @@
+本次测试：鼠族视角、凳子支撑、鼠族炮台、载具炮镜移动
+
+鼠族成年人物体型按人类约一半处理，第一人称站立眼高也为人类设置的一半。
+仅调整相机及对应射击高度，不再次缩小已有鼠族模型。蹲姿、趴姿继续叠加。
+朝向相邻凳子／椅子，按空格登上凳面；向外走出凳面落下。凳面通用高度为0.5格。
+凳面支撑高度同时作用于人物、相机和发射位置。室内登凳不进入屋顶／上一层。
+凳面和四条凳腿具备3D子弹碰撞；椅子靠背目前不单独拟合。
+
+鼠族弩炮／火炮：己方人物靠近后轻按E接管，左键开火，R快速装填，后侧键退出。
+自定义弩矢与炮弹接入3D飞行和碰撞；伤害、穿透次数、地面反弹与爆炸沿用鼠族原实现。
+使用原生弹药，不凭空增加炮弹。空膛时尝试从操作者身上／两格内取得合法弹药装填。
+炮弹装填完成后须重新按下开火，不缓存空膛时的单发点击。
+
+载具右键炮镜内可以WASD继续行驶，鼠标继续瞄准，右键退出炮镜。
+镜内仍受油量、驾驶条件、暂停、失焦和碰撞约束。
+前侧键仍循环载具视角，B切换支持的机枪／机炮射击模式。
+
+中文汉化：启用鼠族／载具原模组后再启用对应汉化，重启游戏。
+已有测试配置的包ID已改成小写，修复游戏条件加载跳过鼠族新版汉化目录的问题。
+朋友使用自己的配置；本包不包含个人存档、按键偏好和第三方汉化文件。
+新内容已完成编译、离线规则和当前引擎挂钩检查，实机操控效果仍需测试。
+
+ENGLISH
+Ratkin standing eye height is half the human setting; existing imported meshes are not scaled again.
+Face a nearby stool/chair and press Space to climb onto its 0.5-cell seat. Walk off to descend.
+Support raises the figure, camera and shot origin together. Indoor seats do not switch to the roof/floor above.
+Seats and four legs have projectile collision; chair backs are not separately fitted yet.
+Ratkin ballista/cannon: tap E nearby to operate, left click to fire, R to reload, back mouse button to exit.
+Native custom rounds use 3D flight/collision while retaining their original damage, penetration and shell bounce/explosion.
+Real shells are consumed. Automatic reload draws from the operator or within two cells; a completed single-shot reload needs a fresh click.
+Vehicle WASD driving remains available through the right-click gunner optic. Normal movement restrictions still apply.
+Chinese packs must load after their base mods. No personal configuration or third-party translation files are redistributed.

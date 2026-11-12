@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <FPS_Air_SeekerTrial80.label>80毫米制导试验吊舱</FPS_Air_SeekerTrial80.label>
+  <FPS_Air_SeekerTrial80.description>使用现有80毫米弹药和原有命中伤害。瞄准可见的敌方目标后按T，或先按一次开火开始锁定；保持目标在视野内，等待“已锁定”再发射。未完成锁定时不会消耗弹药。</FPS_Air_SeekerTrial80.description>
+</LanguageData>

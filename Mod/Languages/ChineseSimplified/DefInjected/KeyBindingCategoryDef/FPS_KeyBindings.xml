@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <FPS_ControlSkills.label>ISORIM FPS Control Bridge</FPS_ControlSkills.label>
+  <FPS_ControlSkills.description>第一人称人物、炮台、背包、工作与专属技能的快捷键；支持主要键及备用键。</FPS_ControlSkills.description>
+  <FPS_ControlKeys.label>ISORIM FPS Control Bridge - 操作按键</FPS_ControlKeys.label>
+  <FPS_ControlKeys.description>人物、背包、工作及情境炮台操作的主要键与备用键。</FPS_ControlKeys.description>
+</LanguageData>

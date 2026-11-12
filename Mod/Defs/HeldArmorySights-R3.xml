@@ -1,0 +1,571 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <HSK.FpsBridge.HeldWeaponVisualDef MayRequire="hsk.cearmory.models">
+    <defName>HSK_HeldSightR3_CE_Gun_FNFiveSeven</defName>
+    <weapon>CE_Gun_FNFiveSeven</weapon>
+    <model>HeldArmorySights/CE_Gun_FNFiveSeven/CE_Gun_FNFiveSeven</model>
+    <view>
+      <overrideOrientation>true</overrideOrientation>
+      <forward>(1, 0, 0)</forward>
+      <up>(0, 1, 0)</up>
+      <hasGrip>true</hasGrip>
+      <grip>(-0.0442622937, 0.0062295082, 0)</grip>
+      <hasMuzzle>true</hasMuzzle>
+      <muzzle>(0.194262296, 0.109508194, 0)</muzzle>
+      <hasSights>true</hasSights>
+      <rearSight>(-0.0614754111, 0.163647547, 0)</rearSight>
+      <frontSight>(0.164672132, 0.163647547, 0)</frontSight>
+      <scope>None</scope>
+      <kind>Gun</kind>
+    </view>
+  </HSK.FpsBridge.HeldWeaponVisualDef>
+  <HSK.FpsBridge.HeldWeaponVisualDef MayRequire="hsk.cearmory.models">
+    <defName>HSK_HeldSightR3_CE_Gun_TaurusJudge</defName>
+    <weapon>CE_Gun_TaurusJudge</weapon>
+    <model>HeldArmorySights/CE_Gun_TaurusJudge/CE_Gun_TaurusJudge</model>
+    <view>
+      <overrideOrientation>true</overrideOrientation>
+      <forward>(1, 0, 0)</forward>
+      <up>(0, 1, 0)</up>
+      <hasGrip>true</hasGrip>
+      <grip>(-0.103, 0.0170000009, 0)</grip>
+      <hasMuzzle>true</hasMuzzle>
+      <muzzle>(0.231999993, 0.138999999, 0)</muzzle>
+      <hasSights>true</hasSights>
+      <rearSight>(-0.05, 0.1875, 0)</rearSight>
+      <frontSight>(0.202, 0.188999996, 0)</frontSight>
+      <scope>None</scope>
+      <kind>Gun</kind>
+    </view>
+  </HSK.FpsBridge.HeldWeaponVisualDef>
+  <HSK.FpsBridge.HeldWeaponVisualDef MayRequire="hsk.cearmory.models">
+    <defName>HSK_HeldSightR3_CE_Gun_Jericho</defName>
+    <weapon>CE_Gun_Jericho</weapon>
+    <model>HeldArmorySights/CE_Gun_Jericho/CE_Gun_Jericho</model>
+    <view>
+      <overrideOrientation>true</overrideOrientation>
+      <forward>(1, 0, 0)</forward>
+      <up>(0, 1, 0)</up>
+      <hasGrip>true</hasGrip>
+      <grip>(0, 0, 0)</grip>
+      <hasMuzzle>true</hasMuzzle>
+      <muzzle>(0.303000003, 0.22299999, 0)</muzzle>
+      <hasSights>true</hasSights>
+      <rearSight>(-0.0200000033, 0.30340001, 0)</rearSight>
+      <frontSight>(0.259999986, 0.30340001, 0)</frontSight>
+      <scope>None</scope>
+      <kind>Gun</kind>
+    </view>
+  </HSK.FpsBridge.HeldWeaponVisualDef>
+  <HSK.FpsBridge.HeldWeaponVisualDef MayRequire="hsk.cearmory.models">
+    <defName>HSK_HeldSightR3_CE_Gun_Deagke</defName>
+    <weapon>CE_Gun_Deagke</weapon>
+    <model>HeldArmorySights/CE_Gun_Deagke/CE_Gun_Deagke</model>
+    <view>
+      <overrideOrientation>true</overrideOrientation>
+      <forward>(1, 0, 0)</forward>
+      <up>(0, 1, 0)</up>
+      <hasGrip>true</hasGrip>
+      <grip>(-0.0446601957, 0.0236893203, 0)</grip>
+      <hasMuzzle>true</hasMuzzle>
+      <muzzle>(0.25048545, 0.126601934, 0)</muzzle>
+      <hasSights>true</hasSights>
+      <rearSight>(-0.0660194159, 0.183470875, 0)</rearSight>
+      <frontSight>(0.220242719, 0.183470875, 0)</frontSight>
+      <scope>None</scope>
+      <kind>Gun</kind>
+    </view>
+  </HSK.FpsBridge.HeldWeaponVisualDef>
+  <HSK.FpsBridge.HeldWeaponVisualDef MayRequire="hsk.cearmory.models">
+    <defName>HSK_HeldSightR3_CE_Gun_HenrySideGate</defName>
+    <weapon>CE_Gun_HenrySideGate</weapon>
+    <model>HeldArmorySights/CE_Gun_HenrySideGate/CE_Gun_HenrySideGate</model>
+    <view>
+      <overrideOrientation>true</overrideOrientation>
+      <forward>(1, 0, 0)</forward>
+      <up>(0, 1, 0)</up>
+      <hasGrip>true</hasGrip>
+      <grip>(0, 0, 0)</grip>
+      <hasMuzzle>true</hasMuzzle>
+      <muzzle>(0.930000007, 0.0949999988, 0)</muzzle>
+      <hasSights>true</hasSights>
+      <rearSight>(0.405, 0.148, 0)</rearSight>
+      <frontSight>(0.866, 0.148, 0)</frontSight>
+      <scope>None</scope>
+      <kind>Gun</kind>
+    </view>
+  </HSK.FpsBridge.HeldWeaponVisualDef>
+  <HSK.FpsBridge.HeldWeaponVisualDef MayRequire="hsk.cearmory.models">
+    <defName>HSK_HeldSightR3_CE_Gun_Uzi</defName>
+    <weapon>CE_Gun_Uzi</weapon>
+    <model>HeldArmorySights/CE_Gun_Uzi/CE_Gun_Uzi</model>
+    <view>
+      <overrideOrientation>true</overrideOrientation>
+      <forward>(1, 0, 0)</forward>
+      <up>(0, 1, 0)</up>
+      <hasGrip>true</hasGrip>
+      <grip>(0.00999999978, -0.0149999997, 0)</grip>
+      <hasMuzzle>true</hasMuzzle>
+      <muzzle>(0.416000009, 0.143000007, 0)</muzzle>
+      <hasSights>true</hasSights>
+      <rearSight>(-0.105, 0.235, 0)</rearSight>
+      <frontSight>(0.291, 0.235, 0)</frontSight>
+      <scope>None</scope>
+      <kind>Gun</kind>
+    </view>
+  </HSK.FpsBridge.HeldWeaponVisualDef>
+  <HSK.FpsBridge.HeldWeaponVisualDef MayRequire="hsk.cearmory.models">
+    <defName>HSK_HeldSightR3_CE_Gun_MicroUzi</defName>
+    <weapon>CE_Gun_MicroUzi</weapon>
+    <model>HeldArmorySights/CE_Gun_MicroUzi/CE_Gun_MicroUzi</model>
+    <view>
+      <overrideOrientation>true</overrideOrientation>
+      <forward>(1, 0, 0)</forward>
+      <up>(0, 1, 0)</up>
+      <hasGrip>true</hasGrip>
+      <grip>(0.00999999978, -0.0149999997, 0)</grip>
+      <hasMuzzle>true</hasMuzzle>
+      <muzzle>(0.275999993, 0.143000007, 0)</muzzle>
+      <hasSights>true</hasSights>
+      <rearSight>(-0.105, 0.235, 0)</rearSight>
+      <frontSight>(0.171, 0.235, 0)</frontSight>
+      <scope>None</scope>
+      <kind>Gun</kind>
+    </view>
+  </HSK.FpsBridge.HeldWeaponVisualDef>
+  <HSK.FpsBridge.HeldWeaponVisualDef MayRequire="hsk.cearmory.models">
+    <defName>HSK_HeldSightR3_CE_Gun_AmericanOneEighty</defName>
+    <weapon>CE_Gun_AmericanOneEighty</weapon>
+    <model>HeldArmorySights/CE_Gun_AmericanOneEighty/CE_Gun_AmericanOneEighty</model>
+    <view>
+      <overrideOrientation>true</overrideOrientation>
+      <forward>(1, 0, 0)</forward>
+      <up>(0, 1, 0)</up>
+      <hasGrip>true</hasGrip>
+      <grip>(0, 0, 0)</grip>
+      <hasMuzzle>true</hasMuzzle>
+      <muzzle>(0.610000014, 0.129999995, 0)</muzzle>
+      <hasSights>true</hasSights>
+      <rearSight>(-0.1, 0.265, 0)</rearSight>
+      <frontSight>(0.496, 0.265, 0)</frontSight>
+      <scope>None</scope>
+      <kind>Gun</kind>
+    </view>
+  </HSK.FpsBridge.HeldWeaponVisualDef>
+  <HSK.FpsBridge.HeldWeaponVisualDef MayRequire="hsk.cearmory.models">
+    <defName>HSK_HeldSightR3_CE_Gun_TavorSeven</defName>
+    <weapon>CE_Gun_TavorSeven</weapon>
+    <model>HeldArmorySights/CE_Gun_TavorSeven/CE_Gun_TavorSeven</model>
+    <view>
+      <overrideOrientation>true</overrideOrientation>
+      <forward>(1, 0, 0)</forward>
+      <up>(0, 1, 0)</up>
+      <hasGrip>true</hasGrip>
+      <grip>(0.0670000017, -0.0160000008, 0)</grip>
+      <hasMuzzle>true</hasMuzzle>
+      <muzzle>(0.586000025, 0.130999997, 0)</muzzle>
+      <hasSights>true</hasSights>
+      <rearSight>(-0.32, 0.257, 0)</rearSight>
+      <frontSight>(0.326, 0.257, 0)</frontSight>
+      <scope>None</scope>
+      <kind>Gun</kind>
+    </view>
+  </HSK.FpsBridge.HeldWeaponVisualDef>
+  <HSK.FpsBridge.HeldWeaponVisualDef MayRequire="hsk.cearmory.models">
+    <defName>HSK_HeldSightR3_CE_Gun_MosqueFAL</defName>
+    <weapon>CE_Gun_MosqueFAL</weapon>
+    <model>HeldArmorySights/CE_Gun_MosqueFAL/CE_Gun_MosqueFAL</model>
+    <view>
+      <overrideOrientation>true</overrideOrientation>
+      <forward>(1, 0, 0)</forward>
+      <up>(0, 1, 0)</up>
+      <hasGrip>true</hasGrip>
+      <grip>(-0.0599999987, 0.0149999997, 0)</grip>
+      <hasMuzzle>true</hasMuzzle>
+      <muzzle>(0.776000023, 0.135000005, 0)</muzzle>
+      <hasSights>true</hasSights>
+      <rearSight>(-0.15, 0.195, 0)</rearSight>
+      <frontSight>(0.727760017, 0.179, 0)</frontSight>
+      <scope>None</scope>
+      <kind>Gun</kind>
+    </view>
+  </HSK.FpsBridge.HeldWeaponVisualDef>
+  <HSK.FpsBridge.HeldWeaponVisualDef MayRequire="hsk.cearmory.models">
+    <defName>HSK_HeldSightR3_CE_Gun_M82A2Barrett</defName>
+    <weapon>CE_Gun_M82A2Barrett</weapon>
+    <model>HeldArmorySights/CE_Gun_M82A2Barrett/CE_Gun_M82A2Barrett</model>
+    <view>
+      <overrideOrientation>true</overrideOrientation>
+      <forward>(1, 0, 0)</forward>
+      <up>(0, 1, 0)</up>
+      <hasGrip>true</hasGrip>
+      <grip>(0, 0, 0)</grip>
+      <hasMuzzle>true</hasMuzzle>
+      <muzzle>(1.07200003, 0.170000002, 0)</muzzle>
+      <hasScopeEye>true</hasScopeEye>
+      <scopeEye>(-0.17, 0.343, 0)</scopeEye>
+      <scopeForward>(1, 0, 0)</scopeForward>
+      <scopeZoom>4</scopeZoom>
+      <scope>ModernPrecision</scope>
+      <kind>Gun</kind>
+    </view>
+  </HSK.FpsBridge.HeldWeaponVisualDef>
+  <HSK.FpsBridge.HeldWeaponVisualDef MayRequire="hsk.cearmory.models">
+    <defName>HSK_HeldSightR3_CE_Gun_BoysRifle</defName>
+    <weapon>CE_Gun_BoysRifle</weapon>
+    <model>HeldArmorySights/CE_Gun_BoysRifle/CE_Gun_BoysRifle</model>
+    <view>
+      <overrideOrientation>true</overrideOrientation>
+      <forward>(1, 0, 0)</forward>
+      <up>(0, 1, 0)</up>
+      <hasGrip>true</hasGrip>
+      <grip>(0, 0, 0)</grip>
+      <hasMuzzle>true</hasMuzzle>
+      <muzzle>(1.14699996, 0.129999995, 0)</muzzle>
+      <hasSights>true</hasSights>
+      <rearSight>(-0.12, 0.234, -0.067)</rearSight>
+      <frontSight>(0.494, 0.234, -0.067)</frontSight>
+      <scope>None</scope>
+      <kind>Gun</kind>
+    </view>
+  </HSK.FpsBridge.HeldWeaponVisualDef>
+  <HSK.FpsBridge.HeldWeaponVisualDef MayRequire="hsk.cearmory.models">
+    <defName>HSK_HeldSightR3_CE_ATFour</defName>
+    <weapon>CE_ATFour</weapon>
+    <model>HeldArmorySights/CE_ATFour/CE_ATFour</model>
+    <view>
+      <overrideOrientation>true</overrideOrientation>
+      <forward>(1, 0, 0)</forward>
+      <up>(0, 1, 0)</up>
+      <hasGrip>true</hasGrip>
+      <grip>(0.200000003, 0.100000001, -0.0700000003)</grip>
+      <hasMuzzle>true</hasMuzzle>
+      <muzzle>(0.720000029, 0.129999995, 0)</muzzle>
+      <hasSights>true</hasSights>
+      <rearSight>(-0.04, 0.28, 0)</rearSight>
+      <frontSight>(0.454, 0.28, 0)</frontSight>
+      <scope>None</scope>
+      <kind>Gun</kind>
+    </view>
+  </HSK.FpsBridge.HeldWeaponVisualDef>
+  <HSK.FpsBridge.HeldWeaponVisualDef MayRequire="hsk.cearmory.models">
+    <defName>HSK_HeldSightR3_CE_Gun_CarlGustaf</defName>
+    <weapon>CE_Gun_CarlGustaf</weapon>
+    <model>HeldArmorySights/CE_Gun_CarlGustaf/CE_Gun_CarlGustaf</model>
+    <view>
+      <overrideOrientation>true</overrideOrientation>
+      <forward>(1, 0, 0)</forward>
+      <up>(0, 1, 0)</up>
+      <hasGrip>true</hasGrip>
+      <grip>(0, 0, 0)</grip>
+      <hasMuzzle>true</hasMuzzle>
+      <muzzle>(0.585391283, 0.0599999987, 0)</muzzle>
+      <hasSights>true</hasSights>
+      <rearSight>(-0.14, 0.22, 0)</rearSight>
+      <frontSight>(0.344, 0.22, 0)</frontSight>
+      <scope>None</scope>
+      <kind>Gun</kind>
+    </view>
+  </HSK.FpsBridge.HeldWeaponVisualDef>
+  <HSK.FpsBridge.HeldWeaponVisualDef MayRequire="hsk.cearmory.models">
+    <defName>HSK_HeldSightR3_CE_Gun_WallGun</defName>
+    <weapon>CE_Gun_WallGun</weapon>
+    <model>HeldArmorySights/CE_Gun_WallGun/CE_Gun_WallGun</model>
+    <view>
+      <overrideOrientation>true</overrideOrientation>
+      <forward>(1, 0, 0)</forward>
+      <up>(0, 1, 0)</up>
+      <hasGrip>true</hasGrip>
+      <grip>(-0.0599999987, 0.0149999997, 0)</grip>
+      <hasMuzzle>true</hasMuzzle>
+      <muzzle>(1.36600006, 0.135000005, 0)</muzzle>
+      <hasSights>true</hasSights>
+      <rearSight>(-0.15, 0.195, 0)</rearSight>
+      <frontSight>(1.314, 0.179, 0)</frontSight>
+      <scope>None</scope>
+      <kind>Gun</kind>
+    </view>
+  </HSK.FpsBridge.HeldWeaponVisualDef>
+  <HSK.FpsBridge.HeldWeaponVisualDef MayRequire="hsk.cearmory.models">
+    <defName>HSK_HeldSightR3_CE_Gun_AK74GL</defName>
+    <weapon>CE_Gun_AK74GL</weapon>
+    <model>HeldArmorySights/CE_Gun_AK74GL/CE_Gun_AK74GL</model>
+    <view>
+      <overrideOrientation>true</overrideOrientation>
+      <forward>(1, 0, 0)</forward>
+      <up>(0, 1, 0)</up>
+      <hasGrip>true</hasGrip>
+      <grip>(0, 0, 0)</grip>
+      <hasMuzzle>true</hasMuzzle>
+      <muzzle>(0.689999998, 0.129999995, 0)</muzzle>
+      <hasSights>true</hasSights>
+      <rearSight>(0.129999995, 0.254000008, 0)</rearSight>
+      <frontSight>(0.504000008, 0.254000008, 0)</frontSight>
+      <scope>None</scope>
+      <kind>Gun</kind>
+    </view>
+  </HSK.FpsBridge.HeldWeaponVisualDef>
+  <HSK.FpsBridge.HeldWeaponVisualDef MayRequire="hsk.cearmory.models">
+    <defName>HSK_HeldSightR3_CE_Gun_AKSSeventyFourU</defName>
+    <weapon>CE_Gun_AKSSeventyFourU</weapon>
+    <model>HeldArmorySights/CE_Gun_AKSSeventyFourU/CE_Gun_AKSSeventyFourU</model>
+    <view>
+      <overrideOrientation>true</overrideOrientation>
+      <forward>(1, 0, 0)</forward>
+      <up>(0, 1, 0)</up>
+      <hasGrip>true</hasGrip>
+      <grip>(0, 0, 0)</grip>
+      <hasMuzzle>true</hasMuzzle>
+      <muzzle>(0.495000005, 0.129999995, 0)</muzzle>
+      <hasSights>true</hasSights>
+      <rearSight>(-0.104000002, 0.254000008, 0)</rearSight>
+      <frontSight>(0.414000005, 0.254000008, 0)</frontSight>
+      <scope>None</scope>
+      <kind>Gun</kind>
+    </view>
+  </HSK.FpsBridge.HeldWeaponVisualDef>
+  <HSK.FpsBridge.HeldWeaponVisualDef MayRequire="hsk.cearmory.models">
+    <defName>HSK_HeldSightR3_CE_Gun_AKTwelve</defName>
+    <weapon>CE_Gun_AKTwelve</weapon>
+    <model>HeldArmorySights/CE_Gun_AKTwelve/CE_Gun_AKTwelve</model>
+    <view>
+      <overrideOrientation>true</overrideOrientation>
+      <forward>(1, 0, 0)</forward>
+      <up>(0, 1, 0)</up>
+      <hasGrip>true</hasGrip>
+      <grip>(0, 0, 0)</grip>
+      <hasMuzzle>true</hasMuzzle>
+      <muzzle>(0.680000007, 0.129999995, 0)</muzzle>
+      <hasSights>true</hasSights>
+      <rearSight>(-0.1095, 0.256, 0)</rearSight>
+      <frontSight>(0.54400003, 0.256000012, 0)</frontSight>
+      <scope>None</scope>
+      <kind>Gun</kind>
+    </view>
+  </HSK.FpsBridge.HeldWeaponVisualDef>
+  <HSK.FpsBridge.HeldWeaponVisualDef MayRequire="hsk.cearmory.models">
+    <defName>HSK_HeldSightR3_CE_Gun_AVB</defName>
+    <weapon>CE_Gun_AVB</weapon>
+    <model>HeldArmorySights/CE_Gun_AVB/CE_Gun_AVB</model>
+    <view>
+      <overrideOrientation>true</overrideOrientation>
+      <forward>(1, 0, 0)</forward>
+      <up>(0, 1, 0)</up>
+      <hasGrip>true</hasGrip>
+      <grip>(0, 0, 0)</grip>
+      <hasMuzzle>true</hasMuzzle>
+      <muzzle>(0.730000019, 0.129999995, 0)</muzzle>
+      <hasSights>true</hasSights>
+      <rearSight>(0.130999997, 0.254000008, 0)</rearSight>
+      <frontSight>(0.523999989, 0.254000008, 0)</frontSight>
+      <scope>None</scope>
+      <kind>Gun</kind>
+    </view>
+  </HSK.FpsBridge.HeldWeaponVisualDef>
+  <HSK.FpsBridge.HeldWeaponVisualDef MayRequire="hsk.cearmory.models">
+    <defName>HSK_HeldSightR3_CE_Gun_BAR</defName>
+    <weapon>CE_Gun_BAR</weapon>
+    <model>HeldArmorySights/CE_Gun_BAR/CE_Gun_BAR</model>
+    <view>
+      <overrideOrientation>true</overrideOrientation>
+      <forward>(1, 0, 0)</forward>
+      <up>(0, 1, 0)</up>
+      <hasGrip>true</hasGrip>
+      <grip>(-0.100000001, 0.0599999987, 0)</grip>
+      <hasMuzzle>true</hasMuzzle>
+      <muzzle>(0.790000021, 0.129999995, 0)</muzzle>
+      <hasSights>true</hasSights>
+      <rearSight>(-0.1045, 0.239, 0)</rearSight>
+      <frontSight>(0.603999972, 0.238999993, 0)</frontSight>
+      <scope>None</scope>
+      <kind>Gun</kind>
+    </view>
+  </HSK.FpsBridge.HeldWeaponVisualDef>
+  <HSK.FpsBridge.HeldWeaponVisualDef MayRequire="hsk.cearmory.models">
+    <defName>HSK_HeldSightR3_CE_Gun_DPtwentySeven</defName>
+    <weapon>CE_Gun_DPtwentySeven</weapon>
+    <model>HeldArmorySights/CE_Gun_DPtwentySeven/CE_Gun_DPtwentySeven</model>
+    <view>
+      <overrideOrientation>true</overrideOrientation>
+      <forward>(1, 0, 0)</forward>
+      <up>(0, 1, 0)</up>
+      <hasGrip>true</hasGrip>
+      <grip>(-0.200000003, 0.0900000036, 0)</grip>
+      <hasMuzzle>true</hasMuzzle>
+      <muzzle>(0.850000024, 0.129999995, 0)</muzzle>
+      <hasSights>true</hasSights>
+      <rearSight>(-0.100000001, 0.269000047, 0)</rearSight>
+      <frontSight>(0.600000024, 0.269000047, 0)</frontSight>
+      <scope>None</scope>
+      <kind>Gun</kind>
+    </view>
+  </HSK.FpsBridge.HeldWeaponVisualDef>
+  <HSK.FpsBridge.HeldWeaponVisualDef MayRequire="hsk.cearmory.models">
+    <defName>HSK_HeldSightR3_CE_Gun_FightLiteMCR</defName>
+    <weapon>CE_Gun_FightLiteMCR</weapon>
+    <model>HeldArmorySights/CE_Gun_FightLiteMCR/CE_Gun_FightLiteMCR</model>
+    <view>
+      <overrideOrientation>true</overrideOrientation>
+      <forward>(1, 0, 0)</forward>
+      <up>(0, 1, 0)</up>
+      <hasGrip>true</hasGrip>
+      <grip>(-0.129999995, -0.0250000004, 0)</grip>
+      <hasMuzzle>true</hasMuzzle>
+      <muzzle>(0.660000026, 0.129999995, 0)</muzzle>
+      <hasSights>true</hasSights>
+      <rearSight>(-0.159999996, 0.264500134, 0)</rearSight>
+      <frontSight>(0.519999981, 0.264500134, 0)</frontSight>
+      <scope>None</scope>
+      <kind>Gun</kind>
+    </view>
+  </HSK.FpsBridge.HeldWeaponVisualDef>
+  <HSK.FpsBridge.HeldWeaponVisualDef MayRequire="hsk.cearmory.models">
+    <defName>HSK_HeldSightR3_CE_Gun_Lewis</defName>
+    <weapon>CE_Gun_Lewis</weapon>
+    <model>HeldArmorySights/CE_Gun_Lewis/CE_Gun_Lewis</model>
+    <view>
+      <overrideOrientation>true</overrideOrientation>
+      <forward>(1, 0, 0)</forward>
+      <up>(0, 1, 0)</up>
+      <hasGrip>true</hasGrip>
+      <grip>(0, 0, 0)</grip>
+      <hasMuzzle>true</hasMuzzle>
+      <muzzle>(1.12, 0.0949999988, 0)</muzzle>
+      <hasSights>true</hasSights>
+      <rearSight>(0.0500000119, 0.247000092, 0)</rearSight>
+      <frontSight>(1.00999999, 0.247000092, 0)</frontSight>
+      <scope>None</scope>
+      <kind>Gun</kind>
+    </view>
+  </HSK.FpsBridge.HeldWeaponVisualDef>
+  <HSK.FpsBridge.HeldWeaponVisualDef MayRequire="hsk.cearmory.models">
+    <defName>HSK_HeldSightR3_CE_Gun_MadsenLMG</defName>
+    <weapon>CE_Gun_MadsenLMG</weapon>
+    <model>HeldArmorySights/CE_Gun_MadsenLMG/CE_Gun_MadsenLMG</model>
+    <view>
+      <overrideOrientation>true</overrideOrientation>
+      <forward>(1, 0, 0)</forward>
+      <up>(0, 1, 0)</up>
+      <hasGrip>true</hasGrip>
+      <grip>(0, 0, 0)</grip>
+      <hasMuzzle>true</hasMuzzle>
+      <muzzle>(1.01999998, 0.0949999988, 0)</muzzle>
+      <hasSights>true</hasSights>
+      <rearSight>(0.0400000066, 0.198999997, 0)</rearSight>
+      <frontSight>(0.949999988, 0.198999997, 0)</frontSight>
+      <scope>None</scope>
+      <kind>Gun</kind>
+    </view>
+  </HSK.FpsBridge.HeldWeaponVisualDef>
+  <HSK.FpsBridge.HeldWeaponVisualDef MayRequire="hsk.cearmory.models">
+    <defName>HSK_HeldSightR3_CE_Gun_HandMortar</defName>
+    <weapon>CE_Gun_HandMortar</weapon>
+    <model>HeldArmorySights/CE_Gun_HandMortar/CE_Gun_HandMortar</model>
+    <view>
+      <overrideOrientation>true</overrideOrientation>
+      <forward>(1, 0, 0)</forward>
+      <up>(0, 1, 0)</up>
+      <hasGrip>true</hasGrip>
+      <grip>(-0.100000001, 0.0599999987, 0)</grip>
+      <hasMuzzle>true</hasMuzzle>
+      <muzzle>(0.400000006, 0.129999995, 0)</muzzle>
+      <scope>None</scope>
+      <kind>Gun</kind>
+    </view>
+  </HSK.FpsBridge.HeldWeaponVisualDef>
+  <HSK.FpsBridge.HeldWeaponVisualDef MayRequire="hsk.cearmory.models">
+    <defName>HSK_HeldSightR3_CE_Gun_M1917Enfield</defName>
+    <weapon>CE_Gun_M1917Enfield</weapon>
+    <model>HeldArmorySights/CE_Gun_M1917Enfield/CE_Gun_M1917Enfield</model>
+    <view>
+      <overrideOrientation>true</overrideOrientation>
+      <forward>(1, 0, 0)</forward>
+      <up>(0, 1, 0)</up>
+      <hasGrip>true</hasGrip>
+      <grip>(0, 0, 0)</grip>
+      <hasMuzzle>true</hasMuzzle>
+      <muzzle>(1.05999994, 0.0949999988, 0)</muzzle>
+      <hasSights>true</hasSights>
+      <rearSight>(0.08, 0.177, 0)</rearSight>
+      <frontSight>(0.976, 0.177, 0)</frontSight>
+      <scope>None</scope>
+      <kind>Gun</kind>
+    </view>
+  </HSK.FpsBridge.HeldWeaponVisualDef>
+  <HSK.FpsBridge.HeldWeaponVisualDef MayRequire="hsk.cearmory.models">
+    <defName>HSK_HeldSightR3_CE_Gun_M1Garand</defName>
+    <weapon>CE_Gun_M1Garand</weapon>
+    <model>HeldArmorySights/CE_Gun_M1Garand/CE_Gun_M1Garand</model>
+    <view>
+      <overrideOrientation>true</overrideOrientation>
+      <forward>(1, 0, 0)</forward>
+      <up>(0, 1, 0)</up>
+      <hasGrip>true</hasGrip>
+      <grip>(0, 0, 0)</grip>
+      <hasMuzzle>true</hasMuzzle>
+      <muzzle>(1.00999999, 0.0949999988, 0)</muzzle>
+      <hasSights>true</hasSights>
+      <rearSight>(0.07, 0.177, 0)</rearSight>
+      <frontSight>(0.936, 0.177, 0)</frontSight>
+      <scope>None</scope>
+      <kind>Gun</kind>
+    </view>
+  </HSK.FpsBridge.HeldWeaponVisualDef>
+  <HSK.FpsBridge.HeldWeaponVisualDef MayRequire="hsk.cearmory.models">
+    <defName>HSK_HeldSightR3_CE_Gun_MosinNagant</defName>
+    <weapon>CE_Gun_MosinNagant</weapon>
+    <model>HeldArmorySights/CE_Gun_MosinNagant/CE_Gun_MosinNagant</model>
+    <view>
+      <overrideOrientation>true</overrideOrientation>
+      <forward>(1, 0, 0)</forward>
+      <up>(0, 1, 0)</up>
+      <hasGrip>true</hasGrip>
+      <grip>(-0.0599999987, 0.0149999997, 0)</grip>
+      <hasMuzzle>true</hasMuzzle>
+      <muzzle>(0.925999999, 0.135000005, 0)</muzzle>
+      <hasSights>true</hasSights>
+      <rearSight>(0.19, 0.187, 0)</rearSight>
+      <frontSight>(0.876, 0.179, 0)</frontSight>
+      <scope>None</scope>
+      <kind>Gun</kind>
+    </view>
+  </HSK.FpsBridge.HeldWeaponVisualDef>
+  <HSK.FpsBridge.HeldWeaponVisualDef MayRequire="hsk.cearmory.models">
+    <defName>HSK_HeldSightR3_CE_Gun_KSTwentyThree</defName>
+    <weapon>CE_Gun_KSTwentyThree</weapon>
+    <model>HeldArmorySights/CE_Gun_KSTwentyThree/CE_Gun_KSTwentyThree</model>
+    <view>
+      <overrideOrientation>true</overrideOrientation>
+      <forward>(1, 0, 0)</forward>
+      <up>(0, 1, 0)</up>
+      <hasGrip>true</hasGrip>
+      <grip>(0, 0, 0)</grip>
+      <hasMuzzle>true</hasMuzzle>
+      <muzzle>(0.850000024, 0.0949999988, 0)</muzzle>
+      <hasSights>true</hasSights>
+      <rearSight>(0.1, 0.172, 0)</rearSight>
+      <frontSight>(0.796, 0.172, 0)</frontSight>
+      <scope>None</scope>
+      <kind>Gun</kind>
+    </view>
+  </HSK.FpsBridge.HeldWeaponVisualDef>
+  <HSK.FpsBridge.HeldWeaponVisualDef MayRequire="hsk.cearmory.models">
+    <defName>HSK_HeldSightR3_CE_Gun_WinchesterEightySix</defName>
+    <weapon>CE_Gun_WinchesterEightySix</weapon>
+    <model>HeldArmorySights/CE_Gun_WinchesterEightySix/CE_Gun_WinchesterEightySix</model>
+    <view>
+      <overrideOrientation>true</overrideOrientation>
+      <forward>(1, 0, 0)</forward>
+      <up>(0, 1, 0)</up>
+      <hasGrip>true</hasGrip>
+      <grip>(-0.209999993, 0.057, 0)</grip>
+      <hasMuzzle>true</hasMuzzle>
+      <muzzle>(0.825999975, 0.135000005, 0)</muzzle>
+      <hasSights>true</hasSights>
+      <rearSight>(0.22, 0.195, 0)</rearSight>
+      <frontSight>(0.776, 0.179, 0)</frontSight>
+      <scope>None</scope>
+      <kind>Gun</kind>
+    </view>
+  </HSK.FpsBridge.HeldWeaponVisualDef>
+</Defs>

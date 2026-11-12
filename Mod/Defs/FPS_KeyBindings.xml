@@ -1,0 +1,218 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <KeyBindingCategoryDef>
+    <defName>FPS_ControlSkills</defName>
+    <label>ISORIM FPS Control Bridge</label>
+    <description>Independent first-person skill shortcuts; existing preferences are preserved.</description>
+    <selfConflicting>true</selfConflicting>
+  </KeyBindingCategoryDef>
+  <KeyBindingCategoryDef>
+    <defName>FPS_ControlKeys</defName>
+    <label>ISORIM FPS Control Bridge - controls</label>
+    <description>Pawn, inventory, work and contextual turret controls.</description>
+    <selfConflicting>true</selfConflicting>
+  </KeyBindingCategoryDef>
+  <KeyBindingDef>
+    <defName>FPS_ViewCycle</defName>
+    <label>Possess / cycle pawn views</label>
+    <category>FPS_ControlKeys</category>
+    <defaultKeyCodeA>Mouse4</defaultKeyCodeA>
+    <defaultKeyCodeB>P</defaultKeyCodeB>
+  </KeyBindingDef>
+  <KeyBindingDef>
+    <defName>FPS_ExitRecall</defName>
+    <label>Exit / recall previous pawn</label>
+    <category>FPS_ControlKeys</category>
+    <defaultKeyCodeA>Mouse3</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef>
+    <defName>FPS_Capture</defName>
+    <label>Release / capture mouse</label>
+    <category>FPS_ControlKeys</category>
+    <defaultKeyCodeA>BackQuote</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef>
+    <defName>FPS_Forward</defName>
+    <label>Move forward</label>
+    <category>FPS_ControlKeys</category>
+    <defaultKeyCodeA>W</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef>
+    <defName>FPS_Backward</defName>
+    <label>Move backward</label>
+    <category>FPS_ControlKeys</category>
+    <defaultKeyCodeA>S</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef>
+    <defName>FPS_Left</defName>
+    <label>Move left</label>
+    <category>FPS_ControlKeys</category>
+    <defaultKeyCodeA>A</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef>
+    <defName>FPS_Right</defName>
+    <label>Move right</label>
+    <category>FPS_ControlKeys</category>
+    <defaultKeyCodeA>D</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef>
+    <defName>FPS_LeanLeft</defName>
+    <label>Lean left / previous turret</label>
+    <category>FPS_ControlKeys</category>
+    <defaultKeyCodeA>Q</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef>
+    <defName>FPS_InteractLeanRight</defName>
+    <label>Tap interact / hold lean right / next turret</label>
+    <category>FPS_ControlKeys</category>
+    <defaultKeyCodeA>E</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef>
+    <defName>FPS_NextWeapon</defName>
+    <label>Cycle weapon / artillery view</label>
+    <category>FPS_ControlKeys</category>
+    <defaultKeyCodeA>Tab</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef>
+    <defName>FPS_Inventory</defName>
+    <label>Open / close inventory</label>
+    <category>FPS_ControlKeys</category>
+    <defaultKeyCodeA>I</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef>
+    <defName>FPS_Fire</defName>
+    <label>Attack / throw</label>
+    <category>FPS_ControlKeys</category>
+    <defaultKeyCodeA>Mouse0</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef>
+    <defName>FPS_Aim</defName>
+    <label>Aim / scope / heavy melee</label>
+    <category>FPS_ControlKeys</category>
+    <defaultKeyCodeA>Mouse1</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef>
+    <defName>FPS_Sprint</defName>
+    <label>Sprint / fine artillery adjustment</label>
+    <category>FPS_ControlKeys</category>
+    <defaultKeyCodeA>LeftShift</defaultKeyCodeA>
+    <defaultKeyCodeB>RightShift</defaultKeyCodeB>
+  </KeyBindingDef>
+  <KeyBindingDef>
+    <defName>FPS_Crouch</defName>
+    <label>Crouch / slide</label>
+    <category>FPS_ControlKeys</category>
+    <defaultKeyCodeA>LeftControl</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef>
+    <defName>FPS_Prone</defName>
+    <label>Prone / stand</label>
+    <category>FPS_ControlKeys</category>
+    <defaultKeyCodeA>Z</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef>
+    <defName>FPS_Jump</defName>
+    <label>Jump / vault / climb</label>
+    <category>FPS_ControlKeys</category>
+    <defaultKeyCodeA>Space</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef>
+    <defName>FPS_AutoWork</defName>
+    <label>Automatic work</label>
+    <category>FPS_ControlKeys</category>
+    <defaultKeyCodeA>H</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef>
+    <defName>FPS_ManualWork</defName>
+    <label>Manual work / leave turret</label>
+    <category>FPS_ControlKeys</category>
+    <defaultKeyCodeA>F</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef>
+    <defName>FPS_FireMode</defName>
+    <label>Cycle fire mode</label>
+    <category>FPS_ControlKeys</category>
+    <defaultKeyCodeA>B</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef>
+    <defName>FPS_Reload</defName>
+    <label>Reload weapon / quick-load artillery</label>
+    <category>FPS_ControlKeys</category>
+    <defaultKeyCodeA>R</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef>
+    <defName>FPS_UseItem</defName>
+    <label>Use selected inventory item</label>
+    <category>FPS_ControlKeys</category>
+    <defaultKeyCodeA>Return</defaultKeyCodeA>
+    <defaultKeyCodeB>KeypadEnter</defaultKeyCodeB>
+  </KeyBindingDef>
+  <KeyBindingDef>
+    <defName>FPS_MarkTarget</defName>
+    <label>Mark / unmark target</label>
+    <category>FPS_ControlKeys</category>
+    <defaultKeyCodeA>Mouse2</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef>
+    <defName>FPS_Social</defName>
+    <label>Social menu / confirm</label>
+    <category>FPS_ControlKeys</category>
+    <defaultKeyCodeA>T</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef>
+    <defName>FPS_MechAbility</defName>
+    <label>Mech special ability</label>
+    <category>FPS_ControlKeys</category>
+    <defaultKeyCodeA>G</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef>
+    <defName>FPS_Overlay</defName>
+    <label>Hitboxes / artillery lead / speed modifier</label>
+    <category>FPS_ControlKeys</category>
+    <defaultKeyCodeA>LeftAlt</defaultKeyCodeA>
+    <defaultKeyCodeB>RightAlt</defaultKeyCodeB>
+  </KeyBindingDef>
+  <KeyBindingDef>
+    <defName>FPS_AbilityPage</defName>
+    <label>Next ability page</label>
+    <category>FPS_ControlKeys</category>
+    <defaultKeyCodeA>Alpha0</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef>
+    <defName>FPS_Sandevistan</defName>
+    <label>First-person skill: Sandevistan</label>
+    <category>FPS_ControlSkills</category>
+    <defaultKeyCodeA>F6</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef>
+    <defName>FPS_DeathEye</defName>
+    <label>First-person skill: Death Eye</label>
+    <category>FPS_ControlSkills</category>
+    <defaultKeyCodeA>F7</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef>
+    <defName>FPS_QuickTend</defName>
+    <label>Quick tend self / nearby ally</label>
+    <category>FPS_ControlKeys</category>
+    <defaultKeyCodeA>J</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef>
+    <defName>FPS_AirAscend</defName>
+    <label>Aircraft ascend</label>
+    <category>FPS_FlightKeys</category>
+    <defaultKeyCodeA>Space</defaultKeyCodeA>
+  </KeyBindingDef>
+  <KeyBindingDef>
+    <defName>FPS_AirDescend</defName>
+    <label>Aircraft descend</label>
+    <category>FPS_FlightKeys</category>
+    <defaultKeyCodeA>LeftControl</defaultKeyCodeA>
+    <defaultKeyCodeB>RightControl</defaultKeyCodeB>
+  </KeyBindingDef>
+  <KeyBindingCategoryDef>
+    <defName>FPS_FlightKeys</defName>
+    <label>ISORIM FPS - aircraft</label>
+    <description>Contextual flight controls; separate from ground jump and machine gun bindings.</description>
+    <selfConflicting>true</selfConflicting>
+  </KeyBindingCategoryDef>
+<KeyBindingDef><defName>FPS_AirLand</defName><label>Auto land (L; fixed-wing Ctrl is brake)</label><category>FPS_FlightKeys</category><defaultKeyCodeA>L</defaultKeyCodeA></KeyBindingDef><KeyBindingDef><defName>FPS_AirOrbit</defName><label>Orbit point / hover at point</label><category>FPS_FlightKeys</category><defaultKeyCodeA>T</defaultKeyCodeA></KeyBindingDef><KeyBindingCategoryDef><defName>FPS_VehicleKeys</defName><label>ISORIM FPS - vehicle weapons</label><description>Contextual vehicle weapons. Separate from infantry abilities and flight altitude.</description><selfConflicting>true</selfConflicting></KeyBindingCategoryDef><KeyBindingDef><defName>FPS_VehicleMachineGun</defName><label>Vehicle machine gun (hold to fire)</label><category>FPS_VehicleKeys</category><defaultKeyCodeA>G</defaultKeyCodeA></KeyBindingDef><KeyBindingDef><defName>FPS_AirParachute</defName><label>Parachute (hold 3 seconds)</label><category>FPS_FlightKeys</category><defaultKeyCodeA>J</defaultKeyCodeA></KeyBindingDef></Defs>
