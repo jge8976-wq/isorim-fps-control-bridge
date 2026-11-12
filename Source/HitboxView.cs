@@ -63,13 +63,11 @@ namespace HSK.FpsBridge
 
         private static void DrawCrewVolumes(Pawn vehicle)
         {
-            if (!VehicleBallisticDamage.TryCrewProfile(vehicle, out var profile, out var handlers)) return;
             var pose = VehicleGeometry.Pose(vehicle);
             Vector3 origin = VehicleModels.U(pose.Position);
             Quaternion rotation = AerialGeometry.Rotation(pose);
-            foreach (var volume in profile.volumes)
-                if (handlers.Any(handler => VehicleApi.RoleKey(handler) == volume.roleKey))
-                    Visuals.CrewVolume(origin + rotation * volume.center, rotation, volume.size);
+            foreach (var volume in VehicleCrewDisplay.Volumes(vehicle))
+                Visuals.CrewVolume(origin + rotation * volume.center, rotation, volume.size);
         }
 
         internal static void DrawInspection(Pawn vehicle)

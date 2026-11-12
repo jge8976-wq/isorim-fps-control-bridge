@@ -109,7 +109,7 @@ namespace HSK.FpsBridge
             Mathf.Clamp(Mathf.FloorToInt(point.x + .5f), grid.minX, grid.maxX),
             Mathf.Clamp(Mathf.FloorToInt(point.z + .5f), grid.minZ, grid.maxZ));
 
-        private static VehicleCrewVolumesDef Profile(Pawn pawn)
+        internal static VehicleCrewVolumesDef ExplicitCrewProfile(Pawn pawn)
         {
             if (!profiles.TryGetValue(pawn.def, out var profile))
                 profiles[pawn.def] = profile = DefDatabase<VehicleCrewVolumesDef>.AllDefsListForReading
@@ -119,7 +119,7 @@ namespace HSK.FpsBridge
 
         internal static bool TryCrewProfile(Pawn vehicle, out VehicleCrewVolumesDef profile, out object[] handlers)
         {
-            profile = Ready ? Profile(vehicle) : null;
+            profile = Ready ? ExplicitCrewProfile(vehicle) : null;
             handlers = null;
             if (profile == null || profile.volumes.Count == 0) return false;
             var volumes = profile.volumes;

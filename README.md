@@ -1,10 +1,10 @@
 # ISORIM FPS Control Bridge (CE & Vanilla)
 
-Version **0.8.20-minimap-crew-r1** · [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3824599915)
+Version **0.8.21-vehicle-crew-r1** · [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3824599915)
 
-The built-in and Dub’s Mint minimaps now rotate with the 3D camera. The compass marks north in cyan and Dub’s click positions follow the rotated map. Hold Alt to view cyan crew hit volumes. On foot, tap Alt to toggle them. Includes crew hit volumes for the Warbird and Badger.
+Hold Alt to view crew spaces on Vehicle Framework vehicles within 40 cells in 3D. Calibrated models use their measured positions. Other models use the vehicle’s native role hitboxes or an estimate based on the hull and seats. When no crew member can act, a hostile vehicle becomes unowned and ejects surviving occupants. Airborne ejections use the Strike Framework’s parachute and crash sequence.
 
-内置小地图和 Dub’s 小地图随 3D 镜头转向。指南针用青色标出北方，Dub’s 的点选位置随地图旋转换算。第一人称按住 Alt 查看青色乘员受击体积，步兵视角也可轻按切换。本版包含 Warbird 和 Badger 的乘员位置。
+按住 Alt 查看三维距离 40 格以内的 Vehicle Framework 载具乘员位置。已有实测坐标的车型使用实测值，其余车型使用原生席位格或按车体与席位估算。敌方载具所有乘员失能时变为无主，并弹出仍在舱内的幸存者。空中弹出沿用立体打击框架的跳伞和坠机流程。
 
 The GitHub Releases page provides an installable ZIP. Extract its mod folder into RimWorld’s Mods directory. See Mod/About/About.xml for requirements.
 

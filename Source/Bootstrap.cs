@@ -121,6 +121,9 @@ namespace HSK.FpsBridge
                     var vehicleBallistics = new Harmony(Id + ".vehicle-ballistic-damage");
                     try { VehicleBallisticDamage.Install(vehicleBallistics); }
                     catch (Exception e) { vehicleBallistics.UnpatchAll(vehicleBallistics.Id); Log.Warning("[FpsBridge] Vehicle ballistic mapping unavailable: " + e); }
+                    var crewOwnership = new Harmony(Id + ".vehicle-crew-ownership");
+                    try { VehicleCrewOwnership.Install(crewOwnership); }
+                    catch (Exception e) { crewOwnership.UnpatchAll(crewOwnership.Id); Log.Warning("[FpsBridge] Vehicle crew ownership unavailable: " + e); }
                 }
                 if (VehicleApi.Ready)
                 {

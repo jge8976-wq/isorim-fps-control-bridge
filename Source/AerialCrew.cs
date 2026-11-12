@@ -6,7 +6,7 @@ namespace HSK.FpsBridge
 {
     internal static class AerialCrew
     {
-        internal static bool HasPilot(Pawn vehicle) => VehicleApi.Uncrewed(vehicle) || VehicleApi.Handlers(vehicle).Where(VehicleApi.Movement)
+        internal static bool HasPilot(Pawn vehicle) => (vehicle.Faction != null && VehicleApi.Uncrewed(vehicle)) || VehicleApi.Handlers(vehicle).Where(VehicleApi.Movement)
             .Any(h => VehicleApi.List(h, "thingOwner").OfType<Pawn>()
                 .Any(p => !p.Dead && !p.Downed && !p.InMentalState && VehicleApi.CanOperate(h, p)));
 

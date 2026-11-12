@@ -1,35 +1,35 @@
 {
   "workshopItemId": 3824599915,
   "packageId": "hsk.fpsbridge.control.r4",
-  "version": "0.8.20-minimap-crew-r1",
+  "version": "0.8.21-vehicle-crew-r1",
   "files": {
     "1.7/Assemblies/HSK.FpsBridge.dll": {
-      "sha256": "aefb7d6c3a7a725d301803fb8d6439098bb3577d5263182f7d1b007a12def50f",
-      "bytes": 1289728
+      "sha256": "b1f2e396f35f7f7034ae1e4980b113de49f8c2ca36d5f46aac0df7f43938f6d3",
+      "bytes": 1295872
     },
     "1.7/Assemblies/HSK.FpsVehicleCompatibility.dll": {
       "sha256": "95390b2ddd1b61b5849f83a9a7c2d20694903303ce005e935e0fe01d1b8ce418",
       "bytes": 18944
     },
     "About/About.xml": {
-      "sha256": "6794aa4aaaa5cd11cbcf4d019bf67cf2792024434759b615b9d91b339df2c736",
-      "bytes": 9026
+      "sha256": "d351753df8ab4756c54165dbcc6ba013e1c56ccc9ea382533abd71a08d47c6a1",
+      "bytes": 9447
     },
     "About/ChineseSimplified/About.xml": {
-      "sha256": "e5f72e545e287ef721c8e120d83a60e3e0bfd45dd8390fdd23e0e7514bd6ac9d",
-      "bytes": 9056
+      "sha256": "23de4afa6f096128df60e2b19f85b54eb3dd6f53a849c8d87abc3c5a28a4ad06",
+      "bytes": 9417
     },
     "About/Description-Chinese.txt": {
-      "sha256": "0c772d7eb0794fa330bf418134a3cb424c2a62d60dbe82f10bf4d1b34bee0d51",
-      "bytes": 6911
+      "sha256": "c05e64c3ea2bbd52ffd73851dbcfd91768827429d98282d261d7030334a104f5",
+      "bytes": 7272
     },
     "About/Description-English.txt": {
-      "sha256": "857eeb1714be08909dae90a3512fa6a9e0c64c5411a8c277d3b9315d6678de6e",
-      "bytes": 6883
+      "sha256": "83107a80dc0fa0b0d57431654c078a3b0aa3b8141099888d731de5615ac5bd46",
+      "bytes": 7304
     },
     "About/English/About.xml": {
-      "sha256": "6794aa4aaaa5cd11cbcf4d019bf67cf2792024434759b615b9d91b339df2c736",
-      "bytes": 9026
+      "sha256": "d351753df8ab4756c54165dbcc6ba013e1c56ccc9ea382533abd71a08d47c6a1",
+      "bytes": 9447
     },
     "About/Preview.png": {
       "sha256": "d4b9971f3c7348b779c8d637ffd3e858a3e6d443be7a06a8932e78a50edc5512",
