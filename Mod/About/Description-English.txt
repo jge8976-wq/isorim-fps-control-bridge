@@ -1,3 +1,6 @@
+[h2]0.8.22[/h2]
+A claimed damaged vehicle now enters your faction’s repair list and can be repaired through Vehicle Framework. When a hostile pilot is incapacitated, a helicopter attempts a vertical landing at its current position or a nearby clear spot. Fixed-wing aircraft at or below 15 cells above the surface glide and roll to a stop if the route is clear. Higher aircraft crash and leave a recoverable wreck. Intact aircraft can be claimed after stopping and wrecks after repair. Update both ISORIM FPS Control Bridge and ISORIM 3D Strike Framework for these changes.
+
 [h2]0.8.21[/h2]
 Hold Alt to view crew spaces on Vehicle Framework vehicles within 40 cells in 3D. Calibrated models use their measured positions. Other models use the vehicle’s native role hitboxes or an estimate based on the hull and seats. When no crew member can act, a hostile vehicle becomes unowned and ejects surviving occupants. Airborne ejections use the Strike Framework’s parachute and crash sequence.
 

@@ -129,26 +129,39 @@ namespace HSK.FpsBridge
         {
             if(!AerialCrew.Check(v,r))return;
             AerialArrival.Sync(v,r);
+            if (r.EmergencyLanding && !r.Landing)
+            {
+                if (r.Airborne) AerialCrew.Crash(v,r);
+                else
+                {
+                    StopEngine(v,r);
+                    FinishForcedLanding(v,r);
+                }
+                return;
+            }
             var profile=Profile(v);bool fixedWing=profile.kind==AerialFlightKind.FixedWing;
             var systems = AircraftSystems.Flight(v);
             if (r.Airborne && systems.critical)
             {
-                v.Kill(new DamageInfo(DamageDefOf.Blunt, 1f));
+                if(r.EmergencyLanding)AerialCrew.Crash(v,r);
+                else v.Kill(new DamageInfo(DamageDefOf.Blunt, 1f));
                 return;
             }
             bool stunned = v.stances?.stunner?.Stunned == true;
             if (stunned) forward = turn = climb = 0;
             if(!r.Airborne&&!r.Automatic&&!r.Landing&&(forward!=0||turn!=0)&&HasPower(v))
             {r.EngineStopped=false;if(!VehicleApi.Drafted(v))VehicleApi.Draft(v,true);}
-            bool powered=!stunned&&!r.EngineStopped&&HasPower(v);
+            bool hasPower=HasPower(v);
+            bool powered=!stunned&&!r.EngineStopped&&hasPower;
             if(!r.Airborne&&!powered&&!r.Automatic){r.Status=L.T("地面待命：WASD滑行，空格自动起飞","Ground ready: WASD taxi, Space auto takeoff");return;}
-            if(!powered&&r.Automatic){AerialRunway.Cancel(r);r.Status=L.T("动力不足，取消自动起降","Power lost: automatic sequence cancelled");}
+            if(!powered&&r.Automatic&&!r.EmergencyLanding){AerialRunway.Cancel(r);r.Status=L.T("动力不足，取消自动起降","Power lost: automatic sequence cancelled");}
             bool boost=BoostActive(v,r);
             float normalMaximum=NormalMaximum(v);
             float maximum=(boost?EmergencyMaximum(v):normalMaximum)*systems.power;
             float throttle=fixedWing&&!boost?AerialThrottle.Get(v):1f;
             int budget=0;
             bool emp = stunned && v.stances.stunner.StunFromEMP;
+            bool forcedTouchdown=false;
             if (emp) r.BoostRequested = false;
             r.Status=AerialRunway.Phase(r)??(r.Landing?L.T("自动着陆：减速／下降","Auto landing: slowing / descending")
                 :!powered?L.T("动力不足，缓降","No power: descending"):r.Airborne?null:L.T("地面滑行 · 空格自动起飞","Ground taxi · Space auto takeoff"));
@@ -209,6 +222,11 @@ namespace HSK.FpsBridge
                     next.Velocity.X=r.CollisionRecoveryVelocity.X;next.Velocity.Z=r.CollisionRecoveryVelocity.Z;
                     next.Position.X=before.Position.X+next.Velocity.X*dt;next.Position.Z=before.Position.Z+next.Velocity.Z*dt;
                 }
+                if (r.EmergencyLanding && r.Airborne && !AerialArrival.Fits(v,next))
+                {
+                    AerialCrew.Crash(v,r);
+                    return;
+                }
                 if(r.Airborne&&AerialBoundary.Enforce(v,r,ref next))return;
                 if(boost)r.Status=L.T("紧急加力 · 上限 ","EMERGENCY BOOST · CAP ")+maximum.ToString("0.0")+L.T(" 格/秒 · 燃油 ×2"," cells/s · FUEL x2");
                 Bounds shape=AircraftFootprint.BoundsAt(v,next);
@@ -234,6 +252,11 @@ namespace HSK.FpsBridge
                 bool clear=automatic?AerialCollision.LandingClear(v,next):AerialCollision.Clear(v,next);
                 if(!clear)
                 {
+                    if(r.EmergencyLanding)
+                    {
+                        if(r.Airborne){AerialCrew.Crash(v,r);return;}
+                        r.Motor=before.Brake();StopEngine(v,r);forcedTouchdown=true;break;
+                    }
                     if(automatic)
                     {
                         AerialRunway.Cancel(r);r.Motor=before.Brake();
@@ -262,7 +285,7 @@ namespace HSK.FpsBridge
                     r.Airborne=r.RunwayMode!=AerialRunwayMode.TakeoffRoll&&r.RunwayMode!=AerialRunwayMode.LandingRoll&&!contact;
                     if(complete)
                     {
-                        if(landing){r.Airborne=false;r.HomeHeight=r.Motor.Position.Y;StopEngine(v,r);r.Status=L.T("着陆完成，停机停油 · WASD滑行","Landed, engine off · WASD taxi");}
+                        if(landing){forcedTouchdown=r.EmergencyLanding;r.Airborne=false;r.HomeHeight=r.Motor.Position.Y;StopEngine(v,r);r.Status=L.T("着陆完成，停机停油 · WASD滑行","Landed, engine off · WASD taxi");}
                         else{r.Airborne=true;r.AimPitch=0;r.Status=L.T("自动起飞完成，已交还操控","Takeoff complete: manual control ready");if(VehicleControl.Owns(v)&&VehicleControl.PilotLook)VehicleControl.SetLook(r.Motor.Yaw,0);}
                         break;
                     }
@@ -272,12 +295,25 @@ namespace HSK.FpsBridge
                 {
                     var settled=next;settled.Pitch=settled.Roll=0;settled.Position.Y+=floor+.012f-AircraftFootprint.BoundsAt(v,settled).min.y;
                     if(!AerialCollision.Clear(v,settled))continue;
+                    forcedTouchdown=r.Airborne&&(r.EmergencyLanding||!hasPower||!landing&&!stunned);
                     r.Motor=settled;r.Airborne=false;r.HomeHeight=settled.Position.Y;StopEngine(v,r);
                     r.Status=L.T("已着陆，发动机关闭／不耗油","Landed: engine off / zero fuel use");break;
                 }
                 if(!r.Airborne&&!r.Automatic&&forward==0&&turn==0&&AerialRunwayRules.FlatSpeed(next)<.03f)StopEngine(v,r);
             }
-            if(!Commit(v,r)){r.Motor=r.Motor.Brake();r.Status=L.T("位置跳变／地图边界已阻止","Position jump / map boundary blocked");}
+            if(!Commit(v,r))
+            {
+                r.Motor=r.Motor.Brake();r.Status=L.T("位置跳变／地图边界已阻止","Position jump / map boundary blocked");
+                if(forcedTouchdown&&r.EmergencyLanding){r.Airborne=true;AerialCrew.Crash(v,r);}
+                return;
+            }
+            if(forcedTouchdown) FinishForcedLanding(v,r);
+        }
+
+        private static void FinishForcedLanding(Pawn v,AerialFlightRecord r)
+        {
+            r.EmergencyLanding=r.EnemyPilotLoss=r.PilotLost=false;
+            VehicleCrewOwnership.AbandonOnSurface(v);
         }
         private static bool Commit(Pawn v, AerialFlightRecord r)
         {

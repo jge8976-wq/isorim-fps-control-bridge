@@ -59,12 +59,18 @@ namespace HSK.FpsBridge
 
         private static void BeginCrewTick() => crewTickDepth++;
 
-        private static void EndCrewTick()
+        private static void EndCrewTick(Pawn __instance)
         {
-            if (--crewTickDepth != 0 || deferred == null) return;
-            var ready = deferred;
-            deferred = null;
-            foreach (Pawn vehicle in ready) Resolve(vehicle);
+            if (--crewTickDepth != 0) return;
+            if (deferred != null)
+            {
+                var ready = deferred;
+                deferred = null;
+                foreach (Pawn vehicle in ready) Resolve(vehicle);
+            }
+            if (__instance.IsHashIntervalTick(30) && Hostile(__instance) && !AerialFlight.Airborne(__instance)
+                && (VehicleApi.OutOfFuel(__instance) || (__instance.stances?.stunner?.Stunned != true && VehicleApi.ChassisDisabled(__instance))))
+                AbandonOnSurface(__instance);
         }
 
         private static void QueueOrResolve(Pawn vehicle)
@@ -78,12 +84,27 @@ namespace HSK.FpsBridge
         private static void Resolve(Pawn vehicle)
         {
             if (!Hostile(vehicle)) return;
-            var crew = VehicleApi.Handlers(vehicle).SelectMany(handler => VehicleApi.List(handler, "thingOwner").OfType<Pawn>()).ToArray();
+            var crew = Crew(vehicle);
             if (crew.Any(pawn => !Incapacitated(pawn))) return;
+            Release(vehicle, crew);
+        }
 
+        internal static void AbandonOnSurface(Pawn vehicle)
+        {
+            if (!Hostile(vehicle) || AerialFlight.Airborne(vehicle) || AerialCrew.LandingWithoutPilot(vehicle)) return;
+            var crew = Crew(vehicle);
+            if (crew.Any(pawn => !pawn.Dead)) Release(vehicle, crew);
+        }
+
+        private static Pawn[] Crew(Pawn vehicle) => VehicleApi.Handlers(vehicle)
+            .SelectMany(handler => VehicleApi.List(handler, "thingOwner").OfType<Pawn>()).ToArray();
+
+        private static void Release(Pawn vehicle, Pawn[] crew)
+        {
             vehicle.SetFaction(null);
             if (AerialFlight.TryGet(vehicle, out var flight) && flight.Airborne)
             {
+                flight.EnemyPilotLoss = true;
                 flight.Navigate = flight.Orbit = flight.Cruise = flight.CombatEnabled = flight.BoostRequested = false;
             }
             else

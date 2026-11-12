@@ -1,35 +1,35 @@
 {
   "workshopItemId": 3824599915,
   "packageId": "hsk.fpsbridge.control.r4",
-  "version": "0.8.21-vehicle-crew-r1",
+  "version": "0.8.22-vehicle-recovery-r1",
   "files": {
     "1.7/Assemblies/HSK.FpsBridge.dll": {
-      "sha256": "b1f2e396f35f7f7034ae1e4980b113de49f8c2ca36d5f46aac0df7f43938f6d3",
-      "bytes": 1295872
+      "sha256": "192023522327177852982bcd96b0e9f746764c6a31d86e2e6dd737ba446ef046",
+      "bytes": 1303552
     },
     "1.7/Assemblies/HSK.FpsVehicleCompatibility.dll": {
       "sha256": "95390b2ddd1b61b5849f83a9a7c2d20694903303ce005e935e0fe01d1b8ce418",
       "bytes": 18944
     },
     "About/About.xml": {
-      "sha256": "d351753df8ab4756c54165dbcc6ba013e1c56ccc9ea382533abd71a08d47c6a1",
-      "bytes": 9447
+      "sha256": "966ee0f56b833d6d5f7022cdee6597a08763664de14d6c7ab47343512f7294bb",
+      "bytes": 10031
     },
     "About/ChineseSimplified/About.xml": {
-      "sha256": "23de4afa6f096128df60e2b19f85b54eb3dd6f53a849c8d87abc3c5a28a4ad06",
-      "bytes": 9417
+      "sha256": "7b94b6e9a31a3e241e8dcb599f59da5f428f2eb3ba52a63714d3844679ec928d",
+      "bytes": 9925
     },
     "About/Description-Chinese.txt": {
-      "sha256": "c05e64c3ea2bbd52ffd73851dbcfd91768827429d98282d261d7030334a104f5",
-      "bytes": 7272
+      "sha256": "10150ffef7264d46c0ad0eae121ae1154265586bbebe3cf14dcca86693532670",
+      "bytes": 7776
     },
     "About/Description-English.txt": {
-      "sha256": "83107a80dc0fa0b0d57431654c078a3b0aa3b8141099888d731de5615ac5bd46",
-      "bytes": 7304
+      "sha256": "829fe5f63314ddd1fed8273a6079ba2cfa99264c79fedcbb0f233756d037ba70",
+      "bytes": 7884
     },
     "About/English/About.xml": {
-      "sha256": "d351753df8ab4756c54165dbcc6ba013e1c56ccc9ea382533abd71a08d47c6a1",
-      "bytes": 9447
+      "sha256": "966ee0f56b833d6d5f7022cdee6597a08763664de14d6c7ab47343512f7294bb",
+      "bytes": 10031
     },
     "About/Preview.png": {
       "sha256": "d4b9971f3c7348b779c8d637ffd3e858a3e6d443be7a06a8932e78a50edc5512",
@@ -82,6 +82,10 @@
     "Defs/AerialVehicleTurretBase.xml": {
       "sha256": "b338005460e5a2f6975afbd9e67782134183886ad04b741f5bee857b12dc80d8",
       "bytes": 472
+    },
+    "Defs/FPS_ClaimVehicle.xml": {
+      "sha256": "697101d279fb659d3e1cb9e49d5f7f47db2e0ed254ac2b194fa80a8acf3fc8dd",
+      "bytes": 288
     },
     "Defs/FPS_InteractionWheel.xml": {
       "sha256": "dab0d280b541701cac850d57402a36d11ed9eda4bc40a92e9e1601b23367e87c",

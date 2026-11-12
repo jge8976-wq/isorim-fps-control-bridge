@@ -23,6 +23,7 @@ namespace HSK.FpsBridge
         private static FieldInfo vehicleKind;
         private static object landKind, seaKind;
         private static object movementRole, weaponRole;
+        private static int mobilePermission;
         private static object moveSpeedStat;
         private static MethodInfo terrainCost, toRot4;
         private static FieldInfo frameworkSettings, moveStartEvent, moveStopEvent;
@@ -108,6 +109,8 @@ namespace HSK.FpsBridge
             if (v != null) Call(Get(v, "vehiclePather"), "StopDead");
         }
         internal static float ManualSpeed(Pawn v) => Convert.ToSingle(Call(v, "GetStatValue", moveSpeedStat));
+        internal static bool ChassisDisabled(Pawn v) => (Int(v, "MovementPermissions") & mobilePermission) != 0 && !Bool(v, "CanMove");
+        internal static bool OutOfFuel(Pawn v) => Get(v, "CompFueledTravel") is object fuel && Float(fuel, "Fuel") <= .0001f;
         internal static float AerialSpeed(Pawn v)
         {
             object stat = AccessTools.Field(AccessTools.TypeByName("Vehicles.VehicleStatDefOf"), "FlightSpeed")?.GetValue(null);
@@ -266,6 +269,8 @@ namespace HSK.FpsBridge
                 drivable = NeedMethod(ext, "Drivable", PawnType, typeof(IntVec3));
                 Type statDef = AccessTools.TypeByName("Vehicles.VehicleStatDef");
                 moveSpeedStat = AccessTools.Field(AccessTools.TypeByName("Vehicles.VehicleStatDefOf"), "MoveSpeed").GetValue(null);
+                var permissions = AccessTools.Property(PawnType, "MovementPermissions");
+                if (permissions != null) mobilePermission = Convert.ToInt32(Enum.Parse(permissions.PropertyType, "Mobile"));
                 terrainCost = NeedMethod(AccessTools.TypeByName("Vehicles.VehiclePathGrid"), "TerrainCostAt", vehicleDef, typeof(TerrainDef), typeof(System.Text.StringBuilder));
                 NeedMethod(PawnType, "GetStatValue", statDef);
                 NeedMethod(PawnType, "TrueCenter");

@@ -35,6 +35,7 @@ namespace HSK.FpsBridge
         internal int GodForward,GodTurn;
         internal bool PilotAim;
         internal bool PilotLost;
+        internal bool EnemyPilotLoss, EmergencyLanding;
         internal bool BoostRequested;
         internal int WingInputFrame=-100;
         internal float AimYaw,AimPitch;
@@ -56,6 +57,8 @@ namespace HSK.FpsBridge
             Scribe_Values.Look(ref ReconSpeedFactor,"reconSpeedFactor",1f);
             Scribe_Values.Look(ref HomeHeight, "homeHeight"); Scribe_Values.Look(ref Airborne, "airborne");
             Scribe_Values.Look(ref PilotLost, "pilotLostR8");
+            Scribe_Values.Look(ref EnemyPilotLoss, "enemyPilotLoss");
+            Scribe_Values.Look(ref EmergencyLanding, "emergencyLanding");
             Scribe_Values.Look(ref Motor.Throttle,"throttle");
             Scribe_Values.Look(ref Motor.WingAirSpeed,"wingAirSpeedR4");Scribe_Values.Look(ref Motor.WingSink,"wingSinkR4");Scribe_Values.Look(ref Motor.WingAirReady,"wingAirReadyR4");
             Scribe_Values.Look(ref Landing,"landing");Scribe_Values.Look(ref EngineStopped,"engineStopped");
@@ -70,7 +73,11 @@ namespace HSK.FpsBridge
             Scribe_Values.Look(ref RunwayMode,"runwayModeR6");Scribe_Values.Look(ref RunwayYaw,"runwayYawR6");Scribe_Values.Look(ref RunwaySurface,"runwaySurfaceR6");
             Scribe_Values.Look(ref RunwayStart.X,"runwayStartX");Scribe_Values.Look(ref RunwayStart.Y,"runwayStartY");Scribe_Values.Look(ref RunwayStart.Z,"runwayStartZ");
             Scribe_Values.Look(ref RunwayEnd.X,"runwayEndX");Scribe_Values.Look(ref RunwayEnd.Y,"runwayEndY");Scribe_Values.Look(ref RunwayEnd.Z,"runwayEndZ");
-            if (Scribe.mode == LoadSaveMode.PostLoadInit) Motor=Airborne?(Motor.WingAirReady?Motor:AerialFixedWing.Synchronize(Motor,true)):AerialFixedWing.Synchronize(Motor.Brake(),false);
+            if (Scribe.mode == LoadSaveMode.PostLoadInit)
+            {
+                if (Airborne && !Motor.WingAirReady) Motor = AerialFixedWing.Synchronize(Motor, true);
+                else if (!Airborne && !EmergencyLanding) Motor = AerialFixedWing.Synchronize(Motor.Brake(), false);
+            }
         }
     }
 

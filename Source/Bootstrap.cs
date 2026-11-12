@@ -124,6 +124,12 @@ namespace HSK.FpsBridge
                     var crewOwnership = new Harmony(Id + ".vehicle-crew-ownership");
                     try { VehicleCrewOwnership.Install(crewOwnership); }
                     catch (Exception e) { crewOwnership.UnpatchAll(crewOwnership.Id); Log.Warning("[FpsBridge] Vehicle crew ownership unavailable: " + e); }
+                    var vehicleClaim = new Harmony(Id + ".vehicle-claim");
+                    try { VehicleClaim.Install(vehicleClaim); }
+                    catch (Exception e) { vehicleClaim.UnpatchAll(vehicleClaim.Id); Log.Warning("[FpsBridge] Vehicle claiming unavailable: " + e); }
+                    var vehicleRepair = new Harmony(Id + ".vehicle-repair-index");
+                    try { VehicleRepairIndex.Install(vehicleRepair); }
+                    catch (Exception e) { vehicleRepair.UnpatchAll(vehicleRepair.Id); Log.Warning("[FpsBridge] Vehicle repair index unavailable: " + e); }
                 }
                 if (VehicleApi.Ready)
                 {

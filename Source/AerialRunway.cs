@@ -27,7 +27,9 @@ namespace HSK.FpsBridge
         private static float cachedYaw,cachedUntil;
         internal static float Agl(Pawn v,AerialFlightRecord r)
         {Bounds b=AircraftFootprint.BoundsAt(v,r.Motor);return AerialCollision.Altitude(v,b);} 
-        internal static AerialRunwayPlan Plan(Pawn v,AerialFlightRecord r,bool landing)
+        internal static AerialRunwayPlan Plan(Pawn v,AerialFlightRecord r,bool landing) => BuildPlan(v,r,landing,false);
+
+        private static AerialRunwayPlan BuildPlan(Pawn v,AerialFlightRecord r,bool landing,bool emergency)
         {
             var p=new AerialRunwayPlan{Landing=landing,Yaw=r.Motor.Yaw};
             var flat=r.Motor;flat.Pitch=flat.Roll=0;
@@ -43,9 +45,16 @@ namespace HSK.FpsBridge
             p.Start=flat.Position;
             if(landing)
             {
-                p.Start+=VehicleModels.V(f*Math.Max(6f,height*3f));
+                float approach=Math.Max(6f,height*3f);
+                if(emergency)
+                {
+                    float glideSpeed=Math.Max(AerialRunwayRules.FlatSpeed(r.Motor),Math.Min(maximum*.8f,Math.Max(3f,maximum*.5f)));
+                    float drop=Math.Max(0f,r.Motor.Position.Y-flat.Position.Y);
+                    approach=Math.Max(approach,drop*glideSpeed/3f+3f);
+                }
+                p.Start+=VehicleModels.V(f*approach);
                 p.End=p.Start+VehicleModels.V(f*AerialRunwayRules.LandingLength(maximum));
-                if(height>AerialRunwayRules.PreviewHeight+.05f){p.Reason=L.T("降至离地5格内再着陆","Descend to within 5 cells AGL to land");return p;}
+                if(!emergency&&height>AerialRunwayRules.PreviewHeight+.05f){p.Reason=L.T("降至离地5格内再着陆","Descend to within 5 cells AGL to land");return p;}
             }
             else
             {
@@ -99,9 +108,12 @@ namespace HSK.FpsBridge
             if(!VehicleApi.Drafted(v))VehicleApi.Draft(v,true);
             r.Status=L.T("自动起飞：加速／爬升","Auto takeoff: accelerate / climb");cachedUntil=0;return true;
         }
-        internal static bool RequestLanding(Pawn v,AerialFlightRecord r)
+        internal static bool RequestLanding(Pawn v,AerialFlightRecord r) => BeginLanding(r,Plan(v,r,true));
+
+        internal static bool RequestEmergencyLanding(Pawn v,AerialFlightRecord r) => BeginLanding(r,BuildPlan(v,r,true,true));
+
+        private static bool BeginLanding(AerialFlightRecord r,AerialRunwayPlan plan)
         {
-            AerialRunwayPlan plan=Plan(v,r,true);
             if(!plan.Clear){r.Status=plan.Reason;return false;}
             Set(r,plan);r.Landing=true;r.LandInputLatch=true;r.RunwayMode=AerialRunwayMode.LandingGlide;
             r.Navigate=r.Orbit=r.Cruise=false;r.Status=L.T("自动着陆：对准跑道进近","Auto landing: runway approach");cachedUntil=0;return true;
