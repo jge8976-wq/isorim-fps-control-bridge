@@ -1,3 +1,9 @@
+[h2]0.8.19[/h2]
+Aircraft collision checks now skip widely separated airframes before detailed contact checks. Paired with Strike Framework 0.6.7 and tested with and without Combat Extended.
+
+[h2]0.8.18[/h2]
+Weapons without a dedicated first-person model now use their own original texture as a thickened held model. Right-click opens the shared optic. This version is paired with Strike Framework 0.6.6.
+
 [h2]0.8.17[/h2]
 AI fixed-wing aircraft on both sides turn into a 60° forward firing cone, dive into attack runs, and pull out. Pilot skill, handling and distance affect shot spread. Selecting an airborne fixed wing shows its translucent red firing sector. Anti-air muzzle flashes and trajectories use the raised barrel. Compatible CIWS can engage aircraft.
 

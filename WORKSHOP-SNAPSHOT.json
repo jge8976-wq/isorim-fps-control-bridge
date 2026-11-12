@@ -1,36 +1,36 @@
 {
   "workshopItemId": 3824599915,
   "packageId": "hsk.fpsbridge.control.r4",
-  "version": "0.8.18-held-sprite-r1",
-  "workshopBaselineVersion": "0.8.17-air-recon-vt-r1",
+  "version": "0.8.19-formation-raids-r1",
+  "workshopBaselineVersion": "0.8.19-formation-raids-r1",
   "files": {
     "1.7/Assemblies/HSK.FpsBridge.dll": {
-      "bytes": 1273856,
-      "sha256": "500cde08b7f27b608e1cc639fa9db496418625d6ab9084bad149bc12f89cca17"
+      "bytes": 1274368,
+      "sha256": "0c524846e4641cfb889ff7c29347c525764fb4c558aef27e21d81e944dd64993"
     },
     "1.7/Assemblies/HSK.FpsVehicleCompatibility.dll": {
       "bytes": 18944,
       "sha256": "95390b2ddd1b61b5849f83a9a7c2d20694903303ce005e935e0fe01d1b8ce418"
     },
     "About/About.xml": {
-      "bytes": 8347,
-      "sha256": "458fd2493d9ef9db30225cf88ea163935ef677e988b11514de2ca9ce0dff7b28"
+      "bytes": 8728,
+      "sha256": "2144075a510d599a13b3e7b38cd4328984e75a2c787c59abfd6d3c23488204d5"
     },
     "About/ChineseSimplified/About.xml": {
-      "bytes": 8346,
-      "sha256": "c5f8f99899f9b43470581cb00314ec272196f94a0a21db6e2d06557f6d029ca3"
+      "bytes": 8761,
+      "sha256": "151df6df7c48bf3e3d162e382b99c16f6d99c14650c38b040f69e2b0d6e17b17"
     },
     "About/Description-Chinese.txt": {
-      "bytes": 6241,
-      "sha256": "631c5c93877fee53410ca9006998f4b9045076cf149c042c3e522f688a2dd878"
+      "bytes": 6613,
+      "sha256": "6e9e1167a255d640818598878d08338fa2264706bc51b16d549120a41b75e962"
     },
     "About/Description-English.txt": {
-      "bytes": 6171,
-      "sha256": "a659e45dbf3ae90b4697ac74fde5aa0dcc048edf47fdbd499788195c777766b7"
+      "bytes": 6582,
+      "sha256": "8b98e8a5a6299037fd7742bd323672bc5306bedc224f6b4d8b72c500faaf0096"
     },
     "About/English/About.xml": {
-      "bytes": 8347,
-      "sha256": "458fd2493d9ef9db30225cf88ea163935ef677e988b11514de2ca9ce0dff7b28"
+      "bytes": 8728,
+      "sha256": "2144075a510d599a13b3e7b38cd4328984e75a2c787c59abfd6d3c23488204d5"
     },
     "About/Preview.png": {
       "bytes": 914165,

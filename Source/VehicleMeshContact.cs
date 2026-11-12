@@ -49,7 +49,14 @@ namespace HSK.FpsBridge
         }
         internal static bool Contact(Pawn a,AerialMotor ap,Pawn b,AerialMotor bp,out MeshContactMath.Contact contact)
         {
-            contact=default;var aa=new List<MeshContactMath.Instance>();var bb=new List<MeshContactMath.Instance>();
+            contact=default;
+            if(AerialFlight.Supports(a)&&AerialFlight.Supports(b))
+            {
+                var bounds=AircraftFootprint.BoundsAt(a,ap);
+                bounds.Expand(.04f);
+                if(!bounds.Intersects(AircraftFootprint.BoundsAt(b,bp)))return false;
+            }
+            var aa=new List<MeshContactMath.Instance>();var bb=new List<MeshContactMath.Instance>();
             if(!Instances(a,ap,aa)||!Instances(b,bp,bb))return false;
             foreach(var x in aa)foreach(var y in bb)if(MeshContactMath.Query(x,y,N.Vector3.Zero,out contact))return true;return false;
         }
@@ -57,6 +64,24 @@ namespace HSK.FpsBridge
         {var p=a;p.Position=a.Position+(b.Position-a.Position)*t;p.Yaw=a.Yaw+Mathf.DeltaAngle(a.Yaw,b.Yaw)*t;p.Pitch=a.Pitch+Mathf.DeltaAngle(a.Pitch,b.Pitch)*t;p.Roll=a.Roll+Mathf.DeltaAngle(a.Roll,b.Roll)*t;return p;}
         internal static bool Sweep(Pawn a,AerialMotor before,AerialMotor next,Pawn b,AerialMotor other,out MeshContactMath.Contact contact)
         {
+            contact = default;
+            if (AerialFlight.Supports(a) && AerialFlight.Supports(b))
+            {
+                var swept = AircraftFootprint.BoundsAt(a, before);
+                swept.Encapsulate(AircraftFootprint.BoundsAt(a, next));
+                // The footprint snaps at cardinal headings. Its largest XY projection fits within this horizontal radius.
+                float width = Math.Max(a.def.size.x, a.def.size.z);
+                var start = VehicleModels.U(before.Position);
+                var end = VehicleModels.U(next.Position);
+                var min = swept.min; var max = swept.max;
+                min.x = Math.Min(start.x, end.x) - width * .5f - .02f;
+                min.z = Math.Min(start.z, end.z) - width * .5f - .02f;
+                max.x = Math.Max(start.x, end.x) + width * .5f + .02f;
+                max.z = Math.Max(start.z, end.z) + width * .5f + .02f;
+                min.y -= .02f; max.y += .02f;
+                swept.SetMinMax(min, max);
+                if (!swept.Intersects(AircraftFootprint.BoundsAt(b, other))) return false;
+            }
             var target = new List<MeshContactMath.Instance>();
             if (!Instances(b, other, target)) { contact = default; return false; }
             return SweepAgainst(a, before, next, target, false, out contact);

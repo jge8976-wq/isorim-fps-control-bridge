@@ -3,7 +3,7 @@
   <name>ISORIM 第一人称控制桥接（CE与原版）</name>
   <author>ISORIM FPS team</author>
   <packageId>hsk.fpsbridge.control.r4</packageId>
-  <modVersion IgnoreIfNoMatchingField="true">0.8.18-held-sprite-r1</modVersion>
+  <modVersion IgnoreIfNoMatchingField="true">0.8.19-formation-raids-r1</modVersion>
   <supportedVersions>
     <li>1.7</li>
   </supportedVersions>
@@ -46,8 +46,11 @@
     <li>OskarPotocki.VanillaVehiclesExpandedTier3</li>
     <li>CETeam.CombatExtended</li>
   </loadAfter>
-  <description>[h2]0.8.18[/h2]
-缺专用模型的武器使用原贴图加厚手持外形，右键使用通用瞄具。
+  <description>[h2]0.8.19[/h2]
+飞行器之间先检查外廓，距离足够远时跳过精确碰撞计算。配套立体打击框架 0.6.7，已通过 CE 与无 CE 的大编队实机测试。
+
+[h2]0.8.18[/h2]
+缺少专用第一人称模型的武器会用自身原贴图生成加厚手持外形，右键进入通用瞄具。此版本已与立体打击框架 0.6.6 配套验证。
 
 [h2]0.8.17[/h2]
 敌我 AI 固定翼使用机头前方 60° 射击锥，会转向、俯冲攻击并拉起。逐发散布取决于飞行员的射击、智力、操作能力和距离。选中在空固定翼可见透明红色射击锥。对空火光和弹道从抬起的炮口发出，兼容的点防炮可以攻击飞行器。
