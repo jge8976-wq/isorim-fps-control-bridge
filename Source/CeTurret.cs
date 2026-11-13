@@ -66,6 +66,7 @@ namespace HSK.FpsBridge
             :!Loaded?L.T("CE 无弹药","CE empty"):mode.ToString()+" · "+AmmoLabel(by);
         public float? Ammo=>CeCompat.TurretAmmo(gun.AttackVerb);
         public string AmmoLabel(Pawn pawn)=>CeCompat.TurretAmmoLabel(gun.AttackVerb);
+        internal CombatHudCard.Ammo HudAmmo => CeCompat.HudAmmo(by, gun.AttackVerb) with { Reload = ReloadProgress };
         public float BlastRadius=>CeCompat.ProjectileFor(gun.AttackVerb)?.projectile.explosionRadius??0f;
         public float FlightTicks(IntVec3 target)=>CeCompat.TurretFlightTicks(gun,gun.AttackVerb,target);
         public float Spread(IntVec3 target,Pawn pawn)=>0f;

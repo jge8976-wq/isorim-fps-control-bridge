@@ -1,35 +1,35 @@
 {
   "workshopItemId": 3824599915,
-  "version": "0.8.23-air-raid-feedback-r1",
+  "version": "0.8.26-combat-hud-r2",
   "packageId": "hsk.fpsbridge.control.r4",
   "files": {
     "1.7/Assemblies/HSK.FpsBridge.dll": {
-      "sha256": "7331d2116545dbaef986663a5c392502aa15d7a0ef6847c9dfd6a348e8d58cb6",
-      "bytes": 1311744
+      "sha256": "6f76bf33b0b5f55360d01900c59d579ae07a4366edc60313abe44ab5bb46194e",
+      "bytes": 1325568
     },
     "1.7/Assemblies/HSK.FpsVehicleCompatibility.dll": {
       "sha256": "95390b2ddd1b61b5849f83a9a7c2d20694903303ce005e935e0fe01d1b8ce418",
       "bytes": 18944
     },
     "About/About.xml": {
-      "sha256": "77c3fa3059c500e87f9a23e266d48b5f1afb2edd83b3dd45015e1bd0020342bd",
-      "bytes": 10015
+      "sha256": "19605542f3ea96eb6d35f7dc7668c281fe93077091a2664b5df16a94a265e690",
+      "bytes": 9968
     },
     "About/ChineseSimplified/About.xml": {
-      "sha256": "320f5a7c8b4c90598c82475caa7675f3fabdf17b29cfb5a7d3e3d43e87c5cfff",
-      "bytes": 9937
+      "sha256": "e9ab41688eab1eba15e59f7ac8c5813b81e60499554b4c21a23101a1668d53a0",
+      "bytes": 9858
     },
     "About/Description-Chinese.txt": {
-      "sha256": "ac4ddcc5b127ea0fe816936ebdacdcfabb9a58441be60f90edcc6253cd94cd5c",
-      "bytes": 7787
+      "sha256": "a6235bab50c864214f9ce7cc79309f6d6e8b01e09861d17052d8724f0e19b6da",
+      "bytes": 7715
     },
     "About/Description-English.txt": {
-      "sha256": "59d7aa6364d8ecc5125e93f442cbc01bf44b2eb0f7858dfe266183ac9d05f81d",
-      "bytes": 7867
+      "sha256": "a78959c458503bff6662d7c0342ce1a66801f6ad6c60b9a1323436186b70565d",
+      "bytes": 7827
     },
     "About/English/About.xml": {
-      "sha256": "77c3fa3059c500e87f9a23e266d48b5f1afb2edd83b3dd45015e1bd0020342bd",
-      "bytes": 10015
+      "sha256": "19605542f3ea96eb6d35f7dc7668c281fe93077091a2664b5df16a94a265e690",
+      "bytes": 9968
     },
     "About/Preview.png": {
       "sha256": "d4b9971f3c7348b779c8d637ffd3e858a3e6d443be7a06a8932e78a50edc5512",
@@ -92,8 +92,8 @@
       "bytes": 340
     },
     "Defs/FPS_KeyBindings.xml": {
-      "sha256": "cc47faf8a3ae8ecd63e9b93b697596dd2feeb33305bea5aef0adb87a7c714466",
-      "bytes": 8779
+      "sha256": "8439cf7f162d0ccf8a18a00f803e7b74113635799b6fdd2040a5e74b40efe4aa",
+      "bytes": 8958
     },
     "Defs/FPS_ManualJobs.xml": {
       "sha256": "4a1b636dec3c93f922f0cdb032396a0da25e65469bb6f64458b8b0650dca103d",
@@ -236,8 +236,8 @@
       "bytes": 180
     },
     "Languages/ChineseSimplified/DefInjected/KeyBindingDef/FPS_KeyBindings.xml": {
-      "sha256": "34103a35024f109d59c83f13ce251bc6479c42a98d6b155f1cc3f7a42d7ddee3",
-      "bytes": 2203
+      "sha256": "33084be09e61cb1be5786caa0bec7b428050ee990d440295bb8477c2fdacc690",
+      "bytes": 2284
     },
     "Languages/ChineseSimplified/DefInjected/RecipeDef/AerialAmmoRecipes.xml": {
       "sha256": "67826b723785193e92e3527fde893869a1cd291c1270c4521b7b3619e89e5d0d",
@@ -280,8 +280,8 @@
       "bytes": 180
     },
     "Languages/ChineseTraditional/DefInjected/KeyBindingDef/FPS_KeyBindings.xml": {
-      "sha256": "df354fb90e985c4423b5fdafdeaf4bd250675c1c689f8ee6d79c22b7939650fb",
-      "bytes": 2203
+      "sha256": "7d0dade64e644179522a08e9a993fc52f3b914debd58a22d483c5131eb3c809b",
+      "bytes": 2284
     },
     "Languages/ChineseTraditional/DefInjected/VehicleTurretDef/AerialSeekerTrial.xml": {
       "sha256": "ced11a307c8e326bf72ac2d7b3ea0ac3b11baaf1bd4d36c40e222563d54d42c8",

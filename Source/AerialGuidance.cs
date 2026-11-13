@@ -5,7 +5,9 @@ namespace HSK.FpsBridge
     internal static class AerialGuidance
     {
         internal static float AiRadius(float speed, float span) =>
-            Math.Max(6f, Math.Max(span * 1.1f, speed / (AerialFixedWing.AiYawRate * MathF.PI / 180f) * 1.4f));
+            Math.Max(6f, Math.Max(span * 1.1f, speed / (WingYawRate * MathF.PI / 180f) * 1.4f));
+        internal static float Agility => FpsMod.Settings?.aircraftAgility ?? .6f;
+        internal static float WingYawRate => AerialFixedWing.AiYawRate * Agility;
         internal static float Radius(float speed, float span) => Math.Max(9f, Math.Max(span * 1.2f, speed / (32f * MathF.PI / 180f) * 1.4f));
         internal static float Heading(AerialMotor m, V3 target, float radius, bool orbit)
         {

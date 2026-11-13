@@ -59,8 +59,7 @@ namespace HSK.FpsBridge
             Observe(pawn, verb, c, now);
             if (!(held || pressed) || !c.clock.Ready(now, verb.Bursting) || pawn.stances.curStance is Stance_Busy
                 || !Magazines.Ready(pawn, verb) || !verb.Available()) return;
-            LocalTargetInfo target = AimPicker.Target(pawn, verb);
-            if (!target.IsValid) target = Ballistics.FallbackTarget(pawn, verb);
+            LocalTargetInfo target = Bridge.NativeAimTarget(pawn, verb);
             if (target.IsValid && verb.CanHitTarget(target)) StartCast(pawn, verb, target, now);
         }
 

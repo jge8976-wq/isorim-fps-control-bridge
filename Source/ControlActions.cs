@@ -9,6 +9,7 @@ namespace HSK.FpsBridge
         LeanLeft, InteractLeanRight, NextWeapon, Inventory,
         Fire, Aim, Sprint, Crouch, Prone, Jump,
         AutoWork, ManualWork, FireMode, Reload, UseItem, MarkTarget, Social, MechAbility,
-        Overlay, AbilityPage, Sandevistan, DeathEye, QuickTend, InteractionMenu, AirAscend, AirDescend, AirLand, AirOrbit, VehicleMachineGun, AirParachute
+        Overlay, AbilityPage, Sandevistan, DeathEye, QuickTend, InteractionMenu, AirAscend, AirDescend, AirLand, AirOrbit, VehicleMachineGun, AirParachute,
+        CockpitStatus
     }
 }

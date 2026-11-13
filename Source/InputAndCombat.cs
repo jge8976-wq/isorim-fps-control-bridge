@@ -271,13 +271,18 @@ namespace HSK.FpsBridge
                 + "; verb=" + type.FullName + "; projectile=" + projectile?.defName + "; class=" + projectile?.thingClass?.FullName + "; route=" + route);
         }
 
+        internal static LocalTargetInfo NativeAimTarget(Pawn actor, Verb verb)
+        {
+            LocalTargetInfo target = AimPicker.Target(actor, verb);
+            // Nothing under the crosshair within reach (sky, far ground): any visible cell along the view keeps the
+            // game's range and sight checks satisfied.
+            return target.IsValid ? target : Ballistics.FallbackTarget(actor, verb);
+        }
+
         private static void NativeFire(Verb verb)
         {
             if (pawn.stances.curStance is Stance_Busy) return;
-            LocalTargetInfo target = AimPicker.Target(pawn, verb);
-            // Nothing under the crosshair within reach (sky, far ground): any visible cell along the view keeps the
-            // game's range and sight checks satisfied.
-            if (!target.IsValid) target = Ballistics.FallbackTarget(pawn, verb);
+            LocalTargetInfo target = NativeAimTarget(pawn, verb);
             if (target.IsValid && verb.CanHitTarget(target)) verb.TryStartCastOn(target, false, true);
         }
 

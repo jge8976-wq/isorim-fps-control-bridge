@@ -9,6 +9,68 @@ namespace HSK.FpsBridge
 {
     internal static partial class CeCompat
     {
+        internal static bool TryWeaponImpact(Pawn actor, Verb verb, ThingDef projectile, out ImpactMinimap.Impact impact)
+        {
+            LocalTargetInfo target = PickTarget(actor, verb);
+            if (!target.IsValid) target = Ballistics.FallbackTarget(actor, verb);
+            return TryDirectImpact(actor, actor, verb, projectile, target, Ballistics.Eye(actor), ControlCamera.ShotDirection(actor), out impact);
+        }
+
+        internal static bool TryTurretImpact(Thing gun, Pawn actor, Verb verb, ThingDef projectile, LocalTargetInfo target, out ImpactMinimap.Impact impact)
+        {
+            impact = default;
+            if (!target.Cell.InBounds(gun.Map)) return false;
+            if (!projectile.projectile.flyOverhead)
+            {
+                V3 muzzle = TurretControl.Muzzle(out V3 direction);
+                return TryDirectImpact(gun, actor, verb, projectile, target, muzzle, direction, out impact);
+            }
+            V3 source = FloorSpace.Spot(gun) + new V3(0, 1, 0);
+            var context = new ShotScope { eye = source, arcGoal = ArtilleryGoal(gun.Map, target.Cell) };
+            float speed = ViewRules.Speed(PreviewShotSpeed(verb, target), FpsMod.Settings.speed);
+            if (!float.IsFinite(speed) || speed <= 0f) return false;
+            SetArtilleryArc(context, speed);
+            return ImpactMinimap.Trace(gun, actor, projectile, source, context.arcVelocity, context.arcGravity, out impact);
+        }
+
+        private static bool TryDirectImpact(Thing source, Pawn actor, Verb verb, ThingDef projectile, LocalTargetInfo target, V3 origin, V3 direction,
+            out ImpactMinimap.Impact impact)
+        {
+            impact = default;
+            if (!target.IsValid || !FloorSpace.InWorld(source.Map, origin)) return false;
+            float originalSpeed = PreviewShotSpeed(verb, target);
+            if (!float.IsFinite(originalSpeed) || originalSpeed <= 0f) return false;
+            V3 velocity = NativeShotVelocity(direction, ViewRules.Speed(originalSpeed, FpsMod.Settings.speed));
+            NativeMotionPreview native = CreateNativeMotionPreview(source, projectile, origin, velocity, target.Thing, false, target, originalSpeed, verb.EquipmentSource);
+            return native != null && ImpactMinimap.Trace(source, actor, projectile, origin, velocity, 0f, out impact, native);
+        }
+
+        private static readonly FieldInfo verbTargetField = AccessTools.Field(typeof(Verb), "currentTarget");
+
+        private static float PreviewShotSpeed(Verb verb, LocalTargetInfo target)
+        {
+            // CE selects a charge using the target cell. Restore the verb's target and its cached speed after previewing.
+            FieldInfo speedField = AccessTools.Field(launchType, "shotSpeed");
+            object previousTarget = verbTargetField.GetValue(verb);
+            object previousSpeed = speedField?.GetValue(verb);
+            try
+            {
+                verbTargetField.SetValue(verb, target);
+                return Convert.ToSingle(Property(launchType, "ShotSpeed").GetValue(verb)) / 60f;
+            }
+            finally
+            {
+                verbTargetField.SetValue(verb, previousTarget);
+                speedField?.SetValue(verb, previousSpeed);
+            }
+        }
+
+        private static V3 ArtilleryGoal(Map map, IntVec3 target)
+        {
+            FloorBand floor = FloorSpace.Band(map, target);
+            return new V3(target.x + .5f, floor.Height, target.z + .5f - floor.Shift);
+        }
+
         internal static float TurretFlightTicks(Thing gun,Verb verb,IntVec3 target)
         {
             ThingDef projectile=ProjectileFor(verb);
@@ -19,9 +81,8 @@ namespace HSK.FpsBridge
             {
                 current.SetValue(verb,new LocalTargetInfo(target));
                 float speed=ViewRules.Speed(Math.Max(projectile.projectile.speed,Convert.ToSingle(Property(launchType,"ShotSpeed").GetValue(verb)))/60f,FpsMod.Settings.speed);
-                FloorBand goal=FloorSpace.Band(gun.Map,target);
                 V3 source=FloorSpace.Spot(gun)+new V3(0,1,0);
-                V3 destination=new V3(target.x+.5f,goal.Height,target.z-goal.Shift+.5f);
+                V3 destination=ArtilleryGoal(gun.Map,target);
                 return ArtilleryTicks(destination-source,speed);
             }
             finally{current.SetValue(verb,previous);}
@@ -64,8 +125,7 @@ namespace HSK.FpsBridge
             if(artillery)
             {
                 eye=FloorSpace.Spot(gun)+new V3(0,1,0);
-                FloorBand band=FloorSpace.Band(gun.Map,target.Cell);
-                goal=new V3(target.Cell.x+.5f,band.Height,target.Cell.z-band.Shift+.5f);
+                goal=ArtilleryGoal(gun.Map,target.Cell);
             }
             V3 nativeDirection=WorldVelocityToNative(direction);
             CeNativeRules.TryAngles(nativeDirection.X,nativeDirection.Y,nativeDirection.Z,out float elevation,out float rotation);

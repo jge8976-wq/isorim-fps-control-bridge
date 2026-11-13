@@ -65,7 +65,6 @@ namespace HSK.FpsBridge
         private static Verb currentVerb;
         private static MagazineSpec currentSpec;
         private static int lastTick = -1;
-        private static float flashUntil;
         [ThreadStatic] private static Dictionary<Verb, int> shotDepth;
         public sealed class ShotAttempt { internal bool owned, root, released; internal Verb verb; }
         private static readonly Dictionary<ThingDef, MagazineSpec> specs = new Dictionary<ThingDef, MagazineSpec>();
@@ -126,7 +125,7 @@ namespace HSK.FpsBridge
         {
             if (!Applies(pawn, verb)) return true;
             MagazineState state = State(pawn, verb, out _);
-            if (state.Reloading || state.Rounds == 0) { flashUntil = Time.unscaledTime + 1f; return false; }
+            if (state.Reloading || state.Rounds == 0) return false;
             return true;
         }
         public static void Shot(Pawn pawn, Verb verb)
@@ -206,29 +205,13 @@ namespace HSK.FpsBridge
                 ? L.T(" · 换弹 ", " · reload ") + state.Remaining(spec).ToString("F1") + "s"
                 : " · " + ControlKeys.Label(ControlAction.Reload) + L.T(" 换弹", " reload"));
         }
-        // Read-only lower-left HUD, above the existing pawn panel. Reload ring fills clockwise to a full turn.
-        public static void DrawHud(Pawn pawn)
+        internal static CombatHudCard.Ammo HudAmmo(Pawn pawn, Verb verb)
         {
-            if (Bridge.MainTabBlocks || InventoryPanel.Blocking || TurretControl.Manned) return;
-            string text = Status(pawn); if (text == null) return;
-            float y = Math.Max(12, UI.screenHeight - 423);
-            GameFont font = Text.Font; TextAnchor anchor = Text.Anchor; Color color = GUI.color;
-            try
-            {
-                Widgets.DrawBoxSolid(new Rect(12, y, 354, 35), new Color(.035f, .045f, .06f, .9f));
-                Text.Font = GameFont.Small; Text.Anchor = TextAnchor.MiddleLeft;
-                GUI.color = Time.unscaledTime < flashUntil ? new Color(1f, .6f, .25f) : Color.white;
-                Widgets.Label(new Rect(46, y + 2, 316, 31), text);
-                Vector2 center = new Vector2(29, y + 17);
-                float fill = CeCompat.Reloading ? CeCompat.ReloadProgress : current?.Reloading == true ? current.Progress(currentSpec) : 1f;
-                for (int i = 0; i < 40; i++)
-                {
-                    float a = i * Mathf.PI * 2f / 40f - Mathf.PI / 2f, b = (i + 1) * Mathf.PI * 2f / 40f - Mathf.PI / 2f;
-                    Widgets.DrawLine(center + new Vector2(Mathf.Cos(a), Mathf.Sin(a)) * 11f, center + new Vector2(Mathf.Cos(b), Mathf.Sin(b)) * 11f,
-                        i / 40f < fill ? new Color(.4f, .9f, 1f) : new Color(.25f, .3f, .35f), 2f);
-                }
-            }
-            finally { Text.Font = font; Text.Anchor = anchor; GUI.color = color; }
+            if (CeCompat.Owns(verb)) return CeCompat.HudAmmo(pawn, verb);
+            if (!Applies(pawn, verb)) return default;
+            MagazineState state = State(pawn, verb, out MagazineSpec spec);
+            return new CombatHudCard.Ammo((verb as Verb_LaunchProjectile)?.Projectile, state.Rounds,
+                spec.Capacity, null, state.Reloading ? state.Progress(spec) : null);
         }
     }
 }

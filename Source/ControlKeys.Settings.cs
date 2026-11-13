@@ -80,6 +80,7 @@ namespace HSK.FpsBridge
             ControlAction.AirLand => L.T("着陆 降落", "aircraft land"),
             ControlAction.AirOrbit => L.T("盘旋 锁定", "orbit lock"),
             ControlAction.VehicleMachineGun => L.T("载具 机枪", "vehicle machine gun"),
+            ControlAction.CockpitStatus => L.T("座舱 载具 部件 状态", "cockpit vehicle component status"),
             _ => ""
         };
 

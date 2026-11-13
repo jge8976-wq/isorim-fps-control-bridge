@@ -18,7 +18,15 @@ namespace HSK.FpsBridge
             {Vector3 d=Vector3.Max(Vector3.Zero,Vector3.Max(Min-b.Max,b.Min-Max));return d.LengthSquared();}
             internal Box Swept(Vector3 d)=>new(Vector3.Min(Min,Min+d),Vector3.Max(Max,Max+d));
             internal Box Transform(Matrix4x4 m)
-            {var b=new Box(Vector3.Transform(Min,m),Vector3.Transform(Max,m));for(int i=1;i<7;i++)b.Add(Vector3.Transform(new Vector3((i&1)==0?Min.X:Max.X,(i&2)==0?Min.Y:Max.Y,(i&4)==0?Min.Z:Max.Z),m));return b;}
+            {
+                Vector3 center = Vector3.Transform(Center, m);
+                Vector3 extent = (Max - Min) * .5f;
+                var half = new Vector3(
+                    MathF.Abs(m.M11) * extent.X + MathF.Abs(m.M21) * extent.Y + MathF.Abs(m.M31) * extent.Z,
+                    MathF.Abs(m.M12) * extent.X + MathF.Abs(m.M22) * extent.Y + MathF.Abs(m.M32) * extent.Z,
+                    MathF.Abs(m.M13) * extent.X + MathF.Abs(m.M23) * extent.Y + MathF.Abs(m.M33) * extent.Z);
+                return new Box(center - half, center + half);
+            }
         }
         internal sealed class Tree
         {
@@ -27,19 +35,52 @@ namespace HSK.FpsBridge
             internal Tree(Vector3[] vertices)
             {
                 if(vertices==null||vertices.Length<3||vertices.Length%3!=0)throw new ArgumentException("Triangle soup required");
-                Vertices=vertices;Triangles=new int[vertices.Length/3];for(int i=0;i<Triangles.Length;i++)Triangles[i]=i;
-                Build(0,Triangles.Length);Closed=IsClosed(vertices);
+                Vertices=vertices;
+                Triangles=new int[vertices.Length/3];
+                var centers = new Vector3[Triangles.Length];
+                for(int i=0;i<Triangles.Length;i++)
+                {
+                    Triangles[i]=i;
+                    centers[i]=(vertices[i*3]+vertices[i*3+1]+vertices[i*3+2])/3f;
+                }
+                Build(0,Triangles.Length,centers);Closed=IsClosed(vertices);
             }
-            int Build(int start,int count)
+            int Build(int start,int count, Vector3[] centers)
             {
                 var b=new Box(Vertices[Triangles[start]*3],Vertices[Triangles[start]*3]);
                 for(int i=start;i<start+count;i++)for(int j=0;j<3;j++)b.Add(Vertices[Triangles[i]*3+j]);
                 int n=Nodes.Count;Nodes.Add(new Node{Bounds=b,Start=start,Count=count,Left=-1,Right=-1});
                 if(count<=6)return n;
                 Vector3 size=b.Max-b.Min;int axis=size.X>size.Y&&size.X>size.Z?0:size.Y>size.Z?1:2;
-                float Key(int t){Vector3 p=(Vertices[t*3]+Vertices[t*3+1]+Vertices[t*3+2])/3;return axis==0?p.X:axis==1?p.Y:p.Z;}
-                Array.Sort(Triangles,start,count,Comparer<int>.Create((a,c)=>Key(a).CompareTo(Key(c))));
-                int half=count/2,l=Build(start,half),r=Build(start+half,count-half);Nodes[n]=new Node{Bounds=b,Left=l,Right=r};return n;
+                int half = count / 2;
+                Partition(start, start + count - 1, start + half, axis, centers);
+                int l=Build(start,half,centers),r=Build(start+half,count-half,centers);
+                Nodes[n]=new Node{Bounds=b,Left=l,Right=r};return n;
+            }
+            private void Partition(int low, int high, int middle, int axis, Vector3[] centers)
+            {
+                float Key(int triangle)
+                {
+                    Vector3 value = centers[triangle];
+                    return axis == 0 ? value.X : axis == 1 ? value.Y : value.Z;
+                }
+                while (low < high)
+                {
+                    float pivot = Key(Triangles[low + (high - low) / 2]);
+                    int left = low, right = high;
+                    while (left <= right)
+                    {
+                        while (Key(Triangles[left]) < pivot) left++;
+                        while (Key(Triangles[right]) > pivot) right--;
+                        if (left > right) break;
+                        (Triangles[left], Triangles[right]) = (Triangles[right], Triangles[left]);
+                        left++;
+                        right--;
+                    }
+                    if (middle <= right) high = right;
+                    else if (middle >= left) low = left;
+                    else return;
+                }
             }
             static bool IsClosed(Vector3[] v)
             {

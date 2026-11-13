@@ -1,5 +1,4 @@
 using System;
-using System.Linq;
 using UnityEngine;
 using Verse;
 
@@ -18,21 +17,8 @@ namespace HSK.FpsBridge
         }
         internal static void Draw()
         {
-            object turret = VehicleWeapons.Current;
             string blocked = VehicleControl.ControlBlockReason;
-            if (blocked != null)
-            {
-                DrawBlocked(blocked);
-                return;
-            }
-            object machine = VehicleWeapons.MachineGuns().FirstOrDefault(t => t != turret);
-            Vector2 center = new Vector2(UI.screenWidth * .5f, Math.Min(UI.screenHeight * .5f + 84f, UI.screenHeight - 208f));
-            if (machine == null) DrawGun(turret, center, "");
-            else
-            {
-                DrawGun(turret, center + new Vector2(-74f, 0f), L.T("当前武器 · ", "Selected · "));
-                DrawGun(machine, center + new Vector2(74f, 0f), ControlKeys.Label(ControlAction.VehicleMachineGun) + L.T(" 机枪 · ", " MG · "));
-            }
+            if (blocked != null) DrawBlocked(blocked);
         }
         private static void DrawBlocked(string reason)
         {
@@ -84,25 +70,15 @@ namespace HSK.FpsBridge
             return (filled, tint, label);
         }
 
-        private static void DrawGun(object turret, Vector2 center, string title)
+        internal static void DrawRing(Vector2 center, float radius, float filled, Color tint)
         {
-            var (filled, tint, label) = Status(turret);
-            Color old = GUI.color; GameFont font = Text.Font; TextAnchor anchor = Text.Anchor;
-            try
+            for (int i = 0; i < Segments; i++)
             {
-                GUI.color = Color.white; Text.Font = GameFont.Tiny; Text.Anchor = TextAnchor.UpperCenter;
-                const float radius = 21f;
-                for (int i = 0; i < Segments; i++)
-                {
-                    Vector2 a = center + ring[i] * radius, b = center + ring[i + 1] * radius;
-                    Widgets.DrawLine(a, b, new Color(0f, 0f, 0f, .72f), 5f);
-                    float part = Mathf.Clamp01(filled * Segments - i);
-                    if (part > 0f) Widgets.DrawLine(a, a + (b - a) * part, tint, 3f);
-                }
-                GUI.color = tint;
-                Widgets.Label(new Rect(center.x - 73f, center.y + radius + 6f, 146f, 60f), title + label);
+                Vector2 a = center + ring[i] * radius, b = center + ring[i + 1] * radius;
+                Widgets.DrawLine(a, b, new Color(.18f, .24f, .29f, .92f), 4f);
+                float part = Mathf.Clamp01(filled * Segments - i);
+                if (part > 0f) Widgets.DrawLine(a, a + (b - a) * part, tint, 2.5f);
             }
-            finally { GUI.color = old; Text.Font = font; Text.Anchor = anchor; }
         }
     }
 }

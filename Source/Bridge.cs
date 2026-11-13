@@ -329,7 +329,6 @@ namespace HSK.FpsBridge
                         Text.Font = font; Text.Anchor = anchor; GUI.color = color;
                     }
                 }
-                Magazines.DrawHud(pawn);
                 MountedControl.DrawHud(pawn);
                 WorkControl.DrawHud(pawn);
                 if (MechControl.IsMech(pawn)) MechControl.DrawHud(pawn, CaptureStatus());

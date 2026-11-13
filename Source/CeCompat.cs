@@ -298,8 +298,7 @@ namespace HSK.FpsBridge
             object modes = fireModes.GetValue(verb);
             string mode = modes == null ? "SingleFire" : fireMode.GetValue(modes).ToString();
             if (!(CyberSkills.Eye(pawn) ? held || pressed : CeNativeRules.WantsTrigger(mode, held, pressed)) || !verb.Available()) {LastGate="trigger-or-unavailable";return;}
-            LocalTargetInfo target = PickTarget(pawn, verb);
-            if (!target.IsValid) target = FreeFireTarget(pawn, verb, Ballistics.FallbackTarget(pawn, verb));
+            LocalTargetInfo target = FirstPersonTarget(pawn, verb);
             if (!target.IsValid) {LastGate="no-target";return;}
             cast.pawn = pawn; cast.managed = true; cast.mode = mode;
             cast.clock.Begin(verb.verbProps.AdjustedCooldownTicks(verb, pawn));
@@ -362,10 +361,17 @@ namespace HSK.FpsBridge
                 || Bridge.ShootingPawn != cast.pawn || cast.pawn.equipment?.PrimaryEq?.PrimaryVerb != verb) return true;
             if (!Bridge.CeControlsAllowed || !Supported(cast.pawn, verb)) { StopBurst(cast.pawn,verb,cast); return false; }
             if (cast.mode == "AutoFire" && !cast.held) { StopBurst(cast.pawn,verb,cast);return false; }
-            LocalTargetInfo picked = PickTarget(cast.pawn, verb);
-            if (!picked.IsValid) picked = FreeFireTarget(cast.pawn, verb, Ballistics.FallbackTarget(cast.pawn, verb));
+            LocalTargetInfo picked = FirstPersonTarget(cast.pawn, verb);
             if (!picked.IsValid) return false;
             target = picked; return true;
+        }
+
+        private static LocalTargetInfo FirstPersonTarget(Pawn pawn, Verb verb)
+        {
+            if (IsGrenade(verb) && TryThrowImpact(pawn, verb, out var impact))
+                return new LocalTargetInfo(impact.Cell);
+            LocalTargetInfo target = PickTarget(pawn, verb);
+            return target.IsValid ? target : FreeFireTarget(pawn, verb, Ballistics.FallbackTarget(pawn, verb));
         }
 
         internal static bool BeforeShot(Verb __instance, ref bool __result, out ShotScope __state)
@@ -612,6 +618,18 @@ namespace HSK.FpsBridge
                 : L.T("弹药消耗关闭", "ammo consumption off");
             string reload = IsReload(pawn, verb) ? L.T(" · 换弹 ", " · reload ") + (Math.Max(0, pawn.jobs.curDriver.ticksLeftThisToil) / 60f).ToString("F1") + "s" : "";
             return "CE " + count + " · " + supply + reload;
+        }
+        internal static CombatHudCard.Ammo HudAmmo(Pawn pawn, Verb verb)
+        {
+            object ammo = compAmmo.GetValue(verb);
+            if (ammo == null) return default;
+            bool magazine = (bool)hasMagazine.GetValue(ammo);
+            ThingDef kind = (bool)useAmmo.GetValue(ammo) ? (ThingDef)(currentAmmo.GetValue(ammo) ?? VehicleApi.Get(ammo, "SelectedAmmo")) : null;
+            int? reserve = kind == null || pawn?.inventory == null ? null
+                : pawn.inventory.innerContainer.TotalStackCountOfDef(kind);
+            float? loading = IsReload(pawn, verb) && hudPawn == pawn && hudVerb == verb && reloadMaximum > 0 ? ReloadProgress : null;
+            return new CombatHudCard.Ammo(kind, magazine ? (int)curRounds.GetValue(ammo) : 0,
+                magazine ? (int)magSize.GetValue(ammo) : 0, reserve, loading);
         }
         internal static void DrawHud(Pawn pawn)
         {

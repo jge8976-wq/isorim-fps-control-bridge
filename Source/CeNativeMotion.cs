@@ -177,7 +177,7 @@ namespace HSK.FpsBridge
             return direction * (1f / Math.Max(.00001f, direction.Length));
         }
 
-        internal static NativeMotionPreview CreateNativeMotionPreview(Pawn launcher, ThingDef definition, V3 start, V3 velocity, Thing target, bool velocityMotion, LocalTargetInfo? intendedTarget = null, float? launchSpeed = null)
+        internal static NativeMotionPreview CreateNativeMotionPreview(Thing launcher, ThingDef definition, V3 start, V3 velocity, Thing target, bool velocityMotion, LocalTargetInfo? intendedTarget = null, float? launchSpeed = null, Thing equipment = null)
         {
             if (!NativeProjectile(definition)) return null;
             var preview = new NativeMotionPreview
@@ -200,7 +200,7 @@ namespace HSK.FpsBridge
             try
             {
                 nativeMotionLaunch.Invoke(preview.Projectile, new object[] { launcher, vector2.Make2(new Vector2(origin.x, origin.z)), angle, rotation,
-                    Math.Max(.001f, origin.y), (launchSpeed ?? nativeVelocityValue.Length) * 60f, launcher, -1f });
+                    Math.Max(.001f, origin.y), (launchSpeed ?? nativeVelocityValue.Length) * 60f, equipment ?? launcher, -1f });
             }
             finally { Rand.PopState(); cePackLaunch = previousCePackLaunch; }
             if (preview.Projectile.Spawned) throw new InvalidOperationException("A ballistic preview must remain unspawned.");

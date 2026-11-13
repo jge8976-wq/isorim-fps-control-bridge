@@ -30,4 +30,5 @@
   <FPS_Sandevistan.label>第一人称技能：斯安威斯坦</FPS_Sandevistan.label>
   <FPS_DeathEye.label>第一人称技能：死神之眼</FPS_DeathEye.label>
   <FPS_QuickTend.label>快捷包扎自己／附近队友</FPS_QuickTend.label>
-<FPS_VehicleMachineGun.label>载具机枪（按住开火）</FPS_VehicleMachineGun.label></LanguageData>
+<FPS_VehicleMachineGun.label>载具机枪（按住开火）</FPS_VehicleMachineGun.label>  <FPS_CockpitStatus.label>展开或收起座舱状态</FPS_CockpitStatus.label>
+</LanguageData>

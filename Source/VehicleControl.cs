@@ -158,6 +158,7 @@ namespace HSK.FpsBridge
             old3D = View3D.Active; oldLock = Cursor.lockState; oldVisible = Cursor.visible;
             oldDrafted = VehicleApi.Drafted(v); oldReverse = VehicleApi.Bool(v, "Reverse");
             Vehicle = v; Crew = p; Seat = h; game = Current.Game; map = v.Map;
+            VehicleHud.Expanded = false;
             VehicleDriving.Begin(v);
             camera.Reset(); RefreshCameraRoles(); enterFrame = Time.frameCount; lastCrewTick = -1;
             triggerArmed = machineTriggerArmed = false; moveTarget = IntVec3.Invalid;
@@ -206,6 +207,7 @@ namespace HSK.FpsBridge
                 capture.Step(allows, ControlKeys.Down(ControlAction.Capture), Input.GetKeyDown(KeyCode.Escape));
                 bool input = Captured;
                 ApplyCursor();
+                if (allows && ControlKeys.Down(ControlAction.CockpitStatus)) VehicleHud.Expanded = !VehicleHud.Expanded;
                 if (input) Bridge.GameSpeedKeys();
                 bool paused = Find.TickManager.Paused;
                 bool simulation = VehicleRules.Simulation(input, paused, Application.isFocused, !allows || capture.SkipMouse);

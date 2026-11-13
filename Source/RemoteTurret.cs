@@ -164,6 +164,7 @@ namespace HSK.FpsBridge
             try
             {
                 TurretControl.DrawHud(null);
+                if (!DubsMinimap.Active) PawnMinimap.Draw(TurretControl.Current?.Thing);
                 if (!Captured)
                     Widgets.Label(new Rect(24, 104, 620, 28), L.T("远程炮台 · ~ 释放/捕获鼠标 · F / 侧键退出", "Remote turret · ~ release/capture mouse · F / side button to exit"));
             }

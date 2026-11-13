@@ -14,6 +14,55 @@ namespace HSK.FpsBridge
         [ThreadStatic] private static float aircraftFireLift;
         internal static int RejectedDamage, RejectedAttachment;
 
+        private static bool OutOfCombustibleFuel(Pawn vehicle)
+        {
+            object tank = VehicleApi.Get(vehicle, "CompFueledTravel");
+            return tank != null && !VehicleApi.Bool(VehicleApi.Get(tank, "Props"), "ElectricPowered")
+                && VehicleApi.Float(tank, "Fuel") <= .0001f;
+        }
+
+        private static bool HasFirefoam(Thing vehicle)
+        {
+            if (!vehicle.Spawned) return false;
+            Map map = vehicle.Map;
+            foreach (IntVec3 cell in vehicle.OccupiedRect())
+            {
+                if (!cell.InBounds(map)) continue;
+                foreach (Thing thing in cell.GetThingList(map))
+                    if (thing.def.filth is { allowsFire: false }) return true;
+            }
+            return false;
+        }
+
+        public static bool BeforeFireCalculations(Fire __instance)
+        {
+            if (__instance.parent is not Pawn vehicle || !VehicleApi.IsVehicle(vehicle)) return true;
+            if (!vehicle.Spawned || vehicle.Destroyed || !AerialFlight.Airborne(vehicle) && HasFirefoam(vehicle))
+            {
+                __instance.Destroy();
+                return false;
+            }
+            if (OutOfCombustibleFuel(vehicle))
+            {
+                __instance.fireSize -= .45f;
+                if (__instance.fireSize < .1f)
+                {
+                    __instance.Destroy();
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        public static bool BeforeVehicleDamage(Pawn __instance, ref DamageInfo dinfo, ref bool absorbed)
+        {
+            if (dinfo.Def != DamageDefOf.Extinguish) return true;
+            if (__instance.GetAttachment(ThingDefOf.Fire) is Fire { Destroyed: false } fire)
+                fire.TakeDamage(dinfo);
+            absorbed = true;
+            return false;
+        }
+
         internal static bool Reaches(Fire source, Thing target)
         {
             if (source.parent != null || target is not Pawn aircraft
@@ -38,13 +87,33 @@ namespace HSK.FpsBridge
 
         public static bool BeforeDamage(Fire __instance, Thing targ)
         {
-            if (Reaches(__instance, targ)) return true;
-            RejectedDamage++;
+            if (!Reaches(__instance, targ))
+            {
+                RejectedDamage++;
+                return false;
+            }
+            if (targ is not Pawn vehicle || !VehicleApi.IsVehicle(vehicle)) return true;
+            DamageComponent(vehicle, Math.Max(1, GenMath.RoundRandom((.0125f + .0036f * __instance.fireSize) * 150f)));
             return false;
+        }
+
+        private static void DamageComponent(Pawn vehicle, float amount)
+        {
+            object stats = VehicleApi.Get(vehicle, "statHandler");
+            var surviving = VehicleApi.List(stats, "components").Where(part => VehicleApi.Float(part, "Health") > 0f);
+            object part = surviving.FirstOrDefault(candidate =>
+                string.Equals(VehicleApi.Get(VehicleApi.Get(candidate, "props"), "depth")?.ToString(), "External", StringComparison.Ordinal))
+                ?? surviving.FirstOrDefault();
+            if (part == null) return;
+            VehicleApi.Call(part, "SetHealth", VehicleApi.Float(part, "Health") - amount);
+            VehicleApi.Call(stats, "MarkAllDirty");
         }
 
         public static bool BeforeAttachment(Thing t)
         {
+            if (t is Pawn vehicle && VehicleApi.IsVehicle(vehicle)
+                && (!AerialFlight.Airborne(vehicle) && HasFirefoam(vehicle)
+                    || currentFire != null && OutOfCombustibleFuel(vehicle))) return false;
             if (currentFire == null || Reaches(currentFire, t)) return true;
             RejectedAttachment++;
             return false;
@@ -65,6 +134,11 @@ namespace HSK.FpsBridge
 
         internal static void Install(Harmony harmony)
         {
+            harmony.Patch(AccessTools.DeclaredMethod(typeof(Fire), "DoComplexCalcs"),
+                prefix: new HarmonyMethod(typeof(AerialGroundFire), nameof(BeforeFireCalculations)) { priority = Priority.First + 300 });
+            if (VehicleApi.Ready)
+                harmony.Patch(AccessTools.DeclaredMethod(VehicleApi.PawnType, nameof(Thing.PreApplyDamage)),
+                    prefix: new HarmonyMethod(typeof(AerialGroundFire), nameof(BeforeVehicleDamage)));
             harmony.Patch(AccessTools.Method(typeof(Fire), "DoComplexCalcs"),
                 prefix: new HarmonyMethod(typeof(AerialGroundFire), nameof(Enter)),
                 finalizer: new HarmonyMethod(typeof(AerialGroundFire), nameof(Exit)));

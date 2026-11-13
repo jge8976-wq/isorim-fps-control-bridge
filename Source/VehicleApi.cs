@@ -297,6 +297,7 @@ namespace HSK.FpsBridge
                 Patch(harmony, AccessTools.PropertyGetter(PawnType, "DrawPos"), null, nameof(DrawManualPosition));
                 Patch(harmony, NeedMethod(PatherType, "PatherTick"), nameof(ManualPather), null);
                 Patch(harmony, NeedMethod(PatherType, "RecalculatePermissions"), nameof(NativePathPermissions), null);
+                VehicleNativeJobs.Install(harmony);
                 harmony.Patch(NeedMethod(PatherType, "StartPath", typeof(LocalTargetInfo), typeof(PathEndMode), typeof(bool)),
                     prefix: new HarmonyMethod(typeof(AerialHandoff), nameof(AerialHandoff.BeforeNativePath)));
                 Patch(harmony, AccessTools.PropertyGetter(PatherType, "Moving"), null, nameof(ManualMoving));

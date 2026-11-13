@@ -170,9 +170,9 @@ namespace HSK.FpsBridge
             V3 at=V3.Lerp(from,to,fraction);
             if(flight.bounces>0&&target!=null&&!(target is Pawn)&&Math.Abs(normal.Y)<.5f)
             {
-                flight.bounces--;float dot=V3.Dot(flight.velocity,normal);
-                flight.velocity=(flight.velocity-normal*(2f*dot))*.45f;
-                flight.pos=at+normal*.05f;exactPos.SetValue(__instance,vector3.Make3(ToNative(map,flight.pos)));
+                flight.bounces--;flight.pos=at;
+                BounceThrow(ref flight.pos, ref flight.velocity, normal);
+                exactPos.SetValue(__instance,vector3.Make3(ToNative(map,flight.pos)));
                 Bounces++;__result=false;return false;
             }
             flight.pos=at;flight.completed=true;

@@ -279,7 +279,7 @@ namespace HSK.FpsBridge
         public static void Frame(Pawn pawn, bool held, bool pressed)
         {
             if (!Manned) return;
-            LocalTargetInfo t = Artillery.On ? Artillery.Target() : Pick(pawn);
+            LocalTargetInfo t = AimTarget(pawn);
             if (Artillery.On) { target = t; targetFrame = Time.frameCount; }
             try
             {
@@ -321,6 +321,8 @@ namespace HSK.FpsBridge
 
         // What the crosshair rests on. Nothing there (sky) or out of reach: a cell along the view within range, so the
         // turret still fires where it points (the round itself flies along the view, BeforeTurretShot).
+        internal static LocalTargetInfo AimTarget(Pawn pawn) => Artillery.On ? Artillery.Target() : Pick(pawn);
+
         private static LocalTargetInfo Pick(Pawn pawn)
         {
             if (targetFrame == Time.frameCount) return target;
@@ -409,6 +411,7 @@ namespace HSK.FpsBridge
                 return;
             }
             if (Artillery.On) { Artillery.DrawHud(pawn); return; }
+            DrawWeaponCard();
             bool scoped = TurretOptics.Draw();
             LocalTargetInfo tg = Pick(pawn);
             float dist = tg.IsValid ? (tg.Cell - current.Thing.Position).LengthHorizontal : -1f;
@@ -421,18 +424,52 @@ namespace HSK.FpsBridge
             }
             (current as VanillaTurret)?.DrawHeat(x, y + 30f);
             Thing thing = current.Thing;
-            string line1 = thing.LabelCap + " · " + current.Status;
             string line2 = (dist >= 0f ? L.T("距离 ", "Distance ") + dist.ToString("F1") : L.T("距离 —", "Distance —")) + L.T(" / 射程 ", " / range ") + current.Range.ToString("F0")
                 + (current.MinRange > 0f ? L.T("（最近 ", " (min ") + current.MinRange.ToString("F0") + L.T("）", ")") : "")
-                + L.T(" · 耐久 ", " · HP ") + (thing.MaxHitPoints > 0 ? (100f * thing.HitPoints / thing.MaxHitPoints).ToString("F0") + "%" : "—")
-                + (current.Ammo.HasValue ? L.T(" · 弹药 ", " · ammo ") + (100f * current.Ammo.Value).ToString("F0") + "%" : "");
+                + L.T(" · 耐久 ", " · HP ") + (thing.MaxHitPoints > 0 ? (100f * thing.HitPoints / thing.MaxHitPoints).ToString("F0") + "%" : "—");
             float w = 520f, top = UI.screenHeight - 150f;
             Widgets.DrawBoxSolid(new Rect(x - w / 2, top, w, 64), new Color(0f, 0f, 0f, .55f));
-            Label(new Rect(x - w / 2, top + 3, w, 22), line1, Color.white, GameFont.Small);
+            if (current is ISelectableFireMode modes && modes.FireModes.Count > 1)
+                Label(new Rect(x - w / 2, top + 3, w, 22), TurretModeLabel(modes.FireMode), Color.white, GameFont.Small);
             Label(new Rect(x - w / 2, top + 25, w, 20), line2, new Color(.85f, .85f, .85f), GameFont.Tiny);
             Label(new Rect(x - w / 2, top + 43, w, 20), ControlKeys.Label(ControlAction.Fire) + L.T(" 开火 · ", " fire · ")
                 + ControlKeys.Label(ControlAction.Aim) + L.T(" 开镜 · 滚轮倍率 · ", " scope · wheel zoom · ")
                 + ControlHints.For(L.T("B 模式 · Q/E 切换 · F 离开", "B mode · Q/E switch · F leave")), new Color(.7f, .7f, .7f), GameFont.Tiny);
+        }
+
+        private static string TurretModeLabel(TurretFireMode mode) => mode switch
+        {
+            TurretFireMode.Auto => L.T("全自动", "Automatic"),
+            TurretFireMode.Burst3 => L.T("三连发", "3-round burst"),
+            _ => L.T("单发", "Single")
+        };
+
+        internal static void DrawWeaponCard()
+        {
+            if (Current is not { } turret || Bridge.MainTabBlocks || InventoryPanel.Blocking) return;
+            var thing = turret.Thing;
+            var ammo = turret switch
+            {
+                CeTurret ce => ce.HudAmmo,
+                VanillaTurret vanilla => vanilla.HudAmmo,
+                _ => default
+            };
+            float width = Math.Min(310f, UI.screenWidth - 24f);
+            if (width < 180f) return;
+            float height = ammo.Reload.HasValue ? 81f : 57f;
+            float y = UI.screenHeight * .35f - height * .5f;
+            GameFont font = Text.Font;
+            TextAnchor anchor = Text.Anchor;
+            Text.Font = GameFont.Tiny;
+            Text.Anchor = TextAnchor.UpperLeft;
+            try
+            {
+                Widgets.DrawBoxSolid(new Rect(12f, y, width, height), CombatHudCard.Background);
+                CombatHudCard.Weapon(new Rect(17f, y + 5f, width - 10f, 46f), thing.LabelCap.ToString(), thing.def.uiIcon, ammo, false, false);
+                if (ammo.Reload is float value)
+                    CombatHudCard.Reload(new Rect(20f, y + 57f, width - 16f, 18f), value);
+            }
+            finally { Text.Font = font; Text.Anchor = anchor; }
         }
 
         private static void Label(Rect r, string text, Color color, GameFont font)
@@ -586,6 +623,13 @@ namespace HSK.FpsBridge
         // A rocket rack counts as loaded while it holds a rocket's worth of fuel.
         public bool Loaded => (CeCompat.TurretLoaded(Verb)??(Shells == null || Shells.Loaded)) && RocketsLeft > 0;
         public bool Reloading => reloadDone >= 0;
+        internal float? ReloadProgress => Reloading ? Mathf.Clamp01(1f - (reloadDone - Find.TickManager.TicksGame) / (float)ReloadTicks) : null;
+        internal CombatHudCard.Ammo HudAmmo => new CombatHudCard.Ammo(
+            Shells?.LoadedShell ?? lastShell ?? reloadFrom?.def ?? ShellProjectile,
+            Shells != null ? (Shells.Loaded ? 1 : 0) : RocketsLeft,
+            Shells != null ? 1 : Rocket && gun.refuelableComp != null
+                ? Mathf.FloorToInt(gun.refuelableComp.Props.fuelCapacity / Verb.verbProps.consumeFuelPerShot) : 0,
+            null, ReloadProgress);
 
         private bool Accepts(Thing t)
         {
@@ -668,7 +712,7 @@ namespace HSK.FpsBridge
 
         // ---- artillery numbers, as the game computes them
 
-        private ThingDef ShellProjectile
+        internal ThingDef ShellProjectile
         {
             get
             {

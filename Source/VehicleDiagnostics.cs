@@ -37,8 +37,7 @@ namespace HSK.FpsBridge
                 : Find.TickManager.Paused ? L.T("游戏已暂停，恢复时间后才能转炮塔和开火", "Game paused: resume time to aim and fire")
                 : !capture.WantsCapture ? ControlKeys.Label(ControlAction.Capture) + L.T("：恢复鼠标控制", ": capture the mouse")
                 : !capture.Captured || capture.SkipMouse ? L.T("正在恢复鼠标控制", "Restoring mouse control")
-                : VehicleWeapons.Current == null ? L.T("本载具当前没有已安装的武器", "No weapon installed on this vehicle")
-                : FireBlockReason);
+                : VehicleWeapons.Current == null ? null : FireBlockReason);
 
         private static long vehicleFrames, vehicleGuiCalls, vehicleHudRepaints, vehicleFirePresses, vehicleFireHeldFrames;
         private static float vehicleNextSample;

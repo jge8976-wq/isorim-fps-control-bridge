@@ -127,28 +127,13 @@ namespace HSK.FpsBridge
         internal static bool TryMinimapPosition(Rect area, bool wholeMap, out Vector2 center)
         {
             center = default;
-            if (!Visible || !Contact || VehicleControl.Vehicle.Map is not Map map || !ImpactCell.InBounds(map)) return false;
-            if (wholeMap) return DubsMinimap.TryMinimapPosition(map, Impact, ImpactCell, area, out center);
-            FloorBand floor = FloorSpace.Band(map, VehicleControl.Vehicle.Position);
-            if (FloorSpace.Band(map, ImpactCell).Level != floor.Level) return false;
-            var p = MinimapRules.PixelPosition(Impact.X, Impact.Z, map.Size.x, floor.Rows, area.x, area.y, area.width, area.height);
-            center = new Vector2(p.x, p.y);
-            return true;
+            return Visible && Contact && ImpactMinimap.TryPosition(VehicleControl.Vehicle,
+                new ImpactMinimap.Impact(Impact, ImpactCell, Radius), area, wholeMap, out center);
         }
         internal static void DrawMinimap(Rect area, bool wholeMap)
         {
-            if (!TryMinimapPosition(area, wholeMap, out Vector2 center)) return;
-            Pawn vehicle = VehicleControl.Vehicle;
-            int rows = wholeMap ? DubsMinimap.ViewSize(vehicle.Map).z : FloorSpace.Band(vehicle.Map, vehicle.Position).Rows;
-            float x = center.x, y = center.y;
-            float rx = Math.Max(3f, Radius / vehicle.Map.Size.x * area.width), ry = Math.Max(3f, Radius / rows * area.height);
-            for (int i = 0; i < 40; i++)
-            {
-                float a = i * Mathf.PI * 2f / 40f, b = (i + 1) * Mathf.PI * 2f / 40f;
-                Widgets.DrawLine(new Vector2(x + Mathf.Cos(a) * rx, y + Mathf.Sin(a) * ry), new Vector2(x + Mathf.Cos(b) * rx, y + Mathf.Sin(b) * ry), Tint, 2f);
-            }
-            Widgets.DrawLine(new Vector2(x - 3f, y), new Vector2(x + 3f, y), Tint, 1f);
-            Widgets.DrawLine(new Vector2(x, y - 3f), new Vector2(x, y + 3f), Tint, 1f);
+            if (Visible && Contact)
+                ImpactMinimap.DrawMarker(VehicleControl.Vehicle, new ImpactMinimap.Impact(Impact, ImpactCell, Radius), area, wholeMap);
         }
     }
 }

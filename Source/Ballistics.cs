@@ -716,7 +716,7 @@ namespace HSK.FpsBridge
         }
 
         // The predicted path of a grenade throw, with the same contacts and bounce as the real flight, for the preview.
-        internal static void PredictThrow(Pawn pawn, Verb_LaunchProjectile verb, List<V3> path, out V3 landing)
+        internal static bool PredictThrow(Pawn pawn, Verb_LaunchProjectile verb, List<V3> path, out V3 landing, out IntVec3 cell)
         {
             path.Clear();
             Map map = pawn.Map;
@@ -725,6 +725,7 @@ namespace HSK.FpsBridge
             var shot = new Shot { kind = Kind.Grenade, pos = Hand(pawn), vel = HitMath.Direction(ControlCamera.AttackYaw(pawn), -elevation) * speed, gravity = gravity, launcher = pawn, bounces = 1 };
             path.Add(shot.pos);
             landing = shot.pos;
+            cell = IntVec3.Invalid;
             for (int i = 0; i < 600; i++)
             {
                 shot.vel.Y -= shot.gravity;
@@ -743,13 +744,15 @@ namespace HSK.FpsBridge
                     }
                     path.Add(at);
                     landing = at;
-                    return;
+                    cell = FloorSpace.ContactCell(map, at, shot.vel.Y, thing);
+                    return cell.InBounds(map);
                 }
                 shot.pos = b;
                 path.Add(b);
                 landing = b;
-                if (!FloorSpace.InWorld(map, b)) return;
+                if (!FloorSpace.InWorld(map, b)) break;
             }
+            return false;
         }
 
         // The cell under the view at a distance (in bounds and visible), for the game's sight checks of launchers and

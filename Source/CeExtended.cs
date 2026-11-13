@@ -17,7 +17,16 @@ namespace HSK.FpsBridge
         internal static bool IsExplosiveDef(ThingDef def) => def?.projectile!=null && (def.projectile.explosionRadius>0f || def.projectile.explosionDelay>0 || VehicleBlastRadius(def)>0f);
         internal static bool IsExplosive(Verb verb) => IsExplosiveDef(ProjectileFor(verb));
         internal static bool IsGrenade(Verb verb)
-        { for(Type t=verb?.GetType();t!=null;t=t.BaseType)if(t.FullName=="CombatExtended.Verb_ThrowGrenade")return true;return false; }
+        {
+            for (Type type = verb?.GetType(); type != null; type = type.BaseType)
+            {
+                if (type.FullName == "CombatExtended.Verb_ThrowGrenade") return true;
+                if (type.FullName == "CombatExtended.Verb_ShootCEOneUse")
+                    return verb.EquipmentSource?.def.weaponTags?.Contains("CE_AI_Grenade") == true
+                        || verb.verbProps.soundCast?.defName == "ThrowGrenade";
+            }
+            return false;
+        }
         private static float ThrowGravity(Verb verb)=>.02f;
         private static float ThrowSpeed(Verb verb,V3 direction)
         {
@@ -167,18 +176,47 @@ namespace HSK.FpsBridge
             IntVec3 cell=FloorSpace.Cell(map,world,surface);FloorBand band=FloorSpace.Band(map,cell);
             return WorldPointToNative(map,world,band);
         }
-        internal static void Preview(Pawn pawn,Verb verb)
+        private static readonly List<V3> throwPath = new List<V3>();
+        private static int throwFrame = -1;
+        private static Pawn thrower;
+        private static Verb throwVerb;
+        private static ThingDef throwProjectile;
+        private static bool throwContact;
+        private static ImpactMinimap.Impact throwImpact;
+
+        internal static void BounceThrow(ref V3 position, ref V3 velocity, V3 normal)
         {
-            if(!Supported(pawn,verb)||!IsGrenade(verb))return;
-            var path=new List<V3>();V3 pos=Ballistics.Hand(pawn),dir=ControlCamera.ShotDirection(pawn),velocity=dir*ThrowSpeed(verb,dir);
-            var sweep=new Ballistics.ExternalTrace(pawn);path.Add(pos);
-            for(int i=0;i<300;i++)
+            float dot = V3.Dot(velocity, normal);
+            velocity = (velocity - normal * (2f * dot)) * .45f;
+            position += normal * .05f;
+        }
+
+        internal static bool TryThrowImpact(Pawn pawn, Verb verb, out ImpactMinimap.Impact impact)
+        {
+            impact = default;
+            ThingDef projectile = ProjectileFor(verb);
+            if (pawn?.Map == null || !NativeProjectile(projectile) || !IsGrenade(verb)) return false;
+            if (throwFrame != Time.frameCount || thrower != pawn || throwVerb != verb || throwProjectile != projectile)
             {
-                velocity.Y-=ThrowGravity(verb);V3 next=pos+velocity;
-                if(sweep.Segment(pawn.Map,pos,next,out float t,out _,out _,out _,out _)){pos=V3.Lerp(pos,next,t);path.Add(pos);break;}
-                if(!FloorSpace.InWorld(pawn.Map,next))break;pos=next;path.Add(pos);
+                throwFrame = Time.frameCount;
+                thrower = pawn;
+                throwVerb = verb;
+                throwProjectile = projectile;
+                throwPath.Clear();
+                V3 direction = ControlCamera.ShotDirection(pawn);
+                throwContact = ImpactMinimap.Trace(pawn, pawn, projectile, Ballistics.Hand(pawn), direction * ThrowSpeed(verb, direction),
+                    ThrowGravity(verb), out throwImpact, ceThrow: true, path: throwPath);
             }
-            Visuals.ThrowPreview(path,pos,ProjectileFor(verb).projectile.explosionRadius,Vector3.zero);
+            impact = throwImpact;
+            return throwContact;
+        }
+
+        internal static void Preview(Pawn pawn, Verb verb)
+        {
+            if (TryThrowImpact(pawn, verb, out ImpactMinimap.Impact impact))
+                Visuals.ThrowPreview(throwPath, impact.Point, impact.BlastRadius, Vector3.zero);
+            else if (throwFrame == Time.frameCount && thrower == pawn && throwVerb == verb && throwPath.Count > 1)
+                Visuals.ThrowPreview(throwPath, throwPath[throwPath.Count - 1], CeCompat.VehicleBlastRadius(throwProjectile), Vector3.zero);
         }
     }
 }

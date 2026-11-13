@@ -7,6 +7,7 @@ namespace HSK.FpsBridge
     {
         public float gravity = 1f, speed = 1f, tracerVisibility = .4f;
         public float colonyAircraftSpeed = .6f, airToGroundTracer = 1.5f, groundToAirTracer = 1.5f;
+        public float aircraftAgility = .6f;
         public float antiAirLead = 1f, missileTurn = 1f, shootingSkillInfluence = 1f;
         public float manualTurretDispersion = .6f;
         public bool showAircraftRanges = true;
@@ -64,6 +65,7 @@ namespace HSK.FpsBridge
             speed = ViewRules.Safe(speed, .25f, 4f, 1f);
             tracerVisibility = ViewRules.Safe(tracerVisibility, .1f, 3f, .4f);
             colonyAircraftSpeed = ViewRules.Safe(colonyAircraftSpeed, .2f, 1.25f, .6f);
+            aircraftAgility = ViewRules.Safe(aircraftAgility, .2f, 1f, .6f);
             airToGroundTracer = ViewRules.Safe(airToGroundTracer, .5f, 3f, 1.5f);
             groundToAirTracer = ViewRules.Safe(groundToAirTracer, .5f, 3f, 1.5f);
             antiAirLead = ViewRules.Safe(antiAirLead, 0f, 1f, 1f);
@@ -97,6 +99,7 @@ namespace HSK.FpsBridge
             Scribe_Values.Look(ref speed, "bulletSpeedMultiplier", 1f);
             Scribe_Values.Look(ref tracerVisibility, "tracerSize081", .4f);   // 0.8.1: new key, so the old 1.6 default does not carry over
             Scribe_Values.Look(ref colonyAircraftSpeed, "colonyAircraftSpeedR2", .6f);
+            Scribe_Values.Look(ref aircraftAgility, "aircraftAgility", .6f);
             if (Scribe.mode == LoadSaveMode.LoadingVars && Scribe.loader.curXmlParent["colonyAircraftSpeedR2"] == null)
             {
                 float previous = .4f;
@@ -225,6 +228,7 @@ namespace HSK.FpsBridge
             list.Gap();
             list.Label(L.T("空战与防空", "Air combat and anti-air"));
             Slider(L.T("殖民地地图最大空速", "Maximum airspeed on colony maps"), ref Settings.colonyAircraftSpeed, .2f, 1.25f);
+            Slider(L.T("飞行操纵灵活性（玩家与 AI）", "Aircraft handling (player and AI)"), ref Settings.aircraftAgility, .2f, 1f);
             Slider(L.T("空对地曳光大小", "Air-to-ground tracer size"), ref Settings.airToGroundTracer, .5f, 3f);
             Slider(L.T("地对空曳光大小", "Ground-to-air tracer size"), ref Settings.groundToAirTracer, .5f, 3f);
             Slider(L.T("自动防空提前量", "Automatic anti-air lead"), ref Settings.antiAirLead, 0f, 1f);
@@ -253,6 +257,7 @@ namespace HSK.FpsBridge
             if (list.ButtonText(L.T("空战选项恢复默认", "Reset air combat options")))
             {
                 Settings.colonyAircraftSpeed = .6f;
+                Settings.aircraftAgility = .6f;
                 Settings.airToGroundTracer = Settings.groundToAirTracer = 1.5f;
                 Settings.antiAirLead = 1f;
                 Settings.turretTracers = true;

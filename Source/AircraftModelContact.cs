@@ -58,5 +58,6 @@ namespace HSK.FpsBridge
             return Target(target, targetParts)
                 && VehicleMeshContact.SweepAgainst(aircraft, before, next, targetParts, true, out _);
         }
+
     }
 }

@@ -12,6 +12,9 @@ namespace HSK.FpsBridge
     {
         private Thing reloadSource;
         private int reloadUntil = -1;
+        private int reloadDuration;
+        internal int ReloadRemaining => Math.Max(0, reloadUntil - Find.TickManager.TicksGame);
+        internal float? ReloadProgress => reloadUntil < 0 ? null : Mathf.Clamp01(1f - ReloadRemaining / (float)reloadDuration);
         private int nextReloadAttempt;
 
         internal Thing ManualReloadSource => reloadUntil >= 0 ? reloadSource : null;
@@ -84,7 +87,8 @@ namespace HSK.FpsBridge
             var speedStat = DefDatabase<StatDef>.GetNamedSilentFail("ReloadSpeed");
             float speed = speedStat == null ? 1f : by.GetStatValue(speedStat);
             int duration = Mathf.CeilToInt(60f * VehicleApi.Float(ammo, "ReloadTime") / Mathf.Max(.01f, speed));
-            reloadUntil = Find.TickManager.TicksGame + Math.Max(1, duration);
+            reloadDuration = Math.Max(1, duration);
+            reloadUntil = Find.TickManager.TicksGame + reloadDuration;
             return null;
         }
 

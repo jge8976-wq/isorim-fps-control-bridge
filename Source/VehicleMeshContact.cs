@@ -44,8 +44,20 @@ namespace HSK.FpsBridge
         }
         internal static bool ModelInstances(Pawn v,AerialMotor pose,List<MeshContactMath.Instance> output)
         {
-            output.Clear();var plan=new List<VehicleGeometry.Part>();if(!VehicleGeometry.Parts(v,pose,plan))return false;
-            foreach(var part in plan){var mesh=Mesh(part.Mesh);if(!mesh.Closed)OpenMeshes[v.def.defName+":"+part.Role]=mesh.Vertices.Length/3;output.Add(new MeshContactMath.Instance(mesh,Matrix(part.World)));}return output.Count>0;
+            var plan = new List<VehicleGeometry.Part>();
+            if (!VehicleGeometry.Parts(v, pose, plan)) { output.Clear(); return false; }
+            MakeModelInstances(v, plan, output);
+            return output.Count > 0;
+        }
+        private static void MakeModelInstances(Pawn vehicle, List<VehicleGeometry.Part> plan, List<MeshContactMath.Instance> output)
+        {
+            output.Clear();
+            foreach (var part in plan)
+            {
+                var mesh = Mesh(part.Mesh);
+                if (!mesh.Closed) OpenMeshes[vehicle.def.defName + ":" + part.Role] = mesh.Vertices.Length / 3;
+                output.Add(new MeshContactMath.Instance(mesh, Matrix(part.World)));
+            }
         }
         internal static bool Contact(Pawn a,AerialMotor ap,Pawn b,AerialMotor bp,out MeshContactMath.Contact contact)
         {
@@ -90,19 +102,48 @@ namespace HSK.FpsBridge
             List<MeshContactMath.Instance> bb, bool exactModel, out MeshContactMath.Contact contact)
         {
             contact = default;
+            if (bb.Count == 0) return false;
             var aa = new List<MeshContactMath.Instance>();
             bool Build(AerialMotor pose) => exactModel ? ModelInstances(a, pose, aa) : Instances(a, pose, aa);
-            if (!Build(before) || bb.Count == 0) return false;
+            float angle = (Math.Abs(Mathf.DeltaAngle(before.Yaw,next.Yaw)) + Math.Abs(Mathf.DeltaAngle(before.Pitch,next.Pitch))
+                + Math.Abs(Mathf.DeltaAngle(before.Roll,next.Roll))) * Mathf.Deg2Rad;
+            var delta = N3(VehicleModels.U(next.Position - before.Position));
+            if (exactModel)
+            {
+                var plan = new List<VehicleGeometry.Part>();
+                if (!VehicleGeometry.Parts(a, before, plan)) return false;
+                // Model handles already provide local bounds. Reject distant contacts before building the triangle hierarchy.
+                var pivot = N3(VehicleModels.U(before.Position));
+                bool mayContact = false;
+                foreach (var part in plan)
+                {
+                    var box = new MeshContactMath.Box(N3(part.Mesh.Min), N3(part.Mesh.Max)).Transform(Matrix(part.World));
+                    float angularReach = (N.Vector3.Distance(pivot, box.Center) + (box.Max - box.Min).Length() * .5f) * angle;
+                    box = box.Swept(delta);
+                    box.Min -= new N.Vector3(angularReach);
+                    box.Max += new N.Vector3(angularReach);
+                    foreach (var target in bb)
+                    {
+                        if (!box.Intersects(target.Bounds)) continue;
+                        mayContact = true;
+                        break;
+                    }
+                    if (mayContact) break;
+                }
+                if (!mayContact) return false;
+                MakeModelInstances(a, plan, aa);
+                if (aa.Count == 0) return false;
+            }
+            else if (!Build(before)) return false;
             Vector3 root=VehicleModels.U(before.Position);float radius=0;
             foreach(var p in aa){var box=p.Bounds;radius=Math.Max(radius,N.Vector3.Distance(VehicleMeshContact.N3(root),box.Center)+(box.Max-box.Min).Length()*.5f);}
-            float angle=(Math.Abs(Mathf.DeltaAngle(before.Yaw,next.Yaw))+Math.Abs(Mathf.DeltaAngle(before.Pitch,next.Pitch))+Math.Abs(Mathf.DeltaAngle(before.Roll,next.Roll)))*Mathf.Deg2Rad;
             float bound=(next.Position-before.Position).Length+radius*angle;
             var union=aa[0].Bounds;foreach(var p in aa){union.Add(p.Bounds.Min);union.Add(p.Bounds.Max);}
             union=union.Swept(N3(VehicleModels.U(next.Position-before.Position)));union.Min-=new N.Vector3(radius*angle);union.Max+=new N.Vector3(radius*angle);
             bool candidate=false;foreach(var p in bb)if(union.Intersects(p.Bounds)){candidate=true;break;}if(!candidate)return false;
             if(angle<.000001f)
             {
-                float first=float.PositiveInfinity;var delta=N3(VehicleModels.U(next.Position-before.Position));
+                float first=float.PositiveInfinity;
                 foreach(var x in aa)foreach(var y in bb)if(MeshContactMath.Query(x,y,delta,out var hit)&&hit.Time<first){first=hit.Time;contact=hit;}
                 return float.IsFinite(first);
             }

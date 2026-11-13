@@ -8,18 +8,18 @@ namespace HSK.FpsBridge
 {
     internal static class PawnHud
     {
-        private static readonly Color background = new Color(.035f, .045f, .06f, .9f);
         private static readonly Color barColor = new Color(.3f, .7f, .85f);
-        private static float nextInventoryRead;
-        private static Pawn lastPawn;
-        private static string inventoryText;
-
         public static void Draw(Pawn pawn, string controlState)
         {
             // Native main tabs keep the entire left edge while open.
             if (Bridge.MainTabBlocks || InventoryPanel.Blocking) return;
+            var equipped = pawn.equipment?.Primary;
+            bool showWeapon = equipped != null && !TurretControl.Manned;
+            var ammo = showWeapon ? Magazines.HudAmmo(pawn, pawn.equipment.PrimaryEq?.PrimaryVerb) : default;
+            string notice = WeaponCycle.VisibleNotice;
             float width = Math.Min(354f, UI.screenWidth - 24f);
-            float height = 238f;
+            float height = 134f + (showWeapon ? 50f : 0f) + (ammo.Reload.HasValue ? 22f : 0f)
+                + (notice != null ? 20f : 0f) + (FpsMod.Settings.showHints ? 41f : 0f);
             if (width < 180 || UI.screenHeight < 330) return;
             // Leave the bottom command/gizmo rows available; the new HUD is read-only.
             Rect rect = new Rect(12, Math.Max(12, UI.screenHeight - height - 144), width, height);
@@ -28,7 +28,7 @@ namespace HSK.FpsBridge
             try
             {
                 GUI.color = Color.white; Text.Font = GameFont.Tiny; Text.Anchor = TextAnchor.UpperLeft; Text.WordWrap = false;
-                Widgets.DrawBoxSolid(rect, background);
+                Widgets.DrawBoxSolid(rect, CombatHudCard.Background);
                 GUI.BeginGroup(rect);
                 try
                 {
@@ -46,25 +46,27 @@ namespace HSK.FpsBridge
                         Widgets.DrawBoxSolid(new Rect(84, 120, (width - 94) * Mathf.Clamp01(st.Fill), 4), c);
                     }
                     Widgets.DrawBoxSolid(new Rect(9, 125, width - 18, 1), new Color(.25f, .3f, .35f));
-                    ThingWithComps equipped = pawn.equipment?.Primary;
-                    if (equipped != null) Widgets.ThingIcon(new Rect(10, 134, 34, 34), equipped);
-                    Label(new Rect(51, 131, width - 60, 20), equipped?.LabelCap.ToString() ?? L.T("未装备武器", "No weapon"));
-                    string attack = pawn.stances?.curStance is Stance_Warmup ? L.T("瞄准中", "Aiming") : pawn.stances?.curStance is Stance_Cooldown ? L.T("射击 / 冷却中", "Firing / cooling") : L.T("就绪", "Ready");
-                    Label(new Rect(51, 150, width - 60, 20), (FpsMod.Settings.showHints ? ControlKeys.Label(ControlAction.NextWeapon)
-                        + L.T(" 换武器 · ", " weapon · ") + ControlKeys.Label(ControlAction.Inventory) + L.T(" 背包 | ", " inventory | ") : "") + attack);
-                    if (lastPawn != pawn || Time.unscaledTime >= nextInventoryRead)
+                    float y = 131f;
+                    if (showWeapon)
                     {
-                        lastPawn = pawn; nextInventoryRead = Time.unscaledTime + .2f;
-                        var names = new List<string>();
-                        foreach (var item in WeaponCycle.Weapons(pawn)) names.Add(item.LabelShortCap + (item == equipped ? L.T(" [当前]", " [current]") : ""));
-                        inventoryText = names.Count == 0 ? L.T("武器库存：空", "Weapons carried: none") : L.T("武器库存：", "Weapons carried: ") + string.Join(" / ", names);
+                        CombatHudCard.Weapon(new Rect(9, y, width - 18, 46), equipped.LabelCap.ToString(), equipped.def.uiIcon, ammo, false, false);
+                        y += 50f;
                     }
-                    Label(new Rect(9, 174, width - 18, 20), FpsMod.Settings.showHints ? WeaponCycle.VisibleNotice ?? inventoryText : inventoryText);
+                    if (ammo.Reload is float progress)
+                    {
+                        CombatHudCard.Reload(new Rect(9, y, width - 18, 18), progress);
+                        y += 22f;
+                    }
+                    if (notice != null)
+                    {
+                        Label(new Rect(9, y, width - 18, 20), notice);
+                        y += 20f;
+                    }
                     if (FpsMod.Settings.showHints)
                     {
-                        Label(new Rect(9, 194, width - 18, 20), ControlHints.For(controlState));
-                        Label(new Rect(9, 214, width - 18, 20), ControlKeys.Label(ControlAction.Capture) + L.T(" 释放鼠标 · ", " release mouse · ")
-                            + ControlKeys.Label(ControlAction.ViewCycle) + L.T(" 切换视角", " cycle view"));
+                        Label(new Rect(9, y, width - 18, 20), ControlHints.For(controlState));
+                        Label(new Rect(9, y + 20, width - 18, 20), ControlKeys.Label(ControlAction.NextWeapon)
+                            + L.T(" 武器 · ", " weapon · ") + ControlKeys.Label(ControlAction.Inventory) + L.T(" 背包", " inventory"));
                     }
                 }
                 finally { GUI.EndGroup(); }

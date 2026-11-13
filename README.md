@@ -1,18 +1,19 @@
 # ISORIM FPS Control Bridge (CE & Vanilla)
 
-Version **0.8.23-air-raid-feedback-r1** · [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3824599915)
+Version **0.8.26-combat-hud-r2** · [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3824599915)
 
-飞机受击火花显示在真实三维接触点。直射防空弹跳过该发武器的操作员。配合立体打击框架可使用新的坠机楼板处理、空袭警报、5.56 毫米轻机枪平衡和编队飞行调整。
+新增第一人称紧凑武器卡、多武器挂载条和默认 K 键展开的座舱状态图。装填时显示真实进度，小地图显示爆炸武器预计落点。修复敌机重复进入地面待命任务。敌方 AI 和玩家共用默认 60% 的飞行灵活性。火焰损伤部件，泡沫可扑灭载具上的火焰。寻路连通性每批只更新一次受影响的邻格。请同时更新两个 ISORIM 模组。
 
-Aircraft impact flashes use the actual 3D contact point. Direct anti-air fire skips the operator of that shot. Pair with the Strike Framework for deck-aware crashes, the new siren, light 5.56 mm weapon tuning and formation flight updates.
+Adds compact first-person weapon cards, an aircraft and vehicle weapon rail, and a cockpit status panel bound to K by default. Reload bars appear during loading. The minimaps mark projected explosive impacts. Enemy aircraft keep native jobs without re-entering ground job loops. Air handling defaults to 60% for both player and AI. Fire drains component durability and can be extinguished with foam. Path connectivity now updates each affected neighbor once per batch. Update both ISORIM mods together.
 
 GitHub Releases provides an installable ZIP. Extract its mod folder into RimWorld’s Mods directory.
 
 ## In-game screenshots / 实机截图
 
-- [Four flights at 12, 18, 24, and 30 cells / 12、18、24、30 格错层进场](Screenshots/01-formation-12-18-24-30.png)
-- [Fixed-wing strafing run / 固定翼俯冲扫射](Screenshots/02-strafing.png)
-- [Wreck on the second-floor plasteel deck / 残骸停在二楼玻璃钢楼板](Screenshots/03-wreck-upper-floor.png)
+- [Compact weapon card / 紧凑武器卡](Screenshots/armed-hud.png)
+- [Weapon rail and cockpit status / 挂载条与座舱状态](Screenshots/cockpit-hud.png)
+- [Infantry first-person weapon card / 人物第一人称武器卡](Screenshots/infantry-hud.png)
+- [Mortar reloading in first person / 第一人称迫击炮装填](Screenshots/turret-reload-hud.png)
 
 ## Build the FPS bridge
 

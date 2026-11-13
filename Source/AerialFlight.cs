@@ -140,7 +140,7 @@ namespace HSK.FpsBridge
                 return;
             }
             var profile=Profile(v);bool fixedWing=profile.kind==AerialFlightKind.FixedWing;
-            bool aiWing=fixedWing&&!VehicleControl.Owns(v)&&(r.Navigate||r.CombatAim);
+            float agility=AerialGuidance.Agility;
             var systems = AircraftSystems.Flight(v);
             if (r.Airborne && systems.critical)
             {
@@ -173,19 +173,20 @@ namespace HSK.FpsBridge
                 AerialMotor before=r.Motor;
                 bool automatic=r.Automatic,landing=r.Landing,complete=false;
                 if(r.Navigate&&!r.Orbit&&fixedWing){float dx=before.Position.X-r.NavTarget.X,dz=before.Position.Z-r.NavTarget.Z;if(dx*dx+dz*dz<r.OrbitRadius*r.OrbitRadius*2.25f)r.Orbit=true;}
-                AerialMotor next=automatic?AerialRunwayRules.Automatic(before,dt,profile.kind,maximum,r.RunwayStart,r.RunwayEnd,r.RunwayYaw,ref r.RunwayMode,out complete)
+                bool wingFree=fixedWing&&r.Airborne&&!automatic&&!landing;
+                AerialMotor next=wingFree?before:automatic?AerialRunwayRules.Automatic(before,dt,profile.kind,maximum,r.RunwayStart,r.RunwayEnd,r.RunwayYaw,ref r.RunwayMode,out complete)
                     :r.Landing&&powered?before.LandingStep(dt,r.LandingTarget,false)
                     :!r.Airborne?AerialRunwayRules.Taxi(before,dt,forward,turn,profile.BaseSpeed(v))
                     :r.Navigate?AerialGuidance.Step(before,dt,r.NavTarget,r.OrbitRadius,r.Orbit,r.NavHeight,maximum,r.HomeHeight+profile.maximumHeight,profile.kind,false,powered)
                     :r.PilotAim&&VehicleControl.Owns(v)&&!boost?AerialGuidance.MouseStep(before,dt,forward,turn,climb,maximum,r.HomeHeight+profile.maximumHeight,profile.kind,false,powered,r.AimYaw,r.AimPitch,boost)
                     :fixedWing&&powered?AerialFixedWing.Step(before,dt,forward,turn,climb,maximum,r.HomeHeight+profile.maximumHeight,before.Yaw,before.Pitch,boost)
                     :before.StepKind(dt,forward,turn,climb,maximum,r.HomeHeight+profile.maximumHeight,profile.kind,false,powered,boost);
-                if(fixedWing&&r.Airborne&&!automatic&&!landing)
+                if(wingFree)
                 {
                     float yaw=r.PilotAim&&VehicleControl.Owns(v)?r.AimYaw:before.Yaw,pitch=r.PilotAim&&VehicleControl.Owns(v)?r.AimPitch:before.Pitch;
                     if(r.Navigate){yaw=AerialGuidance.Heading(before,r.NavTarget,r.OrbitRadius,r.Orbit);pitch=-Mathf.Atan2(r.NavHeight-before.Position.Y,Math.Max(5,(VehicleModels.U(r.NavTarget)-VehicleModels.U(before.Position)).magnitude))*Mathf.Rad2Deg;}
                     if(r.CombatAim&&!VehicleControl.Owns(v)){yaw=r.CombatYaw;pitch=r.CombatPitch;}
-                    next=AerialFixedWing.Step(before,dt,forward,turn,climb,maximum,r.HomeHeight+profile.maximumHeight,yaw,pitch,boost,maximum*throttle,powered,normalMaximum,aiWing?AerialFixedWing.AiYawRate:75f);
+                    next=AerialFixedWing.Step(before,dt,forward,turn,climb,maximum,r.HomeHeight+profile.maximumHeight,yaw,pitch,boost,maximum*throttle,powered,normalMaximum,AerialGuidance.WingYawRate,agility);
                 }
                 if (emp && r.Airborne && !fixedWing)
                 {
@@ -198,9 +199,9 @@ namespace HSK.FpsBridge
                     next.Yaw=before.Yaw+Math.Clamp(Mathf.DeltaAngle(before.Yaw,r.CombatYaw),-65f*dt,65f*dt);
                     next.Pitch=before.Pitch+(r.CombatPitch-before.Pitch)*(1-MathF.Exp(-3f*dt));
                 }
-                if (r.Airborne && !automatic && (stunned || systems.control < 1f))
+                float response = stunned ? 0f : systems.control * (fixedWing || landing ? 1f : agility);
+                if (r.Airborne && !automatic && response < 1f)
                 {
-                    float response = stunned ? 0f : systems.control;
                     float unrestrictedYaw = next.Yaw;
                     next.Yaw = Mathf.LerpAngle(before.Yaw, next.Yaw, response);
                     next.Pitch = Mathf.Lerp(before.Pitch, next.Pitch, response);

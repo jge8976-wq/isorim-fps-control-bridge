@@ -148,10 +148,12 @@ namespace HSK.FpsBridge
             {
                 if (Event.current?.type != EventType.Repaint) return;
                 // Dubs is already inside the clipped, zoomed MapRect group here.
-                VehiclePrediction.DrawMinimap(new Rect(Vector2.zero, radarRect.size), true);
+                Rect area = new Rect(Vector2.zero, radarRect.size);
                 Pawn pawn = VehicleControl.On ? VehicleControl.Vehicle : Bridge.ShootingPawn;
-                if (pawn == null || !pawn.Spawned || pawn.Map != Find.CurrentMap || Event.current.type != EventType.Repaint || markedFrame == Time.frameCount) return;
-                if (TryPawnPosition(pawn, new Rect(Vector2.zero, radarRect.size), out Vector2 center)) DrawArrow(center, pawn);
+                Thing viewer = pawn ?? TurretControl.Current?.Thing;
+                if (viewer == null || !viewer.Spawned || viewer.Map != Find.CurrentMap) return;
+                ImpactMinimap.Draw(viewer, area, true);
+                if (pawn != null && markedFrame != Time.frameCount && TryPawnPosition(pawn, area, out Vector2 center)) DrawArrow(center, pawn);
             }
             catch (Exception e) { Log.ErrorOnce("[FpsBridge] Dubs facing arrow failed: " + e.Message, 19271721); }
         }

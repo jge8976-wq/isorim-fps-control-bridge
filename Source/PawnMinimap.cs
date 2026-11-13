@@ -57,14 +57,14 @@ namespace HSK.FpsBridge
             { texture.SetPixels32(pixels); texture.Apply(false, false); ready = true; row = 0; nextRefresh = Time.unscaledTime + 1f; }
         }
 
-        public static void Draw(Pawn pawn)
+        public static void Draw(Thing viewer)
         {
             if (!FpsMod.Settings.showMinimap) { if (texture != null) Reset(); return; }
-            if (pawn?.Map == null || UI.screenWidth < 600 || UI.screenHeight < 400) return;
+            if (viewer?.Map == null || UI.screenWidth < 600 || UI.screenHeight < 400) return;
             GameFont font = Text.Font; TextAnchor anchor = Text.Anchor; Color color = GUI.color;
             try
             {
-                Refresh(pawn.Map, FloorSpace.Band(pawn.Map, pawn.Position));
+                Refresh(viewer.Map, FloorSpace.Band(viewer.Map, viewer.Position));
                 float size = Mathf.Clamp(FpsMod.Settings.minimapSize, 160f, 300f);
                 float scale = size / Math.Max(map.Size.x, floorRows);
                 float w = map.Size.x * scale, h = floorRows * scale;
@@ -73,16 +73,17 @@ namespace HSK.FpsBridge
                 GUI.color = Color.white; Text.Font = GameFont.Tiny; Text.Anchor = TextAnchor.UpperLeft;
                 Widgets.DrawBoxSolid(panel, new Color(.025f, .035f, .05f, .92f));
                 float yaw = MinimapOrientation.CameraYaw;
-                Widgets.Label(new Rect(panel.x + 7f, panel.y + 3f, w, 20f), L.T("楼层 ", "Floor ") + (floorLevel + 1) + " · " + ControlCamera.Label);
-                DrawMap(pawn, area, yaw);
+                string label = RemoteTurret.On ? L.T("远程炮台", "Remote turret") : ControlCamera.Label;
+                Widgets.Label(new Rect(panel.x + 7f, panel.y + 3f, w, 20f), L.T("楼层 ", "Floor ") + (floorLevel + 1) + " · " + label);
+                DrawMap(viewer, area, yaw);
                 MinimapOrientation.DrawCompass(area, yaw);
-                Widgets.Label(new Rect(panel.x + 7f, area.yMax + 3f, w, 20f), "X " + pawn.Position.x + "  Z " + (pawn.Position.z - floorShift) + "  ·  " + yaw.ToString("0") + "°");
+                Widgets.Label(new Rect(panel.x + 7f, area.yMax + 3f, w, 20f), "X " + viewer.Position.x + "  Z " + (viewer.Position.z - floorShift) + "  ·  " + yaw.ToString("0") + "°");
             }
             catch (Exception e) { Log.ErrorOnce("[FpsBridge] Minimap unavailable (control continues): " + e, 19271710); }
             finally { Text.Font = font; Text.Anchor = anchor; GUI.color = color; }
         }
 
-        private static void DrawMap(Pawn pawn, Rect area, float yaw)
+        private static void DrawMap(Thing viewer, Rect area, float yaw)
         {
             Rect local = new Rect(Vector2.zero, area.size);
             GUI.BeginClip(area);
@@ -92,9 +93,9 @@ namespace HSK.FpsBridge
                 if (!ready) Widgets.Label(local, L.T("正在绘制地图…", "Drawing the map…"));
                 MinimapOrientation.BeginMapTransform(local.center, yaw, MinimapOrientation.Fit(local.size, local.size, yaw));
                 if (ready) GUI.DrawTexture(local, texture);
-                if (VehicleControl.Owns(pawn)) VehiclePrediction.DrawMinimap(local, false);
+                ImpactMinimap.Draw(viewer, local, false);
                 // DrawPos can include an IsoRim floor display offset. The minimap uses the current floor's logical grid.
-                V3 pos = FloorSpace.Spot(pawn);
+                V3 pos = FloorSpace.Spot(viewer);
                 var p = MinimapRules.Position(pos.X, pos.Z, map.Size.x, floorRows);
                 var d = MinimapRules.Heading(yaw);
                 Vector2 center = new Vector2(p.x * local.width, p.y * local.height);

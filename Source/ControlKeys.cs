@@ -20,7 +20,8 @@ namespace HSK.FpsBridge
             DefDatabase<KeyBindingDef>.GetNamedSilentFail("FPS_" + action);
         internal static bool IsBinding(KeyBindingDef def) => def?.category?.defName == "FPS_ControlSkills" || def?.category?.defName == "FPS_ControlKeys" || def?.category?.defName == "FPS_FlightKeys" || def?.category?.defName == "FPS_VehicleKeys";
         private static bool FlightAction(ControlAction action) => action==ControlAction.AirAscend || action==ControlAction.AirDescend || action==ControlAction.AirLand || action==ControlAction.AirOrbit || action==ControlAction.AirParachute;
-        private static bool Context(ControlAction action) => action==ControlAction.AirParachute ? VehicleControl.On && !VehicleControl.ExternalFollow && AerialFlight.Airborne(VehicleControl.Vehicle) : action==ControlAction.VehicleMachineGun ? VehicleControl.On : !FlightAction(action) || (VehicleControl.On && AerialFlight.Supports(VehicleControl.Vehicle) || AerialOrders.OwnKeys);
+        private static bool VehicleAction(ControlAction action) => action is ControlAction.VehicleMachineGun or ControlAction.CockpitStatus;
+        private static bool Context(ControlAction action) => action==ControlAction.AirParachute ? VehicleControl.On && !VehicleControl.ExternalFollow && AerialFlight.Airborne(VehicleControl.Vehicle) : VehicleAction(action) ? VehicleControl.On : !FlightAction(action) || (VehicleControl.On && AerialFlight.Supports(VehicleControl.Vehicle) || AerialOrders.OwnKeys);
         internal static bool Keys(ControlAction action, out KeyBindingData data)
         {
             data = null;
@@ -68,7 +69,7 @@ namespace HSK.FpsBridge
             {
                 if (Def(a) == chosen || !Keys(a, out var k)) continue;
                 if ((chosen?.category?.defName=="FPS_FlightKeys") != FlightAction(a)) continue;
-                if ((chosen?.category?.defName=="FPS_VehicleKeys") != (a==ControlAction.VehicleMachineGun)) continue;
+                if ((chosen?.category?.defName=="FPS_VehicleKeys") != VehicleAction(a)) continue;
                 if (k.keyBindingA == code) KeyPrefs.KeyPrefsData.SetBinding(Def(a), KeyPrefs.BindingSlot.A, KeyCode.None);
                 if (k.keyBindingB == code) KeyPrefs.KeyPrefsData.SetBinding(Def(a), KeyPrefs.BindingSlot.B, KeyCode.None);
             }

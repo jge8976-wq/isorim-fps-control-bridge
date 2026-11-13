@@ -145,11 +145,17 @@ namespace HSK.FpsBridge
     {
         private static readonly List<V3> path = new List<V3>();
         private static int previewFrame = -1;
+        private static int predictionFrame = -1;
+        private static Pawn thrower;
+        private static Verb_LaunchProjectile throwingVerb;
+        private static V3 impact;
+        private static IntVec3 impactCell;
+        private static bool contact;
 
         public static void Frame(Pawn pawn, Verb_LaunchProjectile verb, bool pressed)
         {
             if (!pressed || pawn.stances.curStance is Stance_Busy || !Magazines.Ready(pawn, verb) || !verb.Available()) return;
-            Ballistics.PredictThrow(pawn, verb, path, out V3 landing);
+            TryImpact(pawn, verb, out V3 landing, out _);
             if (!Ballistics.ThrowGrenade(pawn, verb)) return;
             Magazines.Shot(pawn, verb);
             IntVec3 cell = FloorSpace.Cell(pawn.Map, landing).ClampInsideMap(pawn.Map);
@@ -163,9 +169,23 @@ namespace HSK.FpsBridge
         {
             if (previewFrame == Time.frameCount) return;
             previewFrame = Time.frameCount;
-            Ballistics.PredictThrow(pawn, verb, path, out V3 landing);
+            TryImpact(pawn, verb, out V3 landing, out _);
             float radius = verb.Projectile?.projectile?.explosionRadius ?? 0f;
             Visuals.ThrowPreview(path, landing, radius, Vector3.zero);
+        }
+
+        internal static bool TryImpact(Pawn pawn, Verb_LaunchProjectile verb, out V3 landing, out IntVec3 cell)
+        {
+            if (predictionFrame != Time.frameCount || thrower != pawn || throwingVerb != verb)
+            {
+                predictionFrame = Time.frameCount;
+                thrower = pawn;
+                throwingVerb = verb;
+                contact = Ballistics.PredictThrow(pawn, verb, path, out impact, out impactCell);
+            }
+            landing = impact;
+            cell = impactCell;
+            return contact;
         }
     }
 }

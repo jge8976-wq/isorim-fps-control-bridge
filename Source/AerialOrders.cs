@@ -55,7 +55,8 @@ namespace HSK.FpsBridge
             if(!r.Airborne){Messages.Message(L.T("请先起飞，再下达空中航行指令。","Take off before giving flight orders."),MessageTypeDefOf.RejectInput,false);return false;}
             if(r.Automatic){Messages.Message(L.T("请等待自动起降完成。","Wait for automatic takeoff or landing to finish."),MessageTypeDefOf.RejectInput,false);return false;}
             bool wing=AerialFlight.Profile(v).kind==AerialFlightKind.FixedWing;
-            float radius=AerialGuidance.Radius(AerialFlight.Profile(v).MaximumSpeed(v)*.65f,Math.Max(v.def.size.x,v.def.size.z));
+            float speed=AerialFlight.Profile(v).MaximumSpeed(v)*.65f, span=Math.Max(v.def.size.x,v.def.size.z);
+            float radius=wing?AerialGuidance.AiRadius(speed,span):AerialGuidance.Radius(speed,span);
             if(wing&&(target.X-radius<4||target.Z-radius<4||target.X+radius>v.Map.Size.x-4||target.Z+radius>FloorSpace.Bands(v.Map)[0].Rows-4))
             {Messages.Message(L.T("盘旋点靠近地图边缘，请选更开阔的位置。","Choose an orbit centre farther from map edges."),MessageTypeDefOf.RejectInput,false);return false;}
             r.Navigate=true;r.Orbit=wing&&orbit;r.Cruise=false;r.NavTarget=target;r.OrbitRadius=radius;r.NavHeight=r.Motor.Position.Y;r.Landing=false;
@@ -69,7 +70,7 @@ namespace HSK.FpsBridge
             if(AerialFlight.Profile(v).kind==AerialFlightKind.FixedWing)
             {
                 float speed=AerialFlight.Profile(v).MaximumSpeed(v)*.65f, span=Math.Max(v.def.size.x,v.def.size.z);
-                float radius=VehicleControl.Owns(v)?AerialGuidance.Radius(speed,span):AerialGuidance.AiRadius(speed,span);
+                float radius=AerialGuidance.AiRadius(speed,span);
                 float a=r.Motor.Yaw*Mathf.Deg2Rad;
                 r.NavTarget=r.Motor.Position+new V3(Mathf.Cos(a)*radius,0,-Mathf.Sin(a)*radius);r.Orbit=true;r.OrbitRadius=radius;
                 float margin=Math.Max(v.def.size.x,v.def.size.z)*.6f+1f;

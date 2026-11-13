@@ -266,6 +266,7 @@ namespace HSK.FpsBridge
         public static void DrawHud(Pawn pawn)
         {
             if (!On) return;
+            TurretControl.DrawWeaponCard();
             float x = UI.screenWidth * .5f, y = UI.screenHeight * .5f;
             IntVec3 c = AimCell();
             Thing thing = gun.Thing;
@@ -279,20 +280,18 @@ namespace HSK.FpsBridge
             string mode = view == View.Map ? L.T("炮兵地图", "Artillery map") : L.T("第二人称 · 仰角 ", "Shoulder view · elevation ") + elevation.ToString("F1") + "°";
             bool modes = gun is ISelectableFireMode fm && fm.FireModes.Count > 1;
             if (modes) mode += " · " + ModeLabel(((ISelectableFireMode)gun).FireMode);
-            string line1 = thing.LabelCap + " · " + gun.Status + " · " + mode;
+            string line1 = mode;
             string line2 = (dist >= 0f ? L.T("距离 ", "Distance ") + dist.ToString("F1") : L.T("距离 —", "Distance —")) + L.T(" / 射程 ", " / range ") + gun.MinRange.ToString("F0") + "–" + gun.Range.ToString("F0")
                 + L.T(" · 飞行 ", " · flight ") + (flight >= 0f ? (flight / 60f).ToString("F1") + L.T(" 秒", " s") : "—")
                 + L.T(" · 散布 ±", " · spread ±") + (c.IsValid ? gun.Spread(c, owner).ToString("F1") : "—") + L.T(" 格", " cells")
                 + (gun.BlastRadius > 0f ? L.T(" · 爆炸半径 ", " · blast radius ") + gun.BlastRadius.ToString("F1") : "");
-            string line3 = gun.AmmoLabel(owner) ?? "";
             string line4 = L.T("左键开火", "LMB fire") + (modes ? L.T(" · B 单发/三连发/全自动", " · B single/burst/auto") : L.T(" · R 装填", " · R reload")) + " · Tab " + (view == View.Map ? L.T("第二人称", "shoulder view") : L.T("炮兵地图", "Artillery map")) + L.T(" · 滚轮 ", " · wheel ") + (view == View.Map ? L.T("缩放", "zoom") : L.T("仰角（Shift 微调）", "elevation (Shift: fine)"))
                 + L.T(" · 按住 Alt 提前量 · Q/E 切换炮台 · F 离开", " · hold Alt for lead · Q/E switch turret · F leave");
             float w = 640f, top = UI.screenHeight - 176f;
-            Widgets.DrawBoxSolid(new Rect(x - w / 2, top, w, 88), new Color(0f, 0f, 0f, .55f));
+            Widgets.DrawBoxSolid(new Rect(x - w / 2, top, w, 68), CombatHudCard.Background);
             Label(new Rect(x - w / 2, top + 3, w, 22), line1, Color.white, GameFont.Small);
             Label(new Rect(x - w / 2, top + 26, w, 20), line2, new Color(.88f, .88f, .88f), GameFont.Tiny);
-            Label(new Rect(x - w / 2, top + 45, w, 20), line3, new Color(1f, .85f, .55f), GameFont.Tiny);
-            Label(new Rect(x - w / 2, top + 64, w, 20), ControlHints.For(line4), new Color(.7f, .7f, .7f), GameFont.Tiny);
+            Label(new Rect(x - w / 2, top + 45, w, 20), ControlHints.For(line4), new Color(.7f, .7f, .7f), GameFont.Tiny);
             (gun as VanillaTurret)?.DrawHeat(x, y + 40f);
             if (leadPawn != null)
                 Label(new Rect(x - 220, y + 18, 440, 22), L.T("提前量：", "Lead: ") + leadPawn.LabelShort + L.T(" · 着弹时 ", " · impact in ") + (leadTicks / 60f).ToString("F1")
