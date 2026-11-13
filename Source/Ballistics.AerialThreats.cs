@@ -41,7 +41,7 @@ namespace HSK.FpsBridge
             // Near-vertical rounds still have a finite life and are advanced in real 3D space.
             ticksRef(p)=Math.Max(1,Mathf.CeilToInt((far-start).Length/Math.Max(.01f,speed)));
             shots[p]=new Shot{kind=Kind.Round,pos=start,vel=velocity,gravity=gravity,startY=start.Y,muzzleY=start.Y,
-                lastTick=Find.TickManager.TicksGame,launcher=launcher};
+                lastTick=Find.TickManager.TicksGame,launcher=launcher,turretOperator=AerialTurretFire.Operator(launcher)};
             p.Position=FloorSpace.Cell(p.Map,start).ClampInsideMap(p.Map);
         }
     }

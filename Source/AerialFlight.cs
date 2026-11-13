@@ -140,6 +140,7 @@ namespace HSK.FpsBridge
                 return;
             }
             var profile=Profile(v);bool fixedWing=profile.kind==AerialFlightKind.FixedWing;
+            bool aiWing=fixedWing&&!VehicleControl.Owns(v)&&(r.Navigate||r.CombatAim);
             var systems = AircraftSystems.Flight(v);
             if (r.Airborne && systems.critical)
             {
@@ -184,7 +185,7 @@ namespace HSK.FpsBridge
                     float yaw=r.PilotAim&&VehicleControl.Owns(v)?r.AimYaw:before.Yaw,pitch=r.PilotAim&&VehicleControl.Owns(v)?r.AimPitch:before.Pitch;
                     if(r.Navigate){yaw=AerialGuidance.Heading(before,r.NavTarget,r.OrbitRadius,r.Orbit);pitch=-Mathf.Atan2(r.NavHeight-before.Position.Y,Math.Max(5,(VehicleModels.U(r.NavTarget)-VehicleModels.U(before.Position)).magnitude))*Mathf.Rad2Deg;}
                     if(r.CombatAim&&!VehicleControl.Owns(v)){yaw=r.CombatYaw;pitch=r.CombatPitch;}
-                    next=AerialFixedWing.Step(before,dt,forward,turn,climb,maximum,r.HomeHeight+profile.maximumHeight,yaw,pitch,boost,maximum*throttle,powered,normalMaximum);
+                    next=AerialFixedWing.Step(before,dt,forward,turn,climb,maximum,r.HomeHeight+profile.maximumHeight,yaw,pitch,boost,maximum*throttle,powered,normalMaximum,aiWing?AerialFixedWing.AiYawRate:75f);
                 }
                 if (emp && r.Airborne && !fixedWing)
                 {

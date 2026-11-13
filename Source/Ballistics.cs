@@ -39,6 +39,7 @@ namespace HSK.FpsBridge
             public int lastAirDrawFrame = -1;
             public bool airLaunched, explosiveGun;
             public Thing launcher;
+            public Pawn turretOperator;
             public Thing aerialTarget;
             public float aerialTurn;
             public Pawn homing;   // Death Eye: steered onto this pawn's head every tick
@@ -490,8 +491,7 @@ namespace HSK.FpsBridge
             pendingCover = thing is Building ? thing : null;   // 0.9.0: stone and metal wear less (CoverWear)
             try
             {
-                Vector3 logicalHit = FloorSpace.Logical(p.Map, shot.pos, p.Position);
-                Visuals.ImpactLight(p.Map, new V3(logicalHit.x, shot.pos.Y - FloorSpace.Band(p.Map, p.Position).Height, logicalHit.z), thing);
+                Visuals.ImpactLight(p.Map, shot.pos, thing, p.Position);
                 if (thing is Pawn victim) Notify(victim, part, region);
                 // ExactPosition still answers the hit point while the game's impact effects run.
                 bool blocked = shot.ratkin?.cannon == true && thing == null && normal.Y < .5f;
@@ -546,7 +546,8 @@ namespace HSK.FpsBridge
         internal sealed class ExternalTrace
         {
             private readonly Shot shot;
-            internal ExternalTrace(Thing launcher) { shot = new Shot { launcher = launcher }; }
+            internal ExternalTrace(Thing launcher, Pawn turretOperator = null)
+            { shot = new Shot { launcher = launcher, turretOperator = turretOperator }; }
             internal bool Segment(Map map, V3 from, V3 to, out float fraction, out Thing thing,
                 out BodyPartRecord part, out HitRegion region, out V3 normal, ISet<Thing> passedThings = null, ISet<IntVec3> passedRoofs = null) =>
                 Trace(map, shot, from, to, out fraction, out thing, out part, out region, out normal,
@@ -579,7 +580,7 @@ namespace HSK.FpsBridge
                     for (int k = 0; k < things.Count; k++)
                     {
                         Thing thing = things[k];
-                        if (thing == shot.launcher || MountedControl.OwnMount(shot.launcher, thing) || shot.ratkin?.pierced.Contains(thing) == true
+                        if (thing == shot.launcher || thing == shot.turretOperator || MountedControl.OwnMount(shot.launcher, thing) || shot.ratkin?.pierced.Contains(thing) == true
                             || passedThings?.Contains(thing) == true || (!includePawns && thing is Pawn) || !seen.Add(thing) || thing.Destroyed || !thing.Spawned) continue;
                         volumes.Clear();
                         if (thing is Pawn pawn) BodyRegions.AddVolumes(pawn, volumes);

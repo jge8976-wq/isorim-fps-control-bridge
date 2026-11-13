@@ -47,7 +47,7 @@ namespace HSK.FpsBridge
             }
             finally { GUI.color = color; Text.Font = font; Text.Anchor = anchor; }
         }
-        private static void DrawGun(object turret, Vector2 center, string title)
+        internal static (float Filled, Color Tint, string Label) Status(object turret)
         {
             VehicleWeaponClock clock = VehicleWeapons.ClockFor(turret);
             int reload = VehicleApi.Int(turret, "ReloadTicks"), tick = Find.TickManager.TicksGame;
@@ -64,13 +64,13 @@ namespace HSK.FpsBridge
                 label = L.T("散热 ", "Cooling ") + (filled * 100f).ToString("0") + "%" + time;
                 if (reload > 0) label += "\n" + L.T("装填暂停", "Reload on hold");
             }
-            else if (disabled)
-            { filled = 0f; tint = new Color(1f, .35f, .3f); label = L.T("武器不可用", "Weapon unavailable"); }
             else if (reload > 0)
             {
                 filled = VehicleWeaponClock.Filled(reload, VehicleApi.Int(turret, "MaxTicks")); tint = new Color(.3f, .85f, 1f);
                 label = L.T("装填 ", "Reload ") + VehicleWeaponClock.Seconds(reload, VehicleControl.Efficiency).ToString("0.0") + "s";
             }
+            else if (disabled)
+            { filled = 0f; tint = new Color(1f, .35f, .3f); label = L.T("武器不可用", "Weapon unavailable"); }
             else if (!VehicleApi.Bool(turret, "HasAmmo"))
             { filled = 0f; tint = new Color(1f, .55f, .3f); label = L.T("无弹药", "No ammunition"); }
             else if (clock.Remaining(tick) > 0)
@@ -81,6 +81,12 @@ namespace HSK.FpsBridge
             else
             { filled = 1f; tint = new Color(.4f, 1f, .6f); label = L.T("就绪", "Ready"); }
             if (Find.TickManager.Paused && (heat || reload > 0 || clock.Remaining(tick) > 0)) label += L.T(" · 暂停", " · paused");
+            return (filled, tint, label);
+        }
+
+        private static void DrawGun(object turret, Vector2 center, string title)
+        {
+            var (filled, tint, label) = Status(turret);
             Color old = GUI.color; GameFont font = Text.Font; TextAnchor anchor = Text.Anchor;
             try
             {

@@ -39,6 +39,9 @@ namespace HSK.FpsBridge
             return !flashes.TryGetValue(bursting, out var flash) || flash.Tick != Find.TickManager.TicksGame;
         }
 
+        internal static Pawn Operator(Thing launcher) => launcher is Building_Turret turret
+            ? turret.TryGetComp<CompMannable>()?.ManningPawn : null;
+
         internal static V3 Muzzle(Building_Turret turret, V3 bore)
         {
             Vector3 heading = VehicleModels.U(bore).normalized;

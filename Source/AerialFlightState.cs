@@ -127,6 +127,7 @@ namespace HSK.FpsBridge
             Ballistics.DrawAirborneRounds(map);
             CeCompat.DrawAirborneRounds(map);
             CeCompat.DrawNativeAirThreats(map);
+            Visuals.DrawAircraftContacts(map);
         }
         public override void GameComponentTick()
         {

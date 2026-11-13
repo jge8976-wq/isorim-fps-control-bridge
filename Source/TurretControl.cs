@@ -63,6 +63,7 @@ namespace HSK.FpsBridge
                 new[] { typeof(Job), typeof(JobTag?), typeof(bool) }),
                 prefix: new HarmonyMethod(typeof(TurretControl), nameof(SkipAvatarWait)));
             VanillaTurret.Bind();
+            TurretView.Install(harmony);
             Enabled = true;
         }
 
@@ -77,6 +78,7 @@ namespace HSK.FpsBridge
             Thing pendingAmmo = (was as CeTurret)?.ManualReloadSource;
             Artillery.End();
             current = null; owner = null; looked = null; target = LocalTargetInfo.Invalid; lookFrame = targetFrame = -1;
+            TurretView.Set(null);
             if (was == null) return;
             try
             {
@@ -182,6 +184,7 @@ namespace HSK.FpsBridge
         {
             current = t; owner = pawn; looked = null; targetFrame = -1;
             t.Begin(pawn);
+            TurretView.Set(t.AimMode == TurretAimMode.Direct ? t.Thing : null);
             rotation = t.Rotation;
             if (t.AimMode == TurretAimMode.Artillery && t is IArtilleryTurret a) Artillery.Begin(a, pawn);
             else FirstPerson.Look(Mathf.DeltaAngle(FirstPerson.Yaw, rotation), Mathf.Clamp(8f, MinPitch, MaxPitch) - FirstPerson.Pitch);

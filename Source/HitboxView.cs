@@ -12,6 +12,7 @@ namespace HSK.FpsBridge
     internal static class HitboxView
     {
         private const float Range = 40f;
+        private const float CrewRange = 120f;
         private static readonly List<HitVolume> volumes = new List<HitVolume>();
         private static int frame = -1;
         private static Pawn inspector;
@@ -50,8 +51,11 @@ namespace HSK.FpsBridge
             for (int i = 0; i < pawns.Count; i++)
             {
                 Pawn p = pawns[i];
-                if (p == self || p.Dead || p.Position.Fogged(map) || (FloorSpace.Spot(p) - origin).Length > Range) continue;
-                if (VehicleApi.IsVehicle(p)) DrawCrewVolumes(p);
+                if (p == self || p.Dead || p.Position.Fogged(map)) continue;
+                V3 offsetFromObserver = FloorSpace.Spot(p) - origin;
+                float distanceSquared = V3.Dot(offsetFromObserver, offsetFromObserver);
+                if (distanceSquared <= CrewRange * CrewRange && VehicleApi.IsVehicle(p)) DrawCrewVolumes(p);
+                if (distanceSquared > Range * Range) continue;
                 volumes.Clear();
                 BodyRegions.AddVolumes(p, volumes);
                 if (volumes.Count == 0) continue;

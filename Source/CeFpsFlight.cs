@@ -73,7 +73,7 @@ namespace HSK.FpsBridge
             if(!traces.TryGetValue(projectile,out trace)||trace.completed||projectile.Destroyed)return false;
             if (trace.nativeRestorePending && projectile.Map != null) RestoreNativeFlight(projectile, trace);
             if(trace.map==null&&projectile.Spawned)
-            {trace.map=projectile.Map;trace.contacts=new Ballistics.ExternalTrace(trace.launcher);trace.lastTick=Find.TickManager.TicksGame-1;}
+            {trace.map=projectile.Map;trace.contacts=new Ballistics.ExternalTrace(trace.launcher,trace.turretOperator ?? AerialTurretFire.Operator(trace.launcher));trace.lastTick=Find.TickManager.TicksGame-1;}
             return projectile.Map==trace.map&&trace.map!=null;
         }
         internal static bool BeforeFpsTick(Thing __instance)

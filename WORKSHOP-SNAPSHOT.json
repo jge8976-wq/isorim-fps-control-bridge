@@ -1,35 +1,35 @@
 {
   "workshopItemId": 3824599915,
+  "version": "0.8.23-air-raid-feedback-r1",
   "packageId": "hsk.fpsbridge.control.r4",
-  "version": "0.8.22-vehicle-recovery-r1",
   "files": {
     "1.7/Assemblies/HSK.FpsBridge.dll": {
-      "sha256": "192023522327177852982bcd96b0e9f746764c6a31d86e2e6dd737ba446ef046",
-      "bytes": 1303552
+      "sha256": "7331d2116545dbaef986663a5c392502aa15d7a0ef6847c9dfd6a348e8d58cb6",
+      "bytes": 1311744
     },
     "1.7/Assemblies/HSK.FpsVehicleCompatibility.dll": {
       "sha256": "95390b2ddd1b61b5849f83a9a7c2d20694903303ce005e935e0fe01d1b8ce418",
       "bytes": 18944
     },
     "About/About.xml": {
-      "sha256": "966ee0f56b833d6d5f7022cdee6597a08763664de14d6c7ab47343512f7294bb",
-      "bytes": 10031
+      "sha256": "77c3fa3059c500e87f9a23e266d48b5f1afb2edd83b3dd45015e1bd0020342bd",
+      "bytes": 10015
     },
     "About/ChineseSimplified/About.xml": {
-      "sha256": "7b94b6e9a31a3e241e8dcb599f59da5f428f2eb3ba52a63714d3844679ec928d",
-      "bytes": 9925
+      "sha256": "320f5a7c8b4c90598c82475caa7675f3fabdf17b29cfb5a7d3e3d43e87c5cfff",
+      "bytes": 9937
     },
     "About/Description-Chinese.txt": {
-      "sha256": "10150ffef7264d46c0ad0eae121ae1154265586bbebe3cf14dcca86693532670",
-      "bytes": 7776
+      "sha256": "ac4ddcc5b127ea0fe816936ebdacdcfabb9a58441be60f90edcc6253cd94cd5c",
+      "bytes": 7787
     },
     "About/Description-English.txt": {
-      "sha256": "829fe5f63314ddd1fed8273a6079ba2cfa99264c79fedcbb0f233756d037ba70",
-      "bytes": 7884
+      "sha256": "59d7aa6364d8ecc5125e93f442cbc01bf44b2eb0f7858dfe266183ac9d05f81d",
+      "bytes": 7867
     },
     "About/English/About.xml": {
-      "sha256": "966ee0f56b833d6d5f7022cdee6597a08763664de14d6c7ab47343512f7294bb",
-      "bytes": 10031
+      "sha256": "77c3fa3059c500e87f9a23e266d48b5f1afb2edd83b3dd45015e1bd0020342bd",
+      "bytes": 10015
     },
     "About/Preview.png": {
       "sha256": "d4b9971f3c7348b779c8d637ffd3e858a3e6d443be7a06a8932e78a50edc5512",
@@ -147,11 +147,11 @@
       "sha256": "a9f226325d78a7bdb5c37aefc1505f8e8f45cc1ce8b1d1d91e8e1a9d22846d10",
       "bytes": 2667
     },
-    "Docs/Flight-R3-测试说明.txt": {
+    "Docs/Flight-R3-\u6d4b\u8bd5\u8bf4\u660e.txt": {
       "sha256": "85eef976b988fdcc7392bb8291d3e80955faaae4d8d6fb817ae61c7094c06219",
       "bytes": 2980
     },
-    "Docs/Flight-R4-测试说明.txt": {
+    "Docs/Flight-R4-\u6d4b\u8bd5\u8bf4\u660e.txt": {
       "sha256": "a9b1a53e388564b0db08e0883330dcdfb779bad5b6c1a9d8d7294f97f32f4549",
       "bytes": 3890
     },
@@ -199,15 +199,15 @@
       "sha256": "0631e89461176d15699563384b45e41da1cdd9fdd5eef33f878a52fe43f84ceb",
       "bytes": 3248
     },
-    "Docs/载具战斗HUD与批量模型-20261025.md": {
+    "Docs/\u8f7d\u5177\u6218\u6597HUD\u4e0e\u6279\u91cf\u6a21\u578b-20261025.md": {
       "sha256": "b662ae2c9c99ba4a4d18e2960efcb7d8d5bc0a839c83231ab5561c528b990916",
       "bytes": 2201
     },
-    "Docs/降临动画与战斗音乐-测试说明.txt": {
+    "Docs/\u964d\u4e34\u52a8\u753b\u4e0e\u6218\u6597\u97f3\u4e50-\u6d4b\u8bd5\u8bf4\u660e.txt": {
       "sha256": "173e5fdad81ce127d93c43b6de1a4f1b92011884da47f894b28dfbb1a0a18d15",
       "bytes": 2931
     },
-    "Docs/鼠族与炮镜-本次测试说明.txt": {
+    "Docs/\u9f20\u65cf\u4e0e\u70ae\u955c-\u672c\u6b21\u6d4b\u8bd5\u8bf4\u660e.txt": {
       "sha256": "c13da587d9e7999f5983d45d5d5cfce9555add821ce8d7fc70c8ed5ff5a9b8ea",
       "bytes": 2726
     },

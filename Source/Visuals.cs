@@ -341,13 +341,47 @@ namespace HSK.FpsBridge
             Draw(quad, Strip(a, b, .025f * width, eye), Vector3.zero, blend, new Color(1f, 1f, 1f, fade));
         }
 
-        // ---- impacts (the game's own flecks)
+        private readonly record struct AirContact(Map Map, V3 Point, int Tick);
+        private static readonly List<AirContact> airContacts = new(64);
+
+        internal static void DrawAircraftContacts(Map map)
+        {
+            if (airContacts.Count == 0) return;
+            int tick = Find.TickManager.TicksGame;
+            for (int i = airContacts.Count - 1; i >= 0; i--)
+            {
+                var contact = airContacts[i];
+                int age = tick - contact.Tick;
+                if (age < 0 || age >= 12) { airContacts.RemoveAt(i); continue; }
+                if (!View3D.Active || contact.Map != map || !Ready()) continue;
+                Vector3 center = U(contact.Point);
+                float fade = 1f - age / 12f;
+                Draw(sphere, Matrix4x4.TRS(center, Quaternion.identity, Vector3.one * (.23f + age * .018f)),
+                    Vector3.zero, blend, new Color(1f,.46f,.10f,.8f * fade));
+                Draw(sphere, Matrix4x4.TRS(center, Quaternion.identity, Vector3.one * .12f),
+                    Vector3.zero, blend, new Color(1f,.92f,.62f,fade));
+            }
+        }
+
+        // ---- impacts
 
         // A round's contact: a red flash and blood for anything of flesh, a spark burst and an orange flash for the rest.
-        public static void ImpactLight(Map map, V3 pos, Thing thing)
+        public static void ImpactLight(Map map, V3 pos, Thing thing, IntVec3? logicalCell = null)
         {
             if (map == null) return;
-            Vector3 at = new Vector3(pos.X, Altitudes.AltitudeFor(AltitudeLayer.MoteOverhead), pos.Z);
+            if (View3D.Active && thing is Pawn aircraft && AerialFlight.Airborne(aircraft))
+            {
+                if (!aircraft.Position.Fogged(map) && pos.Finite)
+                {
+                    if (airContacts.Count == 64) airContacts.RemoveAt(0);
+                    airContacts.Add(new AirContact(map, pos, Find.TickManager.TicksGame));
+                }
+                return;
+            }
+            var raw = logicalCell ?? FloorSpace.ContactCell(map, pos, 0f, thing);
+            if (!raw.InBounds(map)) return;
+            var band = FloorSpace.Band(map, raw);
+            Vector3 at = new Vector3(pos.X, Altitudes.AltitudeFor(AltitudeLayer.MoteOverhead), pos.Z + band.Shift);
             IntVec3 cell = at.ToIntVec3();
             if (!cell.InBounds(map)) return;
             if (thing is Pawn pawn && pawn.RaceProps != null && pawn.RaceProps.IsFlesh)
@@ -360,7 +394,7 @@ namespace HSK.FpsBridge
             }
             FleckMaker.ThrowMicroSparks(at, map);
             Flash(map, at, FleckDefOf.ExplosionFlash, 0.4f, new Color(1f, 0.6f, 0.2f, 0.85f));
-            if (thing == null && pos.Y < 0.2f) FleckMaker.Static(at, map, FleckDefOf.ShotHit_Dirt, 1f);
+            if (thing == null && pos.Y - band.Height < 0.2f) FleckMaker.Static(at, map, FleckDefOf.ShotHit_Dirt, 1f);
         }
 
         private static void Flash(Map map, Vector3 at, FleckDef def, float scale, Color color)

@@ -40,6 +40,7 @@ namespace HSK.FpsBridge
         {
             internal Map map;
             internal Thing launcher;
+            internal Pawn turretOperator;
             internal int lastAirDrawFrame = -1;
             internal bool? explosiveGun;
             internal Thing aerialTarget;
@@ -196,6 +197,9 @@ namespace HSK.FpsBridge
                 foreach (MethodInfo entry in drawEntries)
                     harmony.Patch(entry, prefix: new HarmonyMethod(typeof(CeCompat), nameof(BeforeDraw)) { priority = Priority.First });
                 InstallFpsFlight(harmony);
+                var ceImpactFx = AccessTools.Method(AccessTools.TypeByName("ProjectileImpactFX.ImpactFleckThrower"), "ThrowFleck");
+                if (ceImpactFx != null)
+                    harmony.Patch(ceImpactFx, prefix: new HarmonyMethod(typeof(CeCompat), nameof(KeepNativeImpactFleck)));
                 CeMobileReload.Install(harmony);
                 InstallExtended(harmony);
                 InstallStructure();
@@ -467,8 +471,8 @@ namespace HSK.FpsBridge
                 bool grenade=IsGrenade(scope.verb);
                 if(grenade)speed=ThrowSpeed(scope.verb,scope.direction);
                 if(scope.artillery)SetArtilleryArc(scope,speed);
-                traces.Remove(__instance); traces.Add(__instance, new Trace { map = __instance.Map, launcher = scope.launcher,
-                    velocity = scope.artillery?scope.arcVelocity:grenade?scope.direction * speed:ReadNativeVelocity(__instance)*(speed/ActualLaunchSpeed(__instance)), contacts = new Ballistics.ExternalTrace(scope.launcher), pos=scope.eye,previous=scope.eye,homing=scope.homing,bounces=grenade?1:0,
+                traces.Remove(__instance); traces.Add(__instance, new Trace { map = __instance.Map, launcher = scope.launcher, turretOperator = scope.pawn,
+                    velocity = scope.artillery?scope.arcVelocity:grenade?scope.direction * speed:ReadNativeVelocity(__instance)*(speed/ActualLaunchSpeed(__instance)), contacts = new Ballistics.ExternalTrace(scope.launcher, scope.pawn), pos=scope.eye,previous=scope.eye,homing=scope.homing,bounces=grenade?1:0,
                     structure = StructureFor(__instance, scope.equipment?.def.defName, scope.verb.verbProps.burstShotCount),
                     gravity = scope.artillery?scope.arcGravity:scope.homing!=null?0f:grenade?ThrowGravity(scope.verb):ViewRules.Gravity(FpsMod.Settings.gravity),
                     nativePhysics = !grenade && !scope.artillery, nativeVelocityMotion = scope.homing != null,

@@ -5,8 +5,8 @@
     <Nullable>disable</Nullable>
     <AssemblyName>HSK.FpsBridge</AssemblyName>
     <RootNamespace>HSK.FpsBridge</RootNamespace>
-    <Version>0.8.22</Version>
-    <InformationalVersion>0.8.22-vehicle-recovery-r1</InformationalVersion>
+    <Version>0.8.23</Version>
+    <InformationalVersion>0.8.23-air-raid-feedback-r1</InformationalVersion>
     <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
     <Deterministic>true</Deterministic>
     <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>

@@ -88,6 +88,13 @@ namespace HSK.FpsBridge
                 try { Bridge.InstallMovementRecovery(movementRecovery); }
                 catch (Exception e) { movementRecovery.UnpatchAll(Id + ".movement-guard"); Log.Warning("[FpsBridge] MOVE_GUARD unavailable; existing movement retained: " + e.Message); }
                 Ready = true;
+                var eventDelivery = new Harmony(Id + ".event-delivery");
+                try { FirstPersonEventDelivery.Install(eventDelivery); }
+                catch (Exception e)
+                {
+                    eventDelivery.UnpatchAll(eventDelivery.Id);
+                    Log.Warning("[FpsBridge] First-person event delivery unavailable: " + e.Message);
+                }
                 var descent = new Harmony(Id + ".descent");
                 try { FirstPersonTransition.Install(descent); }
                 catch (Exception e) { descent.UnpatchAll(Id + ".descent"); Log.Warning("[FpsBridge] Descent animation unavailable: " + e.Message); }

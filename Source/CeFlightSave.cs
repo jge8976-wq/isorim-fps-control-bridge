@@ -26,7 +26,7 @@ namespace HSK.FpsBridge
             Scribe_Values.Look(ref trace.nativeLevel,"fpsCeNativeLevelR6");
             if (Scribe.mode == LoadSaveMode.Saving && !trace.nativeRestorePending) trace.nativeUnitsVersion = 1;
             Scribe_Values.Look(ref trace.nativeUnitsVersion,"fpsCeNativeUnitsR6",0);
-            Scribe_References.Look(ref trace.launcher,"fpsCeOwner");Scribe_References.Look(ref trace.homing,"fpsCeHeadTarget");
+            Scribe_References.Look(ref trace.launcher,"fpsCeOwner");Scribe_References.Look(ref trace.turretOperator,"fpsCeTurretOperator");Scribe_References.Look(ref trace.homing,"fpsCeHeadTarget");
             Scribe_References.Look(ref trace.aerialTarget,"fpsAirMissileTargetR14");Scribe_Values.Look(ref trace.aerialTurn,"fpsAirMissileTurnR14");
             trace.pos=new V3(x,y,z);trace.previous=trace.pos;trace.velocity=new V3(vx,vy,vz);
             if(Scribe.mode==LoadSaveMode.PostLoadInit)
@@ -73,7 +73,7 @@ namespace HSK.FpsBridge
                 }
                 trace.nativeUnitsVersion = 1;
                 trace.nativeRestorePending = false;
-                trace.map=map;trace.contacts=new Ballistics.ExternalTrace(trace.launcher);
+                trace.map=map;trace.contacts=new Ballistics.ExternalTrace(trace.launcher,trace.turretOperator ?? AerialTurretFire.Operator(trace.launcher));
                 trace.lastTick=Find.TickManager.TicksGame-1;
         }
 

@@ -95,10 +95,11 @@ namespace HSK.FpsBridge
                 velocity = delta * (speed / Math.Max(.001f, delta.Length));
             }
             var band = FloorSpace.Band(projectile.Map, turret.Position);
+            Pawn operatorPawn = AerialTurretFire.Operator(turret) ?? VehicleApi.Get(projectile, "launcher") as Pawn;
             traces.Add(projectile, new Trace
             {
-                map = projectile.Map, launcher = turret, pos = start, previous = start, velocity = velocity,
-                contacts = new Ballistics.ExternalTrace(turret), gravity = ViewRules.Gravity(FpsMod.Settings.gravity),
+                map = projectile.Map, launcher = turret, turretOperator = operatorPawn, pos = start, previous = start, velocity = velocity,
+                contacts = new Ballistics.ExternalTrace(turret, operatorPawn), gravity = ViewRules.Gravity(FpsMod.Settings.gravity),
                 structure = StructureFor(projectile, turret.def.defName, turret.AttackVerb.verbProps.burstShotCount),
                 nativeHeight = band.Height, nativeShift = band.Shift, nativeLevel = band.Level,
                 nativeUnitsVersion = 1, lastTick = Find.TickManager.TicksGame
@@ -165,6 +166,9 @@ namespace HSK.FpsBridge
         }
         internal static V3 NativeWorld(Map map,Vector3 p)
         {FloorBand b=FloorSpace.Band(map,new IntVec3(p));return NativePointToWorld(map,p,b);}
+        private static bool KeepNativeImpactFleck(Thing hitThing) => !View3D.Active
+            || hitThing is not Pawn aircraft || !AerialFlight.Airborne(aircraft);
+
         public static bool AircraftCollision(Thing __instance,Thing thing,ref bool __result)
         {
             if(!(thing is Pawn plane)||!AerialFlight.Airborne(plane)||OwnFlight(__instance,out _))return true;
@@ -178,6 +182,7 @@ namespace HSK.FpsBridge
             V3 at=V3.Lerp(from,to,fraction);AerialBlast.Remember(__instance,__instance.Map,at);
             exactPos.SetValue(__instance,vector3.Make3(ToNative(__instance.Map,at,plane)));
             ceLanded.SetValue(__instance,true);
+            Visuals.ImpactLight(__instance.Map, at, plane);
             using (VehicleBallisticDamage.Begin(__instance, plane, VehicleApi.Get(__instance, "launcher") as Thing, at, to - from))
                 ceImpact.Invoke(__instance,new object[]{plane});
             __result=true;return false;

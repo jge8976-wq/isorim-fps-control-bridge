@@ -3,7 +3,7 @@
   <name>ISORIM FPS Control Bridge (CE&amp;Vanilla)</name>
   <author>ISORIM FPS Team</author>
   <packageId>hsk.fpsbridge.control.r4</packageId>
-  <modVersion IgnoreIfNoMatchingField="true">0.8.22-vehicle-recovery-r1</modVersion>
+  <modVersion IgnoreIfNoMatchingField="true">0.8.23-air-raid-feedback-r1</modVersion>
   <supportedVersions>
     <li>1.7</li>
   </supportedVersions>
@@ -46,8 +46,8 @@
     <li>OskarPotocki.VanillaVehiclesExpandedTier3</li>
     <li>CETeam.CombatExtended</li>
   </loadAfter>
-  <description>[h2]0.8.22[/h2]
-A claimed damaged vehicle now enters your faction’s repair list and can be repaired through Vehicle Framework. When a hostile pilot is incapacitated, a helicopter attempts a vertical landing at its current position or a nearby clear spot. Fixed-wing aircraft at or below 15 cells above the surface glide and roll to a stop if the route is clear. Higher aircraft crash and leave a recoverable wreck. Intact aircraft can be claimed after stopping and wrecks after repair. Update both ISORIM FPS Control Bridge and ISORIM 3D Strike Framework for these changes.
+  <description>[h2]0.8.23[/h2]
+AI fixed-wing aircraft turn tighter and pull out after their strafing passes. Large raids enter in flights of three at 12, 18 and 24 cells, then climb back to their assigned layer. The airborne 5.56 mm gun has a modest range and rate-of-fire increase. Armed scouts can turn to defend themselves. Aircraft hits flash at the actual 3D contact and direct anti-air rounds skip their own gunner. Wrecks stop on solid upper floors and crash damage stays on that floor. Air-raid warnings use a new mechanical siren. Update both ISORIM mods together.
 
 [h2]0.8.21[/h2]
 Hold Alt to view crew spaces on Vehicle Framework vehicles within 40 cells in 3D. Calibrated models use their measured positions. Other models use the vehicle’s native role hitboxes or an estimate based on the hull and seats. When no crew member can act, a hostile vehicle becomes unowned and ejects surviving occupants. Airborne ejections use the Strike Framework’s parachute and crash sequence.

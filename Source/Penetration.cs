@@ -149,7 +149,7 @@ namespace HSK.FpsBridge
                     for (int k = 0; k < things.Count; k++)
                     {
                         Thing thing = things[k];
-                        if (thing == shot.launcher || MountedControl.OwnMount(shot.launcher,thing) || !seen.Add(thing) || thing.Destroyed || !thing.Spawned) continue;
+                        if (thing == shot.launcher || thing == shot.turretOperator || MountedControl.OwnMount(shot.launcher,thing) || !seen.Add(thing) || thing.Destroyed || !thing.Spawned) continue;
                         if (thing is Pawn vehicle && VehicleApi.IsVehicle(vehicle)) CollectVehicle(vehicle, a, b);
                         else if (thing is Pawn pawn) CollectPawn(pawn, shot, a, b);
                         else CollectSolid(thing, s, a, b);
@@ -362,8 +362,7 @@ namespace HSK.FpsBridge
                 Map map = p.Map;
                 IntVec3 cell = FloorSpace.ContactCell(map, at, shot.vel.Y, thing);
                 if (!cell.InBounds(map)) return;
-                Vector3 logical = FloorSpace.Logical(map, at, cell);
-                Visuals.ImpactLight(map, new V3(logical.x, at.Y - FloorSpace.Band(map, cell).Height, logical.z), thing);
+                Visuals.ImpactLight(map, at, thing, cell);
             }
 
             public bool HitPart(in Contact c, float damage, float penetration, bool firstOnPawn, out float armor, out bool absorbed)

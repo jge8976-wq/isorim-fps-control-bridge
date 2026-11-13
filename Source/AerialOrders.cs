@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Reflection;
 using HarmonyLib;
 using IsoRim;
@@ -68,7 +68,9 @@ namespace HSK.FpsBridge
             if(r.Landing||r.Automatic||r.Navigate||r.Cruise||!r.Airborne)return;
             if(AerialFlight.Profile(v).kind==AerialFlightKind.FixedWing)
             {
-                float radius=AerialGuidance.Radius(AerialFlight.Profile(v).MaximumSpeed(v)*.65f,Math.Max(v.def.size.x,v.def.size.z)),a=r.Motor.Yaw*Mathf.Deg2Rad;
+                float speed=AerialFlight.Profile(v).MaximumSpeed(v)*.65f, span=Math.Max(v.def.size.x,v.def.size.z);
+                float radius=VehicleControl.Owns(v)?AerialGuidance.Radius(speed,span):AerialGuidance.AiRadius(speed,span);
+                float a=r.Motor.Yaw*Mathf.Deg2Rad;
                 r.NavTarget=r.Motor.Position+new V3(Mathf.Cos(a)*radius,0,-Mathf.Sin(a)*radius);r.Orbit=true;r.OrbitRadius=radius;
                 float margin=Math.Max(v.def.size.x,v.def.size.z)*.6f+1f;
                 float maxRadius=Math.Min(v.Map.Size.x,FloorSpace.Bands(v.Map)[0].Rows)*.5f-margin;

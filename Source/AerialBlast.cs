@@ -11,7 +11,7 @@ namespace HSK.FpsBridge
     // Keep native damage/armour, but reject the 2D projection of an airborne hull.
     internal static class AerialBlast
     {
-        internal sealed class Point { internal Map map; internal V3 at; internal Pawn directlyDamaged; }
+        internal sealed class Point { internal Map map; internal V3 at; internal Pawn directlyDamaged; internal bool impactFloorOnly; }
         static readonly ConditionalWeakTable<Thing,Point> points=new();
         [ThreadStatic] static Point active;
         internal static int Rejected;
@@ -35,7 +35,10 @@ namespace HSK.FpsBridge
         public static void StartEffects(Explosion __instance) => ExplosionEffects.NativeStart(__instance);
         internal static V3 Origin(Explosion explosion)
         {
-            if(points.TryGetValue(explosion,out var p)&&p.map==explosion.Map)return p.at;
+            return points.TryGetValue(explosion,out var p)&&p.map==explosion.Map?p.at:OriginAtCell(explosion);
+        }
+        private static V3 OriginAtCell(Explosion explosion)
+        {
             FloorBand band=FloorSpace.Band(explosion.Map,explosion.Position);
             var field=AccessTools.Field(explosion.GetType(),"height");
             float height=field==null?0f:Convert.ToSingle(field.GetValue(explosion)); // CE burst height; vanilla has no field.
@@ -54,8 +57,26 @@ namespace HSK.FpsBridge
             }
             return best;
         }
+        internal static void RestrictToImpactFloor(Explosion explosion)
+        {
+            var point=points.GetOrCreateValue(explosion);
+            point.map=explosion.Map;
+            point.at=OriginAtCell(explosion);
+            point.impactFloorOnly=true;
+        }
+
+        private static bool DamageTerrain(Explosion explosion, IntVec3 c)
+        {
+            // The impact is resolved against this deck. Do not immediately
+            // remove the deck from beneath the newly spawned wreck.
+            return !points.TryGetValue(explosion,out var point)||!point.impactFloorOnly
+                || !FloorSpace.HasFloorAt(explosion.Map,c)||FloorSpace.Band(explosion.Map,c).Level==0;
+        }
+
         public static bool Damage(Explosion explosion,Thing t)
         {
+            if(points.TryGetValue(explosion,out var restriction)&&restriction.impactFloorOnly&&t.Spawned
+                &&FloorSpace.Band(explosion.Map,t.Position).Level!=FloorSpace.Band(explosion.Map,explosion.Position).Level)return false;
             if(!(t is Pawn v)||!AerialFlight.Airborne(v))return true;
             if(points.TryGetValue(explosion,out var point)&&point.directlyDamaged==v)return false;
             bool hit=Distance(v,Origin(explosion))<=explosion.radius+.01f;
@@ -74,6 +95,7 @@ namespace HSK.FpsBridge
             if(points.TryGetValue(__instance,out var restored))
             {
                 Scribe_References.Look(ref restored.directlyDamaged,"fpsAirBurstDirectVictim");
+                Scribe_Values.Look(ref restored.impactFloorOnly,"fpsCrashBlastImpactFloor");
                 if(Scribe.mode==LoadSaveMode.PostLoadInit)restored.map=__instance.Map;
             }
         }
@@ -90,6 +112,8 @@ namespace HSK.FpsBridge
             }
             foreach(var m in damage)h.Patch(m,prefix:new HarmonyMethod(typeof(AerialBlast),nameof(Damage)){priority=Priority.First});
             foreach(var m in contexts)h.Patch(m,prefix:new HarmonyMethod(typeof(AerialBlast),nameof(Enter)),finalizer:new HarmonyMethod(typeof(AerialBlast),nameof(Exit)));
+            h.Patch(AccessTools.Method(typeof(DamageWorker),"ExplosionDamageTerrain"),
+                prefix:new HarmonyMethod(typeof(AerialBlast),nameof(DamageTerrain)){priority=Priority.First+100});
             var remember=new HarmonyMethod(typeof(AerialBlast),nameof(Start));
             var render=new HarmonyMethod(typeof(AerialBlast),nameof(StartEffects));
             h.Patch(AccessTools.Method(typeof(Explosion),"StartExplosion"),prefix:remember,postfix:render);

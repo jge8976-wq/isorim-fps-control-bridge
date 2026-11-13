@@ -70,6 +70,43 @@ namespace HSK.FpsBridge
             }
             return float.IsFinite(floor)?Math.Max(0,box.min.y-floor):float.NaN;
         }
+        // Sweep the descending hull base against occupied floor columns. A
+        // partial platform can stop a falling aircraft even when it cannot land there.
+        internal static IntVec3 CrashContact(Pawn vehicle, Vector3 next, float pitch)
+        {
+            if (!AerialFlight.TryGet(vehicle, out var flight)) return IntVec3.Invalid;
+            var before = flight.Motor;
+            var after = before;
+            after.Position = VehicleModels.V(next);
+            after.Pitch = pitch;
+            Bounds from = AircraftFootprint.BoundsAt(vehicle, before);
+            Bounds to = AircraftFootprint.BoundsAt(vehicle, after);
+            Map map = vehicle.Map;
+            IntVec3 best = IntVec3.Invalid;
+            float highest = float.NegativeInfinity;
+            foreach (var band in FloorSpace.Bands(map))
+            {
+                if (band.Height <= highest || band.Height > from.min.y + .05f || band.Height < to.min.y) continue;
+                float step = Mathf.InverseLerp(from.min.y, to.min.y, band.Height);
+                Vector3 center = Vector3.Lerp(from.center, to.center, step);
+                Vector3 half = Vector3.Lerp(from.extents, to.extents, step);
+                float closest = float.PositiveInfinity;
+                for (int x = Mathf.FloorToInt(center.x - half.x + .02f); x <= Mathf.FloorToInt(center.x + half.x - .02f); x++)
+                for (int z = Mathf.FloorToInt(center.z - half.z + .02f); z <= Mathf.FloorToInt(center.z + half.z - .02f); z++)
+                {
+                    var cell = new IntVec3(x, 0, z + band.Shift);
+                    if (z < 0 || z >= band.Rows || !cell.InBounds(map) || !Plane(map, x, z, band)
+                        || band.Level != 0 && !FloorSpace.HasFloorAt(map, cell)) continue;
+                    float distance = (x + .5f - center.x) * (x + .5f - center.x) + (z + .5f - center.z) * (z + .5f - center.z);
+                    if (distance >= closest) continue;
+                    closest = distance;
+                    highest = band.Height;
+                    best = cell;
+                }
+            }
+            return best;
+        }
+
         private static bool AllSurface(Map map, Bounds box, float height, FloorBand band, bool roof)
         {
             for (int x = Mathf.FloorToInt(box.min.x + .02f); x <= Mathf.FloorToInt(box.max.x - .02f); x++)
